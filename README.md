@@ -1,4 +1,4 @@
-# Animoca Ethereum Contracts
+# Animoca Ethereum Migrations
 
 [![NPM Package](https://img.shields.io/npm/v/@animoca/ethereum-migrations.svg)](https://www.npmjs.org/package/@animoca/ethereum-migrations)
 
