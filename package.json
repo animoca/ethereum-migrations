@@ -1,0 +1,61 @@
+{
+  "name": "@animoca/ethereum-migrations",
+  "version": "0.0.1",
+  "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
+  "keywords": [
+    "animoca",
+    "ethereum",
+    "hardhat",
+    "migrations"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:animoca/ethereum-migrations.git"
+  },
+  "license": "MIT",
+  "author": "Animoca Brands",
+  "scripts": {
+    "postinstall": "for cfg in .vscode/settings.json .vscode/extensions.json .vscode/launch.json; do cp -n ${cfg}.default ${cfg} || :; done",
+    "lint:js": "eslint \"**/*.{js,ts}\" --no-error-on-unmatched-pattern",
+    "lint": "run-s lint:js",
+    "fix:js": "eslint --fix \"**/*.{js,ts}\" --no-error-on-unmatched-pattern",
+    "fix": "run-s fix:js",
+    "format:js": "prettier --write \"**/*.{ts,js}\"",
+    "format": "run-s format:js",
+    "clean:vscode": "rm -rf .vscode/extensions.json .vscode/launch.json .vscode/settings.json",
+    "clean:cache": "rm -rf cache",
+    "clean:deployments": "rm -rf deployments/localhost* deployments/hardhat*",
+    "clean:exports": "rm -rf exports/localhost* exports/hardhat*",
+    "clean:generated": "rm -rf generated/localhost* generated/hardhat*",
+    "clean": "run-s clean:cache clean:deployments clean:exports clean:generated",
+    "deploy": "hardhat deploy",
+    "deploy:test": "NETWORK_TAGS=test hardhat deploy",
+    "run-all": "run-s format fix clean deploy deploy:test",
+    "prepack": "run-s clean"
+  },
+  "dependencies": {
+    "@animoca/ethereum-contracts": "^0.0.3",
+    "@animoca/ethereum-contracts-0.0.4": "animoca/ethereum-contracts",
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "cli-progress": "^3.10.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "ethers": "^5.6.3",
+    "fs-extra": "^10.0.1",
+    "glob": "^8.0.1",
+    "hardhat": "^2.9.3",
+    "hardhat-deploy": "0.11.4",
+    "hardhat-deploy-ethers": "^0.3.0-beta.13",
+    "lodash.merge": "^4.6.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2",
+    "yesno": "^0.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "ganache": "^7.0.4"
+  }
+}
