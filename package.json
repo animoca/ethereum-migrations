@@ -34,8 +34,8 @@
     "prepack": "run-s clean"
   },
   "dependencies": {
-    "@animoca/ethereum-contracts": "^0.0.3",
-    "@animoca/ethereum-contracts-0.0.4": "animoca/ethereum-contracts",
+    "@animoca/ethereum-contracts": "^0.0.4",
+    "@animoca/ethereum-contracts-0.0.4": "npm:@animoca/ethereum-contracts@0.0.4",
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "cli-progress": "^3.10.0",
@@ -43,7 +43,7 @@
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "ethers": "^5.6.3",
+    "ethers": "^5.6.4",
     "fs-extra": "^10.0.1",
     "glob": "^8.0.1",
     "hardhat": "^2.9.3",
