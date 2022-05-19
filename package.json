@@ -34,8 +34,8 @@
     "prepack": "run-s clean"
   },
   "devDependencies": {
-    "@animoca/ethereum-contracts": "^0.0.5-pre.1",
-    "@animoca/ethereum-contracts-0.0.5": "npm:@animoca/ethereum-contracts@0.0.5-pre.1",
+    "@animoca/ethereum-contracts": "^0.0.5-pre.2",
+    "@animoca/ethereum-contracts-0.0.5": "npm:@animoca/ethereum-contracts@0.0.5-pre.2",
     "@nomiclabs/hardhat-ethers": "^2.0.6",
     "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "cli-progress": "^3.11.1",
