@@ -54,7 +54,7 @@ const multiSkip = (conditionFunctions) => {
 const skipIfFileExists = (fileName) => {
   return async (hre) => {
     const {log} = hre.deployments;
-    const filePath = path.join(await makeLocalFolderPath(hre), fileName);
+    const filePath = path.join(hre.config.paths.generated, hre.network.name, fileName);
     if (fse.existsSync(filePath)) {
       log(`${filePath}: already exists, skipping...`);
       return true;
