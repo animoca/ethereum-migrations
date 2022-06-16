@@ -2,9 +2,10 @@
 
 ## 0.0.2
 
-- Use deterministic deployments in migrations.
-- Update dependency version `@animoca/ethereum-contracts@0.0.5`.
-- Fix bug in `skipIfFileExists`.
+- Used deterministic deployments in migrations.
+- Updated dependency version `@animoca/ethereum-contracts@0.1.0`.
+- Added migrations for `ForwarderRegistryContextFacet` and `ERC721`-related facets.
+- Fixed bug in `skipIfFileExists`.
 
 ## 0.0.1
 
