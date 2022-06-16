@@ -8,12 +8,17 @@ let deployment = function (name, artifactName, deploymentArgs, options = {}) {
 
     const contract = options.importPath !== undefined ? await getExtendedArtifactFromFolders(artifactName, [options.importPath]) : artifactName;
     const from = (await hre.getNamedAccounts())[options.deployer || 'deployer'];
+    const deterministicDeployment = options.deterministicDeployment || false;
     const args = await buildArguments(deploymentArgs)(hre);
 
-    console.log(`${name}: Deploying with args [${args.map((arg) => `${arg.name}: ${arg.value}`).join(', ')}] ...`);
-    const deployedContract = await deploy(name, {contract, from, args: args.map((arg) => arg.value)});
     console.log(
-      `${name}: Deployed at ${deployedContract.address} (tx: ${deployedContract.transactionHash}, gasUsed: ${deployedContract.receipt.gasUsed})`
+      `${name}: Deploying ${deterministicDeployment ? '(deterministically) ' : ''}with args [${args
+        .map((arg) => `${arg.name}: ${arg.value}`)
+        .join(', ')}] ...`
+    );
+    const deployedContract = await deploy(name, {contract, from, deterministicDeployment, args: args.map((arg) => arg.value)});
+    console.log(
+      `${name}: Deployed ${deployedContract.address} (tx: ${deployedContract.transactionHash}, gasUsed: ${deployedContract.receipt.gasUsed})`
     );
   };
 

@@ -8,9 +8,9 @@ Ethereum migrations library which uses [hardhat-deploy](https://github.com/wigha
 
 ### Core migrations
 
-This repository contains the migration scripts which deploy the contracts availbale in [@animoca/ethereum-contracts](https://github.com/animoca/ethereum-contracts).
+This repository contains the migration scripts which deploy the contracts available in [@animoca/ethereum-contracts](https://github.com/animoca/ethereum-contracts).
 
-the deployment artifacts for the contracts already deployed on live networks are avilable in the `deployments` folder.
+the deployment artifacts for the contracts already deployed on live networks are available in the `deployments` folder.
 
 ### HardHat plugins and configurations
 
@@ -30,7 +30,7 @@ module.exports = merge(require('./hardhat-config'), {
 
 ### Migration templates and helpers
 
-For common migrations scenarios, some templates are available in `src/templates`. One template function contains the whole logic of a given migration. For example, in its most basic form, a contract deployment can be written as follow:
+For common migrations scenarios, some templates are available in `src/templates`. One template function contains the whole logic for a given migration. For example, in its most basic form, a contract deployment can be written as follow:
 
 ```javascript
 const {deployment} = require('@animoca/ethereum-migrations/src/templates/contracts');
