@@ -4,16 +4,7 @@ module.exports = {
     mainnet: {
       defaultProvider: 'alchemy',
     },
-    ropsten: {
-      defaultProvider: 'infura',
-    },
-    rinkeby: {
-      defaultProvider: 'infura',
-    },
     goerli: {
-      defaultProvider: 'infura',
-    },
-    kovan: {
       defaultProvider: 'infura',
     },
 

@@ -27,27 +27,9 @@ module.exports = {
     },
 
     // Staging
-    ropsten: {
-      // chainId 3
-      url: 'ropsten',
-      live: true,
-      tags: ['staging', 'ethereum'],
-    },
-    rinkeby: {
-      // chainId 4
-      url: 'rinkeby',
-      live: true,
-      tags: ['staging', 'ethereum'],
-    },
     goerli: {
       // chainId 5
       url: 'goerli',
-      live: true,
-      tags: ['staging', 'ethereum'],
-    },
-    kovan: {
-      // chainId 42
-      url: 'kovan',
       live: true,
       tags: ['staging', 'ethereum'],
     },
