@@ -1,8 +1,11 @@
-const {deployment} = require('../../../src/templates/contracts');
-const {getContractAddress} = require('../../../src/helpers');
+const Contract_deploy = require('../../../src/templates/Contract/deploy');
+const {getContractAddress} = require('../../../src/helpers/templates');
 
-module.exports = deployment('ERC721Facet@0.1.0', 'ERC721Facet', [{name: 'ForwarderRegistry', value: getContractAddress('ForwarderRegistry@0.1.0')}], {
+module.exports = Contract_deploy('ERC721Facet@0.1.0', {
+  contract: 'ERC721Facet',
   importPath: 'node_modules/@animoca/ethereum-contracts-0.1.0/artifacts',
+  args: [{name: 'ForwarderRegistry', value: getContractAddress('ForwarderRegistry@0.1.0')}],
   deterministicDeployment: true,
-  dependencies: ['ForwarderRegistry@0.1.0_deploy'],
 });
+module.exports.tags = ['ERC721'];
+module.exports.dependencies = ['ForwarderRegistry@0.1.0_deploy'];

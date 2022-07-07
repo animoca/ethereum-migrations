@@ -7,11 +7,23 @@ module.exports = {
       // chainId 31337
       live: false,
       tags: ['dev'],
+      companionNetworks: {
+        ethereum: 'hardhat',
+        polygon: 'hardhat',
+        bsc: 'hardhat',
+        okex: 'hardhat',
+      },
     },
     localhost: {
       // chainId 1337
       live: false,
       tags: ['dev'],
+      companionNetworks: {
+        ethereum: 'localhost',
+        polygon: 'localhost',
+        bsc: 'localhost',
+        okex: 'localhost',
+      },
     },
 
     //----------------------------//
@@ -24,6 +36,11 @@ module.exports = {
       url: 'mainnet',
       live: true,
       tags: ['production', 'ethereum'],
+      companionNetworks: {
+        polygon: 'polygon',
+        bsc: 'bsc',
+        okex: 'okex',
+      },
     },
 
     // Staging
@@ -32,6 +49,11 @@ module.exports = {
       url: 'goerli',
       live: true,
       tags: ['staging', 'ethereum'],
+      companionNetworks: {
+        polygon: 'polygonMumbai',
+        bsc: 'bscTestnet',
+        okex: 'okexTestnet',
+      },
     },
 
     //----------------------------//
@@ -45,6 +67,9 @@ module.exports = {
       url: 'polygon',
       live: true,
       tags: ['production', 'polygon'],
+      companionNetworks: {
+        ethereum: 'mainnet',
+      },
     },
 
     // Staging
@@ -54,6 +79,9 @@ module.exports = {
       url: 'polygonMumbai',
       live: true,
       tags: ['staging', 'polygon'],
+      companionNetworks: {
+        ethereum: 'goerli',
+      },
     },
 
     //----------------------------//
@@ -67,6 +95,9 @@ module.exports = {
       url: 'bsc',
       live: true,
       tags: ['production', 'bsc'],
+      companionNetworks: {
+        ethereum: 'mainnet',
+      },
     },
 
     // Staging
@@ -75,6 +106,9 @@ module.exports = {
       url: 'bscTestnet',
       live: true,
       tags: ['staging', 'bsc'],
+      companionNetworks: {
+        ethereum: 'goerli',
+      },
     },
 
     //----------------------------//
@@ -87,6 +121,9 @@ module.exports = {
       url: 'okex',
       live: true,
       tags: ['production', 'okex'],
+      companionNetworks: {
+        ethereum: 'mainnet',
+      },
     },
 
     okexTestnet: {
@@ -95,6 +132,9 @@ module.exports = {
       url: 'okexTestnet',
       live: true,
       tags: ['staging', 'okex'],
+      companionNetworks: {
+        ethereum: 'goerli',
+      },
     },
   },
 };

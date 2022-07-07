@@ -1,69 +1,15 @@
-const path = require('path');
-const fse = require('fs-extra');
-const progress = require('cli-progress');
-
-// Utils
-
-function getNamedAccount(account) {
+function multiSkip(...skips) {
   return async (hre) => {
-    const address = (await hre.getNamedAccounts())[account];
-    // hre.deployments.log(`Retrieved address for named account ${account}: ${address}`);
-    return address;
-  };
-}
-
-function getContractAddress(deployment) {
-  return async (hre) => {
-    const address = (await hre.deployments.get(deployment)).address;
-    // hre.deployments.log(`Retrieved address for deployment ${deployment}: ${address}`);
-    return address;
-  };
-}
-
-//  Generated files
-
-const readFile = async (hre, fileName) => {
-  const {log} = hre.deployments;
-  const filePath = path.join(hre.config.paths.generated, hre.network.name, fileName);
-  const data = fse.readFileSync(filePath);
-  log('File read:', filePath);
-  return data;
-};
-
-const writeFile = async (hre, fileName, data) => {
-  const {log} = hre.deployments;
-  const filePath = path.join(hre.config.paths.generated, hre.network.name, fileName);
-  fse.mkdirpSync(path.dirname(filePath));
-  fse.writeFileSync(filePath, data);
-  log('File written:', filePath);
-};
-
-//  Skip functions
-
-const multiSkip = (conditionFunctions) => {
-  return async (hre) => {
-    for (const condition of conditionFunctions) {
-      if (await condition(hre)) {
+    for (const skip of skips) {
+      if (await skip(hre)) {
         return true;
       }
     }
     return false;
   };
-};
+}
 
-const skipIfFileExists = (fileName) => {
-  return async (hre) => {
-    const {log} = hre.deployments;
-    const filePath = path.join(hre.config.paths.generated, hre.network.name, fileName);
-    if (fse.existsSync(filePath)) {
-      log(`${filePath}: already exists, skipping...`);
-      return true;
-    }
-    return false;
-  };
-};
-
-const skipIfContractExists = (contractName) => {
+function skipIfContractExists(contractName) {
   return async ({deployments}) => {
     const {log} = deployments;
     const contract = await deployments.getOrNull(contractName);
@@ -74,9 +20,9 @@ const skipIfContractExists = (contractName) => {
     // log(`Contract ${contractName} not found, proceeding...`);
     return false;
   };
-};
+}
 
-const skipIfChainIdIs = (chainIds) => {
+function skipIfChainIdIs(chainIds) {
   return async ({getChainId, deployments}) => {
     const {log} = deployments;
     const chainId = await getChainId();
@@ -88,9 +34,9 @@ const skipIfChainIdIs = (chainIds) => {
     // log(`Chain id ${chainId} is not part of ${chainIds}, proceeding...`);
     return false;
   };
-};
+}
 
-const skipIfChainIdIsNot = (chainIds) => {
+function skipIfChainIdIsNot(chainIds) {
   return async ({getChainId, deployments}) => {
     const {log} = deployments;
     const chainId = await getChainId();
@@ -102,9 +48,9 @@ const skipIfChainIdIsNot = (chainIds) => {
     log(`${chainId}: not part of chainIds ${chainIds}, skipping...`);
     return true;
   };
-};
+}
 
-const skipIfNetworkIs = (networks) => {
+function skipIfNetworkIs(networks) {
   return async ({network, deployments}) => {
     const {log} = deployments;
     const matchNetwork = network.name === networks || networks.indexOf(network.name) >= 0;
@@ -115,9 +61,9 @@ const skipIfNetworkIs = (networks) => {
     // log(`Network ${network.name} is not part of ${networks}, proceeding...`);
     return false;
   };
-};
+}
 
-const skipIfNetworkIsNot = (networks) => {
+function skipIfNetworkIsNot(networks) {
   return async ({network, deployments}) => {
     const {log} = deployments;
     const matchNetwork = network.name === networks || networks.indexOf(network.name) >= 0;
@@ -128,9 +74,9 @@ const skipIfNetworkIsNot = (networks) => {
     log(`Network ${network.name} is not part of ${networks}, skipping...`);
     return true;
   };
-};
+}
 
-const skipIfNetworkIsTagged = (tag) => {
+function skipIfNetworkIsTagged(tag) {
   return async ({network, deployments}) => {
     const {log} = deployments;
     if (network.tags[tag]) {
@@ -140,9 +86,9 @@ const skipIfNetworkIsTagged = (tag) => {
     // log(`Network ${network.name} is not tagged ${tag}, proceeding...`);
     return false;
   };
-};
+}
 
-const skipIfNetworkIsNotTagged = (tag) => {
+function skipIfNetworkIsNotTagged(tag) {
   return async ({network, deployments}) => {
     const {log} = deployments;
     if (network.tags[tag]) {
@@ -152,9 +98,9 @@ const skipIfNetworkIsNotTagged = (tag) => {
     log(`Network ${network.name} is not tagged ${tag}, skipping...`);
     return true;
   };
-};
+}
 
-const skipIfNetworkIsLive = () => {
+function skipIfNetworkIsLive() {
   return async ({network, deployments}) => {
     const {log} = deployments;
     if (network.live) {
@@ -164,9 +110,9 @@ const skipIfNetworkIsLive = () => {
     // log(`Network ${network.name} is not live, proceeding...`);
     return false;
   };
-};
+}
 
-const skipIfChainTypeIsNot = (chainType) => {
+function skipIfChainTypeIsNot(chainType) {
   return async ({network, deployments}) => {
     const {log} = deployments;
     if (network.name.startsWith('hardhat') || network.name.startsWith('localhost')) {
@@ -179,50 +125,10 @@ const skipIfChainTypeIsNot = (chainType) => {
     log(`Network is not of chain type '${chainType}', skipping...`);
     return true;
   };
-};
-
-// Batch actions
-
-const batchDoWhile = async (doFunction, doArgss, message, conditionFunction, acceptRevert = false) => {
-  const format = `${message} [{bar}] {percentage}% | {value}/{total}...`;
-  const bar = new progress.SingleBar({format}, progress.Presets.shades_classic);
-  bar.start(doArgss.length, 0);
-
-  const results = [];
-  let index = 0;
-  for (const doArgs of doArgss) {
-    let result;
-    if (acceptRevert) {
-      try {
-        result = await doFunction(...doArgs);
-      } catch (err) {
-        result = null;
-      }
-    } else {
-      result = await doFunction(...doArgs);
-    }
-
-    if (conditionFunction(result, index)) {
-      results.push(result);
-      bar.increment();
-    } else {
-      break;
-    }
-    index++;
-  }
-  bar.stop();
-  return results;
-};
-
-const batchDo = async (doFunction, doArgss, message, acceptRevert = false) => {
-  return batchDoWhile(doFunction, doArgss, message, async () => true, acceptRevert);
-};
+}
 
 module.exports = {
-  readFile,
-  writeFile,
   multiSkip,
-  skipIfFileExists,
   skipIfContractExists,
   skipIfChainIdIs,
   skipIfChainIdIsNot,
@@ -232,8 +138,4 @@ module.exports = {
   skipIfNetworkIsNotTagged,
   skipIfNetworkIsLive,
   skipIfChainTypeIsNot,
-  batchDoWhile,
-  batchDo,
-  getContractAddress,
-  getNamedAccount,
 };
