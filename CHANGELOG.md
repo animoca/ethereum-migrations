@@ -7,6 +7,7 @@
 - Added support for `ERC20` polygon predicates.
 - Added migration for `ForwarderRegistryContextFacet`.
 - Added migration and helpers for `MultiStaticCall`.
+- Added migrations for `SealedCall` and `SealedDelegateCall`.
 - Reorganized helpers.
 - Added migrations for `ERC721`-related facets.
 - Added migrations for `ERC1155`-related facets.
