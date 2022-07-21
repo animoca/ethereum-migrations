@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "0.0.2-rc.21",
+  "version": "0.1.0-rc.0",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
@@ -25,18 +25,17 @@
     "clean:vscode": "rm -rf .vscode/extensions.json .vscode/launch.json .vscode/settings.json",
     "clean:cache": "rm -rf cache",
     "clean:deployments": "rm -rf deployments/localhost* deployments/hardhat*",
-    "clean:exports": "rm -rf exports/localhost* exports/hardhat*",
     "clean:generated": "rm -rf generated/localhost* generated/hardhat*",
     "clean:hardhat": "rm -rf hardhat.config.last.json",
-    "clean": "run-s clean:cache clean:deployments clean:exports clean:generated clean:hardhat",
+    "clean": "run-s clean:cache clean:deployments clean:generated clean:hardhat",
     "deploy": "hardhat deploy",
     "deploy:test": "NETWORK_TAGS=test yarn deploy",
     "run-all": "run-s format fix clean deploy deploy:test",
     "prepack": "run-s clean"
   },
   "devDependencies": {
-    "@animoca/ethereum-contracts": "^0.1.0-rc.17",
-    "@animoca/ethereum-contracts-0.1.0": "npm:@animoca/ethereum-contracts@0.1.0-rc.17",
+    "@animoca/ethereum-contracts": "^0.1.0-rc.18",
+    "@animoca/ethereum-contracts-0.1.0": "npm:@animoca/ethereum-contracts@0.1.0-rc.18",
     "@nomiclabs/hardhat-ethers": "^2.1.0",
     "@nomiclabs/hardhat-etherscan": "^3.1.0",
     "cli-progress": "^3.11.2",
@@ -51,6 +50,7 @@
     "hardhat": "^2.10.1",
     "hardhat-deploy": "^0.11.11",
     "hardhat-deploy-ethers": "^0.3.0-beta.13",
+    "lodash.clonedeep": "^4.5.0",
     "lodash.merge": "^4.6.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
