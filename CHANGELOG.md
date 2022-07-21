@@ -11,6 +11,7 @@
 - Reorganized helpers.
 - Added migrations for `ERC721`-related facets.
 - Added migrations for `ERC1155`-related facets.
+- Optionally use environment variable `MNEMONIC_PATH` or `MNEMO_PATH` to select a directory where to find the mnemonic file(s).
 - Fixed bug in `skipIfFileExists`.
 
 ## 0.0.1

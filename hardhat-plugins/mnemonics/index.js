@@ -1,9 +1,17 @@
 const fse = require('fs-extra');
+const path = require('path');
+const os = require('os');
 const {extendConfig} = require('hardhat/config');
 
-extendConfig((config, userConfig) => {
+extendConfig((config) => {
   const mnemoId = process.env.MNEMONIC || process.env.MNEMO || 'default';
-  const mnemonicFile = `.mnemonic_${mnemoId}`;
+  const mnemoPath = process.env.MNEMONIC_PATH || process.env.MNEMO_PATH || '';
+  let mnemonicFile = path.join(path.normalize(mnemoPath), `.mnemonic_${mnemoId}`);
+  const mnemonicFileParts = mnemonicFile.split(path.sep);
+  if (mnemonicFileParts[0] === '~') {
+    mnemonicFileParts[0] = os.homedir();
+  }
+  mnemonicFile = path.join(...mnemonicFileParts);
   console.log(`Loading mnemonic for live networks from file: ${mnemonicFile}`);
 
   let mnemonic;
@@ -15,7 +23,7 @@ extendConfig((config, userConfig) => {
   const accounts = mnemonic ? {mnemonic} : [];
 
   for (const networkName of Object.keys(config.networks)) {
-    if (networkName !== 'hardhat' && networkName !== 'coverage' && !networkName.startsWith('localhost')) {
+    if (config.networks[networkName].live !== false) {
       config.networks[networkName].accounts = accounts;
     }
   }
