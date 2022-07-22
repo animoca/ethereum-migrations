@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "0.1.0-rc.0",
+  "version": "0.1.0-rc.2",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
@@ -34,8 +34,8 @@
     "prepack": "run-s clean"
   },
   "devDependencies": {
-    "@animoca/ethereum-contracts": "^0.1.0-rc.18",
-    "@animoca/ethereum-contracts-0.1.0": "npm:@animoca/ethereum-contracts@0.1.0-rc.18",
+    "@animoca/ethereum-contracts": "^0.1.0-rc.19",
+    "@animoca/ethereum-contracts-0.1.0": "npm:@animoca/ethereum-contracts@0.1.0-rc.19",
     "@nomiclabs/hardhat-ethers": "^2.1.0",
     "@nomiclabs/hardhat-etherscan": "^3.1.0",
     "cli-progress": "^3.11.2",
