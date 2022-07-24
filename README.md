@@ -8,7 +8,7 @@ Ethereum migrations library which uses [hardhat-deploy](https://github.com/wigha
 
 ### Core migrations
 
-This repository contains the migration scripts which deploy the contracts available in [@animoca/ethereum-contracts](https://github.com/animoca/ethereum-contracts).
+This repository contains the migration scripts which deploy the contracts available in [@animoca/ethereum-contracts](https://github.com/animoca/ethereum-contracts) as well as some other base contracts.
 
 the deployment artifacts for the contracts already deployed on live networks are available in the `deployments` folder.
 

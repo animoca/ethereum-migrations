@@ -1,6 +1,6 @@
-const merge = require('lodash.merge');
+const {mergeConfigs} = require('@animoca/ethereum-contracts/src/config');
 require('dotenv').config();
 
 require('./hardhat-plugins');
 
-module.exports = merge(require('./hardhat-config'), require('./hardhat-local-config'));
+module.exports = mergeConfigs(require('./hardhat-config'), require('./hardhat-local-config'));

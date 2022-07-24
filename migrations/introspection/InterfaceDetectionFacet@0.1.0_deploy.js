@@ -1,8 +1,8 @@
-const {deployment} = require('../../src/templates/contracts');
-const {getContractAddress} = require('../../src/helpers');
+const Contract_deploy = require('../../src/templates/Contract/deploy');
 
-module.exports = deployment('InterfaceDetectionFacet@0.1.0', 'InterfaceDetectionFacet', [], {
+module.exports = Contract_deploy('InterfaceDetectionFacet@0.1.0', {
+  contract: 'InterfaceDetectionFacet',
   importPath: 'node_modules/@animoca/ethereum-contracts-0.1.0/artifacts',
   deterministicDeployment: true,
-  dependencies: ['ForwarderRegistry@0.1.0_deploy'],
 });
+module.exports.tags = ['Introspection'];
