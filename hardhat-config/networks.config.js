@@ -61,7 +61,7 @@ module.exports = {
     //----------------------------//
 
     // Production
-    polygon: {
+    matic: {
       // chainId 137
       // https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json
       url: 'polygon',
@@ -73,7 +73,7 @@ module.exports = {
     },
 
     // Staging
-    polygonMumbai: {
+    mumbai: {
       // chainId 80001
       // https://static.matic.network/network/testnet/mumbai/index.json
       url: 'polygonMumbai',
@@ -101,7 +101,7 @@ module.exports = {
     },
 
     // Staging
-    bscTestnet: {
+    bsctest: {
       // chainId 97
       url: 'bscTestnet',
       live: true,
@@ -126,7 +126,7 @@ module.exports = {
       },
     },
 
-    okexTestnet: {
+    okextest: {
       // chainId 65
       // https://okexchain-docs.readthedocs.io/en/latest/developers/quick-start.html
       url: 'okexTestnet',
