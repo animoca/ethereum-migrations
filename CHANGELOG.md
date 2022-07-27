@@ -7,6 +7,7 @@
 - Updated to dependency version `@animoca/ethereum-contracts@0.1.0`.
 - Reorganized helpers.
 - Removed hardhat plugin `hardhat-deploy-etherenv-exports`.
+- Renamed networks.
 
 ### New features
 
@@ -18,6 +19,7 @@
 - Added migrations for `ERC721`-related facets.
 - Optionally use environment variable `MNEMONIC_PATH` or `MNEMO_PATH` to select a directory where to find the mnemonic file(s).
 - Added migrations for `ERC1155`-related facets.
+- Added hardhat plugin `etherscan-api-keys`.
 
 ### Bugfixes
 

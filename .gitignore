@@ -21,6 +21,8 @@ flattened*
 docs/
 gas-report.md
 
+etherscan_requests
+
 deployments/hardhat*
 deployments/localhost*
 

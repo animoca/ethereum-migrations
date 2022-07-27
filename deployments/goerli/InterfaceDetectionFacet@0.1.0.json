@@ -1,0 +1,76 @@
+{
+  "address": "0x74B7a8098Bf9a49586318bcB3198D625A55fD574",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x62a0f1cdb020d96ffa73007a1bbf9170f7fe4ace1e6012acd680dcefb0459b91",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0xB553C4B21966123d7f8c02Ca6909c110260052E8",
+    "contractAddress": null,
+    "transactionIndex": 4,
+    "gasUsed": "173580",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x2157e73cf46fbf19f3e903ef5e4467e294b74c5e70d29bdc3d72c9a888a6d122",
+    "transactionHash": "0x62a0f1cdb020d96ffa73007a1bbf9170f7fe4ace1e6012acd680dcefb0459b91",
+    "logs": [],
+    "blockNumber": 7293053,
+    "cumulativeGasUsed": "500833",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "9410edcddb86920fedd4d4a708e91790",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).\",\"kind\":\"dev\",\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"Note: This function call must use less than 30 000 gas.\",\"params\":{\"interfaceId\":\"the interface identifier to test.\"},\"returns\":{\"_0\":\"True if the interface is supported, false if `interfaceId` is `0xffffffff` or if the interface is not supported.\"}}},\"title\":\"ERC165 Interface Detection Standard (facet version).\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"supportsInterface(bytes4)\":{\"notice\":\"Returns whether this contract implements a given interface.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/introspection/facets/InterfaceDetectionFacet.sol\":\"InterfaceDetectionFacet\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":99999},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/StorageSlot.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.7.0) (utils/StorageSlot.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Library for reading and writing primitive types to specific storage slots.\\n *\\n * Storage slots are often used to avoid storage conflict when dealing with upgradeable contracts.\\n * This library helps with reading and writing to such slots without the need for inline assembly.\\n *\\n * The functions in this library return Slot structs that contain a `value` member that can be used to read or write.\\n *\\n * Example usage to set ERC1967 implementation slot:\\n * ```\\n * contract ERC1967 {\\n *     bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;\\n *\\n *     function _getImplementation() internal view returns (address) {\\n *         return StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value;\\n *     }\\n *\\n *     function _setImplementation(address newImplementation) internal {\\n *         require(Address.isContract(newImplementation), \\\"ERC1967: new implementation is not a contract\\\");\\n *         StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation;\\n *     }\\n * }\\n * ```\\n *\\n * _Available since v4.1 for `address`, `bool`, `bytes32`, and `uint256`._\\n */\\nlibrary StorageSlot {\\n    struct AddressSlot {\\n        address value;\\n    }\\n\\n    struct BooleanSlot {\\n        bool value;\\n    }\\n\\n    struct Bytes32Slot {\\n        bytes32 value;\\n    }\\n\\n    struct Uint256Slot {\\n        uint256 value;\\n    }\\n\\n    /**\\n     * @dev Returns an `AddressSlot` with member `value` located at `slot`.\\n     */\\n    function getAddressSlot(bytes32 slot) internal pure returns (AddressSlot storage r) {\\n        /// @solidity memory-safe-assembly\\n        assembly {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns an `BooleanSlot` with member `value` located at `slot`.\\n     */\\n    function getBooleanSlot(bytes32 slot) internal pure returns (BooleanSlot storage r) {\\n        /// @solidity memory-safe-assembly\\n        assembly {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns an `Bytes32Slot` with member `value` located at `slot`.\\n     */\\n    function getBytes32Slot(bytes32 slot) internal pure returns (Bytes32Slot storage r) {\\n        /// @solidity memory-safe-assembly\\n        assembly {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns an `Uint256Slot` with member `value` located at `slot`.\\n     */\\n    function getUint256Slot(bytes32 slot) internal pure returns (Uint256Slot storage r) {\\n        /// @solidity memory-safe-assembly\\n        assembly {\\n            r.slot := slot\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xd5c50c54bf02740ebd122ff06832546cb5fa84486d52695a9ccfd11666e0c81d\",\"license\":\"MIT\"},\"contracts/introspection/InterfaceDetection.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.8;\\n\\nimport {IERC165} from \\\"./interfaces/IERC165.sol\\\";\\nimport {InterfaceDetectionStorage} from \\\"./libraries/InterfaceDetectionStorage.sol\\\";\\n\\n/// @title ERC165 Interface Detection Standard (immutable or proxiable version).\\n/// @dev This contract is to be used via inheritance in an immutable (non-proxied) or proxied implementation.\\nabstract contract InterfaceDetection is IERC165 {\\n    using InterfaceDetectionStorage for InterfaceDetectionStorage.Layout;\\n\\n    /// @inheritdoc IERC165\\n    function supportsInterface(bytes4 interfaceId) external view override returns (bool) {\\n        return InterfaceDetectionStorage.layout().supportsInterface(interfaceId);\\n    }\\n}\\n\",\"keccak256\":\"0xef423b77e65093f86e7f7ffc35e41f7008304976a7334bb3f9049db69d43eae9\",\"license\":\"MIT\"},\"contracts/introspection/facets/InterfaceDetectionFacet.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.15;\\n\\nimport {InterfaceDetection} from \\\"./../InterfaceDetection.sol\\\";\\n\\n/// @title ERC165 Interface Detection Standard (facet version).\\n/// @dev This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).\\ncontract InterfaceDetectionFacet is InterfaceDetection {\\n\\n}\\n\",\"keccak256\":\"0xf2325ac9dc620ca8fcf131f1150435ff0a3af7d6832b7da06629e44234045468\",\"license\":\"MIT\"},\"contracts/introspection/interfaces/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.8;\\n\\n/// @title ERC165 Interface Detection Standard.\\n/// @dev See https://eips.ethereum.org/EIPS/eip-165.\\n/// @dev Note: The ERC-165 identifier for this interface is 0x01ffc9a7.\\ninterface IERC165 {\\n    /// @notice Returns whether this contract implements a given interface.\\n    /// @dev Note: This function call must use less than 30 000 gas.\\n    /// @param interfaceId the interface identifier to test.\\n    /// @return supported True if the interface is supported, false if `interfaceId` is `0xffffffff` or if the interface is not supported.\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool supported);\\n}\\n\",\"keccak256\":\"0x200c309a198b4f2d5d09ee3ef155ebdb8d8075e205dab2d973139c7ac01c8785\",\"license\":\"MIT\"},\"contracts/introspection/libraries/InterfaceDetectionStorage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.8;\\n\\nimport {IERC165} from \\\"./../interfaces/IERC165.sol\\\";\\nimport {ProxyInitialization} from \\\"./../../proxy/libraries/ProxyInitialization.sol\\\";\\n\\nlibrary InterfaceDetectionStorage {\\n    struct Layout {\\n        mapping(bytes4 => bool) supportedInterfaces;\\n    }\\n\\n    bytes32 internal constant LAYOUT_STORAGE_SLOT = bytes32(uint256(keccak256(\\\"animoca.core.introspection.InterfaceDetection.storage\\\")) - 1);\\n\\n    bytes4 internal constant ILLEGAL_INTERFACE_ID = 0xffffffff;\\n\\n    /// @notice Sets or unsets an ERC165 interface.\\n    /// @dev Reverts if `interfaceId` is `0xffffffff`.\\n    /// @param interfaceId the interface identifier.\\n    /// @param supported True to set the interface, false to unset it.\\n    function setSupportedInterface(\\n        Layout storage s,\\n        bytes4 interfaceId,\\n        bool supported\\n    ) internal {\\n        require(interfaceId != ILLEGAL_INTERFACE_ID, \\\"InterfaceDetection: wrong value\\\");\\n        s.supportedInterfaces[interfaceId] = supported;\\n    }\\n\\n    /// @notice Returns whether this contract implements a given interface.\\n    /// @dev Note: This function call must use less than 30 000 gas.\\n    /// @param interfaceId The interface identifier to test.\\n    /// @return supported True if the interface is supported, false if `interfaceId` is `0xffffffff` or if the interface is not supported.\\n    function supportsInterface(Layout storage s, bytes4 interfaceId) internal view returns (bool supported) {\\n        if (interfaceId == ILLEGAL_INTERFACE_ID) {\\n            return false;\\n        }\\n        if (interfaceId == type(IERC165).interfaceId) {\\n            return true;\\n        }\\n        return s.supportedInterfaces[interfaceId];\\n    }\\n\\n    function layout() internal pure returns (Layout storage s) {\\n        bytes32 position = LAYOUT_STORAGE_SLOT;\\n        assembly {\\n            s.slot := position\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x4e0c63915236f0112c5753e444e4319e3c0f60aa1a7472531a13b0b77fd13ea1\",\"license\":\"MIT\"},\"contracts/proxy/libraries/ProxyInitialization.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.8;\\n\\nimport {StorageSlot} from \\\"@openzeppelin/contracts/utils/StorageSlot.sol\\\";\\n\\n/// @notice Multiple calls protection for storage-modifying proxy initialization functions.\\nlibrary ProxyInitialization {\\n    /// @notice Sets the initialization phase during a storage-modifying proxy initialization function.\\n    /// @dev Reverts if `phase` has been reached already.\\n    /// @param storageSlot the storage slot where `phase` is stored.\\n    /// @param phase the initialization phase.\\n    function setPhase(bytes32 storageSlot, uint256 phase) internal {\\n        StorageSlot.Uint256Slot storage currentVersion = StorageSlot.getUint256Slot(storageSlot);\\n        require(currentVersion.value < phase, \\\"Storage: phase reached\\\");\\n        currentVersion.value = phase;\\n    }\\n}\\n\",\"keccak256\":\"0x15087049c228af4a35975ffcb40747ebceefac58be278a7f2903a9f70c54fa63\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610236806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806301ffc9a714610030575b600080fd5b61004361003e366004610179565b610057565b604051901515815260200160405180910390f35b600061006b82610065610071565b9061009f565b92915050565b60008061006b60017fca9d3e17f264b0f3984e2634e94adb37fa3e6a8103f06aeae6fa59e21c769f5e6101c2565b60007c01000000000000000000000000000000000000000000000000000000007fffffffff000000000000000000000000000000000000000000000000000000008316016100ef5750600061006b565b7ffe003659000000000000000000000000000000000000000000000000000000007fffffffff000000000000000000000000000000000000000000000000000000008316016101405750600161006b565b507fffffffff00000000000000000000000000000000000000000000000000000000166000908152602091909152604090205460ff1690565b60006020828403121561018b57600080fd5b81357fffffffff00000000000000000000000000000000000000000000000000000000811681146101bb57600080fd5b9392505050565b6000828210156101fb577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b50039056fea2646970667358221220c32170e6ef7884d231489c0f0a09473bd2fd089a57e5ce077988ef78ad26e01d64736f6c634300080f0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806301ffc9a714610030575b600080fd5b61004361003e366004610179565b610057565b604051901515815260200160405180910390f35b600061006b82610065610071565b9061009f565b92915050565b60008061006b60017fca9d3e17f264b0f3984e2634e94adb37fa3e6a8103f06aeae6fa59e21c769f5e6101c2565b60007c01000000000000000000000000000000000000000000000000000000007fffffffff000000000000000000000000000000000000000000000000000000008316016100ef5750600061006b565b7ffe003659000000000000000000000000000000000000000000000000000000007fffffffff000000000000000000000000000000000000000000000000000000008316016101405750600161006b565b507fffffffff00000000000000000000000000000000000000000000000000000000166000908152602091909152604090205460ff1690565b60006020828403121561018b57600080fd5b81357fffffffff00000000000000000000000000000000000000000000000000000000811681146101bb57600080fd5b9392505050565b6000828210156101fb577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b50039056fea2646970667358221220c32170e6ef7884d231489c0f0a09473bd2fd089a57e5ce077988ef78ad26e01d64736f6c634300080f0033",
+  "devdoc": {
+    "details": "This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).",
+    "kind": "dev",
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "details": "Note: This function call must use less than 30 000 gas.",
+        "params": {
+          "interfaceId": "the interface identifier to test."
+        },
+        "returns": {
+          "_0": "True if the interface is supported, false if `interfaceId` is `0xffffffff` or if the interface is not supported."
+        }
+      }
+    },
+    "title": "ERC165 Interface Detection Standard (facet version).",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "notice": "Returns whether this contract implements a given interface."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

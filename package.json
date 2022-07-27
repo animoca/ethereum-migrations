@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "0.1.0-rc.2",
+  "version": "0.1.0-rc.3",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
@@ -27,8 +27,9 @@
     "clean:deployments": "rm -rf deployments/localhost* deployments/hardhat*",
     "clean:generated": "rm -rf generated/localhost* generated/hardhat*",
     "clean:hardhat": "rm -rf hardhat.config.last.json",
-    "clean": "run-s clean:cache clean:deployments clean:generated clean:hardhat",
-    "deploy": "hardhat deploy",
+    "clean:etherscan": "rm -rf etherscan_requests",
+    "clean": "run-s clean:cache clean:deployments clean:generated clean:hardhat clean:etherscan",
+    "deploy": "hardhat deploy --show-stack-traces",
     "deploy:test": "NETWORK_TAGS=test yarn deploy",
     "run-all": "run-s format fix clean deploy deploy:test",
     "prepack": "run-s clean"

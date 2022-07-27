@@ -2,9 +2,9 @@
 
 Manage node provider URLs.
 
-Allows to use different node providers for networks, configured by environment variables. Providers are defined in `config.providers`. Networks can define a `defaultProvider` which references an existing provider/network configuration. The environment variable NODE_PROVIDER can be used to override the `defaultProvider` or to apply a provider url to a network without a `defaultProvider`.
+Allows to use different node providers for networks by configuration and environment variables. Providers are defined in `config.providers`. Networks can define a `defaultProvider` which references an existing provider/network configuration. The environment variable NODE_PROVIDER can be used to override the `defaultProvider` where applicable or to apply a provider url to a network without a `defaultProvider`. If NODE_PROVIDER is set but the provider does not have an URL for a network, then the `defaultProvider` for this network is used as fallback.
 
-Some provider urls make use of a private key: it should be set by environment variable and used in the provider configuration with the notation `{{MY_KEY}}`.
+Some provider urls make use of an API key: it should be set by environment variable and used in the provider configuration with the notation `{{MY_KEY}}`.
 
 `hardhat.config` example:
 

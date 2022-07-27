@@ -9,10 +9,10 @@ module.exports = {
     },
 
     // Polygon
-    polygon: {
+    matic: {
       defaultProvider: 'alchemy',
     },
-    polygonMumbai: {
+    mumbai: {
       defaultProvider: 'infura',
     },
 
@@ -20,7 +20,7 @@ module.exports = {
     bsc: {
       defaultProvider: 'binance',
     },
-    bscTestnet: {
+    bsctest: {
       defaultProvider: 'binance',
     },
 
@@ -28,7 +28,7 @@ module.exports = {
     okex: {
       defaultProvider: 'exchain',
     },
-    okexTestnet: {
+    okextest: {
       defaultProvider: 'exchain',
     },
   },

@@ -5,6 +5,7 @@ require('hardhat-deploy-ethers');
 require('./hardhat-deploy-migrations');
 require('./hardhat-deploy-named-groups');
 require('./node-providers');
+require('./etherscan-api-keys');
 require('./network-tags');
 require('./mnemonics');
 require('@animoca/ethereum-contracts/hardhat-plugins/output-config');
