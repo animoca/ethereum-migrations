@@ -33,11 +33,11 @@ module.exports = {
     // Production
     mainnet: {
       // chainId 1
-      url: 'mainnet',
+      url: 'http://mainnet',
       live: true,
       tags: ['production', 'ethereum'],
       companionNetworks: {
-        polygon: 'polygon',
+        polygon: 'matic',
         bsc: 'bsc',
         okex: 'okex',
       },
@@ -46,13 +46,13 @@ module.exports = {
     // Staging
     goerli: {
       // chainId 5
-      url: 'goerli',
+      url: 'http://goerli',
       live: true,
       tags: ['staging', 'ethereum'],
       companionNetworks: {
-        polygon: 'polygonMumbai',
-        bsc: 'bscTestnet',
-        okex: 'okexTestnet',
+        polygon: 'mumbai',
+        bsc: 'bsctest',
+        okex: 'okextest',
       },
     },
 
@@ -64,7 +64,7 @@ module.exports = {
     matic: {
       // chainId 137
       // https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json
-      url: 'polygon',
+      url: 'http://matic',
       live: true,
       tags: ['production', 'polygon'],
       companionNetworks: {
@@ -76,7 +76,7 @@ module.exports = {
     mumbai: {
       // chainId 80001
       // https://static.matic.network/network/testnet/mumbai/index.json
-      url: 'polygonMumbai',
+      url: 'http://mumbai',
       live: true,
       tags: ['staging', 'polygon'],
       companionNetworks: {
@@ -92,7 +92,7 @@ module.exports = {
     // Production
     bsc: {
       // chainId 56
-      url: 'bsc',
+      url: 'http://bsc',
       live: true,
       tags: ['production', 'bsc'],
       companionNetworks: {
@@ -103,7 +103,7 @@ module.exports = {
     // Staging
     bsctest: {
       // chainId 97
-      url: 'bscTestnet',
+      url: 'http://bsctest',
       live: true,
       tags: ['staging', 'bsc'],
       companionNetworks: {
@@ -118,7 +118,7 @@ module.exports = {
     okex: {
       // chainId 66
       // https://okexchain-docs.readthedocs.io/en/latest/developers/quick-start-for-mainnet.html
-      url: 'okex',
+      url: 'http://okex',
       live: true,
       tags: ['production', 'okex'],
       companionNetworks: {
@@ -129,7 +129,7 @@ module.exports = {
     okextest: {
       // chainId 65
       // https://okexchain-docs.readthedocs.io/en/latest/developers/quick-start.html
-      url: 'okexTestnet',
+      url: 'http://okextest',
       live: true,
       tags: ['staging', 'okex'],
       companionNetworks: {
