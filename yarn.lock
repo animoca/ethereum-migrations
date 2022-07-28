@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@animoca/ethereum-contracts-0.1.0@npm:@animoca/ethereum-contracts@0.1.0-rc.19", "@animoca/ethereum-contracts@^0.1.0-rc.19":
-  version "0.1.0-rc.19"
-  resolved "https://registry.yarnpkg.com/@animoca/ethereum-contracts/-/ethereum-contracts-0.1.0-rc.19.tgz#20667c7243503e66178c096c013be32961a7df7c"
-  integrity sha512-3oyZrdOsQBs1W9OyO9B8OQbVZajyh4unA3Hn5WCGNmLDBqUMWMyfMshNQyl1LfNEArsV1Tng4rvDUOjjMUezrQ==
+"@animoca/ethereum-contracts-0.1.0@npm:@animoca/ethereum-contracts@0.1.0-rc.20", "@animoca/ethereum-contracts@^0.1.0-rc.20":
+  version "0.1.0-rc.20"
+  resolved "https://registry.yarnpkg.com/@animoca/ethereum-contracts/-/ethereum-contracts-0.1.0-rc.20.tgz#c2c57653f5e555de34e074c030be8591f055be6e"
+  integrity sha512-QprX5ymdL5bVCm1/al47acJvdX/VB1tG5G+wWFobNnitQSkamlC5oElrdpDRb7gJg4NLauJ9okOGahjOd05dqw==
 
 "@eslint/eslintrc@^1.3.0":
   version "1.3.0"
@@ -2241,10 +2241,10 @@ hardhat-deploy-ethers@^0.3.0-beta.13:
   resolved "https://registry.yarnpkg.com/hardhat-deploy-ethers/-/hardhat-deploy-ethers-0.3.0-beta.13.tgz#b96086ff768ddf69928984d5eb0a8d78cfca9366"
   integrity sha512-PdWVcKB9coqWV1L7JTpfXRCI91Cgwsm7KLmBcwZ8f0COSm1xtABHZTyz3fvF6p42cTnz1VM0QnfDvMFlIRkSNw==
 
-hardhat-deploy@^0.11.11:
-  version "0.11.11"
-  resolved "https://registry.yarnpkg.com/hardhat-deploy/-/hardhat-deploy-0.11.11.tgz#479040ba84d5b6d582d8fc719a3e77656ba8dc66"
-  integrity sha512-/37No1l6aFMMc4+t+a0/8gk6OwwD4tyW8bSQqV/0IZEiaHiNa7hOV4rTbC9B7277SDHVoFUrV/fwmk7IDiB8sQ==
+hardhat-deploy@^0.11.12:
+  version "0.11.12"
+  resolved "https://registry.yarnpkg.com/hardhat-deploy/-/hardhat-deploy-0.11.12.tgz#323e05ecd8e6c80a9193b9c6f6c8ecbb6abfbe47"
+  integrity sha512-Wv0BqzwW4mz78raxkfQtBbkhZwZTRWXwRbEwgkTUimD3MX/0Z9+D4O+s1zHJlG0zwZvJMbwxPOrOHQm4NZ3JAQ==
   dependencies:
     "@types/qs" "^6.9.7"
     axios "^0.21.1"
