@@ -70,26 +70,6 @@ module.exports = function (name, options = {}) {
     const deployedContract = await deploy(name, deployOptions);
 
     log(`${name}: Deployed ${deployedContract.address} (tx: ${deployedContract.transactionHash}, gasUsed: ${deployedContract.receipt.gasUsed})`);
-
-    if (hre.network.live) {
-      const secondsToSleep = 60; // arbitrary, make sure etherscan's node picked up the latest block
-      log(`${name}: Will submit source code verification request(s) in ${secondsToSleep}s`);
-      await sleep(secondsToSleep * 1000);
-      if (options.proxy) {
-        if (options.proxy.proxyContract == 'OptimizedTransparentProxy') {
-          if (deployOptions.proxy.viaAdminContract && deployOptions.proxy.viaAdminContract.name) {
-            await etherscanVerify(hre, deployOptions.proxy.viaAdminContract.name);
-          } else {
-            await etherscanVerify(hre, 'DefaultProxyAdmin');
-          }
-        }
-
-        await etherscanVerify(hre, `${name}_Implementation`);
-        await etherscanVerify(hre, `${name}_Proxy`);
-      } else {
-        await etherscanVerify(hre, name);
-      }
-    }
   });
   migration.skip = skipIfContractExists(name);
   migration.tags = [name, `${name}_deploy`];
