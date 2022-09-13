@@ -15,10 +15,9 @@
 - Added support for `ERC20` polygon predicates.
 - Added migration for `ForwarderRegistryContextFacet`.
 - Added migration and helpers for `MultiStaticCall`.
-- Added migrations for `SealedCall` and `SealedDelegateCall`.
 - Added migrations for `ERC721`-related facets.
-- Optionally use environment variable `MNEMONIC_PATH` or `MNEMO_PATH` to select a directory where to find the mnemonic file(s).
 - Added migrations for `ERC1155`-related facets.
+- Optionally use environment variable `MNEMONIC_PATH` or `MNEMO_PATH` to select a directory where to find the mnemonic file(s).
 - Added hardhat plugin `etherscan-api-keys`.
 
 ### Bugfixes
