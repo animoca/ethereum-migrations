@@ -13,6 +13,7 @@
 
 - Used deterministic deployments in migrations.
 - Added support for `ERC20` polygon predicates.
+- Added migration for Polygon Fx Portal contracts.
 - Added migration for `ForwarderRegistryContextFacet`.
 - Added migration and helpers for `MultiStaticCall`.
 - Added migrations for `ERC721`-related facets.
