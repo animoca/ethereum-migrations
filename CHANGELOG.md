@@ -4,7 +4,7 @@
 
 ### Breaking changes
 
-- Updated to dependency version `@animoca/ethereum-contracts@0.1.0`.
+- Updated to dependency version `@animoca/ethereum-contracts@0.3.0`.
 - Reorganized helpers.
 - Removed hardhat plugin `hardhat-deploy-etherenv-exports`.
 - Renamed networks.
@@ -12,7 +12,8 @@
 ### New features
 
 - Used deterministic deployments in migrations.
-- Added support for `ERC20` polygon predicates.
+- Added support for `ERC20` Polygon POS Portal predicates.
+- Added support for `ERC20` Polygon Fx Portal tunnels.
 - Added migration for Polygon Fx Portal contracts.
 - Added migration for `ForwarderRegistryContextFacet`.
 - Added migration and helpers for `MultiStaticCall`.

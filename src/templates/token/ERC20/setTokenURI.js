@@ -1,4 +1,4 @@
-const {templatedMigration, buildArg} = require('../utils');
+const {templatedMigration, buildArg} = require('../../utils');
 
 module.exports = function (name, tokenURI, options = {}) {
   const migration = templatedMigration(async (hre) => {

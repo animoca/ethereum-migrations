@@ -1,5 +1,5 @@
-const {batchDo, batchDoWhile} = require('../../../src/helpers/batch');
-const {templatedMigration, buildArg} = require('../../../src/templates/utils');
+const {batchDo, batchDoWhile} = require('../../../helpers/batch');
+const {templatedMigration, buildArg} = require('../../utils');
 
 module.exports = function (name, role, accounts, options = {}) {
   let grantedRole, grantedAccounts;
