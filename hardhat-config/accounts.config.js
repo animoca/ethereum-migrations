@@ -30,7 +30,7 @@ module.exports = {
 
     FxPortal_CheckpointManager: {
       default: '0x0000000000000000000000000000000000000000',
-      // 1: '0xfe5e5D361b2ad62c541bAb87C45a0B9B018389a2', // ethereum mainnet // TODO
+      1: '0x86E4Dc95c7FBdBf52e33D563BbDB00823894C287', // ethereum mainnet
       5: '0x2890bA17EfE978480615e330ecB65333b880928e', // goerli testnet
     },
   },

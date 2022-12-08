@@ -15,7 +15,7 @@ module.exports = function (rootTunnelName, rootTokenName, options = {}) {
     const RootToken = await get(rootTokenName);
     log(`${rootTunnelName}: mapping ERC20 token ${rootTokenName}...`);
     await execute(rootTunnelName, executeOptions, 'mapToken', RootToken.address);
-    const childToken = await read(rootTunnelName, rootToChildToken, RootToken.address);
+    const childToken = await read(rootTunnelName, 'rootToChildToken', RootToken.address);
     const FxERC20Interface = await getArtifact('IFxERC20');
     hre.companionNetworks['polygon'].deployments.save(`Polygon${rootTokenName}`, {
       abi: [...RootToken.abi, ...FxERC20Interface.abi],
@@ -27,7 +27,7 @@ module.exports = function (rootTunnelName, rootTokenName, options = {}) {
     const {read, get, log} = hre.deployments;
 
     const RootToken = await get(rootTokenName);
-    const childToken = await read(rootTunnelName, rootToChildToken, RootToken.address);
+    const childToken = await read(rootTunnelName, 'rootToChildToken', RootToken.address);
     if (childToken != constants.AddressZero) {
       log(`${rootTunnelName}: ERC20 token ${rootTokenName} is already mapped at address ${childToken}, skipping...`);
       return true;
