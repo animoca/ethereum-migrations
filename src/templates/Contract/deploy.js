@@ -2,16 +2,6 @@ const {getExtendedArtifactFromFolders} = require('hardhat-deploy/dist/src/utils'
 const {skipIfContractExists} = require('../../helpers/common');
 const {templatedMigration, buildNamedArgs, namedArgsToString} = require('../../templates/utils');
 
-const {TASK_ETHERSCAN_VERIFY} = require('hardhat-deploy');
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-async function etherscanVerify(hre, contractName) {
-  return hre.run(TASK_ETHERSCAN_VERIFY, {contractName, writePostData: true});
-}
-
 module.exports = function (name, options = {}) {
   const migration = templatedMigration(async (hre) => {
     const {deploy, log} = hre.deployments;
