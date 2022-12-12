@@ -4,7 +4,7 @@ const {multiSkip, skipIfNetworkIsTagged, skipIfChainTypeIsNot} = require('../../
 
 module.exports = function (rootTunnelName, rootTokenName, options = {}) {
   const migration = templatedMigration(async (hre) => {
-    const {getArtifact, execute, get, log} = hre.deployments;
+    const {getArtifact, execute, get, read, log} = hre.deployments;
 
     const executeOptions = {
       ...options,
