@@ -13,7 +13,7 @@ const templatedMigration = (script) => {
       if (!this._skip) {
         this._skip = skip;
       } else {
-        this._skip = multiSkip(this._skip, skip);
+        this._skip = multiSkip(skip, this._skip);
       }
     },
   });

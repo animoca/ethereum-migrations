@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "0.1.0-rc.10",
+  "version": "0.1.0-rc.15",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
@@ -51,7 +51,7 @@
     "ethers": "^5.7.2",
     "fs-extra": "^11.1.0",
     "glob": "^8.0.3",
-    "hardhat": "^2.12.3",
+    "hardhat": "^2.12.4",
     "hardhat-deploy": "^0.11.22",
     "hardhat-deploy-ethers": "^0.3.0-beta.13",
     "lodash.clonedeep": "^4.5.0",

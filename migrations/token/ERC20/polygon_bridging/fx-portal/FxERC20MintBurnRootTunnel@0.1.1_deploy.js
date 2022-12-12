@@ -13,6 +13,6 @@ module.exports = Contract_deploy('FxERC20MintBurnRootTunnel@0.1.1', {
   ],
   deterministicDeployment: true,
 });
-module.exports.skip = skipIfChainTypeIsNot('polygon');
+module.exports.skip = skipIfChainTypeIsNot('ethereum');
 module.exports.tags = ['ERC20', 'PolygonFxPortal'];
 module.exports.dependencies = ['ForwarderRegistry@0.3.1_deploy'];

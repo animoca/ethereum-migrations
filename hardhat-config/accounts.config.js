@@ -33,6 +33,10 @@ module.exports = {
       1: '0x86E4Dc95c7FBdBf52e33D563BbDB00823894C287', // ethereum mainnet
       5: '0x2890bA17EfE978480615e330ecB65333b880928e', // goerli testnet
     },
+
+    OpenSea_OperatorFilter_Subscription: {
+      default: '0x3cc6CddA760b79bAfa08dF41ECFA224f810dCeB6',
+    },
   },
   namedGroups: {},
 };
