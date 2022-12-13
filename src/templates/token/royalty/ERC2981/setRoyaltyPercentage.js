@@ -14,7 +14,7 @@ module.exports = function (name, royaltyPercentage, options = {}) {
 
     const ROYALTY_FEE_DENOMINATOR = await read(name, {}, 'ROYALTY_FEE_DENOMINATOR');
 
-    log(`${name}: setting royalty percentage to ${percentage} ...`);
+    log(`${name}: setting royalty percentage to ${percentage}% ...`);
     await execute(name, executeOptions, 'setRoyaltyPercentage', ROYALTY_FEE_DENOMINATOR.mul(percentage).div(100));
   });
 

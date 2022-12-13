@@ -2,7 +2,7 @@ const {templatedMigration, buildArg} = require('../../../utils');
 
 module.exports = function (tokenName, subscriptionAddress, options = {}) {
   const migration = templatedMigration(async (hre) => {
-    const {execute, log} = hre.deployments;
+    const {execute, get, log} = hre.deployments;
 
     const executeOptions = {
       ...options,
