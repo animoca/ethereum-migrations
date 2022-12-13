@@ -27,7 +27,7 @@ module.exports = function (name, royaltyPercentage, options = {}) {
     const royaltyInfo = await read(name, {}, 'royaltyInfo', 0, ROYALTY_FEE_DENOMINATOR);
 
     const percentage = await buildArg(hre, royaltyPercentage);
-    if (ROYALTY_FEE_DENOMINATOR.mul(percentage).div(100) == royaltyInfo.royaltyAmount) {
+    if (ROYALTY_FEE_DENOMINATOR.mul(percentage).div(100).eq(royaltyInfo.royaltyAmount)) {
       log(`${name}: royalty percentage already set to ${percentage}, skipping...`);
       return true;
     }
