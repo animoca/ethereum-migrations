@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "0.1.0-rc.22",
+  "version": "0.1.0-rc.23",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
@@ -38,7 +38,7 @@
   "devDependencies": {
     "@animoca/ethereum-contracts": "^0.3.1",
     "@animoca/ethereum-contracts-0.3.1": "npm:@animoca/ethereum-contracts@0.3.1",
-    "@animoca/ethereum-contracts-bridging-0.1.1": "npm:@animoca/ethereum-contracts-bridging@0.1.1",
+    "@animoca/ethereum-contracts-bridging-0.1.2": "npm:@animoca/ethereum-contracts-bridging@0.1.2",
     "@ethersproject/hardware-wallets": "^5.7.0",
     "@nomiclabs/hardhat-ethers": "^2.2.1",
     "@nomiclabs/hardhat-etherscan": "^3.1.3",
