@@ -22,6 +22,19 @@ function skipIfContractExists(contractName) {
   };
 }
 
+function skipIfContractHasNoBytecode(contractName) {
+  return async ({deployments, ethers}) => {
+    const {log} = deployments;
+    const contract = await deployments.get(contractName);
+    const bytecode = await hre.ethers.provider.getCode(contract.address);
+    if (bytecode == '0x') {
+      log(`${contractName}: has no bytecode, skipping...`);
+      return true;
+    }
+    return false;
+  };
+}
+
 function skipIfChainIdIs(chainIds) {
   return async ({getChainId, deployments}) => {
     const {log} = deployments;
@@ -130,6 +143,7 @@ function skipIfChainTypeIsNot(chainType) {
 module.exports = {
   multiSkip,
   skipIfContractExists,
+  skipIfContractHasNoBytecode,
   skipIfChainIdIs,
   skipIfChainIdIsNot,
   skipIfNetworkIs,

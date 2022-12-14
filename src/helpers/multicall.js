@@ -19,7 +19,7 @@ function decodeAggregateReturnData(returnData, returnTypes) {
   return returnData.map((res, i) => {
     return {
       success: res.success,
-      returnData: ethers.utils.defaultAbiCoder.decode([returnTypes[i]], res.returnData)[0],
+      returnData: res.success ? ethers.utils.defaultAbiCoder.decode([returnTypes[i]], res.returnData)[0] : null,
     };
   });
 }
