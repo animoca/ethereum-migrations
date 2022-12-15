@@ -7,7 +7,7 @@ module.exports = function (name, holders, amountOrAmounts, options = {}) {
     const {execute, log} = hre.deployments;
 
     const [tokenName, tokenSymbol, tokenDecimals] = (
-      await tryAggregate('MultiStaticCall@0.3.0', true, [
+      await tryAggregate('MultiStaticCall@0.3.1', true, [
         {contractName: name, method: 'name', returnType: 'string'},
         {contractName: name, method: 'symbol', returnType: 'string'},
         {contractName: name, method: 'decimals', returnType: 'uint8'},
@@ -50,6 +50,6 @@ module.exports = function (name, holders, amountOrAmounts, options = {}) {
   };
 
   migration.tags = [name, `${name}_initialAirdrop`];
-  migration.dependencies = ['MultiStaticCall@0.1.0', `${name}_deploy`];
+  migration.dependencies = ['MultiStaticCall@0.3.1', `${name}_deploy`];
   return migration;
 };
