@@ -1,6 +1,6 @@
 const {constants} = require('ethers');
 const {templatedMigration} = require('../../../../utils');
-const {multiSkip, skipIfNetworkIsTagged, skipIfChainTypeIsNot} = require('../../../../../helpers/common');
+const {multiSkip, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
 
 module.exports = function (rootTunnelName, rootTokenName, options = {}) {
   const migration = templatedMigration(async (hre) => {
@@ -23,7 +23,7 @@ module.exports = function (rootTunnelName, rootTokenName, options = {}) {
     });
   });
 
-  migration.skip = multiSkip(skipIfNetworkIsTagged('dev'), skipIfChainTypeIsNot('ethereum'), async (hre) => {
+  migration.skip = multiSkip(skipNetworksTagged('dev'), skipChainTypesExceptFor('ethereum'), async (hre) => {
     const {read, get, log} = hre.deployments;
 
     const RootToken = await get(rootTokenName);

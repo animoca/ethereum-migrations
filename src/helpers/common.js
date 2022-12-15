@@ -9,12 +9,12 @@ function multiSkip(...skips) {
   };
 }
 
-function skipIfContractExists(contractName) {
+function skipIfDeployed(deploymentName) {
   return async ({deployments}) => {
     const {log} = deployments;
-    const contract = await deployments.getOrNull(contractName);
-    if (contract) {
-      log(`${contractName}: already deployed at ${contract.address}, skipping...`);
+    const deployment = await deployments.getOrNull(deploymentName);
+    if (deployment) {
+      log(`${deploymentName}: already deployed at ${deployment.address}, skipping...`);
       return true;
     }
     // log(`Contract ${contractName} not found, proceeding...`);
@@ -22,48 +22,20 @@ function skipIfContractExists(contractName) {
   };
 }
 
-function skipIfContractHasNoBytecode(contractName) {
+function skipIfEmptyBytecode(deploymentName) {
   return async ({deployments, ethers}) => {
     const {log} = deployments;
-    const contract = await deployments.get(contractName);
-    const bytecode = await hre.ethers.provider.getCode(contract.address);
+    const deployment = await deployments.get(deploymentName);
+    const bytecode = await hre.ethers.provider.getCode(deployment.address);
     if (bytecode == '0x') {
-      log(`${contractName}: has no bytecode, skipping...`);
+      log(`${deploymentName}: has no bytecode, skipping...`);
       return true;
     }
     return false;
   };
 }
 
-function skipIfChainIdIs(chainIds) {
-  return async ({getChainId, deployments}) => {
-    const {log} = deployments;
-    const chainId = await getChainId();
-    const matchChainId = chainIds === chainId || chainIds.indexOf(chainId) >= 0;
-    if (matchChainId) {
-      log(`${chainId}: restricted chainId, skipping...`);
-      return true;
-    }
-    // log(`Chain id ${chainId} is not part of ${chainIds}, proceeding...`);
-    return false;
-  };
-}
-
-function skipIfChainIdIsNot(chainIds) {
-  return async ({getChainId, deployments}) => {
-    const {log} = deployments;
-    const chainId = await getChainId();
-    const matchChainId = chainIds === chainId || chainIds.indexOf(chainId) >= 0;
-    if (matchChainId) {
-      // log(`Chain id ${chainId} is part of ${chainIds}, proceeding...`);
-      return false;
-    }
-    log(`${chainId}: not part of chainIds ${chainIds}, skipping...`);
-    return true;
-  };
-}
-
-function skipIfNetworkIs(networks) {
+function skipNetworks(networks) {
   return async ({network, deployments}) => {
     const {log} = deployments;
     const matchNetwork = network.name === networks || networks.indexOf(network.name) >= 0;
@@ -76,7 +48,7 @@ function skipIfNetworkIs(networks) {
   };
 }
 
-function skipIfNetworkIsNot(networks) {
+function skipNetworksExceptFor(networks) {
   return async ({network, deployments}) => {
     const {log} = deployments;
     const matchNetwork = network.name === networks || networks.indexOf(network.name) >= 0;
@@ -89,7 +61,7 @@ function skipIfNetworkIsNot(networks) {
   };
 }
 
-function skipIfNetworkIsTagged(tag) {
+function skipNetworksTagged(tag) {
   return async ({network, deployments}) => {
     const {log} = deployments;
     if (network.tags[tag]) {
@@ -101,7 +73,7 @@ function skipIfNetworkIsTagged(tag) {
   };
 }
 
-function skipIfNetworkIsNotTagged(tag) {
+function skipNetworksNotTagged(tag) {
   return async ({network, deployments}) => {
     const {log} = deployments;
     if (network.tags[tag]) {
@@ -113,7 +85,7 @@ function skipIfNetworkIsNotTagged(tag) {
   };
 }
 
-function skipIfNetworkIsLive() {
+function skipLiveNetworks() {
   return async ({network, deployments}) => {
     const {log} = deployments;
     if (network.live) {
@@ -125,14 +97,11 @@ function skipIfNetworkIsLive() {
   };
 }
 
-function skipIfChainTypeIsNot(chainType) {
+function skipChainTypesExceptFor(chainType) {
   return async ({network, deployments}) => {
     const {log} = deployments;
-    if (network.name.startsWith('hardhat') || network.name.startsWith('localhost')) {
+    if (network.tags['dev'] || network.tags[chainType]) {
       // dev networks never skip
-      return false;
-    }
-    if (network.tags[chainType]) {
       return false;
     }
     log(`Network is not of chain type '${chainType}', skipping...`);
@@ -142,14 +111,16 @@ function skipIfChainTypeIsNot(chainType) {
 
 module.exports = {
   multiSkip,
-  skipIfContractExists,
-  skipIfContractHasNoBytecode,
-  skipIfChainIdIs,
-  skipIfChainIdIsNot,
-  skipIfNetworkIs,
-  skipIfNetworkIsNot,
-  skipIfNetworkIsTagged,
-  skipIfNetworkIsNotTagged,
-  skipIfNetworkIsLive,
-  skipIfChainTypeIsNot,
+
+  skipIfDeployed,
+  skipIfEmptyBytecode,
+
+  skipNetworks,
+  skipNetworksExceptFor,
+
+  skipNetworksTagged,
+  skipNetworksNotTagged,
+
+  skipLiveNetworks,
+  skipChainTypesExceptFor,
 };

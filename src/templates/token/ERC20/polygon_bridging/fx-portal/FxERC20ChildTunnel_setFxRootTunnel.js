@@ -1,6 +1,6 @@
 const {constants} = require('ethers');
 const {templatedMigration} = require('../../../../utils');
-const {multiSkip, skipIfNetworkIsTagged, skipIfChainTypeIsNot} = require('../../../../../helpers/common');
+const {multiSkip, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
 
 module.exports = function (childTunnelName, rootTunnelName, options = {}) {
   const migration = templatedMigration(async (hre) => {
@@ -18,7 +18,7 @@ module.exports = function (childTunnelName, rootTunnelName, options = {}) {
     await execute(childTunnelName, executeOptions, 'setFxRootTunnel', rootTunnel.address);
   });
 
-  migration.skip = multiSkip(skipIfNetworkIsTagged('dev'), skipIfChainTypeIsNot('polygon'), async (hre) => {
+  migration.skip = multiSkip(skipNetworksTagged('dev'), skipChainTypesExceptFor('polygon'), async (hre) => {
     const {read, log} = hre.deployments;
 
     const rootTunnel = await read(childTunnelName, 'fxRootTunnel');
@@ -26,6 +26,12 @@ module.exports = function (childTunnelName, rootTunnelName, options = {}) {
       log(`${childTunnelName}: fxRootTunnel is already set at address ${rootTunnel}, skipping...`);
       return true;
     }
+
+    if ((await hre.companionNetworks['ethereum'].deployments.getOrNull(rootTunnelName)) == null) {
+      log(`${childTunnelName}: ${rootTunnelName} has not been deployed yet on ethereum. Deploy it first, skipping...`);
+      return true;
+    }
+
     return false;
   });
 

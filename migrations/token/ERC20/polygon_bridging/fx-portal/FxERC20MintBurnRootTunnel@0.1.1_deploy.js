@@ -1,6 +1,6 @@
 const Contract_deploy = require('../../../../../src/templates/Contract/deploy');
 const {getNamedAccount, getContractAddress} = require('../../../../../src/helpers/templates');
-const {skipIfChainTypeIsNot} = require('../../../../../src/helpers/common');
+const {skipChainTypesExceptFor} = require('../../../../../src/helpers/common');
 
 module.exports = Contract_deploy('FxERC20MintBurnRootTunnel@0.1.2', {
   contract: 'FxERC20MintBurnRootTunnel',
@@ -13,6 +13,6 @@ module.exports = Contract_deploy('FxERC20MintBurnRootTunnel@0.1.2', {
   ],
   deterministicDeployment: true,
 });
-module.exports.skip = skipIfChainTypeIsNot('ethereum');
+module.exports.skip = skipChainTypesExceptFor('ethereum');
 module.exports.tags = ['ERC20', 'PolygonFxPortal'];
 module.exports.dependencies = ['ForwarderRegistry@0.3.1_deploy'];

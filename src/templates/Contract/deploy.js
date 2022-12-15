@@ -1,5 +1,5 @@
 const {getExtendedArtifactFromFolders} = require('hardhat-deploy/dist/src/utils');
-const {skipIfContractExists} = require('../../helpers/common');
+const {skipIfDeployed} = require('../../helpers/common');
 const {templatedMigration, buildNamedArgs, namedArgsToString} = require('../../templates/utils');
 
 module.exports = function (name, options = {}) {
@@ -61,7 +61,7 @@ module.exports = function (name, options = {}) {
 
     log(`${name}: Deployed ${deployedContract.address} (tx: ${deployedContract.transactionHash}, gasUsed: ${deployedContract.receipt.gasUsed})`);
   });
-  migration.skip = skipIfContractExists(name);
+  migration.skip = skipIfDeployed(name);
   migration.tags = [name, `${name}_deploy`];
   return migration;
 };
