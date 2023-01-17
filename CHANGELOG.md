@@ -5,6 +5,7 @@
 ### Bugfixes
 
 - Fix versions in templates.
+- Fix security vulnerability in dependency.
 
 ## 1.0.0
 
