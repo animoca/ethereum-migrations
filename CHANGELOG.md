@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+### Bugfixes
+
+- Fix versions in templates.
+
 ## 1.0.0
 
 ### Breaking changes
