@@ -1,4 +1,4 @@
-const {mergeConfigs} = require('@animoca/ethereum-contracts/src/config');
+const {mergeConfigs} = require('@animoca/ethereum-contract-helpers/src/config');
 require('dotenv').config();
 
 require('./hardhat-plugins');

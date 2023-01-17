@@ -1,7 +1,7 @@
 const yesno = require('yesno');
 const {formatUnits} = require('ethers/lib/utils');
 const {extendConfig, subtask} = require('hardhat/config');
-const {normalizePath} = require('@animoca/ethereum-contracts/hardhat-plugins/utils');
+const {normalizePath} = require('@animoca/ethereum-contract-helpers/hardhat-plugins/utils');
 
 extendConfig((config, userConfig) => {
   config.paths.generated = normalizePath(config, userConfig.paths ? userConfig.paths.generated : undefined, 'generated');

@@ -8,4 +8,4 @@ require('./node-providers');
 require('./etherscan-api-keys');
 require('./network-tags');
 require('./mnemonics');
-require('@animoca/ethereum-contracts/hardhat-plugins/output-config');
+require('@animoca/ethereum-contract-helpers/hardhat-plugins/output-config');
