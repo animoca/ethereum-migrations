@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0
+
+### Breaking changes
+
+- Update to latest contract dependencies.
+- Fix versioning rules.
+
 ## 0.1.0
 
 ### Breaking changes

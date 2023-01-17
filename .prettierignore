@@ -1,14 +1,7 @@
 node_modules/
 
-artifacts/
 cache/
 imports/
 
-coverage*
-
-flattened/
-
 deployments/
 generated/
-
-project-template
