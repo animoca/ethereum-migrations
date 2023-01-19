@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2
+
+### Bugfixes
+
+- Remove the contract name from the tags list in `access/grantRole`.
+- FxRoot and FxChild accounts default to the deployer account.
+
 ## 1.0.1
 
 ### Bugfixes

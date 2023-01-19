@@ -17,13 +17,13 @@ module.exports = {
     },
 
     FxPortal_FxRoot: {
-      default: '0x0000000000000000000000000000000000000000',
+      default: 0,
       1: '0xfe5e5D361b2ad62c541bAb87C45a0B9B018389a2', // ethereum mainnet
       5: '0x3d1d3E34f7fB6D26245E6640E1c50710eFFf15bA', // goerli testnet
     },
 
     FxPortal_FxChild: {
-      default: '0x0000000000000000000000000000000000000000',
+      default: 0,
       137: '0x8397259c983751DAf40400790063935a11afa28a', // polygon mainnet
       80001: '0xCf73231F28B7331BBe3124B907840A94851f9f11', // mumbai testnet
     },

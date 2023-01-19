@@ -54,7 +54,7 @@ module.exports = function (name, role, accounts, options = {}) {
     }
     return false;
   };
-  migration.tags = [name, `${name}_grantRole_${role}`];
+  migration.tags = [`${name}_grantRole_${role}`];
   migration.dependencies = [`${name}_deploy`];
   return migration;
 };
