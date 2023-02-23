@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3
+
+### New features
+
+- Added migration templates for diamonds.
+
 ## 1.0.2
 
 ### Bugfixes
