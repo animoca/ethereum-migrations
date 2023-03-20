@@ -33,20 +33,18 @@ module.exports = function (name, role, accounts, options = {}) {
     log(`${name}: Checking ${role} role status for ${revokedAccounts} ...`);
 
     if (Array.isArray(revokedAccounts)) {
-      const hasGrantedRole = await batchDoWhile(
+      const hasNoGrantedRole = await batchDoWhile(
         read,
         revokedAccounts.map((account) => [name, {}, 'hasRole', revokeRole, account]),
         `${name}: retrieving ${role} role status`,
-        (res) => res != false
+        (res) => res != true
       );
 
-      let remainingAccounts = revokedAccounts[hasGrantedRole.length];
-
-      if (hasGrantedRole.length === revokedAccounts.length) {
+      if (hasNoGrantedRole.length === revokedAccounts.length) {
         log(`${name}: ${role} role can be revoked from all accounts, revoking...`);
         return true;
       }
-      revokedAccounts = revokedAccounts.slice(0, revokedAccounts.indexOf(remainingAccounts));
+      revokedAccounts = revokedAccounts.slice(hasNoGrantedRole.length);
       return false;
     }
 
@@ -56,7 +54,7 @@ module.exports = function (name, role, accounts, options = {}) {
     }
     return true;
   };
-  migration.tags = [`${name}_grantRole_${role}`];
+  migration.tags = [`${name}_revokeRole_${role}`];
   migration.dependencies = [`${name}_deploy`];
   return migration;
 };
