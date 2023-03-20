@@ -33,20 +33,21 @@ module.exports = function (name, role, accounts, options = {}) {
     log(`${name}: Checking ${role} role status for ${revokedAccounts} ...`);
 
     if (Array.isArray(revokedAccounts)) {
-      const granted = await batchDoWhile(
+      const hasGrantedRole = await batchDoWhile(
         read,
         revokedAccounts.map((account) => [name, {}, 'hasRole', revokeRole, account]),
         `${name}: retrieving ${role} role status`,
         (res) => res != false
       );
 
-      if (granted.length == revokedAccounts.length) {
-        log(`${name}: ${role} role can be revoked from all accounts, revoking...`);
-        return false;
-      }
+      let remainingAccounts = revokedAccounts[hasGrantedRole.length];
 
-      revokedAccounts = revokedAccounts.slice(granted.length);
-      return true;
+      if (hasGrantedRole.length === revokedAccounts.length) {
+        log(`${name}: ${role} role can be revoked from all accounts, revoking...`);
+        return true;
+      }
+      revokedAccounts = revokedAccounts.slice(0, revokedAccounts.indexOf(remainingAccounts));
+      return false;
     }
 
     if (await read(name, {}, 'hasRole', revokeRole, revokedAccounts)) {
