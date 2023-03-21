@@ -2,7 +2,7 @@ const {batchDo, batchDoWhile} = require('../../../helpers/batch');
 const {templatedMigration, buildArg} = require('../../utils');
 
 module.exports = function (name, role, accounts, options = {}) {
-  let revokeRole, revokedAccounts;
+  let revokedRole, revokedAccounts;
 
   const migration = templatedMigration(async (hre) => {
     const {execute, log} = hre.deployments;
@@ -16,43 +16,43 @@ module.exports = function (name, role, accounts, options = {}) {
     if (Array.isArray(revokedAccounts)) {
       await batchDo(
         execute,
-        revokedAccounts.map((account) => [name, executeOptions, 'revokeRole', revokeRole, account]),
+        revokedAccounts.map((account) => [name, executeOptions, 'revokeRole', revokedRole, account]),
         `${name}: revoking ${role} role`
       );
     } else {
       log(`${name}: revoking ${role} role from ${revokedAccounts}`);
-      await execute(name, executeOptions, 'revokeRole', revokeRole, revokedAccounts);
+      await execute(name, executeOptions, 'revokeRole', revokedRole, revokedAccounts);
     }
   });
   migration.skip = async (hre) => {
     const {read, log} = hre.deployments;
 
-    revokeRole = await read(name, `${role}_ROLE`);
+    revokedRole = await read(name, `${role}_ROLE`);
     revokedAccounts = await buildArg(hre, accounts);
 
-    log(`${name}: Checking ${role} role status for ${revokedAccounts} ...`);
+    log(`${name}: checking ${role} role status for ${revokedAccounts} ...`);
 
     if (Array.isArray(revokedAccounts)) {
-      const hasNoGrantedRole = await batchDoWhile(
+      const revoked = await batchDoWhile(
         read,
-        revokedAccounts.map((account) => [name, {}, 'hasRole', revokeRole, account]),
+        revokedAccounts.map((account) => [name, {}, 'hasRole', revokedRole, account]),
         `${name}: retrieving ${role} role status`,
-        (res) => res != true
+        (res) => res == false
       );
 
-      if (hasNoGrantedRole.length === revokedAccounts.length) {
-        log(`${name}: ${role} role can be revoked from all accounts, revoking...`);
+      if (revoked.length === revokedAccounts.length) {
+        log(`${name}: ${role} role already revoked from all accounts, skipping...`);
         return true;
       }
-      revokedAccounts = revokedAccounts.slice(hasNoGrantedRole.length);
+      revokedAccounts = revokedAccounts.slice(revoked.length);
       return false;
     }
 
-    if (await read(name, {}, 'hasRole', revokeRole, revokedAccounts)) {
-      log(`${name}: ${revokedAccounts} does have ${role} role, revoking...`);
-      return false;
+    if (!(await read(name, {}, 'hasRole', revokedRole, revokedAccounts))) {
+      log(`${name}: ${revokedAccounts} does not have ${role} role, skipping...`);
+      return true;
     }
-    return true;
+    return false;
   };
   migration.tags = [`${name}_revokeRole_${role}`];
   migration.dependencies = [`${name}_deploy`];
