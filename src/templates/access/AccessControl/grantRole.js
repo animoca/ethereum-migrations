@@ -37,7 +37,7 @@ module.exports = function (name, role, accounts, options = {}) {
         read,
         grantedAccounts.map((account) => [name, {}, 'hasRole', grantedRole, account]),
         `${name}: retrieving ${role} role status`,
-        (res) => res != false
+        (res) => res == true
       );
 
       if (granted.length == grantedAccounts.length) {

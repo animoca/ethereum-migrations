@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.4
+
+### New features
+
+- Added `AccessControl.revokeRole` migration template.
+
 ## 1.0.3
 
 ### New features
