@@ -1,8 +1,6 @@
 const {ethers} = require('hardhat');
 const {buildNamedArgs, namedArgsToString} = require('./utils');
 
-const isEqual = require('lodash.isequal');
-
 const FacetCutAction = {
   Add: 0,
   Replace: 1,
@@ -19,15 +17,16 @@ async function generateCuts(hre, facetsConfig, currentABI = []) {
   for (const facetConfig of facetsConfig) {
     const facet = await hre.deployments.get(facetConfig.name);
     const facetInterface = new ethers.utils.Interface(facet.abi);
-    let functions = Object.values(facetInterface.functions);
-    // console.log(functions.map((fn) => fn.format(ethers.utils.FormatTypes.minimal)));
+
+    // TODO: not only functions
+    let functions = facet.abi.filter((el) => el.type == 'function');
 
     if (facetConfig.abiFilter !== undefined) {
       functions = functions.filter(facetConfig.abiFilter);
     }
     switch (facetConfig.action) {
       case FacetCutAction.Add:
-        abi.push(...functions.map((fragment) => JSON.parse(fragment.format(ethers.utils.FormatTypes.json))));
+        abi.push(...functions);
         break;
       case FacetCutAction.Remove:
         abi = abi.filter((el) => functions.find((fragment) => fragment.name == el.name) === undefined);
@@ -38,7 +37,7 @@ async function generateCuts(hre, facetsConfig, currentABI = []) {
     cuts.push([
       facetConfig.action == FacetCutAction.Remove ? ethers.constants.AddressZero : facet.address,
       facetConfig.action,
-      functions.map((f) => ethers.utils.Interface.getSighash(f)),
+      functions.map((f) => ethers.utils.Interface.getSighash(ethers.utils.FunctionFragment.fromObject(f))),
     ]);
 
     if (facetConfig.init !== undefined) {
