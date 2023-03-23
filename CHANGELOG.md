@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.5
+
+### Improvements
+
+- Maintain ABI structure in diamonds ABI generation.
+
 ## 1.0.4
 
 ### New features
