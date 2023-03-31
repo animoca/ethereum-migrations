@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.6
+
+### New features
+
+- Added ERC20 sealed airdrop migration template.
+
 ## 1.0.5
 
 ### Improvements
