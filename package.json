@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
@@ -36,8 +36,8 @@
     "prepack": "run-s clean"
   },
   "devDependencies": {
-    "@animoca/ethereum-contract-helpers": "^0.0.2",
-    "@animoca/ethereum-contracts": "^1.0.0",
+    "@animoca/ethereum-contract-helpers": "^0.0.4",
+    "@animoca/ethereum-contracts": "^1.1.1",
     "@animoca/ethereum-contracts-1.0": "npm:@animoca/ethereum-contracts@1.0.0",
     "@animoca/ethereum-contracts-bridging-0.3": "npm:@animoca/ethereum-contracts-bridging@0.3.0",
     "@ethersproject/hardware-wallets": "^5.7.0",
@@ -51,7 +51,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "ethers": "^5.7.2",
     "fs-extra": "^11.1.1",
-    "glob": "^9.3.2",
+    "glob": "^9.3.4",
     "hardhat": "^2.13.0",
     "hardhat-deploy": "^0.11.25",
     "hardhat-deploy-ethers": "^0.3.0-beta.13",

@@ -23,9 +23,12 @@ const merge = require('lodash.merge');
 require('@animoca/ethereum-migrations/hardhat-plugins');
 
 // deep merges your config on top of the default provided config
-module.exports = merge(require('./hardhat-config'), {
-  // my config
-});
+module.exports = merge(
+  require('@animoca/ethereum-migrations/hardhat-config'),
+  {
+    // my config
+  }
+);
 ```
 
 ### Migration templates and helpers
