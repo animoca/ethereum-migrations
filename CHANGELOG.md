@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.8
+
+### New deployments
+
+- Contracts deployed on BSC testnet.
+
 ## 1.0.7
 
 ### Bugfixes
