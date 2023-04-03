@@ -5,14 +5,14 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@animoca/ethereum-contract-helpers@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@animoca/ethereum-contract-helpers@npm:0.0.2"
-  checksum: 209dda59c9902848733d9e73ac1cf8e99c2c49d5233760297692acd736959019169a8042b948c8a23688e49abc939cc17b28d97a22d7b2cdef6554562f74c5a2
+"@animoca/ethereum-contract-helpers@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@animoca/ethereum-contract-helpers@npm:0.0.4"
+  checksum: 92e2c5dbec0129899f013d524b49488928cd14a18e78c7738d807ac5ca4f09038a9dd24b89ae949b527973f8cf86e6bf24a34b8c8954a2bb39d8b625ae98b98f
   languageName: node
   linkType: hard
 
-"@animoca/ethereum-contracts-1.0@npm:@animoca/ethereum-contracts@1.0.0, @animoca/ethereum-contracts@npm:^1.0.0":
+"@animoca/ethereum-contracts-1.0@npm:@animoca/ethereum-contracts@1.0.0":
   version: 1.0.0
   resolution: "@animoca/ethereum-contracts@npm:1.0.0"
   checksum: f7333d9c5c967bb3d861cb6a825a5ba678de1adc6777d257f944ce34b90498230ab2d2d510db3f71e4f1fefa0a1ef4629781ec1a5e61781733a394bfe5a021b0
@@ -26,12 +26,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@animoca/ethereum-contracts@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@animoca/ethereum-contracts@npm:1.1.1"
+  checksum: 17594a1781dede0cbc81f8e8262c3a0bed696f37f624e3ef7ed408f9e844f205d80232e9ec68aeedc98c68c39881e27613ee193bfc43a8d2cfeb08ca48434d8c
+  languageName: node
+  linkType: hard
+
 "@animoca/ethereum-migrations@workspace:.":
   version: 0.0.0-use.local
   resolution: "@animoca/ethereum-migrations@workspace:."
   dependencies:
-    "@animoca/ethereum-contract-helpers": ^0.0.2
-    "@animoca/ethereum-contracts": ^1.0.0
+    "@animoca/ethereum-contract-helpers": ^0.0.4
+    "@animoca/ethereum-contracts": ^1.1.1
     "@animoca/ethereum-contracts-1.0": "npm:@animoca/ethereum-contracts@1.0.0"
     "@animoca/ethereum-contracts-bridging-0.3": "npm:@animoca/ethereum-contracts-bridging@0.3.0"
     "@ethersproject/hardware-wallets": ^5.7.0
@@ -45,7 +52,7 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     ethers: ^5.7.2
     fs-extra: ^11.1.1
-    glob: ^9.3.2
+    glob: ^9.3.4
     hardhat: ^2.13.0
     hardhat-deploy: ^0.11.25
     hardhat-deploy-ethers: ^0.3.0-beta.13
@@ -3376,7 +3383,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -3523,15 +3530,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^9.3.2":
-  version: 9.3.2
-  resolution: "glob@npm:9.3.2"
+"glob@npm:^9.3.4":
+  version: 9.3.4
+  resolution: "glob@npm:9.3.4"
   dependencies:
     fs.realpath: ^1.0.0
-    minimatch: ^7.4.1
+    minimatch: ^8.0.2
     minipass: ^4.2.4
     path-scurry: ^1.6.1
-  checksum: f3d188e9f70e24fa729a63ca197bcdb36d838677abec1fb9bbfe4b7620063bf90dc0f8d195203d632abfdfa049fad0edf22f93c60076de67cef20c23bcbfaee8
+  checksum: bcf49eaf475dc4ce8d4e98f896408a9f6507a2cb7d24a207c012cb318b969e04a02bcde2ff2920eadd5055ccae444a007b769e418147a56268fab2cda8694cde
   languageName: node
   linkType: hard
 
@@ -4568,12 +4575,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^7.4.1":
-  version: 7.4.3
-  resolution: "minimatch@npm:7.4.3"
+"minimatch@npm:^8.0.2":
+  version: 8.0.2
+  resolution: "minimatch@npm:8.0.2"
   dependencies:
     brace-expansion: ^2.0.1
-  checksum: daa954231b6859e3ba0e5fbd2486986d3cae283bb69acb7ed3833c84a293f8d7edb8514360ea62c01426ba791446b2a1e1cc0d718bed15c0212cef35c59a6b95
+  checksum: ceb50867205c716a1d027e6de3bd5976a940cec266acf05ff41c29bff9967290a867b381f6317fcebddfb056f0eedff88484d121e4449c3bb16c552a51b7a745
   languageName: node
   linkType: hard
 
@@ -5510,7 +5517,7 @@ __metadata:
 
 "resolve@patch:resolve@1.17.0#~builtin<compat/resolve>":
   version: 1.17.0
-  resolution: "resolve@patch:resolve@npm%3A1.17.0#~builtin<compat/resolve>::version=1.17.0&hash=07638b"
+  resolution: "resolve@patch:resolve@npm%3A1.17.0#~builtin<compat/resolve>::version=1.17.0&hash=c3c19d"
   dependencies:
     path-parse: ^1.0.6
   checksum: 6fd799f282ddf078c4bc20ce863e3af01fa8cb218f0658d9162c57161a2dbafe092b13015b9a4c58d0e1e801cf7aa7a4f13115fea9db98c3f9a0c43e429bad6f
@@ -5519,7 +5526,7 @@ __metadata:
 
 "resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>":
   version: 1.22.0
-  resolution: "resolve@patch:resolve@npm%3A1.22.0#~builtin<compat/resolve>::version=1.22.0&hash=07638b"
+  resolution: "resolve@patch:resolve@npm%3A1.22.0#~builtin<compat/resolve>::version=1.22.0&hash=c3c19d"
   dependencies:
     is-core-module: ^2.8.1
     path-parse: ^1.0.7
