@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.9
+
+### New deployments
+
+- Contracts deployed on BSC.
+
 ## 1.0.8
 
 ### New deployments
