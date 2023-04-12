@@ -7,6 +7,9 @@ module.exports = {
     goerli: {
       defaultProvider: 'infura',
     },
+    sepolia: {
+      defaultProvider: 'infura',
+    },
 
     // Polygon
     matic: {
@@ -30,6 +33,14 @@ module.exports = {
     },
     okextest: {
       defaultProvider: 'exchain',
+    },
+
+    // Arbitrum
+    arb1: {
+      defaultProvider: 'alchemy',
+    },
+    arbgoerli: {
+      defaultProvider: 'infura',
     },
   },
 };

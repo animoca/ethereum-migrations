@@ -12,6 +12,7 @@ module.exports = {
         polygon: 'hardhat',
         bsc: 'hardhat',
         okex: 'hardhat',
+        arbitrum: 'hardhat',
       },
     },
     localhost: {
@@ -23,6 +24,7 @@ module.exports = {
         polygon: 'localhost',
         bsc: 'localhost',
         okex: 'localhost',
+        arbitrum: 'localhost',
       },
     },
 
@@ -40,6 +42,7 @@ module.exports = {
         polygon: 'matic',
         bsc: 'bsc',
         okex: 'okex',
+        arbitrum: 'arb1',
       },
     },
 
@@ -53,6 +56,21 @@ module.exports = {
         polygon: 'mumbai',
         bsc: 'bsctest',
         okex: 'okextest',
+        arbitrum: 'arbgoerli',
+      },
+    },
+
+    // Staging
+    sepolia: {
+      // chainId 11155111
+      url: 'http://sepolia',
+      live: true,
+      tags: ['staging', 'ethereum'],
+      companionNetworks: {
+        polygon: 'mumbai',
+        bsc: 'bsctest',
+        okex: 'okextest',
+        arbitrum: 'arbgoerli',
       },
     },
 
@@ -132,6 +150,32 @@ module.exports = {
       url: 'http://okextest',
       live: true,
       tags: ['staging', 'okex'],
+      companionNetworks: {
+        ethereum: 'goerli',
+      },
+    },
+
+    //----------------------------//
+    //          ARBITRUM          //
+    //----------------------------//
+
+    arb1: {
+      // chainId 42161
+      // https://developer.arbitrum.io/public-chains
+      url: 'http://arb1',
+      live: true,
+      tags: ['production', 'arbitrum'],
+      companionNetworks: {
+        ethereum: 'mainnet',
+      },
+    },
+
+    arbgoerli: {
+      // chainId 421613
+      // https://developer.arbitrum.io/public-chains
+      url: 'http://arbgoerli',
+      live: true,
+      tags: ['staging', 'arbitrum'],
       companionNetworks: {
         ethereum: 'goerli',
       },

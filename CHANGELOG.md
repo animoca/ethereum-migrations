@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.10
+
+### New features
+
+- Support for Sepolia and Arbitrum networks.
+
+### New deployments
+
+- Contracts deployed on Sepolia and Arbitrum Goerli.
+
 ## 1.0.9
 
 ### New deployments
