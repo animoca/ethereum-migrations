@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
@@ -31,7 +31,7 @@
     "clean": "run-s clean:cache clean:deployments clean:generated clean:hardhat clean:etherscan",
     "deploy": "hardhat deploy --show-stack-traces",
     "deploy:test": "NETWORK_TAGS=test yarn deploy",
-    "verify-contract": "hardhat verify --show-stack-traces --write-post-data --contract-name",
+    "verify": "hardhat etherscan-verify --show-stack-traces",
     "run-all": "run-s format fix clean deploy deploy:test",
     "prepack": "run-s clean"
   },
