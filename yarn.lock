@@ -12,10 +12,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@animoca/ethereum-contracts-1.0@npm:@animoca/ethereum-contracts@1.0.0":
-  version: 1.0.0
-  resolution: "@animoca/ethereum-contracts@npm:1.0.0"
-  checksum: f7333d9c5c967bb3d861cb6a825a5ba678de1adc6777d257f944ce34b90498230ab2d2d510db3f71e4f1fefa0a1ef4629781ec1a5e61781733a394bfe5a021b0
+"@animoca/ethereum-contracts-1.0@npm:@animoca/ethereum-contracts@1.1.1":
+  version: 1.1.1
+  resolution: "@animoca/ethereum-contracts@npm:1.1.1"
+  checksum: 17594a1781dede0cbc81f8e8262c3a0bed696f37f624e3ef7ed408f9e844f205d80232e9ec68aeedc98c68c39881e27613ee193bfc43a8d2cfeb08ca48434d8c
   languageName: node
   linkType: hard
 
@@ -46,7 +46,7 @@ __metadata:
   dependencies:
     "@animoca/ethereum-contract-helpers": ^0.0.4
     "@animoca/ethereum-contracts": ^2.0.0-rc.0
-    "@animoca/ethereum-contracts-1.0": "npm:@animoca/ethereum-contracts@1.0.0"
+    "@animoca/ethereum-contracts-1.0": "npm:@animoca/ethereum-contracts@1.1.1"
     "@animoca/ethereum-contracts-2.0": "npm:@animoca/ethereum-contracts@2.0.0-rc.0"
     "@animoca/ethereum-contracts-bridging-0.3": "npm:@animoca/ethereum-contracts-bridging@0.3.0"
     "@animoca/ethereum-contracts-bridging-1.0": "npm:@animoca/ethereum-contracts-bridging@1.0.0-rc.0"

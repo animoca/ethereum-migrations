@@ -38,7 +38,7 @@
   "devDependencies": {
     "@animoca/ethereum-contract-helpers": "^0.0.4",
     "@animoca/ethereum-contracts": "^2.0.0-rc.0",
-    "@animoca/ethereum-contracts-1.0": "npm:@animoca/ethereum-contracts@1.0.0",
+    "@animoca/ethereum-contracts-1.0": "npm:@animoca/ethereum-contracts@1.1.1",
     "@animoca/ethereum-contracts-2.0": "npm:@animoca/ethereum-contracts@2.0.0-rc.0",
     "@animoca/ethereum-contracts-bridging-0.3": "npm:@animoca/ethereum-contracts-bridging@0.3.0",
     "@animoca/ethereum-contracts-bridging-1.0": "npm:@animoca/ethereum-contracts-bridging@1.0.0-rc.0",
