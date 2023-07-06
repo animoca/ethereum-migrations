@@ -1,5 +1,23 @@
 # Changelog
 
+## 2.0.0
+
+### Breaking changes
+
+- Removed `deploy.js` and `airdrop.js` ERC20 migration templates.
+- Renamed ERC20 migration template `sealedAirdrop.js` to `ERC20MintBurn_sealedAirdrop.js`.
+- Renamed ERC20 migration template `setTokenURI.js` to `ERC20_setTokenURI.js`.
+
+### New features
+
+- Migrations for `ERC20Facet@2.0`, `ERC20FixedSupplyProxied@2.0` and `ERC20MintBurnProxied@2.0`.
+- New migration templates `ERC20FixedSupply_deploy.js` and `ERC20MintBurn_deploy.js`.
+
+### New deployments
+
+- Contracts deployed on Arbitrum.
+- `ERC20Facet@2.0`, `ERC20FixedSupplyProxied@2.0` and `ERC20MintBurnProxied@2.0` on all supported networks.
+
 ## 1.0.10
 
 ### New features

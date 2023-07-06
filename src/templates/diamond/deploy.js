@@ -1,5 +1,5 @@
 const {templatedMigration} = require('../utils');
-const {skipIfDeployed} = require('../..//helpers/common');
+const {skipIfDeployed} = require('../../helpers/common');
 const {generateCuts} = require('../diamond');
 
 module.exports = function (name, facetsConfig, options = {}) {

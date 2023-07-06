@@ -12,7 +12,6 @@ module.exports = {
     'no-unused-vars': 'off',
     'no-multi-spaces': ['error', {exceptions: {VariableDeclarator: true}}],
     'no-else-return': ['error', {allowElseIf: true}],
-    'max-params': ['error', 6],
     'no-await-in-loop': 'off',
     'max-len': ['error', {code: 150}],
   },
