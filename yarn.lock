@@ -12,17 +12,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@animoca/ethereum-contracts-1.0@npm:@animoca/ethereum-contracts@1.1.1":
-  version: 1.1.1
-  resolution: "@animoca/ethereum-contracts@npm:1.1.1"
-  checksum: 17594a1781dede0cbc81f8e8262c3a0bed696f37f624e3ef7ed408f9e844f205d80232e9ec68aeedc98c68c39881e27613ee193bfc43a8d2cfeb08ca48434d8c
+"@animoca/ethereum-contracts-1.0@npm:@animoca/ethereum-contracts@1.0.0":
+  version: 1.0.0
+  resolution: "@animoca/ethereum-contracts@npm:1.0.0"
+  checksum: f7333d9c5c967bb3d861cb6a825a5ba678de1adc6777d257f944ce34b90498230ab2d2d510db3f71e4f1fefa0a1ef4629781ec1a5e61781733a394bfe5a021b0
   languageName: node
   linkType: hard
 
-"@animoca/ethereum-contracts-2.0@npm:@animoca/ethereum-contracts@2.0.0-rc.0, @animoca/ethereum-contracts@npm:^2.0.0-rc.0":
-  version: 2.0.0-rc.0
-  resolution: "@animoca/ethereum-contracts@npm:2.0.0-rc.0"
-  checksum: c2e7506285fdb4c3e53a7fdbeef1d9993dd5b817da924bcb378c4e85b78f070d1e46a3d2592ff936cef6ce38e94e24d34b6cc5977c0471e2f99d17472f8bb943
+"@animoca/ethereum-contracts-2.0@npm:@animoca/ethereum-contracts@2.0.0, @animoca/ethereum-contracts@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@animoca/ethereum-contracts@npm:2.0.0"
+  checksum: 3ea60293161c2117c003d7ec39c891075282f81fbdfe1c3ac25d68b6892b329876b2ffbdcfd1bec50e799f439c767b64bddeb41b61952654f8b54efb50a384ba
   languageName: node
   linkType: hard
 
@@ -33,10 +33,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@animoca/ethereum-contracts-bridging-1.0@npm:@animoca/ethereum-contracts-bridging@1.0.0-rc.0":
-  version: 1.0.0-rc.0
-  resolution: "@animoca/ethereum-contracts-bridging@npm:1.0.0-rc.0"
-  checksum: e181083d8d80ce7238b071df870a0eea9ca50bdbc9c93dfac59a14cc002d71ad97ac8b860d3d560b2ba60dd681047256222e7a2dae948fbb444e5d817898f31f
+"@animoca/ethereum-contracts-bridging-1.0@npm:@animoca/ethereum-contracts-bridging@1.0.0":
+  version: 1.0.0
+  resolution: "@animoca/ethereum-contracts-bridging@npm:1.0.0"
+  checksum: cb5c7b75209190b4be97d981144b15fa01d4aa2ecaca753aff69536b99a6277630fea9e4edd6e48d1c58d0e8ca16497d359d615e5b01fd5480a7cff0413a1081
   languageName: node
   linkType: hard
 
@@ -45,11 +45,11 @@ __metadata:
   resolution: "@animoca/ethereum-migrations@workspace:."
   dependencies:
     "@animoca/ethereum-contract-helpers": ^0.0.4
-    "@animoca/ethereum-contracts": ^2.0.0-rc.0
-    "@animoca/ethereum-contracts-1.0": "npm:@animoca/ethereum-contracts@1.1.1"
-    "@animoca/ethereum-contracts-2.0": "npm:@animoca/ethereum-contracts@2.0.0-rc.0"
+    "@animoca/ethereum-contracts": ^2.0.0
+    "@animoca/ethereum-contracts-1.0": "npm:@animoca/ethereum-contracts@1.0.0"
+    "@animoca/ethereum-contracts-2.0": "npm:@animoca/ethereum-contracts@2.0.0"
     "@animoca/ethereum-contracts-bridging-0.3": "npm:@animoca/ethereum-contracts-bridging@0.3.0"
-    "@animoca/ethereum-contracts-bridging-1.0": "npm:@animoca/ethereum-contracts-bridging@1.0.0-rc.0"
+    "@animoca/ethereum-contracts-bridging-1.0": "npm:@animoca/ethereum-contracts-bridging@1.0.0"
     "@ethersproject/hardware-wallets": ^5.7.0
     "@nomiclabs/hardhat-ethers": ^2.2.3
     "@nomiclabs/hardhat-etherscan": ^3.1.7

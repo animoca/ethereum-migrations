@@ -15,6 +15,7 @@
 
 ### New deployments
 
+- Contracts deployed on Arbitrum.
 - `ERC20Facet@2.0`, `ERC20FixedSupplyProxied@2.0` and `ERC20MintBurnProxied@2.0` on all supported networks.
 
 ## 1.0.10
