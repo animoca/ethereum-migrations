@@ -23,7 +23,7 @@ function skipIfDeployed(deploymentName) {
 }
 
 function skipIfEmptyBytecode(deploymentName) {
-  return async ({deployments, ethers}) => {
+  return async ({deployments}) => {
     const {log} = deployments;
     const deployment = await deployments.get(deploymentName);
     const bytecode = await hre.ethers.provider.getCode(deployment.address);
