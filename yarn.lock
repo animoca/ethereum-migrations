@@ -22,10 +22,10 @@
   resolved "https://registry.yarnpkg.com/@animoca/ethereum-contracts/-/ethereum-contracts-2.0.0.tgz#27eec3f237c8085b23ed3f1585d25fafcd657df4"
   integrity sha512-ZmErM7cu08gNx08p0sPQKiGAtvjSghhIf730ypEACfB+/eyOS5LAkyS0vZHPjy4w8lmGI8O/ucymxQDaZj6POw==
 
-"@animoca/ethereum-contracts-3.0@npm:@animoca/ethereum-contracts@3.0.0-rc.0", "@animoca/ethereum-contracts@^3.0.0-rc.0":
-  version "3.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@animoca/ethereum-contracts/-/ethereum-contracts-3.0.0-rc.0.tgz#588b6d978dec18bb36bf0b87d1ecdab3b2095b48"
-  integrity sha512-AnEQQ9y9kI/q7U/bVRhpxm0nt63CHsODj7b3s+yDqqfD0KNN8HfTJYI/exLph7e/2iIAcikffldR4360Mkb8Sw==
+"@animoca/ethereum-contracts-3.0@npm:@animoca/ethereum-contracts@3.0.0-rc.3", "@animoca/ethereum-contracts@^3.0.0-rc.3":
+  version "3.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/@animoca/ethereum-contracts/-/ethereum-contracts-3.0.0-rc.3.tgz#ee16b4d97b3c6f0e4a1a2feb65c45ff91d0d84ef"
+  integrity sha512-6q6WHnt4+GkPUGKTOscosmjE2bK1ttLCT8FwAZP0ghxBilsbiDWOwIiPqFbmPBKhMQzP1jYHh0ihIyHe2CAUmQ==
 
 "@animoca/ethereum-contracts-bridging-0.3@npm:@animoca/ethereum-contracts-bridging@0.3.0":
   version "0.3.0"
@@ -4406,6 +4406,7 @@ workerpool@6.2.1:
   integrity sha512-ILEIE97kDZvF9Wb9f6h5aXK4swSlKGUcOEGiIYb2OOu/IrDU9iwj0fD//SsA6E5ibwJxpEvhullJY4Sl4GcpAw==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
