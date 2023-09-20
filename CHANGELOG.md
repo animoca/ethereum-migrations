@@ -12,6 +12,7 @@
 - Added ERC1155_sealedSafeMint migration template.
 - Added ContractOwnership_transferOwnership migration template.
 - Added metadata resolvers migrations and templates.
+- Added Chainlink VRF deployment files.
 
 ## 2.0.0
 

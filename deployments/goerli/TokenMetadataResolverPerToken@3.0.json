@@ -1,0 +1,297 @@
+{
+  "address": "0x8C9C12dE0BFE03085EcE30A583dEC1328046f540",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "InconsistentArrayLengths",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "targetContract",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "NotTargetContractRoleHolder",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "targetContract",
+          "type": "address"
+        }
+      ],
+      "name": "TargetIsNotAContract",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "MINTER_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "tokenURIs",
+          "type": "string[]"
+        }
+      ],
+      "name": "batchSetTokenURI",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "metadataURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "tokenURI",
+          "type": "string"
+        }
+      ],
+      "name": "setTokenURI",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenMetadataURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "tokenURI",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xdaa620c86eb79767683396e02c19fc405836a99e545c490c17e20edf1119c7f1",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0xB553C4B21966123d7f8c02Ca6909c110260052E8",
+    "contractAddress": null,
+    "transactionIndex": 92,
+    "gasUsed": "626789",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xceebc39ebcab3b1d59abcd20d0dc21d14bfa81e8da3498cc7f0c487317d5aec8",
+    "transactionHash": "0xdaa620c86eb79767683396e02c19fc405836a99e545c490c17e20edf1119c7f1",
+    "logs": [],
+    "blockNumber": 9728017,
+    "cumulativeGasUsed": "15547594",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "ce5541289a12a5ad82ba0acfc6c277fa",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"InconsistentArrayLengths\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"targetContract\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"NotTargetContractRoleHolder\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"targetContract\",\"type\":\"address\"}],\"name\":\"TargetIsNotAContract\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"MINTER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenContract\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"},{\"internalType\":\"string[]\",\"name\":\"tokenURIs\",\"type\":\"string[]\"}],\"name\":\"batchSetTokenURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"metadataURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"tokenURI\",\"type\":\"string\"}],\"name\":\"setTokenURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenMetadataURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"tokenURI\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"errors\":{\"NotTargetContractRoleHolder(address,bytes32,address)\":[{\"params\":{\"account\":\"The account that was checked.\",\"role\":\"The role that was checked.\",\"targetContract\":\"The contract that was checked.\"}}],\"TargetIsNotAContract(address)\":[{\"params\":{\"targetContract\":\"The contract that was checked\"}}]},\"kind\":\"dev\",\"methods\":{\"batchSetTokenURI(address,uint256[],string[])\":{\"details\":\"Reverts with {InconsistentArrayLengths} if the arrays are of inconsistent lengths.Reverts with {NotTargetContractRoleHolder} if the sender is not a 'minter' of the token contract.\",\"params\":{\"tokenContract\":\"The token contract on which to set the token URI.\",\"tokenIds\":\"The token identifiers.\",\"tokenURIs\":\"The token metadata URIs.\"}},\"setTokenURI(address,uint256,string)\":{\"details\":\"Reverts with {NotTargetContractRoleHolder} if the sender is not a 'minter' of the token contract.\",\"params\":{\"tokenContract\":\"The token contract on which to set the token URI.\",\"tokenId\":\"The token identifier.\",\"tokenURI\":\"The token metadata URI.\"}},\"tokenMetadataURI(address,uint256)\":{\"params\":{\"tokenContract\":\"The token contract for which to retrieve the token URI.\",\"tokenId\":\"The token identifier.\"},\"returns\":{\"tokenURI\":\"The token metadata URI.\"}}},\"title\":\"TokenMetadataResolverPerToken.\",\"version\":1},\"userdoc\":{\"errors\":{\"InconsistentArrayLengths()\":[{\"notice\":\"Thrown when the multiple related arrays have different lengths.\"}],\"NotTargetContractRoleHolder(address,bytes32,address)\":[{\"notice\":\"Thrown when an account does not have the required role on a target contract.\"}],\"TargetIsNotAContract(address)\":[{\"notice\":\"Thrown when the target contract is actually not a contract.\"}]},\"kind\":\"user\",\"methods\":{\"batchSetTokenURI(address,uint256[],string[])\":{\"notice\":\"Sets the metadata URIs for a batch of tokens on a contract.\"},\"setTokenURI(address,uint256,string)\":{\"notice\":\"Sets the metadata URI for a token on a contract.\"},\"tokenMetadataURI(address,uint256)\":{\"notice\":\"Gets the token metadata URI for a token.\"}},\"notice\":\"Token Metadata Resolver which stores the metadata URI for each token.Only minters of the target token contract can set the token metadata URI for this target contract.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/token/metadata/TokenMetadataResolverPerToken.sol\":\"TokenMetadataResolverPerToken\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":99999},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Address.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.9.0) (utils/Address.sol)\\n\\npragma solidity ^0.8.1;\\n\\n/**\\n * @dev Collection of functions related to the address type\\n */\\nlibrary Address {\\n    /**\\n     * @dev Returns true if `account` is a contract.\\n     *\\n     * [IMPORTANT]\\n     * ====\\n     * It is unsafe to assume that an address for which this function returns\\n     * false is an externally-owned account (EOA) and not a contract.\\n     *\\n     * Among others, `isContract` will return false for the following\\n     * types of addresses:\\n     *\\n     *  - an externally-owned account\\n     *  - a contract in construction\\n     *  - an address where a contract will be created\\n     *  - an address where a contract lived, but was destroyed\\n     *\\n     * Furthermore, `isContract` will also return true if the target contract within\\n     * the same transaction is already scheduled for destruction by `SELFDESTRUCT`,\\n     * which only has an effect at the end of a transaction.\\n     * ====\\n     *\\n     * [IMPORTANT]\\n     * ====\\n     * You shouldn't rely on `isContract` to protect against flash loan attacks!\\n     *\\n     * Preventing calls from contracts is highly discouraged. It breaks composability, breaks support for smart wallets\\n     * like Gnosis Safe, and does not provide security since it can be circumvented by calling from a contract\\n     * constructor.\\n     * ====\\n     */\\n    function isContract(address account) internal view returns (bool) {\\n        // This method relies on extcodesize/address.code.length, which returns 0\\n        // for contracts in construction, since the code is only stored at the end\\n        // of the constructor execution.\\n\\n        return account.code.length > 0;\\n    }\\n\\n    /**\\n     * @dev Replacement for Solidity's `transfer`: sends `amount` wei to\\n     * `recipient`, forwarding all available gas and reverting on errors.\\n     *\\n     * https://eips.ethereum.org/EIPS/eip-1884[EIP1884] increases the gas cost\\n     * of certain opcodes, possibly making contracts go over the 2300 gas limit\\n     * imposed by `transfer`, making them unable to receive funds via\\n     * `transfer`. {sendValue} removes this limitation.\\n     *\\n     * https://consensys.net/diligence/blog/2019/09/stop-using-soliditys-transfer-now/[Learn more].\\n     *\\n     * IMPORTANT: because control is transferred to `recipient`, care must be\\n     * taken to not create reentrancy vulnerabilities. Consider using\\n     * {ReentrancyGuard} or the\\n     * https://solidity.readthedocs.io/en/v0.8.0/security-considerations.html#use-the-checks-effects-interactions-pattern[checks-effects-interactions pattern].\\n     */\\n    function sendValue(address payable recipient, uint256 amount) internal {\\n        require(address(this).balance >= amount, \\\"Address: insufficient balance\\\");\\n\\n        (bool success, ) = recipient.call{value: amount}(\\\"\\\");\\n        require(success, \\\"Address: unable to send value, recipient may have reverted\\\");\\n    }\\n\\n    /**\\n     * @dev Performs a Solidity function call using a low level `call`. A\\n     * plain `call` is an unsafe replacement for a function call: use this\\n     * function instead.\\n     *\\n     * If `target` reverts with a revert reason, it is bubbled up by this\\n     * function (like regular Solidity function calls).\\n     *\\n     * Returns the raw returned data. To convert to the expected return value,\\n     * use https://solidity.readthedocs.io/en/latest/units-and-global-variables.html?highlight=abi.decode#abi-encoding-and-decoding-functions[`abi.decode`].\\n     *\\n     * Requirements:\\n     *\\n     * - `target` must be a contract.\\n     * - calling `target` with `data` must not revert.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCall(address target, bytes memory data) internal returns (bytes memory) {\\n        return functionCallWithValue(target, data, 0, \\\"Address: low-level call failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`], but with\\n     * `errorMessage` as a fallback revert reason when `target` reverts.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCall(\\n        address target,\\n        bytes memory data,\\n        string memory errorMessage\\n    ) internal returns (bytes memory) {\\n        return functionCallWithValue(target, data, 0, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but also transferring `value` wei to `target`.\\n     *\\n     * Requirements:\\n     *\\n     * - the calling contract must have an ETH balance of at least `value`.\\n     * - the called Solidity function must be `payable`.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCallWithValue(address target, bytes memory data, uint256 value) internal returns (bytes memory) {\\n        return functionCallWithValue(target, data, value, \\\"Address: low-level call with value failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCallWithValue-address-bytes-uint256-}[`functionCallWithValue`], but\\n     * with `errorMessage` as a fallback revert reason when `target` reverts.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCallWithValue(\\n        address target,\\n        bytes memory data,\\n        uint256 value,\\n        string memory errorMessage\\n    ) internal returns (bytes memory) {\\n        require(address(this).balance >= value, \\\"Address: insufficient balance for call\\\");\\n        (bool success, bytes memory returndata) = target.call{value: value}(data);\\n        return verifyCallResultFromTarget(target, success, returndata, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but performing a static call.\\n     *\\n     * _Available since v3.3._\\n     */\\n    function functionStaticCall(address target, bytes memory data) internal view returns (bytes memory) {\\n        return functionStaticCall(target, data, \\\"Address: low-level static call failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-string-}[`functionCall`],\\n     * but performing a static call.\\n     *\\n     * _Available since v3.3._\\n     */\\n    function functionStaticCall(\\n        address target,\\n        bytes memory data,\\n        string memory errorMessage\\n    ) internal view returns (bytes memory) {\\n        (bool success, bytes memory returndata) = target.staticcall(data);\\n        return verifyCallResultFromTarget(target, success, returndata, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but performing a delegate call.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function functionDelegateCall(address target, bytes memory data) internal returns (bytes memory) {\\n        return functionDelegateCall(target, data, \\\"Address: low-level delegate call failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-string-}[`functionCall`],\\n     * but performing a delegate call.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function functionDelegateCall(\\n        address target,\\n        bytes memory data,\\n        string memory errorMessage\\n    ) internal returns (bytes memory) {\\n        (bool success, bytes memory returndata) = target.delegatecall(data);\\n        return verifyCallResultFromTarget(target, success, returndata, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Tool to verify that a low level call to smart-contract was successful, and revert (either by bubbling\\n     * the revert reason or using the provided one) in case of unsuccessful call or if target was not a contract.\\n     *\\n     * _Available since v4.8._\\n     */\\n    function verifyCallResultFromTarget(\\n        address target,\\n        bool success,\\n        bytes memory returndata,\\n        string memory errorMessage\\n    ) internal view returns (bytes memory) {\\n        if (success) {\\n            if (returndata.length == 0) {\\n                // only check isContract if the call was successful and the return data is empty\\n                // otherwise we already know that it was a contract\\n                require(isContract(target), \\\"Address: call to non-contract\\\");\\n            }\\n            return returndata;\\n        } else {\\n            _revert(returndata, errorMessage);\\n        }\\n    }\\n\\n    /**\\n     * @dev Tool to verify that a low level call was successful, and revert if it wasn't, either by bubbling the\\n     * revert reason or using the provided one.\\n     *\\n     * _Available since v4.3._\\n     */\\n    function verifyCallResult(\\n        bool success,\\n        bytes memory returndata,\\n        string memory errorMessage\\n    ) internal pure returns (bytes memory) {\\n        if (success) {\\n            return returndata;\\n        } else {\\n            _revert(returndata, errorMessage);\\n        }\\n    }\\n\\n    function _revert(bytes memory returndata, string memory errorMessage) private pure {\\n        // Look for revert reason and bubble it up if present\\n        if (returndata.length > 0) {\\n            // The easiest way to bubble the revert reason is using memory via assembly\\n            /// @solidity memory-safe-assembly\\n            assembly {\\n                let returndata_size := mload(returndata)\\n                revert(add(32, returndata), returndata_size)\\n            }\\n        } else {\\n            revert(errorMessage);\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x006dd67219697fe68d7fbfdea512e7c4cb64a43565ed86171d67e844982da6fa\",\"license\":\"MIT\"},\"contracts/CommonErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.21;\\n\\n/// @notice Thrown when trying to transfer tokens without calldata to the contract.\\nerror EtherReceptionDisabled();\\n\\n/// @notice Thrown when the multiple related arrays have different lengths.\\nerror InconsistentArrayLengths();\\n\",\"keccak256\":\"0xe863ee99597e327b029ac2217bf983d2d11765127853c0679ae42225ce1067e8\",\"license\":\"MIT\"},\"contracts/access/errors/AccessControlErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.21;\\n\\n/// @notice Thrown when an account does not have the required role.\\n/// @param role The role the caller is missing.\\n/// @param account The account that was checked.\\nerror NotRoleHolder(bytes32 role, address account);\\n\\n/// @notice Thrown when an account does not have the required role on a target contract.\\n/// @param targetContract The contract that was checked.\\n/// @param role The role that was checked.\\n/// @param account The account that was checked.\\nerror NotTargetContractRoleHolder(address targetContract, bytes32 role, address account);\\n\",\"keccak256\":\"0x01f13fa7f5c5473314dabbd6b556d8e2036dc6e850e03ead0ea605ed4c4e16eb\",\"license\":\"MIT\"},\"contracts/access/errors/Common.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.21;\\n\\n/// @notice Thrown when the target contract is actually not a contract.\\n/// @param targetContract The contract that was checked\\nerror TargetIsNotAContract(address targetContract);\\n\",\"keccak256\":\"0xfb45a36f64044b641cc76eb19b394cfb4d936104651e55fee6e4d28b7cde1222\",\"license\":\"MIT\"},\"contracts/access/events/IAccessControlEvents.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.21;\\n\\n/// @title Access control via roles management (events)\\ninterface IAccessControlEvents {\\n    /// @notice Emitted when `role` is granted to `account`.\\n    /// @param role The role that has been granted.\\n    /// @param account The account that has been granted the role.\\n    /// @param operator The account that granted the role.\\n    event RoleGranted(bytes32 role, address account, address operator);\\n\\n    /// @notice Emitted when `role` is revoked from `account`.\\n    /// @param role The role that has been revoked.\\n    /// @param account The account that has been revoked the role.\\n    /// @param operator The account that revoked the role.\\n    event RoleRevoked(bytes32 role, address account, address operator);\\n}\\n\",\"keccak256\":\"0xc33eb3e7869dc886ff1bd5526494a67e2bea02185d8b54cacb2ad2d166faddcd\",\"license\":\"MIT\"},\"contracts/access/interfaces/IAccessControl.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.21;\\n\\nimport {IAccessControlEvents} from \\\"./../events/IAccessControlEvents.sol\\\";\\n\\n/// @title Access control via roles management (functions)\\ninterface IAccessControl is IAccessControlEvents {\\n    /// @notice Renounces a role by the sender.\\n    /// @dev Reverts if `sender` does not have `role`.\\n    /// @dev Emits a {RoleRevoked} event.\\n    /// @param role The role to renounce.\\n    function renounceRole(bytes32 role) external;\\n\\n    /// @notice Retrieves whether an account has a role.\\n    /// @param role The role.\\n    /// @param account The account.\\n    /// @return hasRole_ Whether `account` has `role`.\\n    function hasRole(bytes32 role, address account) external view returns (bool hasRole_);\\n}\\n\",\"keccak256\":\"0xf5548f89b99d4f4bdfe6ee694db7fb002457fe1a50ce381a5cb6b84019e032af\",\"license\":\"MIT\"},\"contracts/access/libraries/AccessControlStorage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.21;\\n\\nimport {NotRoleHolder, NotTargetContractRoleHolder} from \\\"./../errors/AccessControlErrors.sol\\\";\\nimport {TargetIsNotAContract} from \\\"./../errors/Common.sol\\\";\\nimport {IAccessControlEvents} from \\\"./../events/IAccessControlEvents.sol\\\";\\nimport {IAccessControl} from \\\"./../interfaces/IAccessControl.sol\\\";\\nimport {Address} from \\\"@openzeppelin/contracts/utils/Address.sol\\\";\\n\\nlibrary AccessControlStorage {\\n    using Address for address;\\n    using AccessControlStorage for AccessControlStorage.Layout;\\n\\n    struct Layout {\\n        mapping(bytes32 => mapping(address => bool)) roles;\\n    }\\n\\n    bytes32 internal constant LAYOUT_STORAGE_SLOT = bytes32(uint256(keccak256(\\\"animoca.core.access.AccessControl.storage\\\")) - 1);\\n\\n    /// @notice Grants a role to an account.\\n    /// @dev Note: Call to this function should be properly access controlled.\\n    /// @dev Emits a {RoleGranted} event if the account did not previously have the role.\\n    /// @param role The role to grant.\\n    /// @param account The account to grant the role to.\\n    /// @param operator The account requesting the role change.\\n    function grantRole(Layout storage s, bytes32 role, address account, address operator) internal {\\n        if (!s.hasRole(role, account)) {\\n            s.roles[role][account] = true;\\n            emit IAccessControlEvents.RoleGranted(role, account, operator);\\n        }\\n    }\\n\\n    /// @notice Revokes a role from an account.\\n    /// @dev Note: Call to this function should be properly access controlled.\\n    /// @dev Emits a {RoleRevoked} event if the account previously had the role.\\n    /// @param role The role to revoke.\\n    /// @param account The account to revoke the role from.\\n    /// @param operator The account requesting the role change.\\n    function revokeRole(Layout storage s, bytes32 role, address account, address operator) internal {\\n        if (s.hasRole(role, account)) {\\n            s.roles[role][account] = false;\\n            emit IAccessControlEvents.RoleRevoked(role, account, operator);\\n        }\\n    }\\n\\n    /// @notice Renounces a role by the sender.\\n    /// @dev Reverts with {NotRoleHolder} if `sender` does not have `role`.\\n    /// @dev Emits a {RoleRevoked} event.\\n    /// @param sender The message sender.\\n    /// @param role The role to renounce.\\n    function renounceRole(Layout storage s, address sender, bytes32 role) internal {\\n        s.enforceHasRole(role, sender);\\n        s.roles[role][sender] = false;\\n        emit IAccessControlEvents.RoleRevoked(role, sender, sender);\\n    }\\n\\n    /// @notice Retrieves whether an account has a role.\\n    /// @param role The role.\\n    /// @param account The account.\\n    /// @return hasRole_ Whether `account` has `role`.\\n    function hasRole(Layout storage s, bytes32 role, address account) internal view returns (bool hasRole_) {\\n        return s.roles[role][account];\\n    }\\n\\n    /// @notice Checks whether an account has a role in a target contract.\\n    /// @param targetContract The contract to check.\\n    /// @param role The role to check.\\n    /// @param account The account to check.\\n    /// @return hasTargetContractRole_ Whether `account` has `role` in `targetContract`.\\n    function hasTargetContractRole(address targetContract, bytes32 role, address account) internal view returns (bool hasTargetContractRole_) {\\n        if (!targetContract.isContract()) revert TargetIsNotAContract(targetContract);\\n        return IAccessControl(targetContract).hasRole(role, account);\\n    }\\n\\n    /// @notice Ensures that an account has a role.\\n    /// @dev Reverts with {NotRoleHolder} if `account` does not have `role`.\\n    /// @param role The role.\\n    /// @param account The account.\\n    function enforceHasRole(Layout storage s, bytes32 role, address account) internal view {\\n        if (!s.hasRole(role, account)) revert NotRoleHolder(role, account);\\n    }\\n\\n    /// @notice Enforces that an account has a role in a target contract.\\n    /// @dev Reverts with {NotTargetContractRoleHolder} if the account does not have the role.\\n    /// @param targetContract The contract to check.\\n    /// @param role The role to check.\\n    /// @param account The account to check.\\n    function enforceHasTargetContractRole(address targetContract, bytes32 role, address account) internal view {\\n        if (!hasTargetContractRole(targetContract, role, account)) revert NotTargetContractRoleHolder(targetContract, role, account);\\n    }\\n\\n    function layout() internal pure returns (Layout storage s) {\\n        bytes32 position = LAYOUT_STORAGE_SLOT;\\n        assembly {\\n            s.slot := position\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x1ae6db61ce87a6f7bd1ba3467520f4171f950719a0fa3439c073254e7c385d8d\",\"license\":\"MIT\"},\"contracts/token/metadata/TokenMetadataResolverPerToken.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.21;\\n\\nimport {InconsistentArrayLengths} from \\\"./../../CommonErrors.sol\\\";\\nimport {ITokenMetadataResolver} from \\\"./interfaces/ITokenMetadataResolver.sol\\\";\\nimport {AccessControlStorage} from \\\"./../../access/libraries/AccessControlStorage.sol\\\";\\n\\n/// @title TokenMetadataResolverPerToken.\\n/// @notice Token Metadata Resolver which stores the metadata URI for each token.\\n/// @notice Only minters of the target token contract can set the token metadata URI for this target contract.\\ncontract TokenMetadataResolverPerToken is ITokenMetadataResolver {\\n    using AccessControlStorage for address;\\n\\n    bytes32 public constant MINTER_ROLE = \\\"minter\\\";\\n\\n    mapping(address => mapping(uint256 => string)) public metadataURI;\\n\\n    /// @notice Sets the metadata URI for a token on a contract.\\n    /// @dev Reverts with {NotTargetContractRoleHolder} if the sender is not a 'minter' of the token contract.\\n    /// @param tokenContract The token contract on which to set the token URI.\\n    /// @param tokenId The token identifier.\\n    /// @param tokenURI The token metadata URI.\\n    function setTokenURI(address tokenContract, uint256 tokenId, string calldata tokenURI) external {\\n        tokenContract.enforceHasTargetContractRole(MINTER_ROLE, msg.sender);\\n        metadataURI[tokenContract][tokenId] = tokenURI;\\n    }\\n\\n    /// @notice Sets the metadata URIs for a batch of tokens on a contract.\\n    /// @dev Reverts with {InconsistentArrayLengths} if the arrays are of inconsistent lengths.\\n    /// @dev Reverts with {NotTargetContractRoleHolder} if the sender is not a 'minter' of the token contract.\\n    /// @param tokenContract The token contract on which to set the token URI.\\n    /// @param tokenIds The token identifiers.\\n    /// @param tokenURIs The token metadata URIs.\\n    function batchSetTokenURI(address tokenContract, uint256[] calldata tokenIds, string[] calldata tokenURIs) external {\\n        uint256 length = tokenIds.length;\\n        if (length != tokenURIs.length) {\\n            revert InconsistentArrayLengths();\\n        }\\n        tokenContract.enforceHasTargetContractRole(MINTER_ROLE, msg.sender);\\n\\n        unchecked {\\n            for (uint256 i; i != length; ++i) {\\n                metadataURI[tokenContract][tokenIds[i]] = tokenURIs[i];\\n            }\\n        }\\n    }\\n\\n    /// @notice Gets the token metadata URI for a token.\\n    /// @param tokenContract The token contract for which to retrieve the token URI.\\n    /// @param tokenId The token identifier.\\n    /// @return tokenURI The token metadata URI.\\n    function tokenMetadataURI(address tokenContract, uint256 tokenId) external view virtual override returns (string memory tokenURI) {\\n        return metadataURI[tokenContract][tokenId];\\n    }\\n}\\n\",\"keccak256\":\"0xdd2cf31ec1e5858724a7a67d3848d0a433fed472e26ee12fe9c8dc56960e2342\",\"license\":\"MIT\"},\"contracts/token/metadata/interfaces/ITokenMetadataResolver.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.21;\\n\\n/// @title ITokenMetadataResolver\\n/// @notice Interface for Token Metadata Resolvers.\\ninterface ITokenMetadataResolver {\\n    /// @notice Gets the token metadata URI for a token.\\n    /// @param tokenContract The token contract for which to retrieve the token URI.\\n    /// @param tokenId The token identifier.\\n    /// @return tokenURI The token metadata URI.\\n    function tokenMetadataURI(address tokenContract, uint256 tokenId) external view returns (string memory tokenURI);\\n}\\n\",\"keccak256\":\"0x4f099041c13749a385a989d3c0228166c3d062f1effe9e6d4faf0395aefb2520\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610a69806100206000396000f3fe608060405234801561001057600080fd5b50600436106100675760003560e01c8063626dc9a811610050578063626dc9a8146100aa578063d5391393146100bd578063f724dad7146100f257600080fd5b8063361953a31461006c5780634e5786bf14610095575b600080fd5b61007f61007a3660046105a2565b610105565b60405161008c91906105cc565b60405180910390f35b6100a86100a3366004610638565b6101a7565b005b6100a86100b836600461070b565b610228565b6100e47f6d696e746572000000000000000000000000000000000000000000000000000081565b60405190815260200161008c565b61007f6101003660046105a2565b61033d565b6000602081815292815260408082209093529081522080546101269061078c565b80601f01602080910402602001604051908101604052809291908181526020018280546101529061078c565b801561019f5780601f106101745761010080835404028352916020019161019f565b820191906000526020600020905b81548152906001019060200180831161018257829003601f168201915b505050505081565b6101e873ffffffffffffffffffffffffffffffffffffffff85167f6d696e746572000000000000000000000000000000000000000000000000000033610400565b73ffffffffffffffffffffffffffffffffffffffff8416600090815260208181526040808320868452909152902061022182848361085c565b5050505050565b82818114610262576040517f6582533600000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6102a373ffffffffffffffffffffffffffffffffffffffff87167f6d696e746572000000000000000000000000000000000000000000000000000033610400565b60005b818114610334578383828181106102bf576102bf610976565b90506020028101906102d191906109a5565b73ffffffffffffffffffffffffffffffffffffffff891660009081526020819052604081209089898681811061030957610309610976565b905060200201358152602001908152602001600020918261032b92919061085c565b506001016102a6565b50505050505050565b73ffffffffffffffffffffffffffffffffffffffff8216600090815260208181526040808320848452909152902080546060919061037a9061078c565b80601f01602080910402602001604051908101604052809291908181526020018280546103a69061078c565b80156103f35780601f106103c8576101008083540402835291602001916103f3565b820191906000526020600020905b8154815290600101906020018083116103d657829003601f168201915b5050505050905092915050565b61040b838383610472565b61046d576040517f7a436c1600000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff808516600483015260248201849052821660448201526064015b60405180910390fd5b505050565b600073ffffffffffffffffffffffffffffffffffffffff84163b6104da576040517f73a5b5e300000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff85166004820152602401610464565b6040517f91d148540000000000000000000000000000000000000000000000000000000081526004810184905273ffffffffffffffffffffffffffffffffffffffff83811660248301528516906391d1485490604401602060405180830381865afa15801561054d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105719190610a0a565b949350505050565b803573ffffffffffffffffffffffffffffffffffffffff8116811461059d57600080fd5b919050565b600080604083850312156105b557600080fd5b6105be83610579565b946020939093013593505050565b600060208083528351808285015260005b818110156105f9578581018301518582016040015282016105dd565b5060006040828601015260407fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f8301168501019250505092915050565b6000806000806060858703121561064e57600080fd5b61065785610579565b935060208501359250604085013567ffffffffffffffff8082111561067b57600080fd5b818701915087601f83011261068f57600080fd5b81358181111561069e57600080fd5b8860208285010111156106b057600080fd5b95989497505060200194505050565b60008083601f8401126106d157600080fd5b50813567ffffffffffffffff8111156106e957600080fd5b6020830191508360208260051b850101111561070457600080fd5b9250929050565b60008060008060006060868803121561072357600080fd5b61072c86610579565b9450602086013567ffffffffffffffff8082111561074957600080fd5b61075589838a016106bf565b9096509450604088013591508082111561076e57600080fd5b5061077b888289016106bf565b969995985093965092949392505050565b600181811c908216806107a057607f821691505b6020821081036107d9577f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b50919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b601f82111561046d57600081815260208120601f850160051c810160208610156108355750805b601f850160051c820191505b8181101561085457828155600101610841565b505050505050565b67ffffffffffffffff831115610874576108746107df565b61088883610882835461078c565b8361080e565b6000601f8411600181146108da57600085156108a45750838201355b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff600387901b1c1916600186901b178355610221565b6000838152602090207fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0861690835b828110156109295786850135825560209485019460019092019101610909565b5086821015610964577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff60f88860031b161c19848701351681555b505060018560011b0183555050505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60008083357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe18436030181126109da57600080fd5b83018035915067ffffffffffffffff8211156109f557600080fd5b60200191503681900382131561070457600080fd5b600060208284031215610a1c57600080fd5b81518015158114610a2c57600080fd5b939250505056fea2646970667358221220acfb89154e9d12acb88193bf021f063e6e7a7734f539cf4cfe38f88142e135ad64736f6c63430008150033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100675760003560e01c8063626dc9a811610050578063626dc9a8146100aa578063d5391393146100bd578063f724dad7146100f257600080fd5b8063361953a31461006c5780634e5786bf14610095575b600080fd5b61007f61007a3660046105a2565b610105565b60405161008c91906105cc565b60405180910390f35b6100a86100a3366004610638565b6101a7565b005b6100a86100b836600461070b565b610228565b6100e47f6d696e746572000000000000000000000000000000000000000000000000000081565b60405190815260200161008c565b61007f6101003660046105a2565b61033d565b6000602081815292815260408082209093529081522080546101269061078c565b80601f01602080910402602001604051908101604052809291908181526020018280546101529061078c565b801561019f5780601f106101745761010080835404028352916020019161019f565b820191906000526020600020905b81548152906001019060200180831161018257829003601f168201915b505050505081565b6101e873ffffffffffffffffffffffffffffffffffffffff85167f6d696e746572000000000000000000000000000000000000000000000000000033610400565b73ffffffffffffffffffffffffffffffffffffffff8416600090815260208181526040808320868452909152902061022182848361085c565b5050505050565b82818114610262576040517f6582533600000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6102a373ffffffffffffffffffffffffffffffffffffffff87167f6d696e746572000000000000000000000000000000000000000000000000000033610400565b60005b818114610334578383828181106102bf576102bf610976565b90506020028101906102d191906109a5565b73ffffffffffffffffffffffffffffffffffffffff891660009081526020819052604081209089898681811061030957610309610976565b905060200201358152602001908152602001600020918261032b92919061085c565b506001016102a6565b50505050505050565b73ffffffffffffffffffffffffffffffffffffffff8216600090815260208181526040808320848452909152902080546060919061037a9061078c565b80601f01602080910402602001604051908101604052809291908181526020018280546103a69061078c565b80156103f35780601f106103c8576101008083540402835291602001916103f3565b820191906000526020600020905b8154815290600101906020018083116103d657829003601f168201915b5050505050905092915050565b61040b838383610472565b61046d576040517f7a436c1600000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff808516600483015260248201849052821660448201526064015b60405180910390fd5b505050565b600073ffffffffffffffffffffffffffffffffffffffff84163b6104da576040517f73a5b5e300000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff85166004820152602401610464565b6040517f91d148540000000000000000000000000000000000000000000000000000000081526004810184905273ffffffffffffffffffffffffffffffffffffffff83811660248301528516906391d1485490604401602060405180830381865afa15801561054d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105719190610a0a565b949350505050565b803573ffffffffffffffffffffffffffffffffffffffff8116811461059d57600080fd5b919050565b600080604083850312156105b557600080fd5b6105be83610579565b946020939093013593505050565b600060208083528351808285015260005b818110156105f9578581018301518582016040015282016105dd565b5060006040828601015260407fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f8301168501019250505092915050565b6000806000806060858703121561064e57600080fd5b61065785610579565b935060208501359250604085013567ffffffffffffffff8082111561067b57600080fd5b818701915087601f83011261068f57600080fd5b81358181111561069e57600080fd5b8860208285010111156106b057600080fd5b95989497505060200194505050565b60008083601f8401126106d157600080fd5b50813567ffffffffffffffff8111156106e957600080fd5b6020830191508360208260051b850101111561070457600080fd5b9250929050565b60008060008060006060868803121561072357600080fd5b61072c86610579565b9450602086013567ffffffffffffffff8082111561074957600080fd5b61075589838a016106bf565b9096509450604088013591508082111561076e57600080fd5b5061077b888289016106bf565b969995985093965092949392505050565b600181811c908216806107a057607f821691505b6020821081036107d9577f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b50919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b601f82111561046d57600081815260208120601f850160051c810160208610156108355750805b601f850160051c820191505b8181101561085457828155600101610841565b505050505050565b67ffffffffffffffff831115610874576108746107df565b61088883610882835461078c565b8361080e565b6000601f8411600181146108da57600085156108a45750838201355b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff600387901b1c1916600186901b178355610221565b6000838152602090207fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0861690835b828110156109295786850135825560209485019460019092019101610909565b5086821015610964577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff60f88860031b161c19848701351681555b505060018560011b0183555050505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60008083357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe18436030181126109da57600080fd5b83018035915067ffffffffffffffff8211156109f557600080fd5b60200191503681900382131561070457600080fd5b600060208284031215610a1c57600080fd5b81518015158114610a2c57600080fd5b939250505056fea2646970667358221220acfb89154e9d12acb88193bf021f063e6e7a7734f539cf4cfe38f88142e135ad64736f6c63430008150033",
+  "devdoc": {
+    "errors": {
+      "NotTargetContractRoleHolder(address,bytes32,address)": [
+        {
+          "params": {
+            "account": "The account that was checked.",
+            "role": "The role that was checked.",
+            "targetContract": "The contract that was checked."
+          }
+        }
+      ],
+      "TargetIsNotAContract(address)": [
+        {
+          "params": {
+            "targetContract": "The contract that was checked"
+          }
+        }
+      ]
+    },
+    "kind": "dev",
+    "methods": {
+      "batchSetTokenURI(address,uint256[],string[])": {
+        "details": "Reverts with {InconsistentArrayLengths} if the arrays are of inconsistent lengths.Reverts with {NotTargetContractRoleHolder} if the sender is not a 'minter' of the token contract.",
+        "params": {
+          "tokenContract": "The token contract on which to set the token URI.",
+          "tokenIds": "The token identifiers.",
+          "tokenURIs": "The token metadata URIs."
+        }
+      },
+      "setTokenURI(address,uint256,string)": {
+        "details": "Reverts with {NotTargetContractRoleHolder} if the sender is not a 'minter' of the token contract.",
+        "params": {
+          "tokenContract": "The token contract on which to set the token URI.",
+          "tokenId": "The token identifier.",
+          "tokenURI": "The token metadata URI."
+        }
+      },
+      "tokenMetadataURI(address,uint256)": {
+        "params": {
+          "tokenContract": "The token contract for which to retrieve the token URI.",
+          "tokenId": "The token identifier."
+        },
+        "returns": {
+          "tokenURI": "The token metadata URI."
+        }
+      }
+    },
+    "title": "TokenMetadataResolverPerToken.",
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "InconsistentArrayLengths()": [
+        {
+          "notice": "Thrown when the multiple related arrays have different lengths."
+        }
+      ],
+      "NotTargetContractRoleHolder(address,bytes32,address)": [
+        {
+          "notice": "Thrown when an account does not have the required role on a target contract."
+        }
+      ],
+      "TargetIsNotAContract(address)": [
+        {
+          "notice": "Thrown when the target contract is actually not a contract."
+        }
+      ]
+    },
+    "kind": "user",
+    "methods": {
+      "batchSetTokenURI(address,uint256[],string[])": {
+        "notice": "Sets the metadata URIs for a batch of tokens on a contract."
+      },
+      "setTokenURI(address,uint256,string)": {
+        "notice": "Sets the metadata URI for a token on a contract."
+      },
+      "tokenMetadataURI(address,uint256)": {
+        "notice": "Gets the token metadata URI for a token."
+      }
+    },
+    "notice": "Token Metadata Resolver which stores the metadata URI for each token.Only minters of the target token contract can set the token metadata URI for this target contract.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 27291,
+        "contract": "contracts/token/metadata/TokenMetadataResolverPerToken.sol:TokenMetadataResolverPerToken",
+        "label": "metadataURI",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_mapping(t_uint256,t_string_storage))"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_mapping(t_uint256,t_string_storage))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(uint256 => string))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_uint256,t_string_storage)"
+      },
+      "t_mapping(t_uint256,t_string_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => string)",
+        "numberOfBytes": "32",
+        "value": "t_string_storage"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
