@@ -1,3 +1,5 @@
+const {ethers} = require('hardhat');
+
 function getNamedAccount(account) {
   return async (hre) => {
     const address = (await hre.getNamedAccounts())[account];
@@ -25,8 +27,16 @@ function getContractAddress(deployment) {
   };
 }
 
+function getContractAddressOrZero(deployment) {
+  return async (hre) => {
+    const contract = await hre.deployments.getOrNull(deployment);
+    return contract ? contract.address : ethers.constants.AddressZero;
+  };
+}
+
 module.exports = {
   getNamedAccount,
   getNamedGroups,
   getContractAddress,
+  getContractAddressOrZero,
 };
