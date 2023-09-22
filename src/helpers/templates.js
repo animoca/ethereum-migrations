@@ -1,5 +1,3 @@
-const {ethers} = require('hardhat');
-
 function getNamedAccount(account) {
   return async (hre) => {
     const address = (await hre.getNamedAccounts())[account];
@@ -27,10 +25,10 @@ function getContractAddress(deployment) {
   };
 }
 
-function getContractAddressOrZero(deployment) {
+function getContractAddressOrFallback(deployment, fallback) {
   return async (hre) => {
     const contract = await hre.deployments.getOrNull(deployment);
-    return contract ? contract.address : ethers.constants.AddressZero;
+    return contract ? contract.address : fallback;
   };
 }
 
@@ -38,5 +36,5 @@ module.exports = {
   getNamedAccount,
   getNamedGroups,
   getContractAddress,
-  getContractAddressOrZero,
+  getContractAddressOrFallback,
 };

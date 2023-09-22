@@ -13,6 +13,7 @@
 - Added ContractOwnership_transferOwnership migration template.
 - Added metadata resolvers migrations and templates.
 - Added Chainlink VRF deployment files.
+- Added `getContractAddressOrFallback` helper.
 
 ## 2.0.0
 
