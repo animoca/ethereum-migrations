@@ -20,6 +20,8 @@ module.exports = function (name, resolverName, callbackGasLimit = callbackLimit,
     const callbackGas = await buildArg(hre, callbackGasLimit);
     const confirmations = await buildArg(hre, blockConfirmations);
 
+    const resolver = await get(resolverName);
+
     log(`Chainlink_LinkToken: approving MaxUint256 to ${resolverName} ...`);
     await execute('Chainlink_LinkToken', executeOptions, 'approve', resolver.address, ethers.constants.MaxUint256);
 
@@ -27,7 +29,6 @@ module.exports = function (name, resolverName, callbackGasLimit = callbackLimit,
     // const requestPrice = await read('Chainlink_VRFV2Wrapper', 'estimateRequestPrice', callbackGas, gasPrice);
 
     log(`${name}: Revealing tokens blockConfirmations=${confirmations}, callbackGasLimit=${callbackGas}...`);
-    // const resolver = await get(resolverName);
     // await execute(
     //   'Chainlink_LinkToken',
     //   executeOptions,
