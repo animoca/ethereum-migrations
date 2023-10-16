@@ -9,10 +9,10 @@ module.exports = function (name, resolverName, callbackGasLimit = callbackLimit,
 
   const migration = templatedMigration(async (hre) => {
     const {execute, get, read, log} = hre.deployments;
-    const {deployer} = await hre.getNamedAccounts();
 
     const executeOptions = {
       ...options,
+      gasLimit: 500000,
       from: (await hre.getNamedAccounts())[options.from || 'deployer'],
     };
     if (options.log === undefined) executeOptions.log = true;
@@ -25,19 +25,7 @@ module.exports = function (name, resolverName, callbackGasLimit = callbackLimit,
     log(`Chainlink_LinkToken: approving MaxUint256 to ${resolverName} ...`);
     await execute('Chainlink_LinkToken', executeOptions, 'approve', resolver.address, ethers.constants.MaxUint256);
 
-    // log(`${name}: Estimating Chainlink VRF callback price for callbackGasLimit=${callbackGas} gasPrice=${gasPrice}...`);
-    // const requestPrice = await read('Chainlink_VRFV2Wrapper', 'estimateRequestPrice', callbackGas, gasPrice);
-
     log(`${name}: Revealing tokens blockConfirmations=${confirmations}, callbackGasLimit=${callbackGas}...`);
-    // await execute(
-    //   'Chainlink_LinkToken',
-    //   executeOptions,
-    //   'transferAndCall',
-    //   resolver.address,
-    //   requestPrice,
-    //   ethers.utils.defaultAbiCoder.encode(['address', 'uint32', 'uint16'], [NFTContract.address, callbackGas, confirmations])
-    // );
-
     await execute(resolverName, executeOptions, 'requestReveal', NFTContract.address, callbackGas, confirmations);
   });
 
