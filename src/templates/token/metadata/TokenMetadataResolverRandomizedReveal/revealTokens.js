@@ -38,7 +38,7 @@ module.exports = function (name, resolverName, callbackGasLimit = callbackLimit,
     //   ethers.utils.defaultAbiCoder.encode(['address', 'uint32', 'uint16'], [NFTContract.address, callbackGas, confirmations])
     // );
 
-    await execute(resolverName, executeOptions, 'revealTokens', NFTContract.address, callbackGas, confirmations);
+    await execute(resolverName, executeOptions, 'requestReveal', NFTContract.address, callbackGas, confirmations);
   });
 
   migration.skip = async (hre) => {
