@@ -23,7 +23,7 @@ module.exports = function (name, resolverName, callbackGasLimit = callbackLimit,
     const resolver = await get(resolverName);
 
     log(`Chainlink_LinkToken: approving MaxUint256 to ${resolverName} ...`);
-    await execute('Chainlink_LinkToken', executeOptions, 'approve', resolver.address, ethers.constants.MaxUint256);
+    await execute('Chainlink_LinkToken', executeOptions, 'approve', resolver.address, ethers.MaxUint256);
 
     log(`${name}: Revealing tokens blockConfirmations=${confirmations}, callbackGasLimit=${callbackGas}...`);
     await execute(resolverName, executeOptions, 'requestReveal', NFTContract.address, callbackGas, confirmations);

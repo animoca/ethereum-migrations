@@ -1,4 +1,4 @@
-const {constants} = require('ethers');
+const {ethers} = require('hardhat');
 const {templatedMigration} = require('../../../../utils');
 const {multiSkip, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
 
@@ -28,7 +28,7 @@ module.exports = function (rootTunnelName, rootTokenName, options = {}) {
 
     const RootToken = await get(rootTokenName);
     const childToken = await read(rootTunnelName, 'rootToChildToken', RootToken.address);
-    if (childToken != constants.AddressZero) {
+    if (childToken != ethers.ZeroAddress) {
       log(`${rootTunnelName}: ERC20 token ${rootTokenName} is already mapped at address ${childToken}, skipping...`);
       return true;
     }

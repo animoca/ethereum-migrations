@@ -5,6 +5,7 @@
 ### Breaking changes
 
 - Updated to dependency version `@animoca/ethereum-contracts@3.0.0`.
+- Updated to using `^ethers@6`.
 
 ### New features
 

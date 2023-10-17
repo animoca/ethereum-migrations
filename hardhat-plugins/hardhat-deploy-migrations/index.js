@@ -1,5 +1,5 @@
+const ethers = require('ethers');
 const yesno = require('yesno');
-const {formatUnits} = require('ethers/lib/utils');
 const {extendConfig, subtask} = require('hardhat/config');
 const {normalizePath} = require('@animoca/ethereum-contract-helpers/hardhat-plugins/utils');
 
@@ -29,7 +29,7 @@ subtask('deploy:runDeploy', async (taskArguments, hre, runSuper) => {
       process.exit();
     }
     const sure = await yesno({
-      question: `This is a production network, are you really sure? (gasprice ${formatUnits(taskArguments.gasprice, 'gwei')} gwei)`,
+      question: `This is a production network, are you really sure? (gasprice ${ethers.formatUnits(taskArguments.gasprice, 'gwei')} gwei)`,
     });
     if (!sure) {
       process.exit();

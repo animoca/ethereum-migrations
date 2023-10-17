@@ -26,12 +26,15 @@ module.exports = function (name, facetsConfig, options = {}) {
     const {get, read, log} = hre.deployments;
     const facetConfig = facetsConfig[0];
     const facet = await get(facetConfig.name);
-    const facetInterface = new ethers.utils.Interface(facet.abi);
-    let functions = Object.values(facetInterface.functions);
+    const facetInterface = new ethers.Interface(facet.abi);
+    const functions = [];
+    facetInterface.forEachFunction((fn) => {
+      functions.push(fn);
+    });
     if (facetConfig.abiFilter !== undefined) {
       functions = functions.filter(facetConfig.abiFilter);
     }
-    const currentFacetAddress = await read(name, 'facetAddress', ethers.utils.Interface.getSighash(functions[0]));
+    const currentFacetAddress = await read(name, 'facetAddress', functions[0].selector);
     switch (facetConfig.action) {
       case FacetCutAction.Add:
         if (currentFacetAddress == facet.address) {
@@ -40,7 +43,7 @@ module.exports = function (name, facetsConfig, options = {}) {
         }
         return false;
       case FacetCutAction.Remove:
-        if (currentFacetAddress == ethers.constants.AddressZero) {
+        if (currentFacetAddress == ethers.ZeroAddress) {
           log(`${name}: facet REMOVE already done, skipping...`);
           return true;
         }

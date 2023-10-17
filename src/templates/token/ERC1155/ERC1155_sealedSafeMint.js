@@ -23,7 +23,7 @@ module.exports = function (erc1155ContractName, sealingContractName, sealedMint,
       'sealedCall',
       erc1155Contract.address,
       erc1155Contract.interface.encodeFunctionData('safeMint(address,uint256,uint256,bytes)', [mint.recipient, mint.tokenId, mint.amount, mint.data]),
-      mint.sealId
+      mint.sealId,
     );
   });
 
