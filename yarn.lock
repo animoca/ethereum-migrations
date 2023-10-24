@@ -27,10 +27,10 @@
   resolved "https://registry.yarnpkg.com/@animoca/ethereum-contracts/-/ethereum-contracts-2.0.0.tgz#27eec3f237c8085b23ed3f1585d25fafcd657df4"
   integrity sha512-ZmErM7cu08gNx08p0sPQKiGAtvjSghhIf730ypEACfB+/eyOS5LAkyS0vZHPjy4w8lmGI8O/ucymxQDaZj6POw==
 
-"@animoca/ethereum-contracts-3.0@npm:@animoca/ethereum-contracts@3.0.0-rc.6", "@animoca/ethereum-contracts@^3.0.0-rc.6":
-  version "3.0.0-rc.6"
-  resolved "https://registry.yarnpkg.com/@animoca/ethereum-contracts/-/ethereum-contracts-3.0.0-rc.6.tgz#18e1cc825e8e05a34a1b5b19449a74cae783e8e5"
-  integrity sha512-TYJffVKWzLa/x5AjLb7KYo8DZs4pMZ6GDdAgimOPk2f5Vsr1zMDzIKi538R5qc4y12nmurNMOFZh7ytgDhb/KA==
+"@animoca/ethereum-contracts-3.0@npm:@animoca/ethereum-contracts@3.0.0-rc.7":
+  version "3.0.0-rc.7"
+  resolved "https://registry.yarnpkg.com/@animoca/ethereum-contracts/-/ethereum-contracts-3.0.0-rc.7.tgz#decafac8ea68085679d585043314fbce5760328c"
+  integrity sha512-n66IyblEE4sc9mj93lRQbWGcI85iR/LJyufvYLA8x9Pb0PuquguejfVYA8mDlOFNwqfqIhjLczMiN8VqPXyL9w==
 
 "@animoca/ethereum-contracts-bridging-0.3@npm:@animoca/ethereum-contracts-bridging@0.3.0":
   version "0.3.0"
@@ -41,6 +41,11 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@animoca/ethereum-contracts-bridging/-/ethereum-contracts-bridging-1.0.0.tgz#6c1e3fc6992995e79ae4757ac5dd2a05ee6e7ac5"
   integrity sha512-XdffoH+ym61/MemmpEmoWBlfjNj3djkBMXwtS2nRH/VZfMBMNaNgvS3+a5OUNijwt+Ec8O6qtZF+ArgoYoOnJA==
+
+"@animoca/ethereum-contracts@^3.0.0-rc.7":
+  version "3.0.0-rc.8"
+  resolved "https://registry.yarnpkg.com/@animoca/ethereum-contracts/-/ethereum-contracts-3.0.0-rc.8.tgz#97d7eef997211316e7a1a474c4c4acd7b223d286"
+  integrity sha512-E/XmKpEKMMmJTXOSdurM7XZ3RtoceZS4Pj3lNeFy2GzVuPt7O5EzuqVUZR5k0AfSktemyMClvru2h0ioTQX50Q==
 
 "@chainsafe/as-sha256@^0.3.1":
   version "0.3.1"
