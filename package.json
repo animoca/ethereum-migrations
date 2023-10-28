@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "3.0.0-rc.12",
+  "version": "3.0.0",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
@@ -36,11 +36,11 @@
     "prepack": "run-s clean"
   },
   "devDependencies": {
-    "@animoca/ethereum-contract-helpers": "^1.0.0-rc.0",
-    "@animoca/ethereum-contracts": "^3.0.0-rc.7",
+    "@animoca/ethereum-contract-helpers": "^1.0.2",
+    "@animoca/ethereum-contracts": "^3.0.0",
     "@animoca/ethereum-contracts-1.0": "npm:@animoca/ethereum-contracts@1.1.1",
     "@animoca/ethereum-contracts-2.0": "npm:@animoca/ethereum-contracts@2.0.0",
-    "@animoca/ethereum-contracts-3.0": "npm:@animoca/ethereum-contracts@3.0.0-rc.7",
+    "@animoca/ethereum-contracts-3.0": "npm:@animoca/ethereum-contracts@3.0.0",
     "@animoca/ethereum-contracts-bridging-0.3": "npm:@animoca/ethereum-contracts-bridging@0.3.0",
     "@animoca/ethereum-contracts-bridging-1.0": "npm:@animoca/ethereum-contracts-bridging@1.0.0",
     "@ethersproject/hardware-wallets": "^5.7.0",
@@ -48,17 +48,13 @@
     "cli-progress": "^3.12.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
-    "eslint": "^8.51.0",
+    "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
     "ethers": "^6.8.0",
-    "fs-extra": "^11.1.1",
-    "glob": "^10.3.10",
-    "hardhat": "2.18.1",
+    "hardhat": "2.18.3",
     "hardhat-deploy": "^0.11.43",
     "hardhat-deploy-ethers": "^0.4.1",
-    "lodash.clonedeep": "^4.5.0",
-    "lodash.mergewith": "^4.6.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
     "yesno": "^0.4.0"
