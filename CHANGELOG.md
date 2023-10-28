@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.0.2
+
+### Improvements
+
+- Update eslint config.
+- Remove unused dependency.
+
 ## 3.0.1
 
 ### Bugfixes
