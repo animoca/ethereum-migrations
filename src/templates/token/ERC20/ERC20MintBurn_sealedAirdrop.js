@@ -1,5 +1,4 @@
 const {ethers} = require('hardhat');
-const {utils} = ethers;
 const {templatedMigration, buildArg} = require('../../utils');
 const {tryAggregate} = require('../../../helpers/multicall');
 const {batchDo, batchDoWhile} = require('../../../helpers/batch');
@@ -44,7 +43,7 @@ module.exports = function (erc20ContractName, sealingContractName, sealedAirdrop
           erc20Contract.interface.encodeFunctionData('batchMint', [airdrop.recipients, airdrop.amounts]),
           airdrop.sealId,
         ]),
-        `${erc20ContractName}: minting ${tokenName} to recipients`
+        `${erc20ContractName}: minting ${tokenName} to recipients`,
       );
     } else {
       if (!Array.isArray(airdrops.amounts)) {
@@ -53,7 +52,7 @@ module.exports = function (erc20ContractName, sealingContractName, sealedAirdrop
 
       log(`${erc20ContractName}: minting '${tokenName}':`);
       for (let i = 0; i < airdrops.recipients.length; i++) {
-        log(`  ${airdrops.recipients[i]}: ${utils.formatUnits(airdrops.amounts[i], tokenDecimals)} ${tokenSymbol}`);
+        log(`  ${airdrops.recipients[i]}: ${ethers.formatUnits(airdrops.amounts[i], tokenDecimals)} ${tokenSymbol}`);
       }
 
       await execute(
@@ -62,7 +61,7 @@ module.exports = function (erc20ContractName, sealingContractName, sealedAirdrop
         'sealedCall',
         erc20Contract.address,
         erc20Contract.interface.encodeFunctionData('batchMint', [airdrops.recipients, airdrops.amounts]),
-        airdrops.sealId
+        airdrops.sealId,
       );
     }
   });
@@ -75,7 +74,7 @@ module.exports = function (erc20ContractName, sealingContractName, sealedAirdrop
         read,
         sealedAirdrops.map((sealedAirdrop) => [sealingContractName, {}, 'isSealed', sealedAirdrop.sealId]),
         `${sealingContractName}: retrieving sealing status`,
-        (res) => res == true
+        (res) => res == true,
       );
 
       if (sealed.length == sealedAirdrops.length) {

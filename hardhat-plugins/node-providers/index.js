@@ -22,7 +22,7 @@ extendConfig((config, userConfig) => {
       } else {
         console.log(
           `Could not retrieve a provider URL for network ${networkName}. ` +
-            `env.NODE_PROVIDER=${provider} network.defaultProvider=${network.defaultProvider}`
+            `env.NODE_PROVIDER=${provider} network.defaultProvider=${network.defaultProvider}`,
         );
       }
     }

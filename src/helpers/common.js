@@ -26,7 +26,7 @@ function skipIfEmptyBytecode(deploymentName) {
   return async ({deployments, ethers}) => {
     const {log} = deployments;
     const deployment = await deployments.get(deploymentName);
-    const bytecode = await hre.ethers.provider.getCode(deployment.address);
+    const bytecode = await ethers.provider.getCode(deployment.address);
     if (bytecode == '0x') {
       log(`${deploymentName}: has no bytecode, skipping...`);
       return true;

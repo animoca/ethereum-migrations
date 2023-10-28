@@ -1,5 +1,21 @@
 # Changelog
 
+## 3.0.0
+
+### Breaking changes
+
+- Updated to dependency version `@animoca/ethereum-contracts@3.0.0`.
+- Updated to using `^ethers@6`.
+
+### New features
+
+- Added ERC721_deploy and ERC1155_deploy migration templates.
+- Added ERC1155_sealedSafeMint migration template.
+- Added ContractOwnership_transferOwnership migration template.
+- Added metadata resolvers migrations and templates.
+- Added Chainlink VRF deployment files.
+- Added `getContractAddressOrFallback` helper.
+
 ## 2.0.0
 
 ### Breaking changes

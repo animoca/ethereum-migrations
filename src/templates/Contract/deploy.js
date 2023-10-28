@@ -55,7 +55,7 @@ module.exports = function (name, options = {}) {
         `${args ? ` with args ${namedArgsToString(args)}` : ''}` +
         `${options.proxy ? ' via proxy' : ''}` +
         `${initArgs ? ` with initArgs ${namedArgsToString(initArgs)}` : ''}` +
-        ' ...'
+        ' ...',
     );
     const deployedContract = await deploy(name, deployOptions);
 

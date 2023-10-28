@@ -19,7 +19,7 @@ function decodeAggregateReturnData(returnData, returnTypes) {
   return returnData.map((res, i) => {
     return {
       success: res.success,
-      returnData: res.success ? ethers.utils.defaultAbiCoder.decode([returnTypes[i]], res.returnData)[0] : null,
+      returnData: res.success ? ethers.AbiCoder.defaultAbiCoder().decode([returnTypes[i]], res.returnData)[0] : null,
     };
   });
 }
@@ -29,7 +29,7 @@ async function tryAggregate(name, requireSuccess, calls) {
   const returnData = await multicall.callStatic.tryAggregate(requireSuccess, await encodeCalls(calls));
   return decodeAggregateReturnData(
     returnData,
-    calls.map((call) => call.returnType)
+    calls.map((call) => call.returnType),
   );
 }
 
@@ -40,7 +40,7 @@ async function tryBlockAndAggregate(name, requireSuccess, calls) {
     blockNumber: result.blockNumber,
     returnData: decodeAggregateReturnData(
       result.returnData,
-      calls.map((call) => call.returnType)
+      calls.map((call) => call.returnType),
     ),
   };
 }

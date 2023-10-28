@@ -1,5 +1,4 @@
-require('@nomiclabs/hardhat-ethers');
-require('@nomiclabs/hardhat-etherscan');
+require('@nomicfoundation/hardhat-ethers');
 require('hardhat-deploy');
 require('hardhat-deploy-ethers');
 require('./hardhat-deploy-migrations');
