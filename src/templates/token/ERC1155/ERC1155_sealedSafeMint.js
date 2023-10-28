@@ -8,6 +8,7 @@ module.exports = function (erc1155ContractName, sealingContractName, sealedMint,
     const {execute, log} = hre.deployments;
 
     const erc1155Contract = await ethers.getContract(erc1155ContractName);
+    const erc1155ContractAddress = await erc1155Contract.getAddress();
 
     const executeOptions = {
       ...options,
@@ -21,7 +22,7 @@ module.exports = function (erc1155ContractName, sealingContractName, sealedMint,
       sealingContractName,
       executeOptions,
       'sealedCall',
-      erc1155Contract.address,
+      erc1155ContractAddress,
       erc1155Contract.interface.encodeFunctionData('safeMint(address,uint256,uint256,bytes)', [mint.recipient, mint.tokenId, mint.amount, mint.data]),
       mint.sealId,
     );

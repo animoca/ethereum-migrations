@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
@@ -52,7 +52,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
     "ethers": "^6.8.0",
-    "hardhat": "2.18.3",
+    "hardhat": "^2.18.3",
     "hardhat-deploy": "^0.11.43",
     "hardhat-deploy-ethers": "^0.4.1",
     "npm-run-all": "^4.1.5",

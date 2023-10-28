@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.0.1
+
+### Bugfixes
+
+- Fix ethers6 bugs on multicall helper.
+- Fix bugs on migration helpers.
+
 ## 3.0.0
 
 ### Breaking changes
