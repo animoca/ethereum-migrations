@@ -18,6 +18,7 @@ module.exports = function (erc20ContractName, sealingContractName, sealedAirdrop
     ).map((result) => result.returnData);
 
     const erc20Contract = await ethers.getContract(erc20ContractName);
+    const erc20ContractAddress = await erc20Contract.getAddress();
 
     const executeOptions = {
       ...options,
@@ -39,7 +40,7 @@ module.exports = function (erc20ContractName, sealingContractName, sealedAirdrop
           sealingContractName,
           executeOptions,
           'sealedCall',
-          erc20Contract.address,
+          erc20ContractAddress,
           erc20Contract.interface.encodeFunctionData('batchMint', [airdrop.recipients, airdrop.amounts]),
           airdrop.sealId,
         ]),
@@ -59,7 +60,7 @@ module.exports = function (erc20ContractName, sealingContractName, sealedAirdrop
         sealingContractName,
         executeOptions,
         'sealedCall',
-        erc20Contract.address,
+        erc20ContractAddress,
         erc20Contract.interface.encodeFunctionData('batchMint', [airdrops.recipients, airdrops.amounts]),
         airdrops.sealId,
       );

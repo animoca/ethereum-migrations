@@ -1,8 +1,10 @@
 const {templatedMigration, buildArg} = require('../../../utils');
 
 module.exports = function (name, resolverName, baseMetadataURI, options = {}) {
+  let NFT;
+
   const migration = templatedMigration(async (hre) => {
-    const {execute, get, log} = hre.deployments;
+    const {execute, log} = hre.deployments;
 
     const executeOptions = {
       ...options,
@@ -12,17 +14,17 @@ module.exports = function (name, resolverName, baseMetadataURI, options = {}) {
 
     const uri = await buildArg(hre, baseMetadataURI);
 
-    const NFT = await get(name);
-
     log(`${name}: setting baseMetadataURI for ${name} (${NFT.address}) to ${uri} ...`);
     await execute(resolverName, executeOptions, 'setBaseMetadataURI', NFT.address, uri);
   });
 
   migration.skip = async (hre) => {
-    const {read, log} = hre.deployments;
+    const {get, read, log} = hre.deployments;
+
+    NFT = await get(name);
 
     log(`${name}: checking the baseMetadataURI for ${name} (${NFT.address})...`);
-    const currentURI = await read(resolverName, {}, NFT.address, 'baseMetadataURI');
+    const currentURI = await read(resolverName, 'baseMetadataURI', NFT.address);
 
     const uri = await buildArg(hre, baseMetadataURI);
     if (uri == currentURI) {

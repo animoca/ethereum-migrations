@@ -34,7 +34,7 @@ async function generateCuts(hre, facetsConfig, currentABI = []) {
         abi = abi.filter((el) => functions.find((fragment) => fragment.name == el.name) === undefined);
         break;
     }
-    hre.deployments.log(`Diamond: facet cut: ${facetConfig.name} (${facet.address}) ${facetConfig.action} [${functions.map((el) => el.name)}]`);
+    hre.deployments.log(`Diamond: facet cut: ${facetConfig.name} (${await facet.address}) ${facetConfig.action} [${functions.map((el) => el.name)}]`);
 
     cuts.push([
       facetConfig.action == FacetCutAction.Remove ? ethers.ZeroAddress : facet.address,
