@@ -4,7 +4,10 @@ module.exports = {
     node: true,
   },
   parserOptions: {
-    ecmaVersion: 9,
+    ecmaVersion: 2020,
+  },
+  env: {
+    es2020: true,
   },
   rules: {
     'prettier/prettier': 'error',
