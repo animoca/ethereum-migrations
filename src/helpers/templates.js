@@ -25,8 +25,16 @@ function getContractAddress(deployment) {
   };
 }
 
+function getContractAddressOrFallback(deployment, fallback) {
+  return async (hre) => {
+    const contract = await hre.deployments.getOrNull(deployment);
+    return contract ? contract.address : fallback;
+  };
+}
+
 module.exports = {
   getNamedAccount,
   getNamedGroups,
   getContractAddress,
+  getContractAddressOrFallback,
 };

@@ -16,10 +16,12 @@ async function generateCuts(hre, facetsConfig, currentABI = []) {
 
   for (const facetConfig of facetsConfig) {
     const facet = await hre.deployments.get(facetConfig.name);
-    const facetInterface = new ethers.utils.Interface(facet.abi);
+    const facetInterface = new ethers.Interface(facet.abi);
 
     // TODO: not only functions
     let functions = facet.abi.filter((el) => el.type == 'function');
+
+    facetInterface.getFunction('init').selector;
 
     if (facetConfig.abiFilter !== undefined) {
       functions = functions.filter(facetConfig.abiFilter);
@@ -32,24 +34,24 @@ async function generateCuts(hre, facetsConfig, currentABI = []) {
         abi = abi.filter((el) => functions.find((fragment) => fragment.name == el.name) === undefined);
         break;
     }
-    hre.deployments.log(`Diamond: facet cut: ${facetConfig.name} (${facet.address}) ${facetConfig.action} [${functions.map((el) => el.name)}]`);
+    hre.deployments.log(`Diamond: facet cut: ${facetConfig.name} (${await facet.address}) ${facetConfig.action} [${functions.map((el) => el.name)}]`);
 
     cuts.push([
-      facetConfig.action == FacetCutAction.Remove ? ethers.constants.AddressZero : facet.address,
+      facetConfig.action == FacetCutAction.Remove ? ethers.ZeroAddress : facet.address,
       facetConfig.action,
-      functions.map((f) => ethers.utils.Interface.getSighash(ethers.utils.FunctionFragment.fromObject(f))),
+      functions.map((f) => facetInterface.getFunction(f.name).selector),
     ]);
 
     if (facetConfig.init !== undefined) {
       const initArguments = facetConfig.init.args !== undefined ? await buildNamedArgs(hre, facetConfig.init.args) : [];
       hre.deployments.log(
-        `Diamond: facet init: ${facetConfig.name} (${facet.address}) ${facetConfig.init.method} ${namedArgsToString(initArguments)}`
+        `Diamond: facet init: ${facetConfig.name} (${facet.address}) ${facetConfig.init.method} ${namedArgsToString(initArguments)}`,
       );
       inits.push([
         facet.address,
         facetInterface.encodeFunctionData(
           facetConfig.init.method,
-          initArguments.map((arg) => arg.value)
+          initArguments.map((arg) => arg.value),
         ),
       ]);
     }

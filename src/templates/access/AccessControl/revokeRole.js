@@ -17,7 +17,7 @@ module.exports = function (name, role, accounts, options = {}) {
       await batchDo(
         execute,
         revokedAccounts.map((account) => [name, executeOptions, 'revokeRole', revokedRole, account]),
-        `${name}: revoking ${role} role`
+        `${name}: revoking ${role} role`,
       );
     } else {
       log(`${name}: revoking ${role} role from ${revokedAccounts}`);
@@ -37,7 +37,7 @@ module.exports = function (name, role, accounts, options = {}) {
         read,
         revokedAccounts.map((account) => [name, {}, 'hasRole', revokedRole, account]),
         `${name}: retrieving ${role} role status`,
-        (res) => res == false
+        (res) => res == false,
       );
 
       if (revoked.length === revokedAccounts.length) {

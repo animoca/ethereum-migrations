@@ -1,4 +1,4 @@
-const {constants} = require('ethers');
+const {ethers} = require('hardhat');
 const {templatedMigration} = require('../../../../utils');
 const {multiSkip, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
 
@@ -22,7 +22,7 @@ module.exports = function (rootTunnelName, childTunnelName, options = {}) {
     const {read, log} = hre.deployments;
 
     const childTunnel = await read(rootTunnelName, 'fxChildTunnel');
-    if (childTunnel != constants.AddressZero) {
+    if (childTunnel != ethers.ZeroAddress) {
       log(`${rootTunnelName}: fxChildTunnel is already set at address ${childTunnel}, skipping...`);
       return true;
     }

@@ -2,9 +2,10 @@ module.exports = {
   extends: ['plugin:prettier/recommended', 'prettier'],
   env: {
     node: true,
+    es2020: true,
   },
   parserOptions: {
-    ecmaVersion: 9,
+    ecmaVersion: 2020,
   },
   rules: {
     'prettier/prettier': 'error',
@@ -12,7 +13,6 @@ module.exports = {
     'no-unused-vars': 'off',
     'no-multi-spaces': ['error', {exceptions: {VariableDeclarator: true}}],
     'no-else-return': ['error', {allowElseIf: true}],
-    'max-params': ['error', 6],
     'no-await-in-loop': 'off',
     'max-len': ['error', {code: 150}],
   },

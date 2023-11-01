@@ -1,5 +1,53 @@
 # Changelog
 
+## 3.0.2
+
+### Improvements
+
+- Update eslint config.
+- Remove unused dependency.
+
+## 3.0.1
+
+### Bugfixes
+
+- Fix ethers6 bugs on multicall helper.
+- Fix bugs on migration helpers.
+
+## 3.0.0
+
+### Breaking changes
+
+- Updated to dependency version `@animoca/ethereum-contracts@3.0.0`.
+- Updated to using `^ethers@6`.
+
+### New features
+
+- Added ERC721_deploy and ERC1155_deploy migration templates.
+- Added ERC1155_sealedSafeMint migration template.
+- Added ContractOwnership_transferOwnership migration template.
+- Added metadata resolvers migrations and templates.
+- Added Chainlink VRF deployment files.
+- Added `getContractAddressOrFallback` helper.
+
+## 2.0.0
+
+### Breaking changes
+
+- Removed `deploy.js` and `airdrop.js` ERC20 migration templates.
+- Renamed ERC20 migration template `sealedAirdrop.js` to `ERC20MintBurn_sealedAirdrop.js`.
+- Renamed ERC20 migration template `setTokenURI.js` to `ERC20_setTokenURI.js`.
+
+### New features
+
+- Migrations for `ERC20Facet@2.0`, `ERC20FixedSupplyProxied@2.0` and `ERC20MintBurnProxied@2.0`.
+- New migration templates `ERC20FixedSupply_deploy.js` and `ERC20MintBurn_deploy.js`.
+
+### New deployments
+
+- Contracts deployed on Arbitrum.
+- `ERC20Facet@2.0`, `ERC20FixedSupplyProxied@2.0` and `ERC20MintBurnProxied@2.0` on all supported networks.
+
 ## 1.0.11
 
 ### New features

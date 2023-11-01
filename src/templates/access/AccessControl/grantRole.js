@@ -17,7 +17,7 @@ module.exports = function (name, role, accounts, options = {}) {
       await batchDo(
         execute,
         grantedAccounts.map((account) => [name, executeOptions, 'grantRole', grantedRole, account]),
-        `${name}: granting ${role} role`
+        `${name}: granting ${role} role`,
       );
     } else {
       log(`${name}: granting ${role} role to ${grantedAccounts}`);
@@ -37,7 +37,7 @@ module.exports = function (name, role, accounts, options = {}) {
         read,
         grantedAccounts.map((account) => [name, {}, 'hasRole', grantedRole, account]),
         `${name}: retrieving ${role} role status`,
-        (res) => res == true
+        (res) => res == true,
       );
 
       if (granted.length == grantedAccounts.length) {

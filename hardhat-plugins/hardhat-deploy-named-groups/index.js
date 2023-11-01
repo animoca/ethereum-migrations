@@ -14,7 +14,7 @@ subtask('deploy:runDeploy', async (taskArguments, hre, runSuper) => {
     Object.entries(hre.config.namedGroups).map(([team, members]) => [
       team,
       members.map((member) => namedAccounts[member]), // todo explicit retrieval fail?
-    ])
+    ]),
   );
   await runSuper(taskArguments);
 });
