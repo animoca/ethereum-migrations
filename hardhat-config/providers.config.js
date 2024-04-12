@@ -8,6 +8,7 @@ module.exports = {
       mumbai: '{{PROVIDER_URL_INFURA_MUMBAI}}',
       arb1: '{{PROVIDER_URL_INFURA_ARB1}}',
       arbgoerli: '{{PROVIDER_URL_INFURA_ARBGOERLI}}',
+      amoy: '{{PROVIDER_URL_INFURA_AMOY}}',
     },
     alchemy: {
       mainnet: '{{PROVIDER_URL_ALCHEMY_MAINNET}}',
@@ -17,6 +18,7 @@ module.exports = {
       mumbai: '{{PROVIDER_URL_ALCHEMY_MUMBAI}}',
       arb1: '{{PROVIDER_URL_ALCHEMY_ARB1}}',
       arbgoerli: '{{PROVIDER_URL_ALCHEMY_ARBGOERLI}}',
+      amoy: '{{PROVIDER_URL_ALCHEMY_AMOY}}',
     },
     maticvigil: {
       matic: '{{PROVIDER_URL_MATICVIGIL_MATIC}}',

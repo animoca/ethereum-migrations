@@ -102,6 +102,16 @@ module.exports = {
       },
     },
 
+    //Staging
+    amoy : {
+      url: 'http://amoy',
+      live: true,
+      tags: ['staging', 'polygon'],
+      companionNetworks: {
+        ethereum: 'sepolia',
+      },
+    },
+
     //----------------------------//
     //    BINANCE SMART CHAIN     //
     //----------------------------//
@@ -180,5 +190,6 @@ module.exports = {
         ethereum: 'goerli',
       },
     },
+    
   },
 };
