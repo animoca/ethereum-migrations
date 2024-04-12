@@ -102,6 +102,17 @@ module.exports = {
       },
     },
 
+    //Staging
+    amoy: {
+      // chainId 80002
+      url: 'http://amoy',
+      live: true,
+      tags: ['staging', 'polygon'],
+      companionNetworks: {
+        ethereum: 'sepolia',
+      },
+    },
+
     //----------------------------//
     //    BINANCE SMART CHAIN     //
     //----------------------------//

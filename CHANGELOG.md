@@ -1,18 +1,24 @@
 # Changelog
 
+## 3.0.3
+
+### New features
+
+- Support for Amoy network.
+
 ## 3.0.2
 
 ### Improvements
 
-- Update eslint config.
-- Remove unused dependency.
+- Updated eslint config.
+- Removed unused dependency.
 
 ## 3.0.1
 
 ### Bugfixes
 
-- Fix ethers6 bugs on multicall helper.
-- Fix bugs on migration helpers.
+- Fixed ethers6 bugs on multicall helper.
+- Fixed bugs on migration helpers.
 
 ## 3.0.0
 
