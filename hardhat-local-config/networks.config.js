@@ -18,6 +18,9 @@ module.exports = {
     mumbai: {
       defaultProvider: 'infura',
     },
+    amoy: {
+      defaultProvider: 'alchemy',
+    },
 
     // BSC
     bsc: {

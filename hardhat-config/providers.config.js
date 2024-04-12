@@ -6,9 +6,9 @@ module.exports = {
       sepolia: '{{PROVIDER_URL_INFURA_SEPOLIA}}',
       matic: '{{PROVIDER_URL_INFURA_MATIC}}',
       mumbai: '{{PROVIDER_URL_INFURA_MUMBAI}}',
+      amoy: '{{PROVIDER_URL_INFURA_AMOY}}',
       arb1: '{{PROVIDER_URL_INFURA_ARB1}}',
       arbgoerli: '{{PROVIDER_URL_INFURA_ARBGOERLI}}',
-      amoy: '{{PROVIDER_URL_INFURA_AMOY}}',
     },
     alchemy: {
       mainnet: '{{PROVIDER_URL_ALCHEMY_MAINNET}}',
@@ -16,9 +16,9 @@ module.exports = {
       sepolia: '{{PROVIDER_URL_ALCHEMY_SEPOLIA}}',
       matic: '{{PROVIDER_URL_ALCHEMY_MATIC}}',
       mumbai: '{{PROVIDER_URL_ALCHEMY_MUMBAI}}',
+      amoy: '{{PROVIDER_URL_ALCHEMY_AMOY}}',
       arb1: '{{PROVIDER_URL_ALCHEMY_ARB1}}',
       arbgoerli: '{{PROVIDER_URL_ALCHEMY_ARBGOERLI}}',
-      amoy: '{{PROVIDER_URL_ALCHEMY_AMOY}}',
     },
     maticvigil: {
       matic: '{{PROVIDER_URL_MATICVIGIL_MATIC}}',

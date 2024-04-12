@@ -59,7 +59,7 @@ module.exports = function (name, options = {}) {
     );
     const deployedContract = await deploy(name, deployOptions);
 
-    log(`${name}: Deployed ${deployedContract.address} (tx: ${deployedContract.transactionHash}, gasUsed: ${deployedContract.receipt.gasUsed})`);
+    log(`${name}: Deployed ${deployedContract.address} (tx: ${deployedContract.transactionHash}, gasUsed: ${deployedContract.receipt?.gasUsed})`);
   });
   migration.skip = skipIfDeployed(name);
   migration.tags = [name, `${name}_deploy`];

@@ -103,7 +103,8 @@ module.exports = {
     },
 
     //Staging
-    amoy : {
+    amoy: {
+      // chainId 80002
       url: 'http://amoy',
       live: true,
       tags: ['staging', 'polygon'],
@@ -190,6 +191,5 @@ module.exports = {
         ethereum: 'goerli',
       },
     },
-    
   },
 };
