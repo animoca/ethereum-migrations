@@ -45,5 +45,8 @@ module.exports = {
     arbgoerli: {
       defaultProvider: 'infura',
     },
+    arbsepolia: {
+      defaultProvider: 'infura',
+    },
   },
 };

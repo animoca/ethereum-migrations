@@ -67,10 +67,10 @@ module.exports = {
       live: true,
       tags: ['staging', 'ethereum'],
       companionNetworks: {
-        polygon: 'mumbai',
+        polygon: 'amoy',
         bsc: 'bsctest',
         okex: 'okextest',
-        arbitrum: 'arbgoerli',
+        arbitrum: 'arbsepolia',
       },
     },
 
@@ -126,6 +126,7 @@ module.exports = {
       tags: ['production', 'bsc'],
       companionNetworks: {
         ethereum: 'mainnet',
+        arbitrum: 'arb1',
       },
     },
 
@@ -136,7 +137,8 @@ module.exports = {
       live: true,
       tags: ['staging', 'bsc'],
       companionNetworks: {
-        ethereum: 'goerli',
+        ethereum: 'sepolia',
+        arbitrum: 'arbsepolia',
       },
     },
 
@@ -178,6 +180,7 @@ module.exports = {
       tags: ['production', 'arbitrum'],
       companionNetworks: {
         ethereum: 'mainnet',
+        bsc: 'bsc',
       },
     },
 
@@ -189,6 +192,18 @@ module.exports = {
       tags: ['staging', 'arbitrum'],
       companionNetworks: {
         ethereum: 'goerli',
+      },
+    },
+
+    arbsepolia: {
+      // chainId 421614
+      // https://developer.arbitrum.io/public-chains
+      url: 'http://arbsepolia',
+      live: true,
+      tags: ['staging', 'arbitrum'],
+      companionNetworks: {
+        ethereum: 'sepolia',
+        bsc: 'bsctest',
       },
     },
   },

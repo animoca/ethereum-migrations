@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.0.4
+
+### New features
+
+- Added networks and providers configs for Arbitrum Sepolia network.
+- Added arbitrum networks as companion networks of bsc networks.
+
 ## 3.0.3
 
 ### New features
