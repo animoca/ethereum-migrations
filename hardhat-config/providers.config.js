@@ -9,7 +9,7 @@ module.exports = {
       amoy: '{{PROVIDER_URL_INFURA_AMOY}}',
       arb1: '{{PROVIDER_URL_INFURA_ARB1}}',
       arbgoerli: '{{PROVIDER_URL_INFURA_ARBGOERLI}}',
-      arbsepolia: '{{PROVIDER_URL_ALCHEMY_ARBSEPOLIA}}',
+      arbsepolia: '{{PROVIDER_URL_INFURA_ARBSEPOLIA}}',
     },
     alchemy: {
       mainnet: '{{PROVIDER_URL_ALCHEMY_MAINNET}}',
@@ -20,7 +20,7 @@ module.exports = {
       amoy: '{{PROVIDER_URL_ALCHEMY_AMOY}}',
       arb1: '{{PROVIDER_URL_ALCHEMY_ARB1}}',
       arbgoerli: '{{PROVIDER_URL_ALCHEMY_ARBGOERLI}}',
-      arbsepolia: '{{PROVIDER_URL_INFURA_ARBSEPOLIA}}',
+      arbsepolia: '{{PROVIDER_URL_ALCHEMY_ARBSEPOLIA}}',
     },
     maticvigil: {
       matic: '{{PROVIDER_URL_MATICVIGIL_MATIC}}',
