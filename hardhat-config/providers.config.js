@@ -37,6 +37,7 @@ module.exports = {
     arbitrum: {
       arb1: 'https://arb1.arbitrum.io/rpc',
       arbgoerli: 'https://goerli-rollup.arbitrum.io/rpc',
+      arbsepolia: 'https://sepolia-rollup.arbitrum.io/rpc',
     },
     sepolia: {
       sepolia: 'https://rpc.sepolia.dev',
