@@ -6,6 +6,7 @@
 
 - Added networks and providers configs for Arbitrum Sepolia network.
 - Added arbitrum networks as companion networks of bsc networks.
+- Updated to dependency version `@animoca/ethereum-contract-helpers@1.0.3`.
 
 ## 3.0.3
 
