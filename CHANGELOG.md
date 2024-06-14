@@ -9,7 +9,7 @@
 
 ### Breaking changes
 - Updated to dependency version `@animoca/ethereum-contract-helpers@1.0.3`.
-- Updated to use arbsepolia instead of deprecated arbgoerli as companion networks for testnets.
+- Updated to use latest testnets(amoy, arbsepolia) instead of deprecated testnets(mumbai, arbgoerli) as companion networks.
 
 ## 3.0.3
 
