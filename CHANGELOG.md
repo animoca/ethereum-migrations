@@ -1,5 +1,21 @@
 # Changelog
 
+## 3.0.4
+
+### New features
+
+- Added networks and providers configs for Arbitrum Sepolia network.
+- Added arbitrum networks as companion networks of bsc networks.
+
+### Breaking changes
+
+- Updated to use latest testnets(amoy, arbsepolia) instead of deprecated testnets(mumbai, arbgoerli) as companion networks.
+- Removed deprecated network configs for goerli, mumbai, arbgoerli.
+
+### Improvements
+
+- Updated to dependency version `@animoca/ethereum-contract-helpers@1.0.3`.
+
 ## 3.0.3
 
 ### New features

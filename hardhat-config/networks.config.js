@@ -47,30 +47,16 @@ module.exports = {
     },
 
     // Staging
-    goerli: {
-      // chainId 5
-      url: 'http://goerli',
-      live: true,
-      tags: ['staging', 'ethereum'],
-      companionNetworks: {
-        polygon: 'mumbai',
-        bsc: 'bsctest',
-        okex: 'okextest',
-        arbitrum: 'arbgoerli',
-      },
-    },
-
-    // Staging
     sepolia: {
       // chainId 11155111
       url: 'http://sepolia',
       live: true,
       tags: ['staging', 'ethereum'],
       companionNetworks: {
-        polygon: 'mumbai',
+        polygon: 'amoy',
         bsc: 'bsctest',
         okex: 'okextest',
-        arbitrum: 'arbgoerli',
+        arbitrum: 'arbsepolia',
       },
     },
 
@@ -87,18 +73,6 @@ module.exports = {
       tags: ['production', 'polygon'],
       companionNetworks: {
         ethereum: 'mainnet',
-      },
-    },
-
-    // Staging
-    mumbai: {
-      // chainId 80001
-      // https://static.matic.network/network/testnet/mumbai/index.json
-      url: 'http://mumbai',
-      live: true,
-      tags: ['staging', 'polygon'],
-      companionNetworks: {
-        ethereum: 'goerli',
       },
     },
 
@@ -126,6 +100,7 @@ module.exports = {
       tags: ['production', 'bsc'],
       companionNetworks: {
         ethereum: 'mainnet',
+        arbitrum: 'arb1',
       },
     },
 
@@ -136,7 +111,8 @@ module.exports = {
       live: true,
       tags: ['staging', 'bsc'],
       companionNetworks: {
-        ethereum: 'goerli',
+        ethereum: 'sepolia',
+        arbitrum: 'arbsepolia',
       },
     },
 
@@ -162,7 +138,7 @@ module.exports = {
       live: true,
       tags: ['staging', 'okex'],
       companionNetworks: {
-        ethereum: 'goerli',
+        ethereum: 'sepolia',
       },
     },
 
@@ -178,17 +154,19 @@ module.exports = {
       tags: ['production', 'arbitrum'],
       companionNetworks: {
         ethereum: 'mainnet',
+        bsc: 'bsc',
       },
     },
 
-    arbgoerli: {
-      // chainId 421613
+    arbsepolia: {
+      // chainId 421614
       // https://developer.arbitrum.io/public-chains
-      url: 'http://arbgoerli',
+      url: 'http://arbsepolia',
       live: true,
       tags: ['staging', 'arbitrum'],
       companionNetworks: {
-        ethereum: 'goerli',
+        ethereum: 'sepolia',
+        bsc: 'bsctest',
       },
     },
   },

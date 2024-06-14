@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
@@ -36,7 +36,7 @@
     "prepack": "run-s clean"
   },
   "devDependencies": {
-    "@animoca/ethereum-contract-helpers": "^1.0.2",
+    "@animoca/ethereum-contract-helpers": "^1.0.3",
     "@animoca/ethereum-contracts": "^3.0.0",
     "@animoca/ethereum-contracts-1.0": "npm:@animoca/ethereum-contracts@1.1.1",
     "@animoca/ethereum-contracts-2.0": "npm:@animoca/ethereum-contracts@2.0.0",
