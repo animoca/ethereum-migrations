@@ -4,9 +4,6 @@ module.exports = {
     mainnet: {
       defaultProvider: 'alchemy',
     },
-    goerli: {
-      defaultProvider: 'infura',
-    },
     sepolia: {
       defaultProvider: 'infura',
     },
@@ -14,9 +11,6 @@ module.exports = {
     // Polygon
     matic: {
       defaultProvider: 'alchemy',
-    },
-    mumbai: {
-      defaultProvider: 'infura',
     },
     amoy: {
       defaultProvider: 'alchemy',
@@ -41,9 +35,6 @@ module.exports = {
     // Arbitrum
     arb1: {
       defaultProvider: 'alchemy',
-    },
-    arbgoerli: {
-      defaultProvider: 'infura',
     },
     arbsepolia: {
       defaultProvider: 'infura',
