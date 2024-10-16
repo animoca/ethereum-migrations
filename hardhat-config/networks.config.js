@@ -39,6 +39,7 @@ module.exports = {
       live: true,
       tags: ['production', 'ethereum'],
       companionNetworks: {
+        base: 'base',
         polygon: 'matic',
         bsc: 'bsc',
         okex: 'okex',
@@ -53,6 +54,7 @@ module.exports = {
       live: true,
       tags: ['staging', 'ethereum'],
       companionNetworks: {
+        base: 'basesepolia',
         polygon: 'amoy',
         bsc: 'bsctest',
         okex: 'okextest',
@@ -167,6 +169,30 @@ module.exports = {
       companionNetworks: {
         ethereum: 'sepolia',
         bsc: 'bsctest',
+      },
+    },
+
+    //----------------------------//
+    //            BASE            //
+    //----------------------------//
+
+    base: {
+      // chainId 8453
+      url: 'http://base',
+      live: true,
+      tags: ['production', 'base'],
+      companionNetworks: {
+        ethereum: 'mainnet',
+      },
+    },
+
+    basesepolia: {
+      // chainId 84532
+      url: 'http://basesepolia',
+      live: true,
+      tags: ['staging', 'base'],
+      companionNetworks: {
+        ethereum: 'sepolia',
       },
     },
   },
