@@ -7,6 +7,8 @@ module.exports = {
       amoy: '{{PROVIDER_URL_INFURA_AMOY}}',
       arb1: '{{PROVIDER_URL_INFURA_ARB1}}',
       arbsepolia: '{{PROVIDER_URL_INFURA_ARBSEPOLIA}}',
+      base: '{{PROVIDER_URL_INFURA_BASE}}',
+      basesepolia: '{{PROVIDER_URL_INFURA_BASESEPOLIA}}',
     },
     alchemy: {
       mainnet: '{{PROVIDER_URL_ALCHEMY_MAINNET}}',
@@ -15,6 +17,8 @@ module.exports = {
       amoy: '{{PROVIDER_URL_ALCHEMY_AMOY}}',
       arb1: '{{PROVIDER_URL_ALCHEMY_ARB1}}',
       arbsepolia: '{{PROVIDER_URL_ALCHEMY_ARBSEPOLIA}}',
+      base: '{{PROVIDER_URL_ALCHEMY_BASE}}',
+      basesepolia: '{{PROVIDER_URL_ALCHEMY_BASESEPOLIA}}',
     },
     maticvigil: {
       matic: '{{PROVIDER_URL_MATICVIGIL_MATIC}}',

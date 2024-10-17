@@ -39,5 +39,13 @@ module.exports = {
     arbsepolia: {
       defaultProvider: 'infura',
     },
+
+    // Base
+    base: {
+      defaultProvider: 'alchemy',
+    },
+    basesepolia: {
+      defaultProvider: 'infura',
+    },
   },
 };

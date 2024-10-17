@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.5
+
+### New features
+
+- Support for Base and Base Sepolia networks.
+
 ## 3.0.4
 
 ### New features
