@@ -10,7 +10,7 @@ module.exports = function (erc20ContractName, sealingContractName, sealedAirdrop
     const {execute, log} = hre.deployments;
 
     const [tokenName, tokenSymbol, tokenDecimals] = (
-      await tryAggregate('MultiStaticCall@1.0', true, [
+      await tryAggregate('MultiStaticCall@4.1', true, [
         {contractName: erc20ContractName, method: 'name', returnType: 'string'},
         {contractName: erc20ContractName, method: 'symbol', returnType: 'string'},
         {contractName: erc20ContractName, method: 'decimals', returnType: 'uint8'},
@@ -99,6 +99,6 @@ module.exports = function (erc20ContractName, sealingContractName, sealedAirdrop
     return false;
   };
 
-  migration.dependencies = ['MultiStaticCall@1.0', `${sealingContractName}_deploy`, `${erc20ContractName}_deploy`];
+  migration.dependencies = ['MultiStaticCall@4.1', `${sealingContractName}_deploy`, `${erc20ContractName}_deploy`];
   return migration;
 };

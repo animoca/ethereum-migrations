@@ -1,3 +1,5 @@
+// import { EndpointId } from "@layerzerolabs/lz-definitions";
+
 module.exports = {
   networks: {
     //----------------------------//
@@ -38,6 +40,8 @@ module.exports = {
       url: 'http://mainnet',
       live: true,
       tags: ['production', 'ethereum'],
+      // eid: EndpointId.ETHEREUM_V2_MAINNET,
+      // eid: 30101, // LayerZero V2 Endpoint ID
       companionNetworks: {
         base: 'base',
         polygon: 'matic',
@@ -53,6 +57,8 @@ module.exports = {
       url: 'http://sepolia',
       live: true,
       tags: ['staging', 'ethereum'],
+      // eid: EndpointId.SEPOLIA_V2_TESTNET,
+      // eid: 40161, // LayerZero V2 Endpoint ID
       companionNetworks: {
         base: 'basesepolia',
         polygon: 'amoy',
@@ -73,6 +79,8 @@ module.exports = {
       url: 'http://matic',
       live: true,
       tags: ['production', 'polygon'],
+      // eid: EndpointId.POLYGON_V2_MAINNET,
+      // eid: 30109, // LayerZero V2 Endpoint ID
       companionNetworks: {
         ethereum: 'mainnet',
       },
@@ -84,6 +92,8 @@ module.exports = {
       url: 'http://amoy',
       live: true,
       tags: ['staging', 'polygon'],
+      // eid: EndpointId.AMOY_V2_TESTNET,
+      // eid: 40267, // LayerZero V2 Endpoint ID
       companionNetworks: {
         ethereum: 'sepolia',
       },
@@ -100,6 +110,8 @@ module.exports = {
       url: 'http://bsc',
       live: true,
       tags: ['production', 'bsc'],
+      // eid: EndpointId.BSC_V2_MAINNET,
+      // eid: 30102, // LayerZero V2 Endpoint ID
       companionNetworks: {
         ethereum: 'mainnet',
         arbitrum: 'arb1',
@@ -112,6 +124,8 @@ module.exports = {
       url: 'http://bsctest',
       live: true,
       tags: ['staging', 'bsc'],
+      // eid: EndpointId.BSC_V2_TESTNET,
+      // eid: 40102, // LayerZero V2 Endpoint ID
       companionNetworks: {
         ethereum: 'sepolia',
         arbitrum: 'arbsepolia',
@@ -128,6 +142,8 @@ module.exports = {
       url: 'http://okex',
       live: true,
       tags: ['production', 'okex'],
+      // eid: EndpointId.OKX_V2_MAINNET,
+      // eid: 30155, // LayerZero V2 Endpoint ID
       companionNetworks: {
         ethereum: 'mainnet',
       },
@@ -139,6 +155,8 @@ module.exports = {
       url: 'http://okextest',
       live: true,
       tags: ['staging', 'okex'],
+      // eid: EndpointId.OKX_V2_TESTNET,
+      // eid: 40155, // LayerZero V2 Endpoint ID
       companionNetworks: {
         ethereum: 'sepolia',
       },
@@ -154,6 +172,8 @@ module.exports = {
       url: 'http://arb1',
       live: true,
       tags: ['production', 'arbitrum'],
+      // eid: EndpointId.ARBITRUM_V2_MAINNET,
+      // eid: 30110, // LayerZero V2 Endpoint ID
       companionNetworks: {
         ethereum: 'mainnet',
         bsc: 'bsc',
@@ -166,6 +186,8 @@ module.exports = {
       url: 'http://arbsepolia',
       live: true,
       tags: ['staging', 'arbitrum'],
+      // eid: EndpointId.ARBSEP_V2_TESTNET,
+      // eid: 40231, // LayerZero V2 Endpoint ID
       companionNetworks: {
         ethereum: 'sepolia',
         bsc: 'bsctest',
@@ -181,6 +203,8 @@ module.exports = {
       url: 'http://base',
       live: true,
       tags: ['production', 'base'],
+      // eid: EndpointId.BASE_V2_MAINNET,
+      // eid: 30184, // LayerZero V2 Endpoint ID
       companionNetworks: {
         ethereum: 'mainnet',
       },
@@ -191,6 +215,8 @@ module.exports = {
       url: 'http://basesepolia',
       live: true,
       tags: ['staging', 'base'],
+      // eid: EndpointId.BASESEP_V2_TESTNET,
+      // eid: 40245, // LayerZero V2 Endpoint ID
       companionNetworks: {
         ethereum: 'sepolia',
       },

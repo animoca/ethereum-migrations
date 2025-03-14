@@ -5,10 +5,10 @@ const callbackLimit = 40000; // at the time of development, the callback gas usa
 const nbBlockConfirmations = 3;
 
 module.exports = function (name, resolverName, callbackGasLimit = callbackLimit, blockConfirmations = nbBlockConfirmations, options = {}) {
-  let NFTContract, gasPrice;
+  let NFTContract;
 
   const migration = templatedMigration(async (hre) => {
-    const {execute, get, read, log} = hre.deployments;
+    const {execute, get, log} = hre.deployments;
 
     const executeOptions = {
       ...options,
@@ -32,10 +32,7 @@ module.exports = function (name, resolverName, callbackGasLimit = callbackLimit,
   migration.skip = async (hre) => {
     const {get, read, log} = hre.deployments;
 
-    const gasPriceIdx = process.argv.indexOf('--gasprice');
-    if (gasPriceIdx > -1) {
-      gasPrice = process.argv[gasPriceIdx + 1];
-    } else {
+    if (process.argv.indexOf('--gasprice') == -1) {
       throw new Error('You must supply a gas price');
     }
 
