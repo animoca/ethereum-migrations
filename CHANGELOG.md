@@ -19,6 +19,12 @@
 
 - Updated to latest dependencies.
 
+## 3.0.6
+
+### Bugfixes
+
+- Missing fx-portal contracts deployed on amoy.
+
 ## 3.0.5
 
 ### New features
