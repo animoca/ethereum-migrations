@@ -14,7 +14,6 @@ module.exports = function (erc20DeploymentName, delegate, options = {}) {
     deterministic: true,
     deterministicSalt: deploymentName,
   });
-  migration.dependencies = [`${erc20DeploymentName}_deploy`];
   migration.skip = async (hre) => {
     const {log} = hre.deployments;
     const {live, name} = hre.network;
@@ -24,5 +23,7 @@ module.exports = function (erc20DeploymentName, delegate, options = {}) {
     }
     return false;
   };
+  migration.dependencies = [`${erc20DeploymentName}_deploy`];
+  migration.tags = [erc20DeploymentName];
   return migration;
 };

@@ -1,7 +1,10 @@
 const globals = require('globals');
 
-module.exports = [
+const {defineConfig, globalIgnores} = require('eslint/config');
+
+module.exports = defineConfig([
   require('eslint-plugin-prettier/recommended'),
+  globalIgnores(['node_modules/*', '.yalc/*']),
   {
     languageOptions: {
       ecmaVersion: 2020,
@@ -18,6 +21,6 @@ module.exports = [
       'no-await-in-loop': 'off',
       'max-len': ['error', {code: 150}],
     },
-    ignores: ['node_modules/*', 'artifacts*/**', 'cache*/**', 'imports/*', 'deployments*/**', 'generated/*'],
+    ignores: ['artifacts*/**', 'cache*/**', 'imports/*', 'deployments*/**', 'generated/*'],
   },
-];
+]);

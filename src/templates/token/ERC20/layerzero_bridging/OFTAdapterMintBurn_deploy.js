@@ -12,7 +12,6 @@ module.exports = function (erc20DeploymentName, delegate, options = {}) {
       {name: 'delegate', value: getNamedAccount(delegate)},
     ],
   });
-  migration.dependencies = [`${erc20DeploymentName}_deploy`];
   migration.skip = async (hre) => {
     const {log} = hre.deployments;
     const {live, name} = hre.network;
@@ -22,5 +21,7 @@ module.exports = function (erc20DeploymentName, delegate, options = {}) {
     }
     return false;
   };
+  migration.dependencies = [`${erc20DeploymentName}_deploy`];
+  migration.tags = [erc20DeploymentName];
   return migration;
 };

@@ -1,6 +1,6 @@
 const {ethers} = require('hardhat');
 const {templatedMigration} = require('../utils');
-const {generateCuts, FacetCutAction} = require('../diamond');
+const {generateCuts, FacetCutAction} = require('../../helpers/diamond');
 
 module.exports = function (name, facetsConfig, options = {}) {
   const migration = templatedMigration(async (hre) => {
