@@ -18,6 +18,7 @@
 ### Improvements
 
 - Updated to latest dependencies.
+- Skipped fx-portal migrations on amoy.
 
 ## 3.0.6
 
