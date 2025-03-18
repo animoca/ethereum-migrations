@@ -42,7 +42,7 @@ module.exports = {
         base: 'base',
         polygon: 'matic',
         bsc: 'bsc',
-        okex: 'okex',
+        // okex: 'okex',
         arbitrum: 'arb1',
       },
     },
@@ -57,7 +57,7 @@ module.exports = {
         base: 'basesepolia',
         polygon: 'amoy',
         bsc: 'bsctest',
-        okex: 'okextest',
+        // okex: 'okextest',
         arbitrum: 'arbsepolia',
       },
     },
@@ -133,16 +133,16 @@ module.exports = {
       },
     },
 
-    okextest: {
-      // chainId 65
-      // https://okexchain-docs.readthedocs.io/en/latest/developers/quick-start.html
-      url: 'http://okextest',
-      live: true,
-      tags: ['staging', 'okex'],
-      companionNetworks: {
-        ethereum: 'sepolia',
-      },
-    },
+    // okextest: {
+    //   // chainId 65
+    //   // https://okexchain-docs.readthedocs.io/en/latest/developers/quick-start.html
+    //   url: 'http://okextest',
+    //   live: true,
+    //   tags: ['staging', 'okex'],
+    //   companionNetworks: {
+    //     ethereum: 'sepolia',
+    //   },
+    // },
 
     //----------------------------//
     //          ARBITRUM          //

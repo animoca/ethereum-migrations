@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.0.8
+
+### Bugfixes
+
+- Removed configuration for deprecated network okextest.
+- Skipped fx-portal migrations on sepolia.
+
 ## 3.0.7
 
 ### Bugfixes

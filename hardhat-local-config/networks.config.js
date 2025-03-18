@@ -28,9 +28,9 @@ module.exports = {
     okex: {
       defaultProvider: 'exchain',
     },
-    okextest: {
-      defaultProvider: 'exchain',
-    },
+    // okextest: {
+    //   defaultProvider: 'exchain',
+    // },
 
     // Arbitrum
     arb1: {
