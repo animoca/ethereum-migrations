@@ -18,7 +18,5 @@ module.exports = function (deploymentName, primaryChainDeploymentName, primaryCh
   };
 
   const migration = ERC20FixedSupply_deploy(deploymentName, tokenName, tokenSymbol, tokenDecimals, holders, allocations, options);
-  migration.dependencies = [`${deploymentName}_deploy`];
-  migration.tags = [deploymentName];
   return migration;
 };
