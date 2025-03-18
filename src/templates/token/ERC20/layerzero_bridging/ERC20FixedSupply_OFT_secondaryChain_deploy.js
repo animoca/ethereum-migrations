@@ -17,7 +17,7 @@ module.exports = function (deploymentName, primaryChainType, tokenName, tokenSym
     return [await hre.companionNetworks[primaryChainType].deployments.read(deploymentName, 'totalSupply')];
   };
 
-  const migration = ERC20FixedSupply_deploy(deploymenName, tokenName, tokenSymbol, tokenDecimals, holders, allocations, options);
+  const migration = ERC20FixedSupply_deploy(deploymentName, tokenName, tokenSymbol, tokenDecimals, holders, allocations, options);
   migration.dependencies = [`${deploymentName}_deploy`];
   migration.tags = [deploymentName];
   return migration;
