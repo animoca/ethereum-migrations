@@ -3,6 +3,7 @@ const {getContractAddress} = require('../../../helpers/templates');
 
 module.exports = function (deploymentName, tokenName, tokenSymbol, tokenDecimals, holders, allocations, options = {}) {
   const migration = Contract_deploy(deploymentName, {
+    ...options,
     contract: 'ERC20FixedSupply',
     args: [
       {name: 'name', value: tokenName},
@@ -12,7 +13,6 @@ module.exports = function (deploymentName, tokenName, tokenSymbol, tokenDecimals
       {name: 'allocations', value: allocations},
       {name: 'ForwarderRegistry', value: getContractAddress('ForwarderRegistry@4.1')},
     ],
-    ...options,
   });
   migration.dependencies = ['ForwarderRegistry@4.1_deploy'];
   return migration;
