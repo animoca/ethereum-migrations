@@ -29,7 +29,7 @@ module.exports = {
     },
     exchain: {
       okex: 'https://exchainrpc.okex.org',
-      okextest: 'https://exchaintestrpc.okex.org',
+      // okextest: 'https://exchaintestrpc.okex.org',
     },
     arbitrum: {
       arb1: 'https://arb1.arbitrum.io/rpc',

@@ -5,7 +5,7 @@ module.exports = {
       defaultProvider: 'alchemy',
     },
     sepolia: {
-      defaultProvider: 'infura',
+      defaultProvider: 'alchemy',
     },
 
     // Polygon
@@ -28,9 +28,9 @@ module.exports = {
     okex: {
       defaultProvider: 'exchain',
     },
-    okextest: {
-      defaultProvider: 'exchain',
-    },
+    // okextest: {
+    //   defaultProvider: 'exchain',
+    // },
 
     // Arbitrum
     arb1: {

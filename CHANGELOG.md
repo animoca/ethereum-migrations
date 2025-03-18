@@ -6,10 +6,12 @@
 
 - Updated to dependency version `@animoca/ethereum-contracts@4x` and `@animoca/ethereum-contracts-bridging@2x`.
 - Moved `diamond.js` from `templates/` to `helpers/` folder.
+- Removed deprecated network `okextest`.
 
 ### New features
 
 - Added support for LayerZero OFT bridging: `hardhat-deploy-lz-deployments` plugin, configurations and migration templates.
+- Contracts deployed on test networks.
 
 ### Bugfixes
 

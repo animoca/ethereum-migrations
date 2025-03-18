@@ -1,0 +1,221 @@
+{
+  "address": "0xC6DDf494d30298124dc2B46ad9a1A6423d676779",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IForwarderRegistry",
+          "name": "forwarderRegistry",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "currentPhase",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newPhase",
+          "type": "uint256"
+        }
+      ],
+      "name": "InitializationPhaseAlreadyReached",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NoInitialProxyAdmin",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "NotProxyAdmin",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "previousAdmin",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "AdminChanged",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "changeProxyAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "initialAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "initProxyAdminStorage",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "proxyAdmin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "admin",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x241370504a50986af0097dc796c2bd9a21393d282a5585af7b61420d1a3f1af7",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0xB553C4B21966123d7f8c02Ca6909c110260052E8",
+    "contractAddress": null,
+    "transactionIndex": 25,
+    "gasUsed": "376914",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x89e1bc62d6a9b0d7eb00197ea260975d5fd5c72f60ecb46ed3c301c13a9095eb",
+    "transactionHash": "0x241370504a50986af0097dc796c2bd9a21393d282a5585af7b61420d1a3f1af7",
+    "logs": [],
+    "blockNumber": 23260496,
+    "cumulativeGasUsed": "4648227",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x316a472D084489CB6d4C66e5eB62aE3AdA17521e"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "84bab0eb3356c2e3bedca0f2f5a163c5",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IForwarderRegistry\",\"name\":\"forwarderRegistry\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"currentPhase\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"newPhase\",\"type\":\"uint256\"}],\"name\":\"InitializationPhaseAlreadyReached\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NoInitialProxyAdmin\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"NotProxyAdmin\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"previousAdmin\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"AdminChanged\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"changeProxyAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"initialAdmin\",\"type\":\"address\"}],\"name\":\"initProxyAdminStorage\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"proxyAdmin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"admin\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"See https://eips.ethereum.org/EIPS/eip-1967This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).\",\"errors\":{\"InitializationPhaseAlreadyReached(uint256,uint256)\":[{\"params\":{\"currentPhase\":\"The current phase.\",\"newPhase\":\"The new phase trying to be set.\"}}],\"NotProxyAdmin(address)\":[{\"params\":{\"account\":\"The account that was checked.\"}}]},\"events\":{\"AdminChanged(address,address)\":{\"params\":{\"newAdmin\":\"the new admin.\",\"previousAdmin\":\"the previous admin.\"}}},\"kind\":\"dev\",\"methods\":{\"changeProxyAdmin(address)\":{\"details\":\"Reverts with {NotProxyAdmin} if `sender` is not the proxy admin.Emits an {AdminChanged} event if `newAdmin` is different from the current proxy admin.\",\"params\":{\"newAdmin\":\"The new proxy admin.\"}},\"initProxyAdminStorage(address)\":{\"details\":\"Reverts with {InitializationPhaseAlreadyReached} if the proxy initialization phase is set to `1` or above.Emits an {AdminChanged} event if `initialAdmin` is not the zero address.\",\"params\":{\"initialAdmin\":\"The initial payout wallet.\"}},\"proxyAdmin()\":{\"returns\":{\"admin\":\"The proxy admin.\"}}},\"title\":\"ERC1967 Standard Proxy Storage Slots, Admin Address (facet version).\",\"version\":1},\"userdoc\":{\"errors\":{\"InitializationPhaseAlreadyReached(uint256,uint256)\":[{\"notice\":\"Emitted when trying to set a phase value that has already been reached.\"}],\"NoInitialProxyAdmin()\":[{\"notice\":\"Thrown when the initial admin is not set.\"}],\"NotProxyAdmin(address)\":[{\"notice\":\"Thrown when an account is not the proxy admin but is required to.\"}]},\"events\":{\"AdminChanged(address,address)\":{\"notice\":\"Emitted when the proxy admin changes.\"}},\"kind\":\"user\",\"methods\":{\"changeProxyAdmin(address)\":{\"notice\":\"Sets a new proxy admin.\"},\"initProxyAdminStorage(address)\":{\"notice\":\"Initializes the storage with an initial admin.Sets the proxy initialization phase to `1`.\"},\"proxyAdmin()\":{\"notice\":\"Gets the proxy admin.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/proxy/facets/ProxyAdminFacet.sol\":\"ProxyAdminFacet\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":99999},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.0.1) (utils/Context.sol)\\n\\npragma solidity ^0.8.20;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n\\n    function _contextSuffixLength() internal view virtual returns (uint256) {\\n        return 0;\\n    }\\n}\\n\",\"keccak256\":\"0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/StorageSlot.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.1.0) (utils/StorageSlot.sol)\\n// This file was procedurally generated from scripts/generate/templates/StorageSlot.js.\\n\\npragma solidity ^0.8.20;\\n\\n/**\\n * @dev Library for reading and writing primitive types to specific storage slots.\\n *\\n * Storage slots are often used to avoid storage conflict when dealing with upgradeable contracts.\\n * This library helps with reading and writing to such slots without the need for inline assembly.\\n *\\n * The functions in this library return Slot structs that contain a `value` member that can be used to read or write.\\n *\\n * Example usage to set ERC-1967 implementation slot:\\n * ```solidity\\n * contract ERC1967 {\\n *     // Define the slot. Alternatively, use the SlotDerivation library to derive the slot.\\n *     bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;\\n *\\n *     function _getImplementation() internal view returns (address) {\\n *         return StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value;\\n *     }\\n *\\n *     function _setImplementation(address newImplementation) internal {\\n *         require(newImplementation.code.length > 0);\\n *         StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation;\\n *     }\\n * }\\n * ```\\n *\\n * TIP: Consider using this library along with {SlotDerivation}.\\n */\\nlibrary StorageSlot {\\n    struct AddressSlot {\\n        address value;\\n    }\\n\\n    struct BooleanSlot {\\n        bool value;\\n    }\\n\\n    struct Bytes32Slot {\\n        bytes32 value;\\n    }\\n\\n    struct Uint256Slot {\\n        uint256 value;\\n    }\\n\\n    struct Int256Slot {\\n        int256 value;\\n    }\\n\\n    struct StringSlot {\\n        string value;\\n    }\\n\\n    struct BytesSlot {\\n        bytes value;\\n    }\\n\\n    /**\\n     * @dev Returns an `AddressSlot` with member `value` located at `slot`.\\n     */\\n    function getAddressSlot(bytes32 slot) internal pure returns (AddressSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `BooleanSlot` with member `value` located at `slot`.\\n     */\\n    function getBooleanSlot(bytes32 slot) internal pure returns (BooleanSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `Bytes32Slot` with member `value` located at `slot`.\\n     */\\n    function getBytes32Slot(bytes32 slot) internal pure returns (Bytes32Slot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `Uint256Slot` with member `value` located at `slot`.\\n     */\\n    function getUint256Slot(bytes32 slot) internal pure returns (Uint256Slot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `Int256Slot` with member `value` located at `slot`.\\n     */\\n    function getInt256Slot(bytes32 slot) internal pure returns (Int256Slot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `StringSlot` with member `value` located at `slot`.\\n     */\\n    function getStringSlot(bytes32 slot) internal pure returns (StringSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns an `StringSlot` representation of the string storage pointer `store`.\\n     */\\n    function getStringSlot(string storage store) internal pure returns (StringSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := store.slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `BytesSlot` with member `value` located at `slot`.\\n     */\\n    function getBytesSlot(bytes32 slot) internal pure returns (BytesSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns an `BytesSlot` representation of the bytes storage pointer `store`.\\n     */\\n    function getBytesSlot(bytes storage store) internal pure returns (BytesSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := store.slot\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xcf74f855663ce2ae00ed8352666b7935f6cddea2932fdf2c3ecd30a9b1cd0e97\",\"license\":\"MIT\"},\"contracts/metatx/base/ForwarderRegistryContextBase.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nimport {IForwarderRegistry} from \\\"./../interfaces/IForwarderRegistry.sol\\\";\\nimport {ERC2771Calldata} from \\\"./../libraries/ERC2771Calldata.sol\\\";\\n\\n/// @title Meta-Transactions Forwarder Registry Context (proxiable version).\\n/// @dev This contract is to be used via inheritance in a proxied implementation.\\n/// @dev Derived from https://github.com/wighawag/universal-forwarder (MIT licence)\\nabstract contract ForwarderRegistryContextBase {\\n    IForwarderRegistry internal immutable _FORWARDER_REGISTRY;\\n\\n    constructor(IForwarderRegistry forwarderRegistry) {\\n        _FORWARDER_REGISTRY = forwarderRegistry;\\n    }\\n\\n    /// @notice Returns the message sender depending on the ForwarderRegistry-based meta-transaction context.\\n    function _msgSender() internal view virtual returns (address) {\\n        // Optimised path in case of an EOA-initiated direct tx to the contract or a call from a contract not complying with EIP-2771\\n        // solhint-disable-next-line avoid-tx-origin\\n        if (msg.sender == tx.origin || msg.data.length < 24) {\\n            return msg.sender;\\n        }\\n\\n        address sender = ERC2771Calldata.msgSender();\\n\\n        // Return the EIP-2771 calldata-appended sender address if the message was forwarded by the ForwarderRegistry or an approved forwarder\\n        if (msg.sender == address(_FORWARDER_REGISTRY) || _FORWARDER_REGISTRY.isApprovedForwarder(sender, msg.sender, address(this))) {\\n            return sender;\\n        }\\n\\n        return msg.sender;\\n    }\\n\\n    /// @notice Returns the message data depending on the ForwarderRegistry-based meta-transaction context.\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        // Optimised path in case of an EOA-initiated direct tx to the contract or a call from a contract not complying with EIP-2771\\n        // solhint-disable-next-line avoid-tx-origin\\n        if (msg.sender == tx.origin || msg.data.length < 24) {\\n            return msg.data;\\n        }\\n\\n        // Return the EIP-2771 calldata (minus the appended sender) if the message was forwarded by the ForwarderRegistry or an approved forwarder\\n        if (\\n            msg.sender == address(_FORWARDER_REGISTRY) ||\\n            _FORWARDER_REGISTRY.isApprovedForwarder(ERC2771Calldata.msgSender(), msg.sender, address(this))\\n        ) {\\n            return ERC2771Calldata.msgData();\\n        }\\n\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0x9a024b7aa6527471d6a097c62dfa94e85a1427ec63776153aff9e5d7ba229040\",\"license\":\"MIT\"},\"contracts/metatx/interfaces/IForwarderRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title Meta-Transactions Forwarder Registry.\\ninterface IForwarderRegistry {\\n    /// @notice Checks whether an account is as an approved meta-transaction forwarder for a sender account to a target contract.\\n    /// @param sender The sender account.\\n    /// @param forwarder The forwarder account.\\n    /// @param target The target contract.\\n    /// @return isApproved True if `forwarder` is an approved meta-transaction forwarder for `sender` to `target`, false otherwise.\\n    function isApprovedForwarder(address sender, address forwarder, address target) external view returns (bool isApproved);\\n}\\n\",\"keccak256\":\"0xdfb17430660876a9214c0cc4c37eb688c565b3c8211151b3413d88d5b4e4c4cb\",\"license\":\"MIT\"},\"contracts/metatx/libraries/ERC2771Calldata.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @dev Derived from https://github.com/OpenZeppelin/openzeppelin-contracts (MIT licence)\\n/// @dev See https://eips.ethereum.org/EIPS/eip-2771\\nlibrary ERC2771Calldata {\\n    /// @notice Returns the sender address appended at the end of the calldata, as specified in EIP-2771.\\n    function msgSender() internal pure returns (address sender) {\\n        assembly {\\n            sender := shr(96, calldataload(sub(calldatasize(), 20)))\\n        }\\n    }\\n\\n    /// @notice Returns the calldata while omitting the appended sender address, as specified in EIP-2771.\\n    function msgData() internal pure returns (bytes calldata data) {\\n        unchecked {\\n            return msg.data[:msg.data.length - 20];\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x8de5057207aa02ba450c95d802f3f77736cafeb1c4e516d6989c27ff5fa1315d\",\"license\":\"MIT\"},\"contracts/proxy/base/ProxyAdminBase.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nimport {IProxyAdmin} from \\\"./../interfaces/IProxyAdmin.sol\\\";\\nimport {ProxyAdminStorage} from \\\"./../libraries/ProxyAdminStorage.sol\\\";\\nimport {Context} from \\\"@openzeppelin/contracts/utils/Context.sol\\\";\\n\\n/// @title ERC1967 Standard Proxy Storage Slots, Admin Address (proxiable version).\\n/// @dev See https://eips.ethereum.org/EIPS/eip-1967\\n/// @dev This contract is to be used via inheritance in a proxied implementation.\\nabstract contract ProxyAdminBase is IProxyAdmin, Context {\\n    using ProxyAdminStorage for ProxyAdminStorage.Layout;\\n\\n    /// @notice Sets a new proxy admin.\\n    /// @dev Reverts with {NotProxyAdmin} if `sender` is not the proxy admin.\\n    /// @dev Emits an {AdminChanged} event if `newAdmin` is different from the current proxy admin.\\n    /// @param newAdmin The new proxy admin.\\n    function changeProxyAdmin(address newAdmin) external {\\n        ProxyAdminStorage.layout().changeProxyAdmin(_msgSender(), newAdmin);\\n    }\\n\\n    /// @notice Gets the proxy admin.\\n    /// @return admin The proxy admin.\\n    function proxyAdmin() external view returns (address admin) {\\n        return ProxyAdminStorage.layout().proxyAdmin();\\n    }\\n}\\n\",\"keccak256\":\"0xd76821e9c6753af2959a264504419f043f91ef524b2d32663ca56091626609f4\",\"license\":\"MIT\"},\"contracts/proxy/errors/ProxyAdminErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Thrown when the initial admin is not set.\\nerror NoInitialProxyAdmin();\\n\\n/// @notice Thrown when an account is not the proxy admin but is required to.\\n/// @param account The account that was checked.\\nerror NotProxyAdmin(address account);\\n\",\"keccak256\":\"0x8ba37d9f154407fc3ddc058b5f678866b274a9674cd850bd8bf73d79e626c160\",\"license\":\"MIT\"},\"contracts/proxy/errors/ProxyInitializationErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Emitted when trying to set a phase value that has already been reached.\\n/// @param currentPhase The current phase.\\n/// @param newPhase The new phase trying to be set.\\nerror InitializationPhaseAlreadyReached(uint256 currentPhase, uint256 newPhase);\\n\",\"keccak256\":\"0x85ee7912d0020d0f032e2dacacbec057114235fbdab703753fdcde5c78275543\",\"license\":\"MIT\"},\"contracts/proxy/events/ProxyAdminEvents.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Emitted when the proxy admin changes.\\n/// @param previousAdmin the previous admin.\\n/// @param newAdmin the new admin.\\nevent AdminChanged(address previousAdmin, address newAdmin);\\n\",\"keccak256\":\"0x8af172a87e9b4f1188e7837f4aaac8bdb438191b1465cc963f4543da1a435476\",\"license\":\"MIT\"},\"contracts/proxy/facets/ProxyAdminFacet.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.28;\\n\\nimport {IForwarderRegistry} from \\\"./../../metatx/interfaces/IForwarderRegistry.sol\\\";\\nimport {ProxyAdminStorage} from \\\"./../libraries/ProxyAdminStorage.sol\\\";\\nimport {ProxyAdminBase} from \\\"./../base/ProxyAdminBase.sol\\\";\\nimport {Context} from \\\"@openzeppelin/contracts/utils/Context.sol\\\";\\nimport {ForwarderRegistryContextBase} from \\\"./../../metatx/base/ForwarderRegistryContextBase.sol\\\";\\n\\n/// @title ERC1967 Standard Proxy Storage Slots, Admin Address (facet version).\\n/// @dev See https://eips.ethereum.org/EIPS/eip-1967\\n/// @dev This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).\\ncontract ProxyAdminFacet is ProxyAdminBase, ForwarderRegistryContextBase {\\n    using ProxyAdminStorage for ProxyAdminStorage.Layout;\\n\\n    constructor(IForwarderRegistry forwarderRegistry) ForwarderRegistryContextBase(forwarderRegistry) {}\\n\\n    /// @notice Initializes the storage with an initial admin.\\n    /// @notice Sets the proxy initialization phase to `1`.\\n    /// @dev Reverts with {InitializationPhaseAlreadyReached} if the proxy initialization phase is set to `1` or above.\\n    /// @dev Emits an {AdminChanged} event if `initialAdmin` is not the zero address.\\n    /// @param initialAdmin The initial payout wallet.\\n    function initProxyAdminStorage(address initialAdmin) external {\\n        ProxyAdminStorage.layout().proxyInit(initialAdmin);\\n    }\\n\\n    /// @inheritdoc ForwarderRegistryContextBase\\n    function _msgSender() internal view virtual override(Context, ForwarderRegistryContextBase) returns (address) {\\n        return ForwarderRegistryContextBase._msgSender();\\n    }\\n\\n    /// @inheritdoc ForwarderRegistryContextBase\\n    function _msgData() internal view virtual override(Context, ForwarderRegistryContextBase) returns (bytes calldata) {\\n        return ForwarderRegistryContextBase._msgData();\\n    }\\n}\\n\",\"keccak256\":\"0x9cd69d67d83188b9ab48f3a2be446a5516ba62f0cf69c2f2de20d51c9b5052b4\",\"license\":\"MIT\"},\"contracts/proxy/interfaces/IProxyAdmin.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title ERC1967 Standard Proxy Storage Slots, Admin Address (functions).\\n/// @dev See https://eips.ethereum.org/EIPS/eip-1967\\ninterface IProxyAdmin {\\n    /// @notice Sets a new proxy admin.\\n    /// @dev Reverts with {NotProxyAdmin} if the sender is not the proxy admin.\\n    /// @dev Emits an {AdminChanged} event if `newAdmin` is different from the current proxy admin.\\n    /// @param newAdmin The new proxy admin.\\n    function changeProxyAdmin(address newAdmin) external;\\n\\n    /// @notice Gets the proxy admin.\\n    /// @return admin The proxy admin\\n    function proxyAdmin() external view returns (address admin);\\n}\\n\",\"keccak256\":\"0x88ffcbe82ffa211163cfe2809cafef0d0b5c6e12d54a15197cb75b801abc8f2c\",\"license\":\"MIT\"},\"contracts/proxy/libraries/ProxyAdminStorage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nimport {NoInitialProxyAdmin, NotProxyAdmin} from \\\"./../errors/ProxyAdminErrors.sol\\\";\\nimport {AdminChanged} from \\\"./../events/ProxyAdminEvents.sol\\\";\\nimport {ProxyInitialization} from \\\"./ProxyInitialization.sol\\\";\\n\\nlibrary ProxyAdminStorage {\\n    using ProxyAdminStorage for ProxyAdminStorage.Layout;\\n\\n    struct Layout {\\n        address admin;\\n    }\\n\\n    // bytes32 public constant PROXYADMIN_STORAGE_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103;\\n    bytes32 internal constant LAYOUT_STORAGE_SLOT = bytes32(uint256(keccak256(\\\"eip1967.proxy.admin\\\")) - 1);\\n    bytes32 internal constant PROXY_INIT_PHASE_SLOT = bytes32(uint256(keccak256(\\\"eip1967.proxy.admin.phase\\\")) - 1);\\n\\n    /// @notice Initializes the storage with an initial admin (immutable version).\\n    /// @dev Note: This function should be called ONLY in the constructor of an immutable (non-proxied) contract.\\n    /// @dev Reverts {NoInitialProxyAdmin} if `initialAdmin` is the zero address.\\n    /// @dev Emits an {AdminChanged} event.\\n    /// @param initialAdmin The initial payout wallet.\\n    function constructorInit(Layout storage s, address initialAdmin) internal {\\n        if (initialAdmin == address(0)) revert NoInitialProxyAdmin();\\n        s.admin = initialAdmin;\\n        emit AdminChanged(address(0), initialAdmin);\\n    }\\n\\n    /// @notice Initializes the storage with an initial admin (proxied version).\\n    /// @notice Sets the proxy initialization phase to `1`.\\n    /// @dev Note: This function should be called ONLY in the init function of a proxied contract.\\n    /// @dev Reverts with {InitializationPhaseAlreadyReached} if the proxy initialization phase is set to `1` or above.\\n    /// @dev Reverts {NoInitialProxyAdmin} if `initialAdmin` is the zero address.\\n    /// @dev Emits an {AdminChanged} event.\\n    /// @param initialAdmin The initial payout wallet.\\n    function proxyInit(Layout storage s, address initialAdmin) internal {\\n        ProxyInitialization.setPhase(PROXY_INIT_PHASE_SLOT, 1);\\n        s.constructorInit(initialAdmin);\\n    }\\n\\n    /// @notice Sets a new proxy admin.\\n    /// @dev Reverts with {NotProxyAdmin} if `sender` is not the proxy admin.\\n    /// @dev Emits an {AdminChanged} event if `newAdmin` is different from the current proxy admin.\\n    /// @param newAdmin The new proxy admin.\\n    function changeProxyAdmin(Layout storage s, address sender, address newAdmin) internal {\\n        address previousAdmin = s.admin;\\n        if (sender != previousAdmin) revert NotProxyAdmin(sender);\\n        if (previousAdmin != newAdmin) {\\n            s.admin = newAdmin;\\n            emit AdminChanged(previousAdmin, newAdmin);\\n        }\\n    }\\n\\n    /// @notice Gets the proxy admin.\\n    /// @return admin The proxy admin\\n    function proxyAdmin(Layout storage s) internal view returns (address admin) {\\n        return s.admin;\\n    }\\n\\n    /// @notice Ensures that an account is the proxy admin.\\n    /// @dev Reverts with {NotProxyAdmin} if `account` is not the proxy admin.\\n    /// @param account The account.\\n    function enforceIsProxyAdmin(Layout storage s, address account) internal view {\\n        if (account != s.admin) revert NotProxyAdmin(account);\\n    }\\n\\n    function layout() internal pure returns (Layout storage s) {\\n        bytes32 position = LAYOUT_STORAGE_SLOT;\\n        assembly {\\n            s.slot := position\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x1f1cb9a6470f14aa9942dedd288aaffc6c582abf831edeb52e51a3691cdd32a4\",\"license\":\"MIT\"},\"contracts/proxy/libraries/ProxyInitialization.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nimport {InitializationPhaseAlreadyReached} from \\\"./../errors/ProxyInitializationErrors.sol\\\";\\nimport {StorageSlot} from \\\"@openzeppelin/contracts/utils/StorageSlot.sol\\\";\\n\\n/// @notice Multiple calls protection for storage-modifying proxy initialization functions.\\nlibrary ProxyInitialization {\\n    /// @notice Sets the initialization phase during a storage-modifying proxy initialization function.\\n    /// @dev Reverts with {InitializationPhaseAlreadyReached} if `phase` has been reached already.\\n    /// @param storageSlot the storage slot where `phase` is stored.\\n    /// @param phase the initialization phase.\\n    function setPhase(bytes32 storageSlot, uint256 phase) internal {\\n        StorageSlot.Uint256Slot storage currentVersion = StorageSlot.getUint256Slot(storageSlot);\\n        uint256 currentPhase = currentVersion.value;\\n        if (currentPhase >= phase) revert InitializationPhaseAlreadyReached(currentPhase, phase);\\n        currentVersion.value = phase;\\n    }\\n}\\n\",\"keccak256\":\"0xdc2cca29702fe573cb5af8c3320eafe7a490aef99bcaafe1e6575159bb0007d7\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60a0604052348015600f57600080fd5b50604051610665380380610665833981016040819052602c91603c565b6001600160a01b0316608052606a565b600060208284031215604d57600080fd5b81516001600160a01b0381168114606357600080fd5b9392505050565b6080516105d961008c60003960008181610400015261048e01526105d96000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80633e47158c146100465780634d350622146100775780639f712f2f1461008c575b600080fd5b61004e61009f565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b61008a61008536600461050a565b6100cb565b005b61008a61009a36600461050a565b6100e0565b60006100c66100ac6100fb565b5473ffffffffffffffffffffffffffffffffffffffff1690565b905090565b6100dd816100d76100fb565b9061012f565b50565b6100dd6100eb610172565b826100f46100fb565b919061017c565b60008061012960017fb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6104610547565b92915050565b61016461015d60017fc4214a2a0bb1b53325bec6bf1dc591abd32036bb3f39039f460ac4a3eb0f7298610547565b60016102a5565b61016e82826102f1565b5050565b60006100c66103bd565b825473ffffffffffffffffffffffffffffffffffffffff90811690831681146101ee576040517f673a31a100000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff841660048201526024015b60405180910390fd5b8173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161461029f5783547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff838116918217865560408051918416825260208201929092527f7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f910160405180910390a15b50505050565b815482908281106102ec576040517fbf0c18ec00000000000000000000000000000000000000000000000000000000815260048101829052602481018490526044016101e5565b505550565b73ffffffffffffffffffffffffffffffffffffffff811661033e576040517fbf91956000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b81547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff82169081178355604080516000815260208101929092527f7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f910160405180910390a15050565b6000333214806103cd5750601836105b156103d757503390565b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec36013560601c7f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff163314806104f957506040517f019a202800000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff82811660048301523360248301523060448301527f0000000000000000000000000000000000000000000000000000000000000000169063019a202890606401602060405180830381865afa1580156104d5573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906104f99190610581565b1561050357919050565b3391505090565b60006020828403121561051c57600080fd5b813573ffffffffffffffffffffffffffffffffffffffff8116811461054057600080fd5b9392505050565b81810381811115610129577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006020828403121561059357600080fd5b8151801515811461054057600080fdfea26469706673582212207e622893a89870f2ec9627b705f7bd37fc8167f2d50b86230c96e8d430251f7864736f6c634300081c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80633e47158c146100465780634d350622146100775780639f712f2f1461008c575b600080fd5b61004e61009f565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b61008a61008536600461050a565b6100cb565b005b61008a61009a36600461050a565b6100e0565b60006100c66100ac6100fb565b5473ffffffffffffffffffffffffffffffffffffffff1690565b905090565b6100dd816100d76100fb565b9061012f565b50565b6100dd6100eb610172565b826100f46100fb565b919061017c565b60008061012960017fb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6104610547565b92915050565b61016461015d60017fc4214a2a0bb1b53325bec6bf1dc591abd32036bb3f39039f460ac4a3eb0f7298610547565b60016102a5565b61016e82826102f1565b5050565b60006100c66103bd565b825473ffffffffffffffffffffffffffffffffffffffff90811690831681146101ee576040517f673a31a100000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff841660048201526024015b60405180910390fd5b8173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161461029f5783547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff838116918217865560408051918416825260208201929092527f7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f910160405180910390a15b50505050565b815482908281106102ec576040517fbf0c18ec00000000000000000000000000000000000000000000000000000000815260048101829052602481018490526044016101e5565b505550565b73ffffffffffffffffffffffffffffffffffffffff811661033e576040517fbf91956000000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b81547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff82169081178355604080516000815260208101929092527f7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f910160405180910390a15050565b6000333214806103cd5750601836105b156103d757503390565b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec36013560601c7f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff163314806104f957506040517f019a202800000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff82811660048301523360248301523060448301527f0000000000000000000000000000000000000000000000000000000000000000169063019a202890606401602060405180830381865afa1580156104d5573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906104f99190610581565b1561050357919050565b3391505090565b60006020828403121561051c57600080fd5b813573ffffffffffffffffffffffffffffffffffffffff8116811461054057600080fd5b9392505050565b81810381811115610129577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006020828403121561059357600080fd5b8151801515811461054057600080fdfea26469706673582212207e622893a89870f2ec9627b705f7bd37fc8167f2d50b86230c96e8d430251f7864736f6c634300081c0033",
+  "devdoc": {
+    "details": "See https://eips.ethereum.org/EIPS/eip-1967This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).",
+    "errors": {
+      "InitializationPhaseAlreadyReached(uint256,uint256)": [
+        {
+          "params": {
+            "currentPhase": "The current phase.",
+            "newPhase": "The new phase trying to be set."
+          }
+        }
+      ],
+      "NotProxyAdmin(address)": [
+        {
+          "params": {
+            "account": "The account that was checked."
+          }
+        }
+      ]
+    },
+    "events": {
+      "AdminChanged(address,address)": {
+        "params": {
+          "newAdmin": "the new admin.",
+          "previousAdmin": "the previous admin."
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "changeProxyAdmin(address)": {
+        "details": "Reverts with {NotProxyAdmin} if `sender` is not the proxy admin.Emits an {AdminChanged} event if `newAdmin` is different from the current proxy admin.",
+        "params": {
+          "newAdmin": "The new proxy admin."
+        }
+      },
+      "initProxyAdminStorage(address)": {
+        "details": "Reverts with {InitializationPhaseAlreadyReached} if the proxy initialization phase is set to `1` or above.Emits an {AdminChanged} event if `initialAdmin` is not the zero address.",
+        "params": {
+          "initialAdmin": "The initial payout wallet."
+        }
+      },
+      "proxyAdmin()": {
+        "returns": {
+          "admin": "The proxy admin."
+        }
+      }
+    },
+    "title": "ERC1967 Standard Proxy Storage Slots, Admin Address (facet version).",
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "InitializationPhaseAlreadyReached(uint256,uint256)": [
+        {
+          "notice": "Emitted when trying to set a phase value that has already been reached."
+        }
+      ],
+      "NoInitialProxyAdmin()": [
+        {
+          "notice": "Thrown when the initial admin is not set."
+        }
+      ],
+      "NotProxyAdmin(address)": [
+        {
+          "notice": "Thrown when an account is not the proxy admin but is required to."
+        }
+      ]
+    },
+    "events": {
+      "AdminChanged(address,address)": {
+        "notice": "Emitted when the proxy admin changes."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "changeProxyAdmin(address)": {
+        "notice": "Sets a new proxy admin."
+      },
+      "initProxyAdminStorage(address)": {
+        "notice": "Initializes the storage with an initial admin.Sets the proxy initialization phase to `1`."
+      },
+      "proxyAdmin()": {
+        "notice": "Gets the proxy admin."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
