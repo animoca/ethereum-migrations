@@ -1,5 +1,5 @@
 const {ethers} = require('hardhat');
-const {buildNamedArgs, namedArgsToString} = require('./utils');
+const {buildNamedArgs, namedArgsToString} = require('../templates/utils');
 
 const FacetCutAction = {
   Add: 0,
