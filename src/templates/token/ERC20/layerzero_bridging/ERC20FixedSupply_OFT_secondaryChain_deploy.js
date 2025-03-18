@@ -1,6 +1,6 @@
 const ERC20FixedSupply_deploy = require('../ERC20FixedSupply_deploy');
 
-module.exports = function (deploymentName, primaryChainType, tokenName, tokenSymbol, tokenDecimals, options = {}) {
+module.exports = function (deploymentName, primaryChainDeploymentName, primaryChainType, tokenName, tokenSymbol, tokenDecimals, options = {}) {
   const holders = async (hre) => {
     const {deterministic} = hre.deployments;
     const adapterDeploymentName = `OFTAdapterFixedSupply@4.1_${deploymentName}`;
@@ -14,7 +14,7 @@ module.exports = function (deploymentName, primaryChainType, tokenName, tokenSym
   };
 
   const allocations = async (hre) => {
-    return [await hre.companionNetworks[primaryChainType].deployments.read(deploymentName, 'totalSupply')];
+    return [await hre.companionNetworks[primaryChainType].deployments.read(primaryChainDeploymentName, 'totalSupply')];
   };
 
   const migration = ERC20FixedSupply_deploy(deploymentName, tokenName, tokenSymbol, tokenDecimals, holders, allocations, options);
