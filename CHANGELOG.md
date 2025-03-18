@@ -1,5 +1,6 @@
 # Changelog
 
+<<<<<<< HEAD
 ## 4.0.0
 
 ### Breaking changes
@@ -20,6 +21,13 @@
 ### Improvements
 
 - Updated to latest dependencies.
+
+## 3.0.8
+
+### Bugfixes
+
+- Removed configuration for deprecated network okextest.
+- Skipped fx-portal migrations on sepolia.
 
 ## 3.0.7
 

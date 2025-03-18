@@ -45,7 +45,7 @@ module.exports = {
         base: 'base',
         polygon: 'matic',
         bsc: 'bsc',
-        okex: 'okex',
+        // okex: 'okex',
         arbitrum: 'arb1',
       },
     },
