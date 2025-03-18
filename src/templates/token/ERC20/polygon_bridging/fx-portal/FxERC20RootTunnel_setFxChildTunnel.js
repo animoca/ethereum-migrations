@@ -1,6 +1,6 @@
 const {ethers} = require('hardhat');
 const {templatedMigration} = require('../../../../utils');
-const {multiSkip, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
+const {multiSkip, skipNetworks, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
 
 module.exports = function (rootTunnelName, childTunnelName, options = {}) {
   const migration = templatedMigration(async (hre) => {
@@ -18,22 +18,27 @@ module.exports = function (rootTunnelName, childTunnelName, options = {}) {
     await execute(rootTunnelName, executeOptions, 'setFxChildTunnel', childTunnel.address);
   });
 
-  migration.skip = multiSkip(skipNetworksTagged('dev'), skipChainTypesExceptFor('ethereum'), async (hre) => {
-    const {read, log} = hre.deployments;
+  migration.skip = multiSkip(
+    skipNetworksTagged('dev'),
+    skipNetworks(['sepolia']), // until fx-portal is supported on amoy
+    skipChainTypesExceptFor('ethereum'),
+    async (hre) => {
+      const {read, log} = hre.deployments;
 
-    const childTunnel = await read(rootTunnelName, 'fxChildTunnel');
-    if (childTunnel != ethers.ZeroAddress) {
-      log(`${rootTunnelName}: fxChildTunnel is already set at address ${childTunnel}, skipping...`);
-      return true;
-    }
+      const childTunnel = await read(rootTunnelName, 'fxChildTunnel');
+      if (childTunnel != ethers.ZeroAddress) {
+        log(`${rootTunnelName}: fxChildTunnel is already set at address ${childTunnel}, skipping...`);
+        return true;
+      }
 
-    if ((await hre.companionNetworks['polygon'].deployments.getOrNull(childTunnelName)) == null) {
-      log(`${rootTunnelName}: ${childTunnelName} has not been deployed yet on polygon. Deploy it first, skipping...`);
-      return true;
-    }
+      if ((await hre.companionNetworks['polygon'].deployments.getOrNull(childTunnelName)) == null) {
+        log(`${rootTunnelName}: ${childTunnelName} has not been deployed yet on polygon. Deploy it first, skipping...`);
+        return true;
+      }
 
-    return false;
-  });
+      return false;
+    },
+  );
 
   migration.tags = [`${rootTunnelName}_setFxChildTunnel_${childTunnelName}`];
   migration.dependencies = [`${rootTunnelName}_deploy`, `${childTunnelName}_deploy`];

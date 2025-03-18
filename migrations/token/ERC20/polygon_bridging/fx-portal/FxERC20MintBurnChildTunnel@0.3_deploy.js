@@ -13,7 +13,7 @@ module.exports = Contract_deploy('FxERC20MintBurnChildTunnel@0.3', {
   deterministicDeployment: true,
 });
 module.exports.skip = multiSkip(
-  skipNetworks(['amoy']), // until fx-portal is supported
+  skipNetworks(['amoy']), // until fx-portal is supported on amoy
   skipChainTypesExceptFor('polygon'),
 );
 module.exports.tags = ['ERC20', 'PolygonFxPortal'];

@@ -1,6 +1,6 @@
 const {ethers} = require('hardhat');
 const {templatedMigration} = require('../../../../utils');
-const {multiSkip, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
+const {multiSkip, skipNetworks, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
 
 module.exports = function (rootTunnelName, rootTokenName, options = {}) {
   const migration = templatedMigration(async (hre) => {
@@ -23,17 +23,22 @@ module.exports = function (rootTunnelName, rootTokenName, options = {}) {
     });
   });
 
-  migration.skip = multiSkip(skipNetworksTagged('dev'), skipChainTypesExceptFor('ethereum'), async (hre) => {
-    const {read, get, log} = hre.deployments;
+  migration.skip = multiSkip(
+    skipNetworksTagged('dev'),
+    skipNetworks(['sepolia']), // until fx-portal is supported on amoy
+    skipChainTypesExceptFor('ethereum'),
+    async (hre) => {
+      const {read, get, log} = hre.deployments;
 
-    const RootToken = await get(rootTokenName);
-    const childToken = await read(rootTunnelName, 'rootToChildToken', RootToken.address);
-    if (childToken != ethers.ZeroAddress) {
-      log(`${rootTunnelName}: ERC20 token ${rootTokenName} is already mapped at address ${childToken}, skipping...`);
-      return true;
-    }
-    return false;
-  });
+      const RootToken = await get(rootTokenName);
+      const childToken = await read(rootTunnelName, 'rootToChildToken', RootToken.address);
+      if (childToken != ethers.ZeroAddress) {
+        log(`${rootTunnelName}: ERC20 token ${rootTokenName} is already mapped at address ${childToken}, skipping...`);
+        return true;
+      }
+      return false;
+    },
+  );
 
   migration.tags = [rootTokenName, `${rootTunnelName}_mapToken_${rootTokenName}`];
   migration.dependencies = [`${rootTunnelName}_deploy`, `${rootTokenName}_deploy`];

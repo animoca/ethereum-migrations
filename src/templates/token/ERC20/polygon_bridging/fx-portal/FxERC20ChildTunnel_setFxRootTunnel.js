@@ -20,7 +20,7 @@ module.exports = function (childTunnelName, rootTunnelName, options = {}) {
 
   migration.skip = multiSkip(
     skipNetworksTagged('dev'),
-    skipNetworks(['amoy']), // until fx-portal is supported
+    skipNetworks(['amoy']), // until fx-portal is supported on amoy
     skipChainTypesExceptFor('polygon'),
     async (hre) => {
       const {read, log} = hre.deployments;
