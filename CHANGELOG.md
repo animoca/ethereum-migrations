@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.6
+
+### Bugfix
+
+- Missing fx-portal contracts deployed on amoy.
+
 ## 3.0.5
 
 ### New features
