@@ -1,5 +1,24 @@
 # Changelog
 
+## 4.0.0
+
+### Breaking changes
+
+- Updated to dependency version `@animoca/ethereum-contracts@4x` and `@animoca/ethereum-contracts-bridging@2x`.
+- Moved `diamond.js` from `templates/` to `helpers/` folder.
+
+### New features
+
+- Added support for LayerZero OFT bridging: `hardhat-deploy-lz-deployments` plugin, configurations and migration templates.
+
+### Bugfixes
+
+- Prevented deploy options overwriting in some token migration templates.
+
+### Improvements
+
+- Updated to latest dependencies.
+
 ## 3.0.5
 
 ### New features

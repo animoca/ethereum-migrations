@@ -1,4 +1,4 @@
-# hardhat-deploy-tag-network HardHat plugin
+# network-tags HardHat plugin
 
 Adds tags to the networks configuration via the `NETWORK_TAGS` environment variable.
 

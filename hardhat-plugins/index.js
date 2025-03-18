@@ -7,4 +7,5 @@ require('./node-providers');
 require('./etherscan-api-keys');
 require('./network-tags');
 require('./mnemonics');
+require('./hardhat-deploy-lz-deployments');
 require('@animoca/ethereum-contract-helpers/hardhat-plugins/output-config');
