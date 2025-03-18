@@ -1,13 +1,15 @@
 const Contract_deploy = require('../../../Contract/deploy');
 const {getContractAddress, getNamedAccount} = require('../../../../helpers/templates');
+const {network} = require('hardhat');
 
-module.exports = function (erc20DeploymentName, delegate, options = {}) {
-  const deploymentName = `OFTAdapterMintBurn@4.0_${erc20DeploymentName}`;
+module.exports = function (erc20PrimaryDeploymentName, delegate, options = {}) {
+  const localERC20DeploymentName = `${erc20PrimaryDeploymentName}_${network.name}`;
+  const deploymentName = `OFTAdapterMintBurn@4.0_${localERC20DeploymentName}`;
   const migration = Contract_deploy(deploymentName, {
     ...options,
     contract: 'OFTAdapterMintBurn',
     args: [
-      {name: 'token', value: getContractAddress(erc20DeploymentName)},
+      {name: 'token', value: getContractAddress(localERC20DeploymentName)},
       {name: 'lzEndpoint', value: getContractAddress('EndpointV2')},
       {name: 'delegate', value: getNamedAccount(delegate)},
     ],
@@ -21,7 +23,7 @@ module.exports = function (erc20DeploymentName, delegate, options = {}) {
     }
     return false;
   };
-  migration.dependencies = [`${erc20DeploymentName}_deploy`];
-  migration.tags = [erc20DeploymentName];
+  migration.dependencies = [`${localERC20DeploymentName}_deploy`];
+  migration.tags = [erc20PrimaryDeploymentName, localERC20DeploymentName];
   return migration;
 };
