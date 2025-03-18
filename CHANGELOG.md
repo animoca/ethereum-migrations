@@ -1,8 +1,15 @@
 # Changelog
 
+## 3.0.7
+
+### Bugfixes
+
+- Remove wrongly-added fx-portal contracts on amoy.
+- Skipped fx-portal migrations on amoy.
+
 ## 3.0.6
 
-### Bugfix
+### Bugfixes
 
 - Missing fx-portal contracts deployed on amoy.
 
