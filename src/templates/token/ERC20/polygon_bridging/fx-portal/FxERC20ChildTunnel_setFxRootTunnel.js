@@ -1,6 +1,6 @@
 const {ethers} = require('hardhat');
 const {templatedMigration} = require('../../../../utils');
-const {multiSkip, skipNetworksTagged, skipNetworks, skipChainTypesExceptFor} = require('../../../../../helpers/common');
+const {multiSkip, skipNetworks, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
 
 module.exports = function (childTunnelName, rootTunnelName, options = {}) {
   const migration = templatedMigration(async (hre) => {

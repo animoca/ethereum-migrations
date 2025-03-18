@@ -18,6 +18,12 @@
 ### Improvements
 
 - Updated to latest dependencies.
+
+## 3.0.7
+
+### Bugfixes
+
+- Remove wrongly-added fx-portal contracts on amoy.
 - Skipped fx-portal migrations on amoy.
 
 ## 3.0.6
