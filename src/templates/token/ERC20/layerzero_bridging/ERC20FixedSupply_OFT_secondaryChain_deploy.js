@@ -1,10 +1,9 @@
 const ERC20FixedSupply_deploy = require('../ERC20FixedSupply_deploy');
-const {network} = require('hardhat');
 
-module.exports = function (primaryDeploymentName, primaryChainType, tokenName, tokenSymbol, tokenDecimals, options = {}) {
+module.exports = function (deploymentName, primaryChainType, tokenName, tokenSymbol, tokenDecimals, options = {}) {
   const holders = async (hre) => {
     const {deterministic} = hre.deployments;
-    const adapterDeploymentName = `OFTAdapterFixedSupply@4.0_${primaryDeploymentName}`;
+    const adapterDeploymentName = `OFTAdapterFixedSupply@4.1_${deploymentName}`;
     const adapterDeterministicDeploymentInfo = await deterministic(adapterDeploymentName, {
       contract: 'OFTAdapterFixedSupply',
       deterministic: true,
@@ -15,12 +14,11 @@ module.exports = function (primaryDeploymentName, primaryChainType, tokenName, t
   };
 
   const allocations = async (hre) => {
-    return [await hre.companionNetworks[primaryChainType].deployments.read(primaryDeploymentName, 'totalSupply')];
+    return [await hre.companionNetworks[primaryChainType].deployments.read(deploymentName, 'totalSupply')];
   };
 
-  const deploymenName = `${primaryDeploymentName}_${network.name}`;
   const migration = ERC20FixedSupply_deploy(deploymenName, tokenName, tokenSymbol, tokenDecimals, holders, allocations, options);
-  migration.dependencies = [`${primaryDeploymentName}_deploy`];
-  migration.tags = [primaryDeploymentName];
+  migration.dependencies = [`${deploymentName}_deploy`];
+  migration.tags = [deploymentName];
   return migration;
 };

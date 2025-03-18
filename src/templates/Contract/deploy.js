@@ -2,7 +2,7 @@ const {getExtendedArtifactFromFolders} = require('hardhat-deploy/dist/src/utils'
 const {skipIfDeployed} = require('../../helpers/common');
 const {templatedMigration, buildNamedArgs, namedArgsToString} = require('../../templates/utils');
 
-module.exports = function (name, options = {}) {
+module.exports = function (deploymentName, options = {}) {
   const migration = templatedMigration(async (hre) => {
     const {deploy, log} = hre.deployments;
 
@@ -44,24 +44,27 @@ module.exports = function (name, options = {}) {
 
     if (options.proxy && options.proxy.withOwnAdminContract) {
       deployOptions.proxy.viaAdminContract = {
-        name: `${name}_ProxyAdmin`,
+        name: `${deploymentName}_ProxyAdmin`,
         artifact: await getExtendedArtifactFromFolders('ProxyAdmin', ['node_modules/hardhat-deploy/extendedArtifacts']),
       };
     }
 
     log(
-      `${name}: Deploying` +
+      `${deploymentName}: Deploying` +
         `${options.deterministicDeployment ? ' (deterministically)' : ''}` +
         `${args ? ` with args ${namedArgsToString(args)}` : ''}` +
         `${options.proxy ? ' via proxy' : ''}` +
         `${initArgs ? ` with initArgs ${namedArgsToString(initArgs)}` : ''}` +
         ' ...',
     );
-    const deployedContract = await deploy(name, deployOptions);
+    const deployedContract = await deploy(deploymentName, deployOptions);
 
-    log(`${name}: Deployed ${deployedContract.address} (tx: ${deployedContract.transactionHash}, gasUsed: ${deployedContract.receipt?.gasUsed})`);
+    log(
+      `${deploymentName}: Deployed ${deployedContract.address}` +
+        ` (tx: ${deployedContract.transactionHash}, gasUsed: ${deployedContract.receipt?.gasUsed})`,
+    );
   });
-  migration.skip = skipIfDeployed(name);
-  migration.tags = [name, `${name}_deploy`];
+  migration.skip = skipIfDeployed(deploymentName);
+  migration.tags = [deploymentName, `${deploymentName}_deploy`];
   return migration;
 };
