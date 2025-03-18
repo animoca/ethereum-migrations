@@ -15,7 +15,7 @@ module.exports = function (primaryDeploymentName, primaryChainType, tokenName, t
   };
 
   const allocations = async (hre) => {
-    return await hre.companionNetworks[primaryChainType].deployments.read(primaryDeploymentName, 'totalSupply');
+    return [await hre.companionNetworks[primaryChainType].deployments.read(primaryDeploymentName, 'totalSupply')];
   };
 
   const deploymenName = `${primaryDeploymentName}_${network.name}`;
