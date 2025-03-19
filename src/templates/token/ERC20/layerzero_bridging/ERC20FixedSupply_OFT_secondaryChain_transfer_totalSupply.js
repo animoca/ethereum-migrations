@@ -1,5 +1,6 @@
 const ethers = require('ethers');
 const {templatedMigration} = require('../../../utils');
+const {multiSkip, skipNetworksTagged} = require('../../../../helpers/common');
 
 module.exports = function (deploymentName, options = {}) {
   let from;
@@ -23,20 +24,23 @@ module.exports = function (deploymentName, options = {}) {
     await execute(deploymentName, executeOptions, 'transfer', (await get(oftAdapterDeploymentName)).address, totalSupply);
   });
 
-  migration.skip = async (hre) => {
-    const {read, log} = hre.deployments;
+  migration.skip = multiSkip(
+    skipNetworksTagged(['dev']), //
+    async (hre) => {
+      const {read, log} = hre.deployments;
 
-    log(`${deploymentName}: checking the totalSupply...`);
-    totalSupply = await read(deploymentName, {}, 'totalSupply');
+      log(`${deploymentName}: checking the totalSupply...`);
+      totalSupply = await read(deploymentName, {}, 'totalSupply');
 
-    from = (await hre.getNamedAccounts())[options.from || 'deployer'];
-    const balance = await read(deploymentName, {}, 'balanceOf', from);
-    if (balance.toString() !== totalSupply.toString()) {
-      log(`${deploymentName}: balance of ${from} is not equal to totalSupply, skipping...`);
-      return true;
-    }
-    return false;
-  };
+      from = (await hre.getNamedAccounts())[options.from || 'deployer'];
+      const balance = await read(deploymentName, {}, 'balanceOf', from);
+      if (balance.toString() !== totalSupply.toString()) {
+        log(`${deploymentName}: balance of ${from} is not equal to totalSupply, skipping...`);
+        return true;
+      }
+      return false;
+    },
+  );
 
   migration.tags = [deploymentName, `${deploymentName}_transfer_totalSupply`];
   migration.dependencies = [`${deploymentName}_deploy`, `${oftAdapterDeploymentName}_deploy`];
