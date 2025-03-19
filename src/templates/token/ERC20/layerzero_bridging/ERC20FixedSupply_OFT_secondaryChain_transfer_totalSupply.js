@@ -16,7 +16,10 @@ module.exports = function (deploymentName, options = {}) {
     };
     if (options.log === undefined) executeOptions.log = true;
 
-    log(`${deploymentName}: transferring the total supply (${ethers.formatEther(totalSupply)}) to the OFTAdapter (${oftAdapterDeploymentName})...`);
+    log(
+      `${deploymentName}: transferring the total supply (${ethers.formatEther(totalSupply.toString())})` +
+        ` to the OFTAdapter (${oftAdapterDeploymentName})...`,
+    );
     await execute(deploymentName, executeOptions, 'transfer', (await get(oftAdapterDeploymentName)).address, totalSupply);
   });
 
