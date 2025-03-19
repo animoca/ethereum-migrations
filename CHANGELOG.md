@@ -1,6 +1,5 @@
 # Changelog
 
-<<<<<<< HEAD
 ## 4.0.0
 
 ### Breaking changes
@@ -20,6 +19,7 @@
 
 ### Improvements
 
+- Added etherscan URLs in network configurations where needed.
 - Updated to latest dependencies.
 
 ## 3.0.8
