@@ -16,8 +16,8 @@ module.exports = function (deploymentName, options = {}) {
     };
     if (options.log === undefined) executeOptions.log = true;
 
-    log(`${deploymentName}: the total supply (${ethers.formatEther(totalSupply)}) the OFTAdapter (${oftAdapterDeploymentName})...`);
-    await execute(deploymentName, executeOptions, 'transfer', await get(oftAdapterDeploymentName), totalSupply);
+    log(`${deploymentName}: transferring the total supply (${ethers.formatEther(totalSupply)}) to the OFTAdapter (${oftAdapterDeploymentName})...`);
+    await execute(deploymentName, executeOptions, 'transfer', (await get(oftAdapterDeploymentName)).address, totalSupply);
   });
 
   migration.skip = async (hre) => {
