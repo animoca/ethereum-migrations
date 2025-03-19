@@ -1,17 +1,8 @@
 const ERC20FixedSupply_deploy = require('../ERC20FixedSupply_deploy');
+const {getNamedAccount} = require('../../../../helpers/templates');
 
 module.exports = function (deploymentName, primaryChainDeploymentName, primaryChainType, tokenName, tokenSymbol, tokenDecimals, options = {}) {
-  const holders = async (hre) => {
-    const {deterministic} = hre.deployments;
-    const adapterDeploymentName = `OFTAdapterFixedSupply@4.1_${deploymentName}`;
-    const adapterDeterministicDeploymentInfo = await deterministic(adapterDeploymentName, {
-      contract: 'OFTAdapterFixedSupply',
-      deterministic: true,
-      deterministicSalt: adapterDeploymentName,
-      from: (await hre.getNamedAccounts())[options.from || 'deployer'],
-    });
-    return [adapterDeterministicDeploymentInfo.address];
-  };
+  const holders = [getNamedAccount(options.from || 'deployer')];
 
   const allocations = async (hre) => {
     return [await hre.companionNetworks[primaryChainType].deployments.read(primaryChainDeploymentName, 'totalSupply')];

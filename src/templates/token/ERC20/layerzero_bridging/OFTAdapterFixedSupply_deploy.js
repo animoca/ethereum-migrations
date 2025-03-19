@@ -12,8 +12,6 @@ module.exports = function (erc20DeploymentName, delegate, options = {}) {
       {name: 'lzEndpoint', value: getContractAddress('EndpointV2')},
       {name: 'delegate', value: getNamedAccount(delegate)},
     ],
-    deterministic: true,
-    deterministicSalt: deploymentName,
   });
   migration.skip = skipNetworksTagged(['dev']);
   migration.dependencies = [`${erc20DeploymentName}_deploy`];
