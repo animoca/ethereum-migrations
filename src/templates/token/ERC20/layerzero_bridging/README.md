@@ -11,7 +11,7 @@ Remark: make sure the network config for the secondary networks have a companion
 
 ### Secondary chains (for each)
 
-- ERC20FixedSupply_OFT_secondaryChain_deploy, using the same token deployment name as the primary chain one
+- ERC20FixedSupply_OFT_secondaryChain_deploy, using a different token deployment name than the primary chain one
 - OFTAdapterFixedSupply_deploy, using the token deployment name from the previous step
 
 ## ERC20MintBurn preset
