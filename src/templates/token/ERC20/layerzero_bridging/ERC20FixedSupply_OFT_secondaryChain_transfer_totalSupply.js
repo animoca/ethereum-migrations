@@ -1,5 +1,5 @@
 const ethers = require('ethers');
-const {templatedMigration} = require('../../utils');
+const {templatedMigration} = require('../../../utils');
 
 module.exports = function (deploymentName, options = {}) {
   let from;
