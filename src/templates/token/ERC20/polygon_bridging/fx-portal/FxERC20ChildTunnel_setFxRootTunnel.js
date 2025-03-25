@@ -1,6 +1,6 @@
 const {ethers} = require('hardhat');
 const {templatedMigration} = require('../../../../utils');
-const {multiSkip, skipNetworks, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
+const {multiSkip, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
 
 module.exports = function (childTunnelName, rootTunnelName, options = {}) {
   const migration = templatedMigration(async (hre) => {
@@ -19,8 +19,7 @@ module.exports = function (childTunnelName, rootTunnelName, options = {}) {
   });
 
   migration.skip = multiSkip(
-    skipNetworksTagged('dev'),
-    skipNetworks(['amoy']), // until fx-portal is supported on amoy
+    skipNetworksTagged('dev'), //
     skipChainTypesExceptFor('polygon'),
     async (hre) => {
       const {read, log} = hre.deployments;

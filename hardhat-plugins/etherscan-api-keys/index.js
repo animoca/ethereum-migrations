@@ -1,6 +1,6 @@
 const {extendConfig} = require('hardhat/config');
 
-extendConfig((config, userConfig) => {
+extendConfig((config, _userConfig) => {
   const networksConfig = config.networks;
 
   for (const networkName of Object.keys(networksConfig)) {

@@ -1,0 +1,297 @@
+{
+  "address": "0x172022DBA57fE2939836aabc87f49B0e8bFFD6bA",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "InconsistentArrayLengths",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "targetContract",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "NotTargetContractRoleHolder",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "targetContract",
+          "type": "address"
+        }
+      ],
+      "name": "TargetIsNotAContract",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "MINTER_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "tokenURIs",
+          "type": "string[]"
+        }
+      ],
+      "name": "batchSetTokenURI",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "metadataURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "tokenURI",
+          "type": "string"
+        }
+      ],
+      "name": "setTokenURI",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenMetadataURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "tokenURI",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x79187e2442db2a49744080deaab6fdd3d54cfee87ae82a27ed7e83c37604b262",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x80b12BD0F1793BF6CEa767Fa83Eb2068eaa17DC8",
+    "contractAddress": null,
+    "transactionIndex": 1,
+    "gasUsed": "813733",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xf866628d8501ff40b025025d3521fad9ceec3250196beaabe4e2b85169b31c52",
+    "transactionHash": "0x79187e2442db2a49744080deaab6fdd3d54cfee87ae82a27ed7e83c37604b262",
+    "logs": [],
+    "blockNumber": 319240706,
+    "cumulativeGasUsed": "813733",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "84bab0eb3356c2e3bedca0f2f5a163c5",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"InconsistentArrayLengths\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"targetContract\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"NotTargetContractRoleHolder\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"targetContract\",\"type\":\"address\"}],\"name\":\"TargetIsNotAContract\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"MINTER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenContract\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"},{\"internalType\":\"string[]\",\"name\":\"tokenURIs\",\"type\":\"string[]\"}],\"name\":\"batchSetTokenURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"metadataURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"tokenURI\",\"type\":\"string\"}],\"name\":\"setTokenURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenMetadataURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"tokenURI\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"errors\":{\"NotTargetContractRoleHolder(address,bytes32,address)\":[{\"params\":{\"account\":\"The account that was checked.\",\"role\":\"The role that was checked.\",\"targetContract\":\"The contract that was checked.\"}}],\"TargetIsNotAContract(address)\":[{\"params\":{\"targetContract\":\"The contract that was checked\"}}]},\"kind\":\"dev\",\"methods\":{\"batchSetTokenURI(address,uint256[],string[])\":{\"details\":\"The token contract emits a {URI} event for each token.\",\"params\":{\"tokenContract\":\"The token contract on which to set the token URI.\",\"tokenIds\":\"The token identifiers.\",\"tokenURIs\":\"The token metadata URIs.\"}},\"setTokenURI(address,uint256,string)\":{\"details\":\"The token contract emits a {URI} event.\",\"params\":{\"tokenContract\":\"The token contract on which to set the token URI.\",\"tokenId\":\"The token identifier.\",\"tokenURI\":\"The token metadata URI.\"}},\"tokenMetadataURI(address,uint256)\":{\"params\":{\"tokenContract\":\"The token contract for which to retrieve the token URI.\",\"tokenId\":\"The token identifier.\"},\"returns\":{\"tokenURI\":\"The token metadata URI.\"}}},\"title\":\"TokenMetadataResolverPerTokenERC1155.\",\"version\":1},\"userdoc\":{\"errors\":{\"InconsistentArrayLengths()\":[{\"notice\":\"Thrown when the multiple related arrays have different lengths.\"}],\"NotTargetContractRoleHolder(address,bytes32,address)\":[{\"notice\":\"Thrown when an account does not have the required role on a target contract.\"}],\"TargetIsNotAContract(address)\":[{\"notice\":\"Thrown when the target contract is actually not a contract.\"}]},\"kind\":\"user\",\"methods\":{\"batchSetTokenURI(address,uint256[],string[])\":{\"notice\":\"Sets the metadata URIs for a batch of tokens on a contract.\"},\"setTokenURI(address,uint256,string)\":{\"notice\":\"Sets the metadata URI for a token on a contract.\"},\"tokenMetadataURI(address,uint256)\":{\"notice\":\"Gets the token metadata URI for a token.\"}},\"notice\":\"Token Metadata Resolver which stores the metadata URI for each token, for ERC1155 token contracts.When a metadata URI is set, the target ERC1155 contract will be asked to emit a URI event.Only minters of the target token contract can set the token metadata URI for this target contract.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/token/metadata/TokenMetadataResolverPerTokenERC1155.sol\":\"TokenMetadataResolverPerTokenERC1155\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":99999},\"remappings\":[]},\"sources\":{\"contracts/CommonErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Thrown when trying to transfer tokens without calldata to the contract.\\nerror EtherReceptionDisabled();\\n\\n/// @notice Thrown when the multiple related arrays have different lengths.\\nerror InconsistentArrayLengths();\\n\\n/// @notice Thrown when an ETH transfer has failed.\\nerror TransferFailed();\\n\",\"keccak256\":\"0x016ea12044fa81e3c57662985c8cfa863543ca873697926085a0f7cee10622f3\",\"license\":\"MIT\"},\"contracts/access/errors/AccessControlErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Thrown when an account does not have the required role.\\n/// @param role The role the caller is missing.\\n/// @param account The account that was checked.\\nerror NotRoleHolder(bytes32 role, address account);\\n\\n/// @notice Thrown when an account does not have the required role on a target contract.\\n/// @param targetContract The contract that was checked.\\n/// @param role The role that was checked.\\n/// @param account The account that was checked.\\nerror NotTargetContractRoleHolder(address targetContract, bytes32 role, address account);\\n\",\"keccak256\":\"0x1e8ef0df72a9832998cd1cdf6a6d902c42c41480425dd0db02c22dc94f22fa15\",\"license\":\"MIT\"},\"contracts/access/errors/Common.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Thrown when the target contract is actually not a contract.\\n/// @param targetContract The contract that was checked\\nerror TargetIsNotAContract(address targetContract);\\n\",\"keccak256\":\"0xffd6dcc88e984aeb996af0dedf3e3648e9e09c92efbb707377db195767ff42c5\",\"license\":\"MIT\"},\"contracts/access/events/AccessControlEvents.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Emitted when `role` is granted to `account`.\\n/// @param role The role that has been granted.\\n/// @param account The account that has been granted the role.\\n/// @param operator The account that granted the role.\\nevent RoleGranted(bytes32 role, address account, address operator);\\n\\n/// @notice Emitted when `role` is revoked from `account`.\\n/// @param role The role that has been revoked.\\n/// @param account The account that has been revoked the role.\\n/// @param operator The account that revoked the role.\\nevent RoleRevoked(bytes32 role, address account, address operator);\\n\",\"keccak256\":\"0x3362bafa0766fe7254baad2f901e8c36c39004daeb9e58477048d3b7758edcb7\",\"license\":\"MIT\"},\"contracts/access/interfaces/IAccessControl.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title Access control via roles management (functions)\\ninterface IAccessControl {\\n    /// @notice Renounces a role by the sender.\\n    /// @dev Reverts if `sender` does not have `role`.\\n    /// @dev Emits a {RoleRevoked} event.\\n    /// @param role The role to renounce.\\n    function renounceRole(bytes32 role) external;\\n\\n    /// @notice Retrieves whether an account has a role.\\n    /// @param role The role.\\n    /// @param account The account.\\n    /// @return hasRole_ Whether `account` has `role`.\\n    function hasRole(bytes32 role, address account) external view returns (bool hasRole_);\\n}\\n\",\"keccak256\":\"0x3a5b8f8d04c1ad412d651ecb26ca76a18ad7cfe154ad4542cf2706ccc98f56e6\",\"license\":\"MIT\"},\"contracts/access/libraries/AccessControlStorage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nimport {NotRoleHolder, NotTargetContractRoleHolder} from \\\"./../errors/AccessControlErrors.sol\\\";\\nimport {TargetIsNotAContract} from \\\"./../errors/Common.sol\\\";\\nimport {RoleGranted, RoleRevoked} from \\\"./../events/AccessControlEvents.sol\\\";\\nimport {IAccessControl} from \\\"./../interfaces/IAccessControl.sol\\\";\\nimport {Address} from \\\"./../../utils/libraries/Address.sol\\\";\\n\\nlibrary AccessControlStorage {\\n    using Address for address;\\n    using AccessControlStorage for AccessControlStorage.Layout;\\n\\n    struct Layout {\\n        mapping(bytes32 => mapping(address => bool)) roles;\\n    }\\n\\n    bytes32 internal constant LAYOUT_STORAGE_SLOT = bytes32(uint256(keccak256(\\\"animoca.core.access.AccessControl.storage\\\")) - 1);\\n\\n    /// @notice Grants a role to an account.\\n    /// @dev Note: Call to this function should be properly access controlled.\\n    /// @dev Emits a {RoleGranted} event if the account did not previously have the role.\\n    /// @param role The role to grant.\\n    /// @param account The account to grant the role to.\\n    /// @param operator The account requesting the role change.\\n    function grantRole(Layout storage s, bytes32 role, address account, address operator) internal {\\n        if (!s.hasRole(role, account)) {\\n            s.roles[role][account] = true;\\n            emit RoleGranted(role, account, operator);\\n        }\\n    }\\n\\n    /// @notice Revokes a role from an account.\\n    /// @dev Note: Call to this function should be properly access controlled.\\n    /// @dev Emits a {RoleRevoked} event if the account previously had the role.\\n    /// @param role The role to revoke.\\n    /// @param account The account to revoke the role from.\\n    /// @param operator The account requesting the role change.\\n    function revokeRole(Layout storage s, bytes32 role, address account, address operator) internal {\\n        if (s.hasRole(role, account)) {\\n            s.roles[role][account] = false;\\n            emit RoleRevoked(role, account, operator);\\n        }\\n    }\\n\\n    /// @notice Renounces a role by the sender.\\n    /// @dev Reverts with {NotRoleHolder} if `sender` does not have `role`.\\n    /// @dev Emits a {RoleRevoked} event.\\n    /// @param sender The message sender.\\n    /// @param role The role to renounce.\\n    function renounceRole(Layout storage s, address sender, bytes32 role) internal {\\n        s.enforceHasRole(role, sender);\\n        s.roles[role][sender] = false;\\n        emit RoleRevoked(role, sender, sender);\\n    }\\n\\n    /// @notice Retrieves whether an account has a role.\\n    /// @param role The role.\\n    /// @param account The account.\\n    /// @return hasRole_ Whether `account` has `role`.\\n    function hasRole(Layout storage s, bytes32 role, address account) internal view returns (bool hasRole_) {\\n        return s.roles[role][account];\\n    }\\n\\n    /// @notice Checks whether an account has a role in a target contract.\\n    /// @param targetContract The contract to check.\\n    /// @param role The role to check.\\n    /// @param account The account to check.\\n    /// @return hasTargetContractRole_ Whether `account` has `role` in `targetContract`.\\n    function hasTargetContractRole(address targetContract, bytes32 role, address account) internal view returns (bool hasTargetContractRole_) {\\n        if (!targetContract.hasBytecode()) revert TargetIsNotAContract(targetContract);\\n        return IAccessControl(targetContract).hasRole(role, account);\\n    }\\n\\n    /// @notice Ensures that an account has a role.\\n    /// @dev Reverts with {NotRoleHolder} if `account` does not have `role`.\\n    /// @param role The role.\\n    /// @param account The account.\\n    function enforceHasRole(Layout storage s, bytes32 role, address account) internal view {\\n        if (!s.hasRole(role, account)) revert NotRoleHolder(role, account);\\n    }\\n\\n    /// @notice Enforces that an account has a role in a target contract.\\n    /// @dev Reverts with {NotTargetContractRoleHolder} if the account does not have the role.\\n    /// @param targetContract The contract to check.\\n    /// @param role The role to check.\\n    /// @param account The account to check.\\n    function enforceHasTargetContractRole(address targetContract, bytes32 role, address account) internal view {\\n        if (!hasTargetContractRole(targetContract, role, account)) revert NotTargetContractRoleHolder(targetContract, role, account);\\n    }\\n\\n    function layout() internal pure returns (Layout storage s) {\\n        bytes32 position = LAYOUT_STORAGE_SLOT;\\n        assembly {\\n            s.slot := position\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x79f9d5ff8238f802faf407106a08bde5665438023b52c51d6d919dfb6df923f1\",\"license\":\"MIT\"},\"contracts/token/ERC1155/interfaces/IERC1155MetadataSetter.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\ninterface IERC1155MetadataSetter {\\n    /// @notice Sets the metadata URI for a token.\\n    /// @dev Emits a {URI} event.\\n    /// @param tokenId The token identifier.\\n    /// @param tokenURI The token metadata URI.\\n    function setTokenURI(uint256 tokenId, string calldata tokenURI) external;\\n\\n    /// @notice Sets the metadata URIs for a batch of tokens.\\n    /// @dev Reverts with {InconsistentArrayLengths} if the arrays are of inconsistent lengths.\\n    /// @dev Emits a {URI} event for each token.\\n    /// @param tokenIds The token identifiers.\\n    /// @param tokenURIs The token metadata URIs.\\n    function batchSetTokenURI(uint256[] calldata tokenIds, string[] calldata tokenURIs) external;\\n}\\n\",\"keccak256\":\"0x0858d84d3f0852526a359ecc29e64d65522ce48d3d3c0b8a0da51c0fb5abcb16\",\"license\":\"MIT\"},\"contracts/token/metadata/TokenMetadataResolverPerToken.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.28;\\n\\nimport {InconsistentArrayLengths} from \\\"./../../CommonErrors.sol\\\";\\nimport {ITokenMetadataResolver} from \\\"./interfaces/ITokenMetadataResolver.sol\\\";\\nimport {AccessControlStorage} from \\\"./../../access/libraries/AccessControlStorage.sol\\\";\\n\\n/// @title TokenMetadataResolverPerToken.\\n/// @notice Token Metadata Resolver which stores the metadata URI for each token.\\n/// @notice Only minters of the target token contract can set the token metadata URI for this target contract.\\ncontract TokenMetadataResolverPerToken is ITokenMetadataResolver {\\n    using AccessControlStorage for address;\\n\\n    bytes32 public constant MINTER_ROLE = \\\"minter\\\";\\n\\n    mapping(address => mapping(uint256 => string)) public metadataURI;\\n\\n    /// @notice Sets the metadata URI for a token on a contract.\\n    /// @dev Reverts with {NotTargetContractRoleHolder} if the sender is not a 'minter' of the token contract.\\n    /// @param tokenContract The token contract on which to set the token URI.\\n    /// @param tokenId The token identifier.\\n    /// @param tokenURI The token metadata URI.\\n    function setTokenURI(address tokenContract, uint256 tokenId, string calldata tokenURI) public virtual {\\n        tokenContract.enforceHasTargetContractRole(MINTER_ROLE, msg.sender);\\n        metadataURI[tokenContract][tokenId] = tokenURI;\\n    }\\n\\n    /// @notice Sets the metadata URIs for a batch of tokens on a contract.\\n    /// @dev Reverts with {InconsistentArrayLengths} if the arrays are of inconsistent lengths.\\n    /// @dev Reverts with {NotTargetContractRoleHolder} if the sender is not a 'minter' of the token contract.\\n    /// @param tokenContract The token contract on which to set the token URI.\\n    /// @param tokenIds The token identifiers.\\n    /// @param tokenURIs The token metadata URIs.\\n    function batchSetTokenURI(address tokenContract, uint256[] calldata tokenIds, string[] calldata tokenURIs) public virtual {\\n        uint256 length = tokenIds.length;\\n        if (length != tokenURIs.length) {\\n            revert InconsistentArrayLengths();\\n        }\\n        tokenContract.enforceHasTargetContractRole(MINTER_ROLE, msg.sender);\\n\\n        for (uint256 i; i < length; ++i) {\\n            metadataURI[tokenContract][tokenIds[i]] = tokenURIs[i];\\n        }\\n    }\\n\\n    /// @notice Gets the token metadata URI for a token.\\n    /// @param tokenContract The token contract for which to retrieve the token URI.\\n    /// @param tokenId The token identifier.\\n    /// @return tokenURI The token metadata URI.\\n    function tokenMetadataURI(address tokenContract, uint256 tokenId) external view virtual override returns (string memory tokenURI) {\\n        return metadataURI[tokenContract][tokenId];\\n    }\\n}\\n\",\"keccak256\":\"0x0d3358e7f5a2aa9f2cbd357ffc32a4b741467d5653f07dde6eabe1bfe2cf10c4\",\"license\":\"MIT\"},\"contracts/token/metadata/TokenMetadataResolverPerTokenERC1155.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.28;\\n\\nimport {IERC1155MetadataSetter} from \\\"./../ERC1155/interfaces/IERC1155MetadataSetter.sol\\\";\\nimport {TokenMetadataResolverPerToken} from \\\"./TokenMetadataResolverPerToken.sol\\\";\\n\\n/// @title TokenMetadataResolverPerTokenERC1155.\\n/// @notice Token Metadata Resolver which stores the metadata URI for each token, for ERC1155 token contracts.\\n/// @notice When a metadata URI is set, the target ERC1155 contract will be asked to emit a URI event.\\n/// @notice Only minters of the target token contract can set the token metadata URI for this target contract.\\ncontract TokenMetadataResolverPerTokenERC1155 is TokenMetadataResolverPerToken {\\n    /// @inheritdoc TokenMetadataResolverPerToken\\n    /// @dev The token contract emits a {URI} event.\\n    function setTokenURI(address tokenContract, uint256 tokenId, string calldata tokenURI) public override {\\n        super.setTokenURI(tokenContract, tokenId, tokenURI);\\n        IERC1155MetadataSetter(tokenContract).setTokenURI(tokenId, tokenURI);\\n    }\\n\\n    /// @inheritdoc TokenMetadataResolverPerToken\\n    /// @dev The token contract emits a {URI} event for each token.\\n    function batchSetTokenURI(address tokenContract, uint256[] calldata tokenIds, string[] calldata tokenURIs) public override {\\n        super.batchSetTokenURI(tokenContract, tokenIds, tokenURIs);\\n        IERC1155MetadataSetter(tokenContract).batchSetTokenURI(tokenIds, tokenURIs);\\n    }\\n}\\n\",\"keccak256\":\"0x77e148fe44da51bfb56c1bd0f6038977d7a6896de7b7462391b315cd9421b95f\",\"license\":\"MIT\"},\"contracts/token/metadata/interfaces/ITokenMetadataResolver.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title ITokenMetadataResolver\\n/// @notice Interface for Token Metadata Resolvers.\\ninterface ITokenMetadataResolver {\\n    /// @notice Gets the token metadata URI for a token.\\n    /// @param tokenContract The token contract for which to retrieve the token URI.\\n    /// @param tokenId The token identifier.\\n    /// @return tokenURI The token metadata URI.\\n    function tokenMetadataURI(address tokenContract, uint256 tokenId) external view returns (string memory tokenURI);\\n}\\n\",\"keccak256\":\"0x42ce381428071eefc7153c20a92e908a1366acb797554efab371e064bd826bf3\",\"license\":\"MIT\"},\"contracts/utils/libraries/Address.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nlibrary Address {\\n    /// @notice Checks if the address is a deployed smart contract.\\n    /// @param addr The address to check.\\n    /// @return hasBytecode True if `addr` is a deployed smart contract, false otherwise.\\n    function hasBytecode(address addr) internal view returns (bool) {\\n        uint256 size;\\n        assembly {\\n            size := extcodesize(addr)\\n        }\\n        return size != 0;\\n    }\\n}\\n\",\"keccak256\":\"0xf3119a6298c6da4e7da69344ae8ab51a6a64dc08c68f826a560e72d46cf0ad9c\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50610d3f8061001f6000396000f3fe608060405234801561001057600080fd5b50600436106100675760003560e01c8063626dc9a811610050578063626dc9a8146100aa578063d5391393146100bd578063f724dad7146100f257600080fd5b8063361953a31461006c5780634e5786bf14610095575b600080fd5b61007f61007a3660046106db565b610105565b60405161008c9190610705565b60405180910390f35b6100a86100a3366004610771565b6101a7565b005b6100a86100b8366004610847565b610241565b6100e47f6d696e746572000000000000000000000000000000000000000000000000000081565b60405190815260200161008c565b61007f6101003660046106db565b6102df565b600060208181529281526040808220909352908152208054610126906108cd565b80601f0160208091040260200160405190810160405280929190818152602001828054610152906108cd565b801561019f5780601f106101745761010080835404028352916020019161019f565b820191906000526020600020905b81548152906001019060200180831161018257829003601f168201915b505050505081565b6101b3848484846103a2565b6040517f162094c400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff85169063162094c49061020990869086908690600401610969565b600060405180830381600087803b15801561022357600080fd5b505af1158015610237573d6000803e3d6000fd5b5050505050505050565b61024e8585858585610423565b6040517f6706467b00000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff861690636706467b906102a690879087908790879060040161098c565b600060405180830381600087803b1580156102c057600080fd5b505af11580156102d4573d6000803e3d6000fd5b505050505050505050565b73ffffffffffffffffffffffffffffffffffffffff8216600090815260208181526040808320848452909152902080546060919061031c906108cd565b80601f0160208091040260200160405190810160405280929190818152602001828054610348906108cd565b80156103955780601f1061036a57610100808354040283529160200191610395565b820191906000526020600020905b81548152906001019060200180831161037857829003601f168201915b5050505050905092915050565b6103e373ffffffffffffffffffffffffffffffffffffffff85167f6d696e746572000000000000000000000000000000000000000000000000000033610539565b73ffffffffffffffffffffffffffffffffffffffff8416600090815260208181526040808320868452909152902061041c828483610b32565b5050505050565b8281811461045d576040517f6582533600000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b61049e73ffffffffffffffffffffffffffffffffffffffff87167f6d696e746572000000000000000000000000000000000000000000000000000033610539565b60005b81811015610530578383828181106104bb576104bb610c4c565b90506020028101906104cd9190610c7b565b73ffffffffffffffffffffffffffffffffffffffff891660009081526020819052604081209089898681811061050557610505610c4c565b9050602002013581526020019081526020016000209182610527929190610b32565b506001016104a1565b50505050505050565b6105448383836105ab565b6105a6576040517f7a436c1600000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff808516600483015260248201849052821660448201526064015b60405180910390fd5b505050565b600073ffffffffffffffffffffffffffffffffffffffff84163b610613576040517f73a5b5e300000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff8516600482015260240161059d565b6040517f91d148540000000000000000000000000000000000000000000000000000000081526004810184905273ffffffffffffffffffffffffffffffffffffffff83811660248301528516906391d1485490604401602060405180830381865afa158015610686573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106aa9190610ce0565b949350505050565b803573ffffffffffffffffffffffffffffffffffffffff811681146106d657600080fd5b919050565b600080604083850312156106ee57600080fd5b6106f7836106b2565b946020939093013593505050565b602081526000825180602084015260005b818110156107335760208186018101516040868401015201610716565b5060006040828501015260407fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f83011684010191505092915050565b6000806000806060858703121561078757600080fd5b610790856106b2565b935060208501359250604085013567ffffffffffffffff8111156107b357600080fd5b8501601f810187136107c457600080fd5b803567ffffffffffffffff8111156107db57600080fd5b8760208284010111156107ed57600080fd5b949793965060200194505050565b60008083601f84011261080d57600080fd5b50813567ffffffffffffffff81111561082557600080fd5b6020830191508360208260051b850101111561084057600080fd5b9250929050565b60008060008060006060868803121561085f57600080fd5b610868866106b2565b9450602086013567ffffffffffffffff81111561088457600080fd5b610890888289016107fb565b909550935050604086013567ffffffffffffffff8111156108b057600080fd5b6108bc888289016107fb565b969995985093965092949392505050565b600181811c908216806108e157607f821691505b60208210810361091a577f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b50919050565b8183528181602085013750600060208284010152600060207fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f840116840101905092915050565b838152604060208201526000610983604083018486610920565b95945050505050565b6040815283604082015260007f07ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8511156109c557600080fd5b8460051b808760608501378201828103606090810160208501528101849052600584901b81016080908101908201866000368290037fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1015b88821015610aac577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff808686030184528235818112610a5a57600080fd5b8a0160208101903567ffffffffffffffff811115610a7757600080fd5b803603821315610a8657600080fd5b610a91878284610920565b96505050602083019250602084019350600182019150610a1d565b50929a9950505050505050505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b601f8211156105a657806000526020600020601f840160051c81016020851015610b125750805b601f840160051c820191505b8181101561041c5760008155600101610b1e565b67ffffffffffffffff831115610b4a57610b4a610abc565b610b5e83610b5883546108cd565b83610aeb565b6000601f841160018114610bb05760008515610b7a5750838201355b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff600387901b1c1916600186901b17835561041c565b6000838152602090207fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0861690835b82811015610bff5786850135825560209485019460019092019101610bdf565b5086821015610c3a577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff60f88860031b161c19848701351681555b505060018560011b0183555050505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60008083357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1843603018112610cb057600080fd5b83018035915067ffffffffffffffff821115610ccb57600080fd5b60200191503681900382131561084057600080fd5b600060208284031215610cf257600080fd5b81518015158114610d0257600080fd5b939250505056fea26469706673582212206430bb53a963181cdc326483915a880bdd6f5bc047ffea882b42094f3db09dee64736f6c634300081c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100675760003560e01c8063626dc9a811610050578063626dc9a8146100aa578063d5391393146100bd578063f724dad7146100f257600080fd5b8063361953a31461006c5780634e5786bf14610095575b600080fd5b61007f61007a3660046106db565b610105565b60405161008c9190610705565b60405180910390f35b6100a86100a3366004610771565b6101a7565b005b6100a86100b8366004610847565b610241565b6100e47f6d696e746572000000000000000000000000000000000000000000000000000081565b60405190815260200161008c565b61007f6101003660046106db565b6102df565b600060208181529281526040808220909352908152208054610126906108cd565b80601f0160208091040260200160405190810160405280929190818152602001828054610152906108cd565b801561019f5780601f106101745761010080835404028352916020019161019f565b820191906000526020600020905b81548152906001019060200180831161018257829003601f168201915b505050505081565b6101b3848484846103a2565b6040517f162094c400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff85169063162094c49061020990869086908690600401610969565b600060405180830381600087803b15801561022357600080fd5b505af1158015610237573d6000803e3d6000fd5b5050505050505050565b61024e8585858585610423565b6040517f6706467b00000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff861690636706467b906102a690879087908790879060040161098c565b600060405180830381600087803b1580156102c057600080fd5b505af11580156102d4573d6000803e3d6000fd5b505050505050505050565b73ffffffffffffffffffffffffffffffffffffffff8216600090815260208181526040808320848452909152902080546060919061031c906108cd565b80601f0160208091040260200160405190810160405280929190818152602001828054610348906108cd565b80156103955780601f1061036a57610100808354040283529160200191610395565b820191906000526020600020905b81548152906001019060200180831161037857829003601f168201915b5050505050905092915050565b6103e373ffffffffffffffffffffffffffffffffffffffff85167f6d696e746572000000000000000000000000000000000000000000000000000033610539565b73ffffffffffffffffffffffffffffffffffffffff8416600090815260208181526040808320868452909152902061041c828483610b32565b5050505050565b8281811461045d576040517f6582533600000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b61049e73ffffffffffffffffffffffffffffffffffffffff87167f6d696e746572000000000000000000000000000000000000000000000000000033610539565b60005b81811015610530578383828181106104bb576104bb610c4c565b90506020028101906104cd9190610c7b565b73ffffffffffffffffffffffffffffffffffffffff891660009081526020819052604081209089898681811061050557610505610c4c565b9050602002013581526020019081526020016000209182610527929190610b32565b506001016104a1565b50505050505050565b6105448383836105ab565b6105a6576040517f7a436c1600000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff808516600483015260248201849052821660448201526064015b60405180910390fd5b505050565b600073ffffffffffffffffffffffffffffffffffffffff84163b610613576040517f73a5b5e300000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff8516600482015260240161059d565b6040517f91d148540000000000000000000000000000000000000000000000000000000081526004810184905273ffffffffffffffffffffffffffffffffffffffff83811660248301528516906391d1485490604401602060405180830381865afa158015610686573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106aa9190610ce0565b949350505050565b803573ffffffffffffffffffffffffffffffffffffffff811681146106d657600080fd5b919050565b600080604083850312156106ee57600080fd5b6106f7836106b2565b946020939093013593505050565b602081526000825180602084015260005b818110156107335760208186018101516040868401015201610716565b5060006040828501015260407fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f83011684010191505092915050565b6000806000806060858703121561078757600080fd5b610790856106b2565b935060208501359250604085013567ffffffffffffffff8111156107b357600080fd5b8501601f810187136107c457600080fd5b803567ffffffffffffffff8111156107db57600080fd5b8760208284010111156107ed57600080fd5b949793965060200194505050565b60008083601f84011261080d57600080fd5b50813567ffffffffffffffff81111561082557600080fd5b6020830191508360208260051b850101111561084057600080fd5b9250929050565b60008060008060006060868803121561085f57600080fd5b610868866106b2565b9450602086013567ffffffffffffffff81111561088457600080fd5b610890888289016107fb565b909550935050604086013567ffffffffffffffff8111156108b057600080fd5b6108bc888289016107fb565b969995985093965092949392505050565b600181811c908216806108e157607f821691505b60208210810361091a577f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b50919050565b8183528181602085013750600060208284010152600060207fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f840116840101905092915050565b838152604060208201526000610983604083018486610920565b95945050505050565b6040815283604082015260007f07ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8511156109c557600080fd5b8460051b808760608501378201828103606090810160208501528101849052600584901b81016080908101908201866000368290037fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1015b88821015610aac577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff808686030184528235818112610a5a57600080fd5b8a0160208101903567ffffffffffffffff811115610a7757600080fd5b803603821315610a8657600080fd5b610a91878284610920565b96505050602083019250602084019350600182019150610a1d565b50929a9950505050505050505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b601f8211156105a657806000526020600020601f840160051c81016020851015610b125750805b601f840160051c820191505b8181101561041c5760008155600101610b1e565b67ffffffffffffffff831115610b4a57610b4a610abc565b610b5e83610b5883546108cd565b83610aeb565b6000601f841160018114610bb05760008515610b7a5750838201355b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff600387901b1c1916600186901b17835561041c565b6000838152602090207fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0861690835b82811015610bff5786850135825560209485019460019092019101610bdf565b5086821015610c3a577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff60f88860031b161c19848701351681555b505060018560011b0183555050505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60008083357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1843603018112610cb057600080fd5b83018035915067ffffffffffffffff821115610ccb57600080fd5b60200191503681900382131561084057600080fd5b600060208284031215610cf257600080fd5b81518015158114610d0257600080fd5b939250505056fea26469706673582212206430bb53a963181cdc326483915a880bdd6f5bc047ffea882b42094f3db09dee64736f6c634300081c0033",
+  "devdoc": {
+    "errors": {
+      "NotTargetContractRoleHolder(address,bytes32,address)": [
+        {
+          "params": {
+            "account": "The account that was checked.",
+            "role": "The role that was checked.",
+            "targetContract": "The contract that was checked."
+          }
+        }
+      ],
+      "TargetIsNotAContract(address)": [
+        {
+          "params": {
+            "targetContract": "The contract that was checked"
+          }
+        }
+      ]
+    },
+    "kind": "dev",
+    "methods": {
+      "batchSetTokenURI(address,uint256[],string[])": {
+        "details": "The token contract emits a {URI} event for each token.",
+        "params": {
+          "tokenContract": "The token contract on which to set the token URI.",
+          "tokenIds": "The token identifiers.",
+          "tokenURIs": "The token metadata URIs."
+        }
+      },
+      "setTokenURI(address,uint256,string)": {
+        "details": "The token contract emits a {URI} event.",
+        "params": {
+          "tokenContract": "The token contract on which to set the token URI.",
+          "tokenId": "The token identifier.",
+          "tokenURI": "The token metadata URI."
+        }
+      },
+      "tokenMetadataURI(address,uint256)": {
+        "params": {
+          "tokenContract": "The token contract for which to retrieve the token URI.",
+          "tokenId": "The token identifier."
+        },
+        "returns": {
+          "tokenURI": "The token metadata URI."
+        }
+      }
+    },
+    "title": "TokenMetadataResolverPerTokenERC1155.",
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "InconsistentArrayLengths()": [
+        {
+          "notice": "Thrown when the multiple related arrays have different lengths."
+        }
+      ],
+      "NotTargetContractRoleHolder(address,bytes32,address)": [
+        {
+          "notice": "Thrown when an account does not have the required role on a target contract."
+        }
+      ],
+      "TargetIsNotAContract(address)": [
+        {
+          "notice": "Thrown when the target contract is actually not a contract."
+        }
+      ]
+    },
+    "kind": "user",
+    "methods": {
+      "batchSetTokenURI(address,uint256[],string[])": {
+        "notice": "Sets the metadata URIs for a batch of tokens on a contract."
+      },
+      "setTokenURI(address,uint256,string)": {
+        "notice": "Sets the metadata URI for a token on a contract."
+      },
+      "tokenMetadataURI(address,uint256)": {
+        "notice": "Gets the token metadata URI for a token."
+      }
+    },
+    "notice": "Token Metadata Resolver which stores the metadata URI for each token, for ERC1155 token contracts.When a metadata URI is set, the target ERC1155 contract will be asked to emit a URI event.Only minters of the target token contract can set the token metadata URI for this target contract.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 32342,
+        "contract": "contracts/token/metadata/TokenMetadataResolverPerTokenERC1155.sol:TokenMetadataResolverPerTokenERC1155",
+        "label": "metadataURI",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_mapping(t_uint256,t_string_storage))"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_mapping(t_uint256,t_string_storage))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(uint256 => string))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_uint256,t_string_storage)"
+      },
+      "t_mapping(t_uint256,t_string_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => string)",
+        "numberOfBytes": "32",
+        "value": "t_string_storage"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

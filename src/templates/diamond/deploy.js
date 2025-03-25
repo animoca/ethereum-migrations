@@ -1,6 +1,6 @@
 const {templatedMigration} = require('../utils');
 const {skipIfDeployed} = require('../../helpers/common');
-const {generateCuts} = require('../diamond');
+const {generateCuts} = require('../../helpers/diamond');
 
 module.exports = function (name, facetsConfig, options = {}) {
   const migration = templatedMigration(async (hre) => {

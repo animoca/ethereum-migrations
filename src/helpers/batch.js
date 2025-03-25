@@ -12,7 +12,7 @@ async function batchDoWhile(doFunction, doArgss, message, conditionFunction, acc
     if (acceptRevert) {
       try {
         result = await doFunction(...doArgs);
-      } catch (err) {
+      } catch (_err) {
         result = null;
       }
     } else {

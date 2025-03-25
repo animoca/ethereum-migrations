@@ -17,7 +17,7 @@ extendConfig((config) => {
   let mnemonic;
   try {
     mnemonic = fse.readFileSync(mnemonicFile).toString().replace('\n', '').trim();
-  } catch (err) {
+  } catch (_err) {
     console.log(`Warning: could not read mnemonic file, no transaction can be signed on live networks`);
   }
   const accounts = mnemonic ? {mnemonic} : [];

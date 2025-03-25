@@ -1,0 +1,206 @@
+{
+  "address": "0xf112d009414f7E6a1c54839fA44D6585B1014a7F",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "StaticCallReverted",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "requireSuccess",
+          "type": "bool"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "target",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "callData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct MultiStaticCall.Call[]",
+          "name": "calls",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "tryAggregate",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "returnData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct MultiStaticCall.Result[]",
+          "name": "returnData",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "requireSuccess",
+          "type": "bool"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "target",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "callData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct MultiStaticCall.Call[]",
+          "name": "calls",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "tryBlockAndAggregate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "blockNumber",
+          "type": "uint256"
+        },
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "returnData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct MultiStaticCall.Result[]",
+          "name": "returnData",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xe80dcde5262dabf554266f492675a148e47e9ff21d2cafd71c5a707fd96bfe97",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0xB553C4B21966123d7f8c02Ca6909c110260052E8",
+    "contractAddress": null,
+    "transactionIndex": 1,
+    "gasUsed": "396659",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xe01edf6ded2bf49becc06f0db50c39a077ab03a7b62d99d0de38a095317386bd",
+    "transactionHash": "0xe80dcde5262dabf554266f492675a148e47e9ff21d2cafd71c5a707fd96bfe97",
+    "logs": [],
+    "blockNumber": 133420134,
+    "cumulativeGasUsed": "396659",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "84bab0eb3356c2e3bedca0f2f5a163c5",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"StaticCallReverted\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"requireSuccess\",\"type\":\"bool\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"callData\",\"type\":\"bytes\"}],\"internalType\":\"struct MultiStaticCall.Call[]\",\"name\":\"calls\",\"type\":\"tuple[]\"}],\"name\":\"tryAggregate\",\"outputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"returnData\",\"type\":\"bytes\"}],\"internalType\":\"struct MultiStaticCall.Result[]\",\"name\":\"returnData\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"requireSuccess\",\"type\":\"bool\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"callData\",\"type\":\"bytes\"}],\"internalType\":\"struct MultiStaticCall.Call[]\",\"name\":\"calls\",\"type\":\"tuple[]\"}],\"name\":\"tryBlockAndAggregate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"blockNumber\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"returnData\",\"type\":\"bytes\"}],\"internalType\":\"struct MultiStaticCall.Result[]\",\"name\":\"returnData\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Derived from https://github.com/makerdao/multicall (MIT licence)\",\"errors\":{\"StaticCallReverted(address,bytes)\":[{\"params\":{\"data\":\"The encoded function call executed on `target`.\",\"target\":\"The target contract address of the static call.\"}}]},\"kind\":\"dev\",\"methods\":{\"tryAggregate(bool,(address,bytes)[])\":{\"details\":\"Reverts if `requireSuccess` is true and one of the static calls fails.\",\"params\":{\"calls\":\"The list of target contracts and encoded function calls for each static call.\",\"requireSuccess\":\"Whether a failed static call should trigger a revert.\"},\"returns\":{\"returnData\":\"The list of success flags and raw return data for each static call.\"}},\"tryBlockAndAggregate(bool,(address,bytes)[])\":{\"details\":\"Warning: Do not use this function as part of a transaction: `blockNumber` would not be meaningful due to transactions ordering.Reverts if `requireSuccess` is true and one of the static calls fails.\",\"params\":{\"calls\":\"The list of target contracts and encoded function calls for each static call.\",\"requireSuccess\":\"Whether a failed static call should trigger a revert.\"},\"returns\":{\"blockNumber\":\"The latest mined block number indicating at which point the return data is valid.\",\"returnData\":\"The list of success flags and raw return data for each static call.\"}}},\"title\":\"MultiStaticCall - Aggregate results from multiple static calls\",\"version\":1},\"userdoc\":{\"errors\":{\"StaticCallReverted(address,bytes)\":[{\"notice\":\"Emitted when a static call reverts without return data.\"}]},\"kind\":\"user\",\"methods\":{\"tryAggregate(bool,(address,bytes)[])\":{\"notice\":\"Aggregates the results of multiple static calls.\"},\"tryBlockAndAggregate(bool,(address,bytes)[])\":{\"notice\":\"Aggregates the results of multiple static calls, together with the associated block number.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/utils/MultiStaticCall.sol\":\"MultiStaticCall\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":99999},\"remappings\":[]},\"sources\":{\"contracts/utils/MultiStaticCall.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.28;\\n\\n/// @title MultiStaticCall - Aggregate results from multiple static calls\\n/// @dev Derived from https://github.com/makerdao/multicall (MIT licence)\\ncontract MultiStaticCall {\\n    struct Call {\\n        address target;\\n        bytes callData;\\n    }\\n\\n    struct Result {\\n        bool success;\\n        bytes returnData;\\n    }\\n\\n    /// @notice Emitted when a static call reverts without return data.\\n    /// @param target The target contract address of the static call.\\n    /// @param data The encoded function call executed on `target`.\\n    error StaticCallReverted(address target, bytes data);\\n\\n    /// @notice Aggregates the results of multiple static calls.\\n    /// @dev Reverts if `requireSuccess` is true and one of the static calls fails.\\n    /// @param requireSuccess Whether a failed static call should trigger a revert.\\n    /// @param calls The list of target contracts and encoded function calls for each static call.\\n    /// @return returnData The list of success flags and raw return data for each static call.\\n    function tryAggregate(bool requireSuccess, Call[] calldata calls) public view returns (Result[] memory returnData) {\\n        uint256 length = calls.length;\\n        returnData = new Result[](length);\\n        for (uint256 i; i < length; ++i) {\\n            address target = calls[i].target;\\n            bytes calldata data = calls[i].callData;\\n            (bool success, bytes memory ret) = target.staticcall(data);\\n\\n            if (requireSuccess && !success) {\\n                uint256 returndataLength = ret.length;\\n                if (returndataLength != 0) {\\n                    assembly {\\n                        revert(add(32, ret), returndataLength)\\n                    }\\n                } else {\\n                    revert StaticCallReverted(target, data);\\n                }\\n            }\\n\\n            returnData[i] = Result(success, ret);\\n        }\\n    }\\n\\n    /// @notice Aggregates the results of multiple static calls, together with the associated block number.\\n    /// @dev Warning: Do not use this function as part of a transaction: `blockNumber` would not be meaningful due to transactions ordering.\\n    /// @dev Reverts if `requireSuccess` is true and one of the static calls fails.\\n    /// @param requireSuccess Whether a failed static call should trigger a revert.\\n    /// @param calls The list of target contracts and encoded function calls for each static call.\\n    /// @return blockNumber The latest mined block number indicating at which point the return data is valid.\\n    /// @return returnData The list of success flags and raw return data for each static call.\\n    function tryBlockAndAggregate(bool requireSuccess, Call[] calldata calls) public view returns (uint256 blockNumber, Result[] memory returnData) {\\n        blockNumber = block.number;\\n        returnData = tryAggregate(requireSuccess, calls);\\n    }\\n}\\n\",\"keccak256\":\"0x42f6a4a4e72ac5d495e364873677e59468bfc91221310527be74ab707ea5c07b\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b506106378061001f6000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063399542e91461003b578063bce38bd714610065575b600080fd5b61004e610049366004610298565b610085565b60405161005c92919061040e565b60405180910390f35b610078610073366004610298565b61009d565b60405161005c919061042f565b43606061009385858561009d565b9050935093915050565b6060818067ffffffffffffffff8111156100b9576100b9610449565b6040519080825280602002602001820160405280156100ff57816020015b6040805180820190915260008152606060208201528152602001906001900390816100d75790505b50915060005b8181101561028f57600085858381811061012157610121610478565b905060200281019061013391906104a7565b6101419060208101906104e5565b905036600087878581811061015857610158610478565b905060200281019061016a91906104a7565b61017890602081019061051b565b915091506000808473ffffffffffffffffffffffffffffffffffffffff1684846040516101a6929190610587565b600060405180830381855afa9150503d80600081146101e1576040519150601f19603f3d011682016040523d82523d6000602084013e6101e6565b606091505b50915091508a80156101f6575081155b1561024b578051801561020a578082602001fd5b8585856040517f1199c44200000000000000000000000000000000000000000000000000000000815260040161024293929190610597565b60405180910390fd5b604051806040016040528083151581526020018281525088878151811061027457610274610478565b60200260200101819052505050505050806001019050610105565b50509392505050565b6000806000604084860312156102ad57600080fd5b833580151581146102bd57600080fd5b9250602084013567ffffffffffffffff8111156102d957600080fd5b8401601f810186136102ea57600080fd5b803567ffffffffffffffff81111561030157600080fd5b8660208260051b840101111561031657600080fd5b939660209190910195509293505050565b600082825180855260208501945060208160051b8301016020850160005b83811015610402577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe085840301885281518051151584526020810151905060406020850152805180604086015260005b818110156103b25760208184018101516060888401015201610395565b5060006060828701015260607fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f83011686010194505050602082019150602088019750600181019050610345565b50909695505050505050565b8281526040602082015260006104276040830184610327565b949350505050565b6020815260006104426020830184610327565b9392505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b600082357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc18336030181126104db57600080fd5b9190910192915050565b6000602082840312156104f757600080fd5b813573ffffffffffffffffffffffffffffffffffffffff8116811461044257600080fd5b60008083357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe184360301811261055057600080fd5b83018035915067ffffffffffffffff82111561056b57600080fd5b60200191503681900382131561058057600080fd5b9250929050565b8183823760009101908152919050565b73ffffffffffffffffffffffffffffffffffffffff8416815260406020820152816040820152818360608301376000818301606090810191909152601f9092017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe01601019291505056fea2646970667358221220ad36c17a0a82f09aa61583156c4c0259775720ec56144d1fdf543bda28a4634564736f6c634300081c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063399542e91461003b578063bce38bd714610065575b600080fd5b61004e610049366004610298565b610085565b60405161005c92919061040e565b60405180910390f35b610078610073366004610298565b61009d565b60405161005c919061042f565b43606061009385858561009d565b9050935093915050565b6060818067ffffffffffffffff8111156100b9576100b9610449565b6040519080825280602002602001820160405280156100ff57816020015b6040805180820190915260008152606060208201528152602001906001900390816100d75790505b50915060005b8181101561028f57600085858381811061012157610121610478565b905060200281019061013391906104a7565b6101419060208101906104e5565b905036600087878581811061015857610158610478565b905060200281019061016a91906104a7565b61017890602081019061051b565b915091506000808473ffffffffffffffffffffffffffffffffffffffff1684846040516101a6929190610587565b600060405180830381855afa9150503d80600081146101e1576040519150601f19603f3d011682016040523d82523d6000602084013e6101e6565b606091505b50915091508a80156101f6575081155b1561024b578051801561020a578082602001fd5b8585856040517f1199c44200000000000000000000000000000000000000000000000000000000815260040161024293929190610597565b60405180910390fd5b604051806040016040528083151581526020018281525088878151811061027457610274610478565b60200260200101819052505050505050806001019050610105565b50509392505050565b6000806000604084860312156102ad57600080fd5b833580151581146102bd57600080fd5b9250602084013567ffffffffffffffff8111156102d957600080fd5b8401601f810186136102ea57600080fd5b803567ffffffffffffffff81111561030157600080fd5b8660208260051b840101111561031657600080fd5b939660209190910195509293505050565b600082825180855260208501945060208160051b8301016020850160005b83811015610402577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe085840301885281518051151584526020810151905060406020850152805180604086015260005b818110156103b25760208184018101516060888401015201610395565b5060006060828701015260607fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f83011686010194505050602082019150602088019750600181019050610345565b50909695505050505050565b8281526040602082015260006104276040830184610327565b949350505050565b6020815260006104426020830184610327565b9392505050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b600082357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc18336030181126104db57600080fd5b9190910192915050565b6000602082840312156104f757600080fd5b813573ffffffffffffffffffffffffffffffffffffffff8116811461044257600080fd5b60008083357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe184360301811261055057600080fd5b83018035915067ffffffffffffffff82111561056b57600080fd5b60200191503681900382131561058057600080fd5b9250929050565b8183823760009101908152919050565b73ffffffffffffffffffffffffffffffffffffffff8416815260406020820152816040820152818360608301376000818301606090810191909152601f9092017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe01601019291505056fea2646970667358221220ad36c17a0a82f09aa61583156c4c0259775720ec56144d1fdf543bda28a4634564736f6c634300081c0033",
+  "devdoc": {
+    "details": "Derived from https://github.com/makerdao/multicall (MIT licence)",
+    "errors": {
+      "StaticCallReverted(address,bytes)": [
+        {
+          "params": {
+            "data": "The encoded function call executed on `target`.",
+            "target": "The target contract address of the static call."
+          }
+        }
+      ]
+    },
+    "kind": "dev",
+    "methods": {
+      "tryAggregate(bool,(address,bytes)[])": {
+        "details": "Reverts if `requireSuccess` is true and one of the static calls fails.",
+        "params": {
+          "calls": "The list of target contracts and encoded function calls for each static call.",
+          "requireSuccess": "Whether a failed static call should trigger a revert."
+        },
+        "returns": {
+          "returnData": "The list of success flags and raw return data for each static call."
+        }
+      },
+      "tryBlockAndAggregate(bool,(address,bytes)[])": {
+        "details": "Warning: Do not use this function as part of a transaction: `blockNumber` would not be meaningful due to transactions ordering.Reverts if `requireSuccess` is true and one of the static calls fails.",
+        "params": {
+          "calls": "The list of target contracts and encoded function calls for each static call.",
+          "requireSuccess": "Whether a failed static call should trigger a revert."
+        },
+        "returns": {
+          "blockNumber": "The latest mined block number indicating at which point the return data is valid.",
+          "returnData": "The list of success flags and raw return data for each static call."
+        }
+      }
+    },
+    "title": "MultiStaticCall - Aggregate results from multiple static calls",
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "StaticCallReverted(address,bytes)": [
+        {
+          "notice": "Emitted when a static call reverts without return data."
+        }
+      ]
+    },
+    "kind": "user",
+    "methods": {
+      "tryAggregate(bool,(address,bytes)[])": {
+        "notice": "Aggregates the results of multiple static calls."
+      },
+      "tryBlockAndAggregate(bool,(address,bytes)[])": {
+        "notice": "Aggregates the results of multiple static calls, together with the associated block number."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

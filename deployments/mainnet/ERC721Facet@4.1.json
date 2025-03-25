@@ -1,0 +1,725 @@
+{
+  "address": "0x957F80d35C7D50B6b30E95F6D1352983214e5f5e",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IForwarderRegistry",
+          "name": "forwarderRegistry",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "ERC721BalanceOfAddressZero",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ERC721NonApprovedForApproval",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ERC721NonApprovedForTransfer",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ERC721NonExistingToken",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ERC721NonOwnedToken",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ERC721SafeTransferRejected",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "ERC721SelfApproval",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "ERC721SelfApprovalForAll",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC721TransferToAddressZero",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "IllegalInterfaceId",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "NotProxyAdmin",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "approved",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "ApprovalForAll",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getApproved",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "approved",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "initERC721Storage",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForAll",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "approvedForAll",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "tokenOwner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAll",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x7466edceb97756ea4cec7b75b33a4a53c9ad14fa8fbd418967be3bad5e1490b6",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x80b12BD0F1793BF6CEa767Fa83Eb2068eaa17DC8",
+    "contractAddress": null,
+    "transactionIndex": 131,
+    "gasUsed": "1165752",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x5db62603018936f065285c661cf4dd6d57c1c290cb24cdee3cd803db23da2d63",
+    "transactionHash": "0x7466edceb97756ea4cec7b75b33a4a53c9ad14fa8fbd418967be3bad5e1490b6",
+    "logs": [],
+    "blockNumber": 22120785,
+    "cumulativeGasUsed": "23582057",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x316a472D084489CB6d4C66e5eB62aE3AdA17521e"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "84bab0eb3356c2e3bedca0f2f5a163c5",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IForwarderRegistry\",\"name\":\"forwarderRegistry\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"ERC721BalanceOfAddressZero\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ERC721NonApprovedForApproval\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ERC721NonApprovedForTransfer\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ERC721NonExistingToken\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ERC721NonOwnedToken\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ERC721SafeTransferRejected\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"ERC721SelfApproval\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"ERC721SelfApprovalForAll\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ERC721TransferToAddressZero\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"IllegalInterfaceId\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"NotProxyAdmin\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initERC721Storage\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"approvedForAll\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"tokenOwner\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).Note: This facet depends on {ProxyAdminFacet}, and {InterfaceDetectionFacet}.\",\"errors\":{\"ERC721NonApprovedForApproval(address,address,uint256)\":[{\"params\":{\"sender\":\"The message sender.\",\"tokenId\":\"The identifier of the token.\"}}],\"ERC721NonApprovedForTransfer(address,address,uint256)\":[{\"params\":{\"sender\":\"The message sender.\",\"tokenId\":\"The identifier of the token.\"}}],\"ERC721NonExistingToken(uint256)\":[{\"params\":{\"tokenId\":\"The identifier of the token that was checked.\"}}],\"ERC721NonOwnedToken(address,uint256)\":[{\"params\":{\"account\":\"The account that was expected to own the token.\",\"tokenId\":\"The identifier of the token.\"}}],\"ERC721SafeTransferRejected(address,uint256)\":[{\"params\":{\"recipient\":\"The recipient contract.\",\"tokenId\":\"The identifier of the token.\"}}],\"ERC721SelfApproval(address)\":[{\"params\":{\"account\":\"The account trying to approve itself.\"}}],\"ERC721SelfApprovalForAll(address)\":[{\"params\":{\"account\":\"The account trying to approveForAll itself.\"}}],\"NotProxyAdmin(address)\":[{\"params\":{\"account\":\"The account that was checked.\"}}]},\"events\":{\"Approval(address,address,uint256)\":{\"params\":{\"approved\":\"The approved address.\",\"owner\":\"The token owner.\",\"tokenId\":\"The approved token identifier.\"}},\"ApprovalForAll(address,address,bool)\":{\"params\":{\"approved\":\"True when then approval is set, false when it is unset.\",\"operator\":\"The approved address.\",\"owner\":\"The tokens owner.\"}},\"Transfer(address,address,uint256)\":{\"params\":{\"from\":\"The previous token owner.\",\"to\":\"The new token owner.\",\"tokenId\":\"The transferred token identifier.\"}}},\"kind\":\"dev\",\"methods\":{\"approve(address,uint256)\":{\"details\":\"Note: There can only be one approved address per token at a given time.Note: A token approval gets reset when this token is transferred, including a self-transfer.Reverts if `tokenId` does not exist.Reverts if `to` is the token owner.Reverts if the sender is not the token owner and has not been approved by the token owner.Emits an {Approval} event.\",\"params\":{\"to\":\"The address to approve, or the zero address to remove any existing approval.\",\"tokenId\":\"The token identifier to give approval for.\"}},\"balanceOf(address)\":{\"details\":\"Reverts if `owner` is the zero address.\",\"params\":{\"owner\":\"The address to query the balance of.\"},\"returns\":{\"balance\":\"The amount owned by the owner.\"}},\"getApproved(uint256)\":{\"details\":\"Reverts if `tokenId` does not exist.\",\"params\":{\"tokenId\":\"The token identifier to query the approval of.\"},\"returns\":{\"approved\":\"The approved address for the token identifier, or the zero address if no approval is set.\"}},\"initERC721Storage()\":{\"details\":\"Reverts with {NotProxyAdmin} if the sender is not the proxy admin.\"},\"isApprovedForAll(address,address)\":{\"params\":{\"operator\":\"The address which receives the approval for all tokens.\",\"owner\":\"The address which gives the approval for all tokens.\"},\"returns\":{\"approvedForAll\":\"Whether the operator is approved for all tokens by the owner.\"}},\"ownerOf(uint256)\":{\"details\":\"Reverts if `tokenId` does not exist.\",\"params\":{\"tokenId\":\"The token identifier to query the owner of.\"},\"returns\":{\"tokenOwner\":\"The owner of the token identifier.\"}},\"safeTransferFrom(address,address,uint256)\":{\"details\":\"Resets the token approval for `tokenId`.Reverts if `to` is the zero address.Reverts if `from` is not the owner of `tokenId`.Reverts if the sender is not `from` and has not been approved by `from` for `tokenId`.Reverts if `to` is a contract and the call to {IERC721Receiver-onERC721Received} fails, reverts or is rejected.Emits a {Transfer} event.\",\"params\":{\"from\":\"The current token owner.\",\"to\":\"The recipient of the token transfer.\",\"tokenId\":\"The identifier of the token to transfer.\"}},\"safeTransferFrom(address,address,uint256,bytes)\":{\"details\":\"Resets the token approval for `tokenId`.Reverts if `to` is the zero address.Reverts if `from` is not the owner of `tokenId`.Reverts if the sender is not `from` and has not been approved by `from` for `tokenId`.Reverts if `to` is a contract and the call to {IERC721Receiver-onERC721Received} fails, reverts or is rejected.Emits a {Transfer} event.\",\"params\":{\"data\":\"Optional data to send along to a receiver contract.\",\"from\":\"The current token owner.\",\"to\":\"The recipient of the token transfer.\",\"tokenId\":\"The identifier of the token to transfer.\"}},\"setApprovalForAll(address,bool)\":{\"details\":\"Reverts if the sender is the same as `operator`.Emits an {ApprovalForAll} event.\",\"params\":{\"approved\":\"True to set an approval for all tokens, false to unset it.\",\"operator\":\"The address to approve for all tokens.\"}},\"transferFrom(address,address,uint256)\":{\"details\":\"Note: Usage of this method is discouraged, use `safeTransferFrom` whenever possible.Resets the token approval for `tokenId`.Reverts if `to` is the zero address.Reverts if `from` is not the owner of `tokenId`.Reverts if the sender is not `from` and has not been approved by `from` for `tokenId`.Emits a {Transfer} event.\",\"params\":{\"from\":\"The current token owner.\",\"to\":\"The recipient of the token transfer. Self-transfers are possible.\",\"tokenId\":\"The identifier of the token to transfer.\"}}},\"title\":\"ERC721 Non-Fungible Token Standard (facet version).\",\"version\":1},\"userdoc\":{\"errors\":{\"ERC721BalanceOfAddressZero()\":[{\"notice\":\"Thrown when querying the balance of the zero address.\"}],\"ERC721NonApprovedForApproval(address,address,uint256)\":[{\"notice\":\"Thrown when a sender tries to set a token approval but is neither the owner nor approvedForAll by the owner.\"}],\"ERC721NonApprovedForTransfer(address,address,uint256)\":[{\"notice\":\"Thrown when a sender tries to transfer a token but is neither the owner nor approved by the owner.\"}],\"ERC721NonExistingToken(uint256)\":[{\"notice\":\"Thrown when a token does not exist but is required to.\"}],\"ERC721NonOwnedToken(address,uint256)\":[{\"notice\":\"Thrown when a token is not owned by the expected account.\"}],\"ERC721SafeTransferRejected(address,uint256)\":[{\"notice\":\"Thrown when a safe transfer is rejected by the recipient contract.\"}],\"ERC721SelfApproval(address)\":[{\"notice\":\"Thrown when trying to approve oneself.\"}],\"ERC721SelfApprovalForAll(address)\":[{\"notice\":\"Thrown when trying to approveForAll oneself.\"}],\"ERC721TransferToAddressZero()\":[{\"notice\":\"Thrown when transferring a token to the zero address.\"}],\"IllegalInterfaceId()\":[{\"notice\":\"Thrown when setting the illegal interfaceId 0xffffffff.\"}],\"NotProxyAdmin(address)\":[{\"notice\":\"Thrown when an account is not the proxy admin but is required to.\"}]},\"events\":{\"Approval(address,address,uint256)\":{\"notice\":\"Emitted when a single token approval is set.\"},\"ApprovalForAll(address,address,bool)\":{\"notice\":\"Emitted when an approval for all tokens is set or unset.\"},\"Transfer(address,address,uint256)\":{\"notice\":\"Emitted when a token is transferred.\"}},\"kind\":\"user\",\"methods\":{\"approve(address,uint256)\":{\"notice\":\"Sets or unsets an approval to transfer a single token on behalf of its owner.\"},\"balanceOf(address)\":{\"notice\":\"Gets the balance of an address.\"},\"getApproved(uint256)\":{\"notice\":\"Gets the approved address for a token.\"},\"initERC721Storage()\":{\"notice\":\"Marks the following ERC165 interfaces as supported: ERC721.\"},\"isApprovedForAll(address,address)\":{\"notice\":\"Gets whether an operator is approved for all tokens by an owner.\"},\"ownerOf(uint256)\":{\"notice\":\"Gets the owner of a token.\"},\"safeTransferFrom(address,address,uint256)\":{\"notice\":\"Safely transfers the ownership of a token to a recipient.\"},\"safeTransferFrom(address,address,uint256,bytes)\":{\"notice\":\"Safely transfers the ownership of a token to a recipient.\"},\"setApprovalForAll(address,bool)\":{\"notice\":\"Sets or unsets an approval to transfer all tokens on behalf of their owner.\"},\"transferFrom(address,address,uint256)\":{\"notice\":\"Unsafely transfers the ownership of a token to a recipient.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/token/ERC721/facets/ERC721Facet.sol\":\"ERC721Facet\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":99999},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.0.1) (utils/Context.sol)\\n\\npragma solidity ^0.8.20;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n\\n    function _contextSuffixLength() internal view virtual returns (uint256) {\\n        return 0;\\n    }\\n}\\n\",\"keccak256\":\"0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/StorageSlot.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.1.0) (utils/StorageSlot.sol)\\n// This file was procedurally generated from scripts/generate/templates/StorageSlot.js.\\n\\npragma solidity ^0.8.20;\\n\\n/**\\n * @dev Library for reading and writing primitive types to specific storage slots.\\n *\\n * Storage slots are often used to avoid storage conflict when dealing with upgradeable contracts.\\n * This library helps with reading and writing to such slots without the need for inline assembly.\\n *\\n * The functions in this library return Slot structs that contain a `value` member that can be used to read or write.\\n *\\n * Example usage to set ERC-1967 implementation slot:\\n * ```solidity\\n * contract ERC1967 {\\n *     // Define the slot. Alternatively, use the SlotDerivation library to derive the slot.\\n *     bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;\\n *\\n *     function _getImplementation() internal view returns (address) {\\n *         return StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value;\\n *     }\\n *\\n *     function _setImplementation(address newImplementation) internal {\\n *         require(newImplementation.code.length > 0);\\n *         StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation;\\n *     }\\n * }\\n * ```\\n *\\n * TIP: Consider using this library along with {SlotDerivation}.\\n */\\nlibrary StorageSlot {\\n    struct AddressSlot {\\n        address value;\\n    }\\n\\n    struct BooleanSlot {\\n        bool value;\\n    }\\n\\n    struct Bytes32Slot {\\n        bytes32 value;\\n    }\\n\\n    struct Uint256Slot {\\n        uint256 value;\\n    }\\n\\n    struct Int256Slot {\\n        int256 value;\\n    }\\n\\n    struct StringSlot {\\n        string value;\\n    }\\n\\n    struct BytesSlot {\\n        bytes value;\\n    }\\n\\n    /**\\n     * @dev Returns an `AddressSlot` with member `value` located at `slot`.\\n     */\\n    function getAddressSlot(bytes32 slot) internal pure returns (AddressSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `BooleanSlot` with member `value` located at `slot`.\\n     */\\n    function getBooleanSlot(bytes32 slot) internal pure returns (BooleanSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `Bytes32Slot` with member `value` located at `slot`.\\n     */\\n    function getBytes32Slot(bytes32 slot) internal pure returns (Bytes32Slot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `Uint256Slot` with member `value` located at `slot`.\\n     */\\n    function getUint256Slot(bytes32 slot) internal pure returns (Uint256Slot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `Int256Slot` with member `value` located at `slot`.\\n     */\\n    function getInt256Slot(bytes32 slot) internal pure returns (Int256Slot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `StringSlot` with member `value` located at `slot`.\\n     */\\n    function getStringSlot(bytes32 slot) internal pure returns (StringSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns an `StringSlot` representation of the string storage pointer `store`.\\n     */\\n    function getStringSlot(string storage store) internal pure returns (StringSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := store.slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns a `BytesSlot` with member `value` located at `slot`.\\n     */\\n    function getBytesSlot(bytes32 slot) internal pure returns (BytesSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := slot\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns an `BytesSlot` representation of the bytes storage pointer `store`.\\n     */\\n    function getBytesSlot(bytes storage store) internal pure returns (BytesSlot storage r) {\\n        assembly (\\\"memory-safe\\\") {\\n            r.slot := store.slot\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xcf74f855663ce2ae00ed8352666b7935f6cddea2932fdf2c3ecd30a9b1cd0e97\",\"license\":\"MIT\"},\"contracts/CommonErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Thrown when trying to transfer tokens without calldata to the contract.\\nerror EtherReceptionDisabled();\\n\\n/// @notice Thrown when the multiple related arrays have different lengths.\\nerror InconsistentArrayLengths();\\n\\n/// @notice Thrown when an ETH transfer has failed.\\nerror TransferFailed();\\n\",\"keccak256\":\"0x016ea12044fa81e3c57662985c8cfa863543ca873697926085a0f7cee10622f3\",\"license\":\"MIT\"},\"contracts/introspection/errors/InterfaceDetectionErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Thrown when setting the illegal interfaceId 0xffffffff.\\nerror IllegalInterfaceId();\\n\",\"keccak256\":\"0x0fd7df6f16ddbcaf3f5b8f603a12c0516e1dc5ee08eb770da52691adf070e0bd\",\"license\":\"MIT\"},\"contracts/introspection/interfaces/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title ERC165 Interface Detection Standard.\\n/// @dev See https://eips.ethereum.org/EIPS/eip-165.\\n/// @dev Note: The ERC-165 identifier for this interface is 0x01ffc9a7.\\ninterface IERC165 {\\n    /// @notice Returns whether this contract implements a given interface.\\n    /// @dev Note: This function call must use less than 30 000 gas.\\n    /// @param interfaceId the interface identifier to test.\\n    /// @return supported True if the interface is supported, false if `interfaceId` is `0xffffffff` or if the interface is not supported.\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool supported);\\n}\\n\",\"keccak256\":\"0x34f460e915aaaec82d62c228f4813ca758b487034eaa43b65c128389539194d9\",\"license\":\"MIT\"},\"contracts/introspection/libraries/InterfaceDetectionStorage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nimport {IllegalInterfaceId} from \\\"./../errors/InterfaceDetectionErrors.sol\\\";\\nimport {IERC165} from \\\"./../interfaces/IERC165.sol\\\";\\n\\nlibrary InterfaceDetectionStorage {\\n    struct Layout {\\n        mapping(bytes4 => bool) supportedInterfaces;\\n    }\\n\\n    bytes32 internal constant LAYOUT_STORAGE_SLOT = bytes32(uint256(keccak256(\\\"animoca.core.introspection.InterfaceDetection.storage\\\")) - 1);\\n\\n    bytes4 internal constant ILLEGAL_INTERFACE_ID = 0xffffffff;\\n\\n    /// @notice Sets or unsets an ERC165 interface.\\n    /// @dev Revertswith {IllegalInterfaceId} if `interfaceId` is `0xffffffff`.\\n    /// @param interfaceId the interface identifier.\\n    /// @param supported True to set the interface, false to unset it.\\n    function setSupportedInterface(Layout storage s, bytes4 interfaceId, bool supported) internal {\\n        if (interfaceId == ILLEGAL_INTERFACE_ID) revert IllegalInterfaceId();\\n        s.supportedInterfaces[interfaceId] = supported;\\n    }\\n\\n    /// @notice Returns whether this contract implements a given interface.\\n    /// @dev Note: This function call must use less than 30 000 gas.\\n    /// @param interfaceId The interface identifier to test.\\n    /// @return supported True if the interface is supported, false if `interfaceId` is `0xffffffff` or if the interface is not supported.\\n    function supportsInterface(Layout storage s, bytes4 interfaceId) internal view returns (bool supported) {\\n        if (interfaceId == ILLEGAL_INTERFACE_ID) {\\n            return false;\\n        }\\n        if (interfaceId == type(IERC165).interfaceId) {\\n            return true;\\n        }\\n        return s.supportedInterfaces[interfaceId];\\n    }\\n\\n    function layout() internal pure returns (Layout storage s) {\\n        bytes32 position = LAYOUT_STORAGE_SLOT;\\n        assembly {\\n            s.slot := position\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xeaf559662562be7885b75193ff6994e52cf8109c898ffced02c2b26785d94ee2\",\"license\":\"MIT\"},\"contracts/metatx/base/ForwarderRegistryContextBase.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nimport {IForwarderRegistry} from \\\"./../interfaces/IForwarderRegistry.sol\\\";\\nimport {ERC2771Calldata} from \\\"./../libraries/ERC2771Calldata.sol\\\";\\n\\n/// @title Meta-Transactions Forwarder Registry Context (proxiable version).\\n/// @dev This contract is to be used via inheritance in a proxied implementation.\\n/// @dev Derived from https://github.com/wighawag/universal-forwarder (MIT licence)\\nabstract contract ForwarderRegistryContextBase {\\n    IForwarderRegistry internal immutable _FORWARDER_REGISTRY;\\n\\n    constructor(IForwarderRegistry forwarderRegistry) {\\n        _FORWARDER_REGISTRY = forwarderRegistry;\\n    }\\n\\n    /// @notice Returns the message sender depending on the ForwarderRegistry-based meta-transaction context.\\n    function _msgSender() internal view virtual returns (address) {\\n        // Optimised path in case of an EOA-initiated direct tx to the contract or a call from a contract not complying with EIP-2771\\n        // solhint-disable-next-line avoid-tx-origin\\n        if (msg.sender == tx.origin || msg.data.length < 24) {\\n            return msg.sender;\\n        }\\n\\n        address sender = ERC2771Calldata.msgSender();\\n\\n        // Return the EIP-2771 calldata-appended sender address if the message was forwarded by the ForwarderRegistry or an approved forwarder\\n        if (msg.sender == address(_FORWARDER_REGISTRY) || _FORWARDER_REGISTRY.isApprovedForwarder(sender, msg.sender, address(this))) {\\n            return sender;\\n        }\\n\\n        return msg.sender;\\n    }\\n\\n    /// @notice Returns the message data depending on the ForwarderRegistry-based meta-transaction context.\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        // Optimised path in case of an EOA-initiated direct tx to the contract or a call from a contract not complying with EIP-2771\\n        // solhint-disable-next-line avoid-tx-origin\\n        if (msg.sender == tx.origin || msg.data.length < 24) {\\n            return msg.data;\\n        }\\n\\n        // Return the EIP-2771 calldata (minus the appended sender) if the message was forwarded by the ForwarderRegistry or an approved forwarder\\n        if (\\n            msg.sender == address(_FORWARDER_REGISTRY) ||\\n            _FORWARDER_REGISTRY.isApprovedForwarder(ERC2771Calldata.msgSender(), msg.sender, address(this))\\n        ) {\\n            return ERC2771Calldata.msgData();\\n        }\\n\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0x9a024b7aa6527471d6a097c62dfa94e85a1427ec63776153aff9e5d7ba229040\",\"license\":\"MIT\"},\"contracts/metatx/interfaces/IForwarderRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title Meta-Transactions Forwarder Registry.\\ninterface IForwarderRegistry {\\n    /// @notice Checks whether an account is as an approved meta-transaction forwarder for a sender account to a target contract.\\n    /// @param sender The sender account.\\n    /// @param forwarder The forwarder account.\\n    /// @param target The target contract.\\n    /// @return isApproved True if `forwarder` is an approved meta-transaction forwarder for `sender` to `target`, false otherwise.\\n    function isApprovedForwarder(address sender, address forwarder, address target) external view returns (bool isApproved);\\n}\\n\",\"keccak256\":\"0xdfb17430660876a9214c0cc4c37eb688c565b3c8211151b3413d88d5b4e4c4cb\",\"license\":\"MIT\"},\"contracts/metatx/libraries/ERC2771Calldata.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @dev Derived from https://github.com/OpenZeppelin/openzeppelin-contracts (MIT licence)\\n/// @dev See https://eips.ethereum.org/EIPS/eip-2771\\nlibrary ERC2771Calldata {\\n    /// @notice Returns the sender address appended at the end of the calldata, as specified in EIP-2771.\\n    function msgSender() internal pure returns (address sender) {\\n        assembly {\\n            sender := shr(96, calldataload(sub(calldatasize(), 20)))\\n        }\\n    }\\n\\n    /// @notice Returns the calldata while omitting the appended sender address, as specified in EIP-2771.\\n    function msgData() internal pure returns (bytes calldata data) {\\n        unchecked {\\n            return msg.data[:msg.data.length - 20];\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x8de5057207aa02ba450c95d802f3f77736cafeb1c4e516d6989c27ff5fa1315d\",\"license\":\"MIT\"},\"contracts/proxy/errors/ProxyAdminErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Thrown when the initial admin is not set.\\nerror NoInitialProxyAdmin();\\n\\n/// @notice Thrown when an account is not the proxy admin but is required to.\\n/// @param account The account that was checked.\\nerror NotProxyAdmin(address account);\\n\",\"keccak256\":\"0x8ba37d9f154407fc3ddc058b5f678866b274a9674cd850bd8bf73d79e626c160\",\"license\":\"MIT\"},\"contracts/proxy/errors/ProxyInitializationErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Emitted when trying to set a phase value that has already been reached.\\n/// @param currentPhase The current phase.\\n/// @param newPhase The new phase trying to be set.\\nerror InitializationPhaseAlreadyReached(uint256 currentPhase, uint256 newPhase);\\n\",\"keccak256\":\"0x85ee7912d0020d0f032e2dacacbec057114235fbdab703753fdcde5c78275543\",\"license\":\"MIT\"},\"contracts/proxy/events/ProxyAdminEvents.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Emitted when the proxy admin changes.\\n/// @param previousAdmin the previous admin.\\n/// @param newAdmin the new admin.\\nevent AdminChanged(address previousAdmin, address newAdmin);\\n\",\"keccak256\":\"0x8af172a87e9b4f1188e7837f4aaac8bdb438191b1465cc963f4543da1a435476\",\"license\":\"MIT\"},\"contracts/proxy/libraries/ProxyAdminStorage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nimport {NoInitialProxyAdmin, NotProxyAdmin} from \\\"./../errors/ProxyAdminErrors.sol\\\";\\nimport {AdminChanged} from \\\"./../events/ProxyAdminEvents.sol\\\";\\nimport {ProxyInitialization} from \\\"./ProxyInitialization.sol\\\";\\n\\nlibrary ProxyAdminStorage {\\n    using ProxyAdminStorage for ProxyAdminStorage.Layout;\\n\\n    struct Layout {\\n        address admin;\\n    }\\n\\n    // bytes32 public constant PROXYADMIN_STORAGE_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103;\\n    bytes32 internal constant LAYOUT_STORAGE_SLOT = bytes32(uint256(keccak256(\\\"eip1967.proxy.admin\\\")) - 1);\\n    bytes32 internal constant PROXY_INIT_PHASE_SLOT = bytes32(uint256(keccak256(\\\"eip1967.proxy.admin.phase\\\")) - 1);\\n\\n    /// @notice Initializes the storage with an initial admin (immutable version).\\n    /// @dev Note: This function should be called ONLY in the constructor of an immutable (non-proxied) contract.\\n    /// @dev Reverts {NoInitialProxyAdmin} if `initialAdmin` is the zero address.\\n    /// @dev Emits an {AdminChanged} event.\\n    /// @param initialAdmin The initial payout wallet.\\n    function constructorInit(Layout storage s, address initialAdmin) internal {\\n        if (initialAdmin == address(0)) revert NoInitialProxyAdmin();\\n        s.admin = initialAdmin;\\n        emit AdminChanged(address(0), initialAdmin);\\n    }\\n\\n    /// @notice Initializes the storage with an initial admin (proxied version).\\n    /// @notice Sets the proxy initialization phase to `1`.\\n    /// @dev Note: This function should be called ONLY in the init function of a proxied contract.\\n    /// @dev Reverts with {InitializationPhaseAlreadyReached} if the proxy initialization phase is set to `1` or above.\\n    /// @dev Reverts {NoInitialProxyAdmin} if `initialAdmin` is the zero address.\\n    /// @dev Emits an {AdminChanged} event.\\n    /// @param initialAdmin The initial payout wallet.\\n    function proxyInit(Layout storage s, address initialAdmin) internal {\\n        ProxyInitialization.setPhase(PROXY_INIT_PHASE_SLOT, 1);\\n        s.constructorInit(initialAdmin);\\n    }\\n\\n    /// @notice Sets a new proxy admin.\\n    /// @dev Reverts with {NotProxyAdmin} if `sender` is not the proxy admin.\\n    /// @dev Emits an {AdminChanged} event if `newAdmin` is different from the current proxy admin.\\n    /// @param newAdmin The new proxy admin.\\n    function changeProxyAdmin(Layout storage s, address sender, address newAdmin) internal {\\n        address previousAdmin = s.admin;\\n        if (sender != previousAdmin) revert NotProxyAdmin(sender);\\n        if (previousAdmin != newAdmin) {\\n            s.admin = newAdmin;\\n            emit AdminChanged(previousAdmin, newAdmin);\\n        }\\n    }\\n\\n    /// @notice Gets the proxy admin.\\n    /// @return admin The proxy admin\\n    function proxyAdmin(Layout storage s) internal view returns (address admin) {\\n        return s.admin;\\n    }\\n\\n    /// @notice Ensures that an account is the proxy admin.\\n    /// @dev Reverts with {NotProxyAdmin} if `account` is not the proxy admin.\\n    /// @param account The account.\\n    function enforceIsProxyAdmin(Layout storage s, address account) internal view {\\n        if (account != s.admin) revert NotProxyAdmin(account);\\n    }\\n\\n    function layout() internal pure returns (Layout storage s) {\\n        bytes32 position = LAYOUT_STORAGE_SLOT;\\n        assembly {\\n            s.slot := position\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x1f1cb9a6470f14aa9942dedd288aaffc6c582abf831edeb52e51a3691cdd32a4\",\"license\":\"MIT\"},\"contracts/proxy/libraries/ProxyInitialization.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nimport {InitializationPhaseAlreadyReached} from \\\"./../errors/ProxyInitializationErrors.sol\\\";\\nimport {StorageSlot} from \\\"@openzeppelin/contracts/utils/StorageSlot.sol\\\";\\n\\n/// @notice Multiple calls protection for storage-modifying proxy initialization functions.\\nlibrary ProxyInitialization {\\n    /// @notice Sets the initialization phase during a storage-modifying proxy initialization function.\\n    /// @dev Reverts with {InitializationPhaseAlreadyReached} if `phase` has been reached already.\\n    /// @param storageSlot the storage slot where `phase` is stored.\\n    /// @param phase the initialization phase.\\n    function setPhase(bytes32 storageSlot, uint256 phase) internal {\\n        StorageSlot.Uint256Slot storage currentVersion = StorageSlot.getUint256Slot(storageSlot);\\n        uint256 currentPhase = currentVersion.value;\\n        if (currentPhase >= phase) revert InitializationPhaseAlreadyReached(currentPhase, phase);\\n        currentVersion.value = phase;\\n    }\\n}\\n\",\"keccak256\":\"0xdc2cca29702fe573cb5af8c3320eafe7a490aef99bcaafe1e6575159bb0007d7\",\"license\":\"MIT\"},\"contracts/token/ERC721/base/ERC721Base.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nimport {IERC721} from \\\"./../interfaces/IERC721.sol\\\";\\nimport {ERC721Storage} from \\\"./../libraries/ERC721Storage.sol\\\";\\nimport {Context} from \\\"@openzeppelin/contracts/utils/Context.sol\\\";\\n\\n/// @title ERC721 Non-Fungible Token Standard (proxiable version).\\n/// @dev This contract is to be used via inheritance in a proxied implementation.\\n/// @dev Note: This contract requires ERC165 (Interface Detection Standard).\\nabstract contract ERC721Base is IERC721, Context {\\n    using ERC721Storage for ERC721Storage.Layout;\\n\\n    /// @inheritdoc IERC721\\n    function approve(address to, uint256 tokenId) external virtual {\\n        ERC721Storage.layout().approve(_msgSender(), to, tokenId);\\n    }\\n\\n    /// @inheritdoc IERC721\\n    function setApprovalForAll(address operator, bool approved) external virtual {\\n        ERC721Storage.layout().setApprovalForAll(_msgSender(), operator, approved);\\n    }\\n\\n    /// @inheritdoc IERC721\\n    function transferFrom(address from, address to, uint256 tokenId) external {\\n        ERC721Storage.layout().transferFrom(_msgSender(), from, to, tokenId);\\n    }\\n\\n    /// @inheritdoc IERC721\\n    function safeTransferFrom(address from, address to, uint256 tokenId) external virtual {\\n        ERC721Storage.layout().safeTransferFrom(_msgSender(), from, to, tokenId);\\n    }\\n\\n    /// @inheritdoc IERC721\\n    function safeTransferFrom(address from, address to, uint256 tokenId, bytes calldata data) external virtual {\\n        ERC721Storage.layout().safeTransferFrom(_msgSender(), from, to, tokenId, data);\\n    }\\n\\n    /// @inheritdoc IERC721\\n    function balanceOf(address owner) external view returns (uint256 balance) {\\n        return ERC721Storage.layout().balanceOf(owner);\\n    }\\n\\n    /// @inheritdoc IERC721\\n    function ownerOf(uint256 tokenId) external view returns (address tokenOwner) {\\n        return ERC721Storage.layout().ownerOf(tokenId);\\n    }\\n\\n    /// @inheritdoc IERC721\\n    function getApproved(uint256 tokenId) external view returns (address approved) {\\n        return ERC721Storage.layout().getApproved(tokenId);\\n    }\\n\\n    /// @inheritdoc IERC721\\n    function isApprovedForAll(address owner, address operator) external view returns (bool approvedForAll) {\\n        return ERC721Storage.layout().isApprovedForAll(owner, operator);\\n    }\\n}\\n\",\"keccak256\":\"0x4f0d4569656ec7012105614266e0ea4d9ec3f0283c3e21c3e2c52aba100581af\",\"license\":\"MIT\"},\"contracts/token/ERC721/errors/ERC721Errors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Thrown when trying to approve oneself.\\n/// @param account The account trying to approve itself.\\nerror ERC721SelfApproval(address account);\\n\\n/// @notice Thrown when trying to approveForAll oneself.\\n/// @param account The account trying to approveForAll itself.\\nerror ERC721SelfApprovalForAll(address account);\\n\\n/// @notice Thrown when a sender tries to set a token approval but is neither the owner nor approvedForAll by the owner.\\n/// @param sender The message sender.\\n/// @param tokenId The identifier of the token.\\nerror ERC721NonApprovedForApproval(address sender, address owner, uint256 tokenId);\\n\\n/// @notice Thrown when transferring a token to the zero address.\\nerror ERC721TransferToAddressZero();\\n\\n/// @notice Thrown when a token does not exist but is required to.\\n/// @param tokenId The identifier of the token that was checked.\\nerror ERC721NonExistingToken(uint256 tokenId);\\n\\n/// @notice Thrown when a sender tries to transfer a token but is neither the owner nor approved by the owner.\\n/// @param sender The message sender.\\n/// @param tokenId The identifier of the token.\\nerror ERC721NonApprovedForTransfer(address sender, address owner, uint256 tokenId);\\n\\n/// @notice Thrown when a token is not owned by the expected account.\\n/// @param account The account that was expected to own the token.\\n/// @param tokenId The identifier of the token.\\nerror ERC721NonOwnedToken(address account, uint256 tokenId);\\n\\n/// @notice Thrown when a safe transfer is rejected by the recipient contract.\\n/// @param recipient The recipient contract.\\n/// @param tokenId The identifier of the token.\\nerror ERC721SafeTransferRejected(address recipient, uint256 tokenId);\\n\\n/// @notice Thrown when querying the balance of the zero address.\\nerror ERC721BalanceOfAddressZero();\\n\",\"keccak256\":\"0x8750bbb24c63b87c60d48d460804a3147f42cb4cb8ae4aeae73dbacb939ee992\",\"license\":\"MIT\"},\"contracts/token/ERC721/errors/ERC721MintableErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Thrown when minting a token to the zero address.\\nerror ERC721MintToAddressZero();\\n\\n/// @notice Thrown when minting a token that already exists.\\n/// @param tokenId The identifier of the token that already exists.\\nerror ERC721ExistingToken(uint256 tokenId);\\n\",\"keccak256\":\"0x6202bfb04dea32deb133a87d5df0cd74dc121d4195dbfaaf214595a714723f4e\",\"license\":\"MIT\"},\"contracts/token/ERC721/errors/ERC721MintableOnceErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Thrown when minting a token which has been burnt before (MintableOnce implementation).\\n/// @param tokenId The identifier of the token that has been burnt before.\\nerror ERC721BurntToken(uint256 tokenId);\\n\",\"keccak256\":\"0xfca46176cc52e35a870ee0ed24eb9424046b68b22992eea0d4c3223aaf6ba8db\",\"license\":\"MIT\"},\"contracts/token/ERC721/events/ERC721Events.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @notice Emitted when a token is transferred.\\n/// @param from The previous token owner.\\n/// @param to The new token owner.\\n/// @param tokenId The transferred token identifier.\\nevent Transfer(address indexed from, address indexed to, uint256 indexed tokenId);\\n\\n/// @notice Emitted when a single token approval is set.\\n/// @param owner The token owner.\\n/// @param approved The approved address.\\n/// @param tokenId The approved token identifier.\\nevent Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);\\n\\n/// @notice Emitted when an approval for all tokens is set or unset.\\n/// @param owner The tokens owner.\\n/// @param operator The approved address.\\n/// @param approved True when then approval is set, false when it is unset.\\nevent ApprovalForAll(address indexed owner, address indexed operator, bool approved);\\n\",\"keccak256\":\"0xa41f225efca959c49a61d53cda1ddefa834530050beed152c721e78f56de48be\",\"license\":\"MIT\"},\"contracts/token/ERC721/facets/ERC721Facet.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.28;\\n\\nimport {IForwarderRegistry} from \\\"./../../../metatx/interfaces/IForwarderRegistry.sol\\\";\\nimport {ERC721Storage} from \\\"./../libraries/ERC721Storage.sol\\\";\\nimport {ProxyAdminStorage} from \\\"./../../../proxy/libraries/ProxyAdminStorage.sol\\\";\\nimport {ERC721Base} from \\\"./../base/ERC721Base.sol\\\";\\nimport {Context} from \\\"@openzeppelin/contracts/utils/Context.sol\\\";\\nimport {ForwarderRegistryContextBase} from \\\"./../../../metatx/base/ForwarderRegistryContextBase.sol\\\";\\n\\n/// @title ERC721 Non-Fungible Token Standard (facet version).\\n/// @dev This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).\\n/// @dev Note: This facet depends on {ProxyAdminFacet}, and {InterfaceDetectionFacet}.\\ncontract ERC721Facet is ERC721Base, ForwarderRegistryContextBase {\\n    using ProxyAdminStorage for ProxyAdminStorage.Layout;\\n\\n    constructor(IForwarderRegistry forwarderRegistry) ForwarderRegistryContextBase(forwarderRegistry) {}\\n\\n    /// @notice Marks the following ERC165 interfaces as supported: ERC721.\\n    /// @dev Reverts with {NotProxyAdmin} if the sender is not the proxy admin.\\n    function initERC721Storage() external {\\n        ProxyAdminStorage.layout().enforceIsProxyAdmin(_msgSender());\\n        ERC721Storage.init();\\n    }\\n\\n    /// @inheritdoc ForwarderRegistryContextBase\\n    function _msgSender() internal view virtual override(Context, ForwarderRegistryContextBase) returns (address) {\\n        return ForwarderRegistryContextBase._msgSender();\\n    }\\n\\n    /// @inheritdoc ForwarderRegistryContextBase\\n    function _msgData() internal view virtual override(Context, ForwarderRegistryContextBase) returns (bytes calldata) {\\n        return ForwarderRegistryContextBase._msgData();\\n    }\\n}\\n\",\"keccak256\":\"0x20ab3bad63b69a7692efe2e3ba145b3cd3048359f73284834e358e5b758d58d7\",\"license\":\"MIT\"},\"contracts/token/ERC721/interfaces/IERC721.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title ERC721 Non-Fungible Token Standard, basic interface (functions).\\n/// @dev See https://eips.ethereum.org/EIPS/eip-721\\n/// @dev This interface only contains the standard functions. See IERC721Events for the events.\\n/// @dev Note: The ERC-165 identifier for this interface is 0x80ac58cd.\\ninterface IERC721 {\\n    /// @notice Sets or unsets an approval to transfer a single token on behalf of its owner.\\n    /// @dev Note: There can only be one approved address per token at a given time.\\n    /// @dev Note: A token approval gets reset when this token is transferred, including a self-transfer.\\n    /// @dev Reverts if `tokenId` does not exist.\\n    /// @dev Reverts if `to` is the token owner.\\n    /// @dev Reverts if the sender is not the token owner and has not been approved by the token owner.\\n    /// @dev Emits an {Approval} event.\\n    /// @param to The address to approve, or the zero address to remove any existing approval.\\n    /// @param tokenId The token identifier to give approval for.\\n    function approve(address to, uint256 tokenId) external;\\n\\n    /// @notice Sets or unsets an approval to transfer all tokens on behalf of their owner.\\n    /// @dev Reverts if the sender is the same as `operator`.\\n    /// @dev Emits an {ApprovalForAll} event.\\n    /// @param operator The address to approve for all tokens.\\n    /// @param approved True to set an approval for all tokens, false to unset it.\\n    function setApprovalForAll(address operator, bool approved) external;\\n\\n    /// @notice Unsafely transfers the ownership of a token to a recipient.\\n    /// @dev Note: Usage of this method is discouraged, use `safeTransferFrom` whenever possible.\\n    /// @dev Resets the token approval for `tokenId`.\\n    /// @dev Reverts if `to` is the zero address.\\n    /// @dev Reverts if `from` is not the owner of `tokenId`.\\n    /// @dev Reverts if the sender is not `from` and has not been approved by `from` for `tokenId`.\\n    /// @dev Emits a {Transfer} event.\\n    /// @param from The current token owner.\\n    /// @param to The recipient of the token transfer. Self-transfers are possible.\\n    /// @param tokenId The identifier of the token to transfer.\\n    function transferFrom(address from, address to, uint256 tokenId) external;\\n\\n    /// @notice Safely transfers the ownership of a token to a recipient.\\n    /// @dev Resets the token approval for `tokenId`.\\n    /// @dev Reverts if `to` is the zero address.\\n    /// @dev Reverts if `from` is not the owner of `tokenId`.\\n    /// @dev Reverts if the sender is not `from` and has not been approved by `from` for `tokenId`.\\n    /// @dev Reverts if `to` is a contract and the call to {IERC721Receiver-onERC721Received} fails, reverts or is rejected.\\n    /// @dev Emits a {Transfer} event.\\n    /// @param from The current token owner.\\n    /// @param to The recipient of the token transfer.\\n    /// @param tokenId The identifier of the token to transfer.\\n    function safeTransferFrom(address from, address to, uint256 tokenId) external;\\n\\n    /// @notice Safely transfers the ownership of a token to a recipient.\\n    /// @dev Resets the token approval for `tokenId`.\\n    /// @dev Reverts if `to` is the zero address.\\n    /// @dev Reverts if `from` is not the owner of `tokenId`.\\n    /// @dev Reverts if the sender is not `from` and has not been approved by `from` for `tokenId`.\\n    /// @dev Reverts if `to` is a contract and the call to {IERC721Receiver-onERC721Received} fails, reverts or is rejected.\\n    /// @dev Emits a {Transfer} event.\\n    /// @param from The current token owner.\\n    /// @param to The recipient of the token transfer.\\n    /// @param tokenId The identifier of the token to transfer.\\n    /// @param data Optional data to send along to a receiver contract.\\n    function safeTransferFrom(address from, address to, uint256 tokenId, bytes calldata data) external;\\n\\n    /// @notice Gets the balance of an address.\\n    /// @dev Reverts if `owner` is the zero address.\\n    /// @param owner The address to query the balance of.\\n    /// @return balance The amount owned by the owner.\\n    function balanceOf(address owner) external view returns (uint256 balance);\\n\\n    /// @notice Gets the owner of a token.\\n    /// @dev Reverts if `tokenId` does not exist.\\n    /// @param tokenId The token identifier to query the owner of.\\n    /// @return tokenOwner The owner of the token identifier.\\n    function ownerOf(uint256 tokenId) external view returns (address tokenOwner);\\n\\n    /// @notice Gets the approved address for a token.\\n    /// @dev Reverts if `tokenId` does not exist.\\n    /// @param tokenId The token identifier to query the approval of.\\n    /// @return approved The approved address for the token identifier, or the zero address if no approval is set.\\n    function getApproved(uint256 tokenId) external view returns (address approved);\\n\\n    /// @notice Gets whether an operator is approved for all tokens by an owner.\\n    /// @param owner The address which gives the approval for all tokens.\\n    /// @param operator The address which receives the approval for all tokens.\\n    /// @return approvedForAll Whether the operator is approved for all tokens by the owner.\\n    function isApprovedForAll(address owner, address operator) external view returns (bool approvedForAll);\\n}\\n\",\"keccak256\":\"0x0ae492d8a517113ac1931fe3be5432d7eafd5cb66f6ade9491531ebea1b5e67f\",\"license\":\"MIT\"},\"contracts/token/ERC721/interfaces/IERC721BatchTransfer.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title ERC721 Non-Fungible Token Standard, optional extension: Batch Transfer.\\n/// @dev See https://eips.ethereum.org/EIPS/eip-721\\n/// @dev Note: The ERC-165 identifier for this interface is 0xf3993d11.\\ninterface IERC721BatchTransfer {\\n    /// @notice Unsafely transfers a batch of tokens to a recipient.\\n    /// @dev Resets the token approval for each of `tokenIds`.\\n    /// @dev Reverts if `to` is the zero address.\\n    /// @dev Reverts if one of `tokenIds` is not owned by `from`.\\n    /// @dev Reverts if the sender is not `from` and has not been approved by `from` for each of `tokenIds`.\\n    /// @dev Emits an {IERC721-Transfer} event for each of `tokenIds`.\\n    /// @param from Current tokens owner.\\n    /// @param to Address of the new token owner.\\n    /// @param tokenIds Identifiers of the tokens to transfer.\\n    function batchTransferFrom(address from, address to, uint256[] calldata tokenIds) external;\\n}\\n\",\"keccak256\":\"0x9e88caecf03d56198da4e1d2e684ad5263aab7548c5a30a68acff79f359f2d91\",\"license\":\"MIT\"},\"contracts/token/ERC721/interfaces/IERC721Burnable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title ERC721 Non-Fungible Token Standard, optional extension: Burnable.\\n/// @dev See https://eips.ethereum.org/EIPS/eip-721\\n/// @dev Note: The ERC-165 identifier for this interface is 0x8b8b4ef5.\\ninterface IERC721Burnable {\\n    /// @notice Burns a token.\\n    /// @dev Reverts if `tokenId` is not owned by `from`.\\n    /// @dev Reverts if the sender is not `from` and has not been approved by `from` for `tokenId`.\\n    /// @dev Emits an {IERC721-Transfer} event with `to` set to the zero address.\\n    /// @param from The current token owner.\\n    /// @param tokenId The identifier of the token to burn.\\n    function burnFrom(address from, uint256 tokenId) external;\\n\\n    /// @notice Burns a batch of tokens.\\n    /// @dev Reverts if one of `tokenIds` is not owned by `from`.\\n    /// @dev Reverts if the sender is not `from` and has not been approved by `from` for each of `tokenIds`.\\n    /// @dev Emits an {IERC721-Transfer} event with `to` set to the zero address for each of `tokenIds`.\\n    /// @param from The current tokens owner.\\n    /// @param tokenIds The identifiers of the tokens to burn.\\n    function batchBurnFrom(address from, uint256[] calldata tokenIds) external;\\n}\\n\",\"keccak256\":\"0x5d1eb60e1aa12fa9149bf3b1786513928399255667791165c90456fc2d6876a0\",\"license\":\"MIT\"},\"contracts/token/ERC721/interfaces/IERC721Deliverable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title ERC721 Non-Fungible Token Standard, optional extension: Deliverable.\\n/// @dev See https://eips.ethereum.org/EIPS/eip-721\\n/// @dev Note: The ERC-165 identifier for this interface is 0x9da5e832.\\ninterface IERC721Deliverable {\\n    /// @notice Unsafely mints tokens to multiple recipients.\\n    /// @dev Reverts if `recipients` and `tokenIds` have different lengths.\\n    /// @dev Reverts if one of `recipients` is the zero address.\\n    /// @dev Reverts if one of `tokenIds` already exists.\\n    /// @dev Emits an {IERC721-Transfer} event from the zero address for each of `recipients` and `tokenIds`.\\n    /// @param recipients Addresses of the new tokens owners.\\n    /// @param tokenIds Identifiers of the tokens to mint.\\n    function deliver(address[] calldata recipients, uint256[] calldata tokenIds) external;\\n}\\n\",\"keccak256\":\"0xfdf3696a08b524bec17ed6813694bd80be44f1250c8bdc9fc961f8c9ba7b4e08\",\"license\":\"MIT\"},\"contracts/token/ERC721/interfaces/IERC721Metadata.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title ERC721 Non-Fungible Token Standard, optional extension: Metadata.\\n/// @dev See https://eips.ethereum.org/EIPS/eip-721\\n/// @dev Note: The ERC-165 identifier for this interface is 0x5b5e139f.\\ninterface IERC721Metadata {\\n    /// @notice Gets the name of the token. E.g. \\\"My Token\\\".\\n    /// @return tokenName The name of the token.\\n    function name() external view returns (string memory tokenName);\\n\\n    /// @notice Gets the symbol of the token. E.g. \\\"TOK\\\".\\n    /// @return tokenSymbol The symbol of the token.\\n    function symbol() external view returns (string memory tokenSymbol);\\n\\n    /// @notice Gets the metadata URI for a token identifier.\\n    /// @dev Reverts if `tokenId` does not exist.\\n    /// @param tokenId The token identifier.\\n    /// @return uri The metadata URI for the token identifier.\\n    function tokenURI(uint256 tokenId) external view returns (string memory uri);\\n}\\n\",\"keccak256\":\"0x1460ac650981f3dee2c9750fb77876c861bb8afc0f09190be6fe2a5f39de0328\",\"license\":\"MIT\"},\"contracts/token/ERC721/interfaces/IERC721Mintable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title ERC721 Non-Fungible Token Standard, optional extension: Mintable.\\n/// @dev See https://eips.ethereum.org/EIPS/eip-721\\n/// @dev Note: The ERC-165 identifier for this interface is 0x8e773e13.\\ninterface IERC721Mintable {\\n    /// @notice Unsafely mints a token.\\n    /// @dev Reverts if `to` is the zero address.\\n    /// @dev Reverts if `tokenId` already exists.\\n    /// @dev Emits an {IERC721-Transfer} event from the zero address.\\n    /// @param to Address of the new token owner.\\n    /// @param tokenId Identifier of the token to mint.\\n    function mint(address to, uint256 tokenId) external;\\n\\n    /// @notice Safely mints a token.\\n    /// @dev Reverts if `to` is the zero address.\\n    /// @dev Reverts if `tokenId` already exists.\\n    /// @dev Reverts if `to` is a contract and the call to {IERC721Receiver-onERC721Received} fails, reverts or is rejected.\\n    /// @dev Emits an {IERC721-Transfer} event from the zero address.\\n    /// @param to Address of the new token owner.\\n    /// @param tokenId Identifier of the token to mint.\\n    /// @param data Optional data to pass along to the receiver call.\\n    function safeMint(address to, uint256 tokenId, bytes calldata data) external;\\n\\n    /// @notice Unsafely mints a batch of tokens.\\n    /// @dev Reverts if `to` is the zero address.\\n    /// @dev Reverts if one of `tokenIds` already exists.\\n    /// @dev Emits an {IERC721-Transfer} event from the zero address for each of `tokenIds`.\\n    /// @param to Address of the new tokens owner.\\n    /// @param tokenIds Identifiers of the tokens to mint.\\n    function batchMint(address to, uint256[] calldata tokenIds) external;\\n}\\n\",\"keccak256\":\"0xc06f8cf14e7f365df82b2ac493e856a88993d43c59ca83c995a990d5be6bf2d7\",\"license\":\"MIT\"},\"contracts/token/ERC721/interfaces/IERC721Receiver.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title ERC721 Non-Fungible Token Standard, Tokens Receiver.\\n/// @notice Interface for supporting safe transfers from ERC721 contracts.\\n/// @dev See https://eips.ethereum.org/EIPS/eip-721\\n/// @dev Note: The ERC-165 identifier for this interface is 0x150b7a02.\\ninterface IERC721Receiver {\\n    /// @notice Handles the receipt of an ERC721 token.\\n    /// @dev Note: This function is called by an ERC721 contract after a safe transfer.\\n    /// @dev Note: The ERC721 contract address is always the message sender.\\n    /// @param operator The initiator of the safe transfer.\\n    /// @param from The previous token owner.\\n    /// @param tokenId The token identifier.\\n    /// @param data Optional additional data with no specified format.\\n    /// @return magicValue `bytes4(keccak256(\\\"onERC721Received(address,address,uint256,bytes)\\\"))` (`0x150b7a02`) to accept, any other value to refuse.\\n    function onERC721Received(address operator, address from, uint256 tokenId, bytes calldata data) external returns (bytes4 magicValue);\\n}\\n\",\"keccak256\":\"0xf66d2fe143e0e46475c63ab2bcbd8a0208ace23d1d151d00b7fa101c178759b7\",\"license\":\"MIT\"},\"contracts/token/ERC721/libraries/ERC721Storage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n// solhint-disable-next-line max-line-length\\nimport {ERC721SelfApproval, ERC721SelfApprovalForAll, ERC721NonApprovedForApproval, ERC721TransferToAddressZero, ERC721NonExistingToken, ERC721NonApprovedForTransfer, ERC721NonOwnedToken, ERC721SafeTransferRejected, ERC721BalanceOfAddressZero} from \\\"./../errors/ERC721Errors.sol\\\";\\nimport {ERC721MintToAddressZero, ERC721ExistingToken} from \\\"./../errors/ERC721MintableErrors.sol\\\";\\nimport {ERC721BurntToken} from \\\"./../errors/ERC721MintableOnceErrors.sol\\\";\\nimport {InconsistentArrayLengths} from \\\"./../../../CommonErrors.sol\\\";\\nimport {Transfer, Approval, ApprovalForAll} from \\\"./../events/ERC721Events.sol\\\";\\nimport {IERC721} from \\\"./../interfaces/IERC721.sol\\\";\\nimport {IERC721BatchTransfer} from \\\"./../interfaces/IERC721BatchTransfer.sol\\\";\\nimport {IERC721Metadata} from \\\"./../interfaces/IERC721Metadata.sol\\\";\\nimport {IERC721Mintable} from \\\"./../interfaces/IERC721Mintable.sol\\\";\\nimport {IERC721Deliverable} from \\\"./../interfaces/IERC721Deliverable.sol\\\";\\nimport {IERC721Burnable} from \\\"./../interfaces/IERC721Burnable.sol\\\";\\nimport {IERC721Receiver} from \\\"./../interfaces/IERC721Receiver.sol\\\";\\nimport {Address} from \\\"./../../../utils/libraries/Address.sol\\\";\\nimport {InterfaceDetectionStorage} from \\\"./../../../introspection/libraries/InterfaceDetectionStorage.sol\\\";\\n\\nlibrary ERC721Storage {\\n    using Address for address;\\n    using ERC721Storage for ERC721Storage.Layout;\\n    using InterfaceDetectionStorage for InterfaceDetectionStorage.Layout;\\n\\n    struct Layout {\\n        mapping(uint256 => uint256) owners;\\n        mapping(address => uint256) balances;\\n        mapping(uint256 => address) approvals;\\n        mapping(address => mapping(address => bool)) operators;\\n    }\\n\\n    bytes32 internal constant LAYOUT_STORAGE_SLOT = bytes32(uint256(keccak256(\\\"animoca.token.ERC721.ERC721.storage\\\")) - 1);\\n\\n    bytes4 internal constant ERC721_RECEIVED = IERC721Receiver.onERC721Received.selector;\\n\\n    // Single token approval flag\\n    // This bit is set in the owner's value to indicate that there is an approval set for this token\\n    uint256 internal constant TOKEN_APPROVAL_OWNER_FLAG = 1 << 160;\\n\\n    // Burnt token magic value\\n    // This magic number is used as the owner's value to indicate that the token has been burnt\\n    uint256 internal constant BURNT_TOKEN_OWNER_VALUE = 0xdead000000000000000000000000000000000000000000000000000000000000;\\n\\n    /// @notice Marks the following ERC165 interface(s) as supported: ERC721.\\n    function init() internal {\\n        InterfaceDetectionStorage.layout().setSupportedInterface(type(IERC721).interfaceId, true);\\n    }\\n\\n    /// @notice Marks the following ERC165 interface(s) as supported: ERC721BatchTransfer.\\n    function initERC721BatchTransfer() internal {\\n        InterfaceDetectionStorage.layout().setSupportedInterface(type(IERC721BatchTransfer).interfaceId, true);\\n    }\\n\\n    /// @notice Marks the following ERC165 interface(s) as supported: ERC721Metadata.\\n    function initERC721Metadata() internal {\\n        InterfaceDetectionStorage.layout().setSupportedInterface(type(IERC721Metadata).interfaceId, true);\\n    }\\n\\n    /// @notice Marks the following ERC165 interface(s) as supported: ERC721Mintable.\\n    function initERC721Mintable() internal {\\n        InterfaceDetectionStorage.layout().setSupportedInterface(type(IERC721Mintable).interfaceId, true);\\n    }\\n\\n    /// @notice Marks the following ERC165 interface(s) as supported: ERC721Deliverable.\\n    function initERC721Deliverable() internal {\\n        InterfaceDetectionStorage.layout().setSupportedInterface(type(IERC721Deliverable).interfaceId, true);\\n    }\\n\\n    /// @notice Marks the following ERC165 interface(s) as supported: ERC721Burnable.\\n    function initERC721Burnable() internal {\\n        InterfaceDetectionStorage.layout().setSupportedInterface(type(IERC721Burnable).interfaceId, true);\\n    }\\n\\n    /// @notice Sets or unsets an approval to transfer a single token on behalf of its owner.\\n    /// @dev Note: This function implements {ERC721-approve(address,uint256)}.\\n    /// @dev Reverts with {ERC721NonExistingToken} if `tokenId` does not exist.\\n    /// @dev Reverts with {ERC721SelfApproval} if `to` is the token owner.\\n    /// @dev Reverts with {ERC721NonApprovedForApproval} if `sender` is not the token owner and has not been approved by the token owner.\\n    /// @dev Emits an {Approval} event.\\n    /// @param sender The message sender.\\n    /// @param to The address to approve, or the zero address to remove any existing approval.\\n    /// @param tokenId The token identifier to give approval for.\\n    function approve(Layout storage s, address sender, address to, uint256 tokenId) internal {\\n        uint256 owner = s.owners[tokenId];\\n        if (!_tokenExists(owner)) revert ERC721NonExistingToken(tokenId);\\n        address ownerAddress = _tokenOwner(owner);\\n        if (to == ownerAddress) revert ERC721SelfApproval(ownerAddress);\\n        if (!_isOperatable(s, ownerAddress, sender)) revert ERC721NonApprovedForApproval(sender, ownerAddress, tokenId);\\n        if (to == address(0)) {\\n            if (_tokenHasApproval(owner)) {\\n                // remove the approval bit if it is present\\n                s.owners[tokenId] = uint256(uint160(ownerAddress));\\n            }\\n        } else {\\n            uint256 ownerWithApprovalBit = owner | TOKEN_APPROVAL_OWNER_FLAG;\\n            if (owner != ownerWithApprovalBit) {\\n                // add the approval bit if it is not present\\n                s.owners[tokenId] = ownerWithApprovalBit;\\n            }\\n            s.approvals[tokenId] = to;\\n        }\\n        emit Approval(ownerAddress, to, tokenId);\\n    }\\n\\n    /// @notice Sets or unsets an approval to transfer all tokens on behalf of their owner.\\n    /// @dev Note: This function implements {ERC721-setApprovalForAll(address,bool)}.\\n    /// @dev Reverts with {ERC721SelfApprovalForAll} if `sender` is the same as `operator`.\\n    /// @dev Emits an {ApprovalForAll} event.\\n    /// @param sender The message sender.\\n    /// @param operator The address to approve for all tokens.\\n    /// @param approved True to set an approval for all tokens, false to unset it.\\n    function setApprovalForAll(Layout storage s, address sender, address operator, bool approved) internal {\\n        if (operator == sender) revert ERC721SelfApprovalForAll(sender);\\n        s.operators[sender][operator] = approved;\\n        emit ApprovalForAll(sender, operator, approved);\\n    }\\n\\n    /// @notice Unsafely transfers the ownership of a token to a recipient by a sender.\\n    /// @dev Note: This function implements {ERC721-transferFrom(address,address,uint256)}.\\n    /// @dev Resets the token approval for `tokenId`.\\n    /// @dev Reverts with {ERC721TransferToAddressZero} if `to` is the zero address.\\n    /// @dev Reverts with {ERC721NonExistingToken} if `tokenId` does not exist.\\n    /// @dev Reverts with {ERC721NonOwnedToken} if `from` is not the owner of `tokenId`.\\n    /// @dev Reverts with {ERC721NonApprovedForTransfer} if `sender` is not `from` and has not been approved by `from` for `tokenId`.\\n    /// @dev Emits a {Transfer} event.\\n    /// @param sender The message sender.\\n    /// @param from The current token owner.\\n    /// @param to The recipient of the token transfer.\\n    /// @param tokenId The identifier of the token to transfer.\\n    function transferFrom(Layout storage s, address sender, address from, address to, uint256 tokenId) internal {\\n        if (to == address(0)) revert ERC721TransferToAddressZero();\\n\\n        uint256 owner = s.owners[tokenId];\\n        if (!_tokenExists(owner)) revert ERC721NonExistingToken(tokenId);\\n        if (_tokenOwner(owner) != from) revert ERC721NonOwnedToken(from, tokenId);\\n\\n        if (!_isOperatable(s, from, sender)) {\\n            if (!_tokenHasApproval(owner) || sender != s.approvals[tokenId]) revert ERC721NonApprovedForTransfer(sender, from, tokenId);\\n        }\\n\\n        s.owners[tokenId] = uint256(uint160(to));\\n        if (from != to) {\\n            unchecked {\\n                // cannot underflow as balance is verified through ownership\\n                --s.balances[from];\\n                //  cannot overflow as supply cannot overflow\\n                ++s.balances[to];\\n            }\\n        }\\n\\n        emit Transfer(from, to, tokenId);\\n    }\\n\\n    /// @notice Safely transfers the ownership of a token to a recipient by a sender.\\n    /// @dev Note: This function implements {ERC721-safeTransferFrom(address,address,uint256)}.\\n    /// @dev Warning: Since a `to` contract can run arbitrary code, developers should be aware of potential re-entrancy attacks.\\n    /// @dev Resets the token approval for `tokenId`.\\n    /// @dev Reverts with {ERC721TransferToAddressZero} if `to` is the zero address.\\n    /// @dev Reverts with {ERC721NonExistingToken} if `tokenId` does not exist.\\n    /// @dev Reverts with {ERC721NonOwnedToken} if `from` is not the owner of `tokenId`.\\n    /// @dev Reverts with {ERC721NonApprovedForTransfer} if `sender` is not `from` and has not been approved by `from` for `tokenId`.\\n    /// @dev Reverts with {ERC721SafeTransferRejected} if `to` is a contract and the call to\\n    ///  {IERC721Receiver-onERC721Received} fails, reverts or is rejected.\\n    /// @dev Emits a {Transfer} event.\\n    /// @param sender The message sender.\\n    /// @param from The current token owner.\\n    /// @param to The recipient of the token transfer.\\n    /// @param tokenId The identifier of the token to transfer.\\n    function safeTransferFrom(Layout storage s, address sender, address from, address to, uint256 tokenId) internal {\\n        s.transferFrom(sender, from, to, tokenId);\\n        if (to.hasBytecode()) {\\n            _callOnERC721Received(sender, from, to, tokenId, \\\"\\\");\\n        }\\n    }\\n\\n    /// @notice Safely transfers the ownership of a token to a recipient by a sender.\\n    /// @dev Note: This function implements {ERC721-safeTransferFrom(address,address,uint256,bytes)}.\\n    /// @dev Warning: Since a `to` contract can run arbitrary code, developers should be aware of potential re-entrancy attacks.\\n    /// @dev Resets the token approval for `tokenId`.\\n    /// @dev Reverts with {ERC721TransferToAddressZero} if `to` is the zero address.\\n    /// @dev Reverts with {ERC721NonExistingToken} if `tokenId` does not exist.\\n    /// @dev Reverts with {ERC721NonOwnedToken} if `from` is not the owner of `tokenId`.\\n    /// @dev Reverts with {ERC721NonApprovedForTransfer} if `sender` is not `from` and has not been approved by `from` for `tokenId`.\\n    /// @dev Reverts with {ERC721SafeTransferRejected} if `to` is a contract and the call to\\n    ///  {IERC721Receiver-onERC721Received} fails, reverts or is rejected.\\n    /// @dev Emits a {Transfer} event.\\n    /// @param sender The message sender.\\n    /// @param from The current token owner.\\n    /// @param to The recipient of the token transfer.\\n    /// @param tokenId The identifier of the token to transfer.\\n    /// @param data Optional data to send along to a receiver contract.\\n    function safeTransferFrom(Layout storage s, address sender, address from, address to, uint256 tokenId, bytes calldata data) internal {\\n        s.transferFrom(sender, from, to, tokenId);\\n        if (to.hasBytecode()) {\\n            _callOnERC721Received(sender, from, to, tokenId, data);\\n        }\\n    }\\n\\n    /// @notice Unsafely transfers a batch of tokens to a recipient by a sender.\\n    /// @dev Note: This function implements {ERC721BatchTransfer-batchTransferFrom(address,address,uint256[])}.\\n    /// @dev Resets the token approval for each of `tokenIds`.\\n    /// @dev Reverts with {ERC721TransferToAddressZero} if `to` is the zero address.\\n    /// @dev Reverts with {ERC721NonExistingToken} if one of `tokenIds` does not exist.\\n    /// @dev Reverts with {ERC721NonOwnedToken} if one of `tokenIds` is not owned by `from`.\\n    /// @dev Reverts with {ERC721NonApprovedForTransfer} if the sender is not `from` and has not been approved by `from` for each of `tokenIds`.\\n    /// @dev Emits a {Transfer} event for each of `tokenIds`.\\n    /// @param sender The message sender.\\n    /// @param from Current tokens owner.\\n    /// @param to Address of the new token owner.\\n    /// @param tokenIds Identifiers of the tokens to transfer.\\n    function batchTransferFrom(Layout storage s, address sender, address from, address to, uint256[] calldata tokenIds) internal {\\n        if (to == address(0)) revert ERC721TransferToAddressZero();\\n        bool operatable = _isOperatable(s, from, sender);\\n\\n        uint256 length = tokenIds.length;\\n        for (uint256 i; i < length; ++i) {\\n            uint256 tokenId = tokenIds[i];\\n            uint256 owner = s.owners[tokenId];\\n            if (!_tokenExists(owner)) revert ERC721NonExistingToken(tokenId);\\n            if (_tokenOwner(owner) != from) revert ERC721NonOwnedToken(from, tokenId);\\n            if (!operatable) {\\n                if (!_tokenHasApproval(owner) || sender != s.approvals[tokenId]) revert ERC721NonApprovedForTransfer(sender, from, tokenId);\\n            }\\n            s.owners[tokenId] = uint256(uint160(to));\\n            emit Transfer(from, to, tokenId);\\n        }\\n\\n        if (from != to && length != 0) {\\n            unchecked {\\n                // cannot underflow as balance is verified through ownership\\n                s.balances[from] -= length;\\n                // cannot overflow as supply cannot overflow\\n                s.balances[to] += length;\\n            }\\n        }\\n    }\\n\\n    /// @notice Unsafely mints a token.\\n    /// @dev Note: This function implements {ERC721Mintable-mint(address,uint256)}.\\n    /// @dev Note: Either `mint` or `mintOnce` should be used in a given contract, but not both.\\n    /// @dev Reverts with {ERC721MintToAddressZero} if `to` is the zero address.\\n    /// @dev Reverts with {ERC721ExistingToken} if `tokenId` already exists.\\n    /// @dev Emits a {Transfer} event from the zero address.\\n    /// @param to Address of the new token owner.\\n    /// @param tokenId Identifier of the token to mint.\\n    function mint(Layout storage s, address to, uint256 tokenId) internal {\\n        if (to == address(0)) revert ERC721MintToAddressZero();\\n        if (_tokenExists(s.owners[tokenId])) revert ERC721ExistingToken(tokenId);\\n\\n        s.owners[tokenId] = uint256(uint160(to));\\n\\n        unchecked {\\n            // cannot overflow due to the cost of minting individual tokens\\n            ++s.balances[to];\\n        }\\n\\n        emit Transfer(address(0), to, tokenId);\\n    }\\n\\n    /// @notice Safely mints a token.\\n    /// @dev Note: This function implements {ERC721Mintable-safeMint(address,uint256,bytes)}.\\n    /// @dev Note: Either `safeMint` or `safeMintOnce` should be used in a given contract, but not both.\\n    /// @dev Warning: Since a `to` contract can run arbitrary code, developers should be aware of potential re-entrancy attacks.\\n    /// @dev Reverts with {ERC721MintToAddressZero} if `to` is the zero address.\\n    /// @dev Reverts with {ERC721ExistingToken} if `tokenId` already exists.\\n    /// @dev Reverts with {ERC721SafeTransferRejected} if `to` is a contract and the call to\\n    ///  {IERC721Receiver-onERC721Received} fails, reverts or is rejected.\\n    /// @dev Emits a {Transfer} event from the zero address.\\n    /// @param to Address of the new token owner.\\n    /// @param tokenId Identifier of the token to mint.\\n    /// @param data Optional data to pass along to the receiver call.\\n    function safeMint(Layout storage s, address sender, address to, uint256 tokenId, bytes memory data) internal {\\n        s.mint(to, tokenId);\\n        if (to.hasBytecode()) {\\n            _callOnERC721Received(sender, address(0), to, tokenId, data);\\n        }\\n    }\\n\\n    /// @notice Unsafely mints a batch of tokens.\\n    /// @dev Note: This function implements {ERC721Mintable-batchMint(address,uint256[])}.\\n    /// @dev Note: Either `batchMint` or `batchMintOnce` should be used in a given contract, but not both.\\n    /// @dev Reverts with {ERC721MintToAddressZero} if `to` is the zero address.\\n    /// @dev Reverts with {ERC721ExistingToken} if one of `tokenIds` already exists.\\n    /// @dev Emits a {Transfer} event from the zero address for each of `tokenIds`.\\n    /// @param to Address of the new tokens owner.\\n    /// @param tokenIds Identifiers of the tokens to mint.\\n    function batchMint(Layout storage s, address to, uint256[] memory tokenIds) internal {\\n        if (to == address(0)) revert ERC721MintToAddressZero();\\n\\n        uint256 length = tokenIds.length;\\n        for (uint256 i; i < length; ++i) {\\n            uint256 tokenId = tokenIds[i];\\n            if (_tokenExists(s.owners[tokenId])) revert ERC721ExistingToken(tokenId);\\n\\n            s.owners[tokenId] = uint256(uint160(to));\\n            emit Transfer(address(0), to, tokenId);\\n        }\\n\\n        unchecked {\\n            s.balances[to] += length;\\n        }\\n    }\\n\\n    /// @notice Unsafely mints tokens to multiple recipients.\\n    /// @dev Note: This function implements {ERC721Deliverable-deliver(address[],uint256[])}.\\n    /// @dev Note: Either `deliver` or `deliverOnce` should be used in a given contract, but not both.\\n    /// @dev Reverts with {InconsistentArrayLengths} if `recipients` and `tokenIds` have different lengths.\\n    /// @dev Reverts with {ERC721MintToAddressZero} if one of `recipients` is the zero address.\\n    /// @dev Reverts with {ERC721ExistingToken} if one of `tokenIds` already exists.\\n    /// @dev Emits a {Transfer} event from the zero address for each of `recipients` and `tokenIds`.\\n    /// @param recipients Addresses of the new tokens owners.\\n    /// @param tokenIds Identifiers of the tokens to mint.\\n    function deliver(Layout storage s, address[] memory recipients, uint256[] memory tokenIds) internal {\\n        uint256 length = recipients.length;\\n        if (length != tokenIds.length) revert InconsistentArrayLengths();\\n        for (uint256 i; i < length; ++i) {\\n            s.mint(recipients[i], tokenIds[i]);\\n        }\\n    }\\n\\n    /// @notice Unsafely mints a token once.\\n    /// @dev Note: This function implements {ERC721Mintable-mint(address,uint256)}.\\n    /// @dev Note: Either `mint` or `mintOnce` should be used in a given contract, but not both.\\n    /// @dev Reverts with {ERC721MintToAddressZero} if `to` is the zero address.\\n    /// @dev Reverts with {ERC721ExistingToken} if `tokenId` already exists.\\n    /// @dev Reverts with {ERC721BurntToken} if `tokenId` has been previously burnt.\\n    /// @dev Emits a {Transfer} event from the zero address.\\n    /// @param to Address of the new token owner.\\n    /// @param tokenId Identifier of the token to mint.\\n    function mintOnce(Layout storage s, address to, uint256 tokenId) internal {\\n        if (to == address(0)) revert ERC721MintToAddressZero();\\n\\n        uint256 owner = s.owners[tokenId];\\n        if (_tokenExists(owner)) revert ERC721ExistingToken(tokenId);\\n        if (_tokenWasBurnt(owner)) revert ERC721BurntToken(tokenId);\\n\\n        s.owners[tokenId] = uint256(uint160(to));\\n\\n        unchecked {\\n            // cannot overflow due to the cost of minting individual tokens\\n            ++s.balances[to];\\n        }\\n\\n        emit Transfer(address(0), to, tokenId);\\n    }\\n\\n    /// @notice Safely mints a token once.\\n    /// @dev Note: This function implements {ERC721Mintable-safeMint(address,uint256,bytes)}.\\n    /// @dev Note: Either `safeMint` or `safeMintOnce` should be used in a given contract, but not both.\\n    /// @dev Reverts with {ERC721MintToAddressZero} if `to` is the zero address.\\n    /// @dev Reverts with {ERC721ExistingToken} if `tokenId` already exists.\\n    /// @dev Reverts with {ERC721BurntToken} if `tokenId` has been previously burnt.\\n    /// @dev Reverts with {ERC721SafeTransferRejected} if `to` is a contract and the call to\\n    ///  {IERC721Receiver-onERC721Received} fails, reverts or is rejected.\\n    /// @dev Emits a {Transfer} event from the zero address.\\n    /// @param to Address of the new token owner.\\n    /// @param tokenId Identifier of the token to mint.\\n    /// @param data Optional data to pass along to the receiver call.\\n    function safeMintOnce(Layout storage s, address sender, address to, uint256 tokenId, bytes memory data) internal {\\n        s.mintOnce(to, tokenId);\\n        if (to.hasBytecode()) {\\n            _callOnERC721Received(sender, address(0), to, tokenId, data);\\n        }\\n    }\\n\\n    /// @notice Unsafely mints a batch of tokens once.\\n    /// @dev Note: This function implements {ERC721Mintable-batchMint(address,uint256[])}.\\n    /// @dev Note: Either `batchMint` or `batchMintOnce` should be used in a given contract, but not both.\\n    /// @dev Reverts with {ERC721MintToAddressZero} if `to` is the zero address.\\n    /// @dev Reverts with {ERC721ExistingToken} if one of `tokenIds` already exists.\\n    /// @dev Reverts with {ERC721BurntToken} if one of `tokenIds` has been previously burnt.\\n    /// @dev Emits a {Transfer} event from the zero address for each of `tokenIds`.\\n    /// @param to Address of the new tokens owner.\\n    /// @param tokenIds Identifiers of the tokens to mint.\\n    function batchMintOnce(Layout storage s, address to, uint256[] memory tokenIds) internal {\\n        if (to == address(0)) revert ERC721MintToAddressZero();\\n\\n        uint256 length = tokenIds.length;\\n        for (uint256 i; i < length; ++i) {\\n            uint256 tokenId = tokenIds[i];\\n            uint256 owner = s.owners[tokenId];\\n            if (_tokenExists(owner)) revert ERC721ExistingToken(tokenId);\\n            if (_tokenWasBurnt(owner)) revert ERC721BurntToken(tokenId);\\n\\n            s.owners[tokenId] = uint256(uint160(to));\\n\\n            emit Transfer(address(0), to, tokenId);\\n        }\\n\\n        unchecked {\\n            s.balances[to] += length;\\n        }\\n    }\\n\\n    /// @notice Unsafely mints tokens to multiple recipients once.\\n    /// @dev Note: This function implements {ERC721Deliverable-deliver(address[],uint256[])}.\\n    /// @dev Note: Either `deliver` or `deliverOnce` should be used in a given contract, but not both.\\n    /// @dev Reverts with {InconsistentArrayLengths} if `recipients` and `tokenIds` have different lengths.\\n    /// @dev Reverts with {ERC721MintToAddressZero} if one of `recipients` is the zero address.\\n    /// @dev Reverts with {ERC721ExistingToken} if one of `tokenIds` already exists.\\n    /// @dev Reverts with {ERC721BurntToken} if one of `tokenIds` has been previously burnt.\\n    /// @dev Emits a {Transfer} event from the zero address for each of `recipients` and `tokenIds`.\\n    /// @param recipients Addresses of the new tokens owners.\\n    /// @param tokenIds Identifiers of the tokens to mint.\\n    function deliverOnce(Layout storage s, address[] memory recipients, uint256[] memory tokenIds) internal {\\n        uint256 length = recipients.length;\\n        if (length != tokenIds.length) revert InconsistentArrayLengths();\\n        for (uint256 i; i < length; ++i) {\\n            address to = recipients[i];\\n            if (to == address(0)) revert ERC721MintToAddressZero();\\n\\n            uint256 tokenId = tokenIds[i];\\n            uint256 owner = s.owners[tokenId];\\n            if (_tokenExists(owner)) revert ERC721ExistingToken(tokenId);\\n            if (_tokenWasBurnt(owner)) revert ERC721BurntToken(tokenId);\\n\\n            s.owners[tokenId] = uint256(uint160(to));\\n            unchecked {\\n                ++s.balances[to];\\n            }\\n\\n            emit Transfer(address(0), to, tokenId);\\n        }\\n    }\\n\\n    /// @notice Burns a token by a sender.\\n    /// @dev Note: This function implements {ERC721Burnable-burnFrom(address,uint256)}.\\n    /// @dev Reverts with {ERC721NonOwnedToken} if `tokenId` is not owned by `from`.\\n    /// @dev Reverts with {ERC721NonApprovedForTransfer} if `sender` is not `from` and has not been approved by `from` for `tokenId`.\\n    /// @dev Emits a {Transfer} event with `to` set to the zero address.\\n    /// @param sender The message sender.\\n    /// @param from The current token owner.\\n    /// @param tokenId The identifier of the token to burn.\\n    function burnFrom(Layout storage s, address sender, address from, uint256 tokenId) internal {\\n        uint256 owner = s.owners[tokenId];\\n        if (!_tokenExists(owner)) revert ERC721NonExistingToken(tokenId);\\n        if (_tokenOwner(owner) != from) revert ERC721NonOwnedToken(from, tokenId);\\n\\n        if (!_isOperatable(s, from, sender)) {\\n            if (!_tokenHasApproval(owner) || sender != s.approvals[tokenId]) revert ERC721NonApprovedForTransfer(sender, from, tokenId);\\n        }\\n\\n        s.owners[tokenId] = BURNT_TOKEN_OWNER_VALUE;\\n\\n        unchecked {\\n            // cannot underflow as balance is verified through TOKEN ownership\\n            --s.balances[from];\\n        }\\n        emit Transfer(from, address(0), tokenId);\\n    }\\n\\n    /// @notice Burns a batch of tokens by a sender.\\n    /// @dev Note: This function implements {ERC721Burnable-batchBurnFrom(address,uint256[])}.\\n    /// @dev Reverts with {ERC721NonOwnedToken} if one of `tokenIds` is not owned by `from`.\\n    /// @dev Reverts with {ERC721NonApprovedForTransfer} if `sender` is not `from` and has not been approved by `from` for each of `tokenIds`.\\n    /// @dev Emits a {Transfer} event with `to` set to the zero address for each of `tokenIds`.\\n    /// @param sender The message sender.\\n    /// @param from The current tokens owner.\\n    /// @param tokenIds The identifiers of the tokens to burn.\\n    function batchBurnFrom(Layout storage s, address sender, address from, uint256[] calldata tokenIds) internal {\\n        bool operatable = _isOperatable(s, from, sender);\\n\\n        uint256 length = tokenIds.length;\\n        for (uint256 i; i < length; ++i) {\\n            uint256 tokenId = tokenIds[i];\\n            uint256 owner = s.owners[tokenId];\\n            if (!_tokenExists(owner)) revert ERC721NonExistingToken(tokenId);\\n            if (_tokenOwner(owner) != from) revert ERC721NonOwnedToken(from, tokenId);\\n            if (!operatable) {\\n                if (!_tokenHasApproval(owner) || sender != s.approvals[tokenId]) revert ERC721NonApprovedForTransfer(sender, from, tokenId);\\n            }\\n            s.owners[tokenId] = BURNT_TOKEN_OWNER_VALUE;\\n            emit Transfer(from, address(0), tokenId);\\n        }\\n\\n        if (length != 0) {\\n            unchecked {\\n                s.balances[from] -= length;\\n            }\\n        }\\n    }\\n\\n    /// @notice Gets the balance of an address.\\n    /// @dev Note: This function implements {ERC721-balanceOf(address)}.\\n    /// @dev Reverts with {ERC721BalanceOfAddressZero} if `owner` is the zero address.\\n    /// @param owner The address to query the balance of.\\n    /// @return balance The amount owned by the owner.\\n    function balanceOf(Layout storage s, address owner) internal view returns (uint256 balance) {\\n        if (owner == address(0)) revert ERC721BalanceOfAddressZero();\\n        return s.balances[owner];\\n    }\\n\\n    /// @notice Gets the owner of a token.\\n    /// @dev Note: This function implements {ERC721-ownerOf(uint256)}.\\n    /// @dev Reverts with {ERC721NonExistingToken} if `tokenId` does not exist.\\n    /// @param tokenId The token identifier to query the owner of.\\n    /// @return tokenOwner The owner of the token.\\n    function ownerOf(Layout storage s, uint256 tokenId) internal view returns (address tokenOwner) {\\n        uint256 owner = s.owners[tokenId];\\n        if (!_tokenExists(owner)) revert ERC721NonExistingToken(tokenId);\\n        return _tokenOwner(owner);\\n    }\\n\\n    /// @notice Gets the approved address for a token.\\n    /// @dev Note: This function implements {ERC721-getApproved(uint256)}.\\n    /// @dev Reverts with {ERC721NonExistingToken} if `tokenId` does not exist.\\n    /// @param tokenId The token identifier to query the approval of.\\n    /// @return approved The approved address for the token identifier, or the zero address if no approval is set.\\n    function getApproved(Layout storage s, uint256 tokenId) internal view returns (address approved) {\\n        uint256 owner = s.owners[tokenId];\\n        if (!_tokenExists(owner)) revert ERC721NonExistingToken(tokenId);\\n        if (_tokenHasApproval(owner)) {\\n            return s.approvals[tokenId];\\n        } else {\\n            return address(0);\\n        }\\n    }\\n\\n    /// @notice Gets whether an operator is approved for all tokens by an owner.\\n    /// @dev Note: This function implements {ERC721-isApprovedForAll(address,address)}.\\n    /// @param owner The address which gives the approval for all tokens.\\n    /// @param operator The address which receives the approval for all tokens.\\n    /// @return approvedForAll Whether the operator is approved for all tokens by the owner.\\n    function isApprovedForAll(Layout storage s, address owner, address operator) internal view returns (bool approvedForAll) {\\n        return s.operators[owner][operator];\\n    }\\n\\n    /// @notice Gets whether a token was burnt.\\n    /// @param tokenId The token identifier.\\n    /// @return tokenWasBurnt Whether the token was burnt.\\n    function wasBurnt(Layout storage s, uint256 tokenId) internal view returns (bool tokenWasBurnt) {\\n        return _tokenWasBurnt(s.owners[tokenId]);\\n    }\\n\\n    function layout() internal pure returns (Layout storage s) {\\n        bytes32 position = LAYOUT_STORAGE_SLOT;\\n        assembly {\\n            s.slot := position\\n        }\\n    }\\n\\n    /// @notice Calls {IERC721Receiver-onERC721Received} on a target contract.\\n    /// @dev Reverts with {ERC721SafeTransferRejected} if the call to the target fails, reverts or is rejected.\\n    /// @param sender The message sender.\\n    /// @param from Previous token owner.\\n    /// @param to New token owner.\\n    /// @param tokenId Identifier of the token transferred.\\n    /// @param data Optional data to send along with the receiver contract call.\\n    function _callOnERC721Received(address sender, address from, address to, uint256 tokenId, bytes memory data) private {\\n        if (IERC721Receiver(to).onERC721Received(sender, from, tokenId, data) != ERC721_RECEIVED) revert ERC721SafeTransferRejected(to, tokenId);\\n    }\\n\\n    /// @notice Returns whether an account is authorised to make a transfer on behalf of an owner.\\n    /// @param owner The token owner.\\n    /// @param account The account to check the operatability of.\\n    /// @return operatable True if `account` is `owner` or is an operator for `owner`, false otherwise.\\n    function _isOperatable(Layout storage s, address owner, address account) private view returns (bool operatable) {\\n        return (owner == account) || s.operators[owner][account];\\n    }\\n\\n    function _tokenOwner(uint256 owner) private pure returns (address tokenOwner) {\\n        return address(uint160(owner));\\n    }\\n\\n    function _tokenExists(uint256 owner) private pure returns (bool tokenExists) {\\n        return uint160(owner) != 0;\\n    }\\n\\n    function _tokenWasBurnt(uint256 owner) private pure returns (bool tokenWasBurnt) {\\n        return owner == BURNT_TOKEN_OWNER_VALUE;\\n    }\\n\\n    function _tokenHasApproval(uint256 owner) private pure returns (bool tokenHasApproval) {\\n        return owner & TOKEN_APPROVAL_OWNER_FLAG != 0;\\n    }\\n}\\n\",\"keccak256\":\"0xab975e3b8e71ad7bedfa60f5db81f621fe1b0cdad26a48af8dec6b72b9316ddf\",\"license\":\"MIT\"},\"contracts/utils/libraries/Address.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\nlibrary Address {\\n    /// @notice Checks if the address is a deployed smart contract.\\n    /// @param addr The address to check.\\n    /// @return hasBytecode True if `addr` is a deployed smart contract, false otherwise.\\n    function hasBytecode(address addr) internal view returns (bool) {\\n        uint256 size;\\n        assembly {\\n            size := extcodesize(addr)\\n        }\\n        return size != 0;\\n    }\\n}\\n\",\"keccak256\":\"0xf3119a6298c6da4e7da69344ae8ab51a6a64dc08c68f826a560e72d46cf0ad9c\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60a0604052348015600f57600080fd5b506040516114c03803806114c0833981016040819052602c91603c565b6001600160a01b0316608052606a565b600060208284031215604d57600080fd5b81516001600160a01b0381168114606357600080fd5b9392505050565b60805161143461008c60003960008181610d3e0152610dcc01526114346000f3fe608060405234801561001057600080fd5b50600436106100be5760003560e01c806370a0823111610076578063b1c7ee021161005b578063b1c7ee0214610182578063b88d4fde1461018a578063e985e9c51461019d57600080fd5b806370a082311461014e578063a22cb4651461016f57600080fd5b806323b872dd116100a757806323b872dd1461011557806342842e0e146101285780636352211e1461013b57600080fd5b8063081812fc146100c3578063095ea7b314610100575b600080fd5b6100d66100d13660046110dc565b6101c0565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020015b60405180910390f35b61011361010e36600461111e565b6101da565b005b610113610123366004611148565b6101fb565b610113610136366004611148565b61021f565b6100d66101493660046110dc565b61023e565b61016161015c366004611185565b610252565b6040519081526020016100f7565b61011361017d3660046111b1565b610266565b610113610283565b6101136101983660046111e8565b6102a6565b6101b06101ab366004611285565b6102d0565b60405190151581526020016100f7565b60006101d4826101ce610325565b90610353565b92915050565b6101f76101e561040c565b83836101ef610325565b92919061041b565b5050565b61021a61020661040c565b848484610211610325565b93929190610696565b505050565b61021a61022a61040c565b848484610235610325565b93929190610974565b60006101d48261024c610325565b906109ba565b60006101d482610260610325565b90610a23565b6101f761027161040c565b838361027b610325565b929190610a9f565b61029c61028e61040c565b610296610bb7565b90610be5565b6102a4610c50565b565b6102c96102b161040c565b86868686866102be610325565b959493929190610c85565b5050505050565b600061031e83836102df610325565b919073ffffffffffffffffffffffffffffffffffffffff9182166000908152600393909301602090815260408085209290931684525290205460ff1690565b9392505050565b6000806101d460017fddf3ee18ae6d688373c219468f8be446e7ae82215f4779d821c7ea5e8c13c0c16112b8565b60008181526020839052604081205473ffffffffffffffffffffffffffffffffffffffff81166103b7576040517fdd560475000000000000000000000000000000000000000000000000000000008152600481018490526024015b60405180910390fd5b74010000000000000000000000000000000000000000811615610402575050600081815260028301602052604090205473ffffffffffffffffffffffffffffffffffffffff166101d4565b60009150506101d4565b6000610416610cfb565b905090565b60008181526020859052604090205473ffffffffffffffffffffffffffffffffffffffff811661047a576040517fdd560475000000000000000000000000000000000000000000000000000000008152600481018390526024016103ae565b8073ffffffffffffffffffffffffffffffffffffffff808216908516036104e5576040517fb7fdc01000000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff821660048201526024016103ae565b6104f0868287610e48565b61054d576040517fc7563a1800000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff808716600483015282166024820152604481018490526064016103ae565b73ffffffffffffffffffffffffffffffffffffffff84166105b257740100000000000000000000000000000000000000008216156105ad57600083815260208790526040902073ffffffffffffffffffffffffffffffffffffffff821690555b610633565b7401000000000000000000000000000000000000000082178083146105e35760008481526020889052604090208190555b506000838152600287016020526040902080547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff86161790555b828473ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b92560405160405180910390a4505050505050565b73ffffffffffffffffffffffffffffffffffffffff82166106e3576040517f86c8706700000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b60008181526020869052604090205473ffffffffffffffffffffffffffffffffffffffff8116610742576040517fdd560475000000000000000000000000000000000000000000000000000000008152600481018390526024016103ae565b73ffffffffffffffffffffffffffffffffffffffff84168173ffffffffffffffffffffffffffffffffffffffff16146107c6576040517f14dbb53600000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff85166004820152602481018390526044016103ae565b6107d1868587610e48565b6108805774010000000000000000000000000000000000000000811615806108225750600082815260028701602052604090205473ffffffffffffffffffffffffffffffffffffffff868116911614155b15610880576040517fa4a3018b00000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff808716600483015285166024820152604481018390526064016103ae565b600082815260208790526040902073ffffffffffffffffffffffffffffffffffffffff808516918290558516146109115773ffffffffffffffffffffffffffffffffffffffff80851660009081526001808901602052604080832080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0190559286168252919020805490910190555b818373ffffffffffffffffffffffffffffffffffffffff168573ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef60405160405180910390a4505050505050565b6109818585858585610696565b73ffffffffffffffffffffffffffffffffffffffff82163b156102c9576102c98484848460405180602001604052806000815250610ebd565b60008181526020839052604081205473ffffffffffffffffffffffffffffffffffffffff8116610a19576040517fdd560475000000000000000000000000000000000000000000000000000000008152600481018490526024016103ae565b805b949350505050565b600073ffffffffffffffffffffffffffffffffffffffff8216610a72576040517faefbce4e00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b5073ffffffffffffffffffffffffffffffffffffffff166000908152600191909101602052604090205490565b8273ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1603610b1c576040517fe4215c6a00000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff841660048201526024016103ae565b73ffffffffffffffffffffffffffffffffffffffff838116600081815260038701602090815260408083209487168084529482529182902080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff001686151590811790915591519182527f17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31910160405180910390a350505050565b6000806101d460017fb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d61046112b8565b815473ffffffffffffffffffffffffffffffffffffffff8281169116146101f7576040517f673a31a100000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff821660048201526024016103ae565b6102a47f80ac58cd000000000000000000000000000000000000000000000000000000006001610c7e610fd2565b9190611000565b610c928787878787610696565b73ffffffffffffffffffffffffffffffffffffffff84163b15610cf257610cf28686868686868080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250610ebd92505050565b50505050505050565b600033321480610d0b5750601836105b15610d1557503390565b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec36013560601c7f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16331480610e3757506040517f019a202800000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff82811660048301523360248301523060448301527f0000000000000000000000000000000000000000000000000000000000000000169063019a202890606401602060405180830381865afa158015610e13573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610e3791906112f2565b15610e4157919050565b3391505090565b60008173ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff161480610a1b57505073ffffffffffffffffffffffffffffffffffffffff9182166000908152600393909301602090815260408085209290931684525290205460ff1690565b6040517f150b7a02000000000000000000000000000000000000000000000000000000008082529073ffffffffffffffffffffffffffffffffffffffff85169063150b7a0290610f1790899089908890889060040161130f565b6020604051808303816000875af1158015610f36573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610f5a91906113bc565b7fffffffff0000000000000000000000000000000000000000000000000000000016146102c9576040517fc215a7a100000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff84166004820152602481018390526044016103ae565b6000806101d460017fca9d3e17f264b0f3984e2634e94adb37fa3e6a8103f06aeae6fa59e21c769f5e6112b8565b7c01000000000000000000000000000000000000000000000000000000007fffffffff00000000000000000000000000000000000000000000000000000000831601611078576040517f72c683bb00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b7fffffffff00000000000000000000000000000000000000000000000000000000919091166000908152602092909252604090912080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0016911515919091179055565b6000602082840312156110ee57600080fd5b5035919050565b803573ffffffffffffffffffffffffffffffffffffffff8116811461111957600080fd5b919050565b6000806040838503121561113157600080fd5b61113a836110f5565b946020939093013593505050565b60008060006060848603121561115d57600080fd5b611166846110f5565b9250611174602085016110f5565b929592945050506040919091013590565b60006020828403121561119757600080fd5b61031e826110f5565b80151581146111ae57600080fd5b50565b600080604083850312156111c457600080fd5b6111cd836110f5565b915060208301356111dd816111a0565b809150509250929050565b60008060008060006080868803121561120057600080fd5b611209866110f5565b9450611217602087016110f5565b935060408601359250606086013567ffffffffffffffff81111561123a57600080fd5b8601601f8101881361124b57600080fd5b803567ffffffffffffffff81111561126257600080fd5b88602082840101111561127457600080fd5b959894975092955050506020019190565b6000806040838503121561129857600080fd5b6112a1836110f5565b91506112af602084016110f5565b90509250929050565b818103818111156101d4577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006020828403121561130457600080fd5b815161031e816111a0565b73ffffffffffffffffffffffffffffffffffffffff8516815273ffffffffffffffffffffffffffffffffffffffff84166020820152826040820152608060608201526000825180608084015260005b8181101561137b57602081860181015160a086840101520161135e565b50600060a0828501015260a07fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f83011684010191505095945050505050565b6000602082840312156113ce57600080fd5b81517fffffffff000000000000000000000000000000000000000000000000000000008116811461031e57600080fdfea2646970667358221220d68fb5112bcbb0edab0987b87d71ab87964758651aceb6f990b09a4aaebcd22f64736f6c634300081c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100be5760003560e01c806370a0823111610076578063b1c7ee021161005b578063b1c7ee0214610182578063b88d4fde1461018a578063e985e9c51461019d57600080fd5b806370a082311461014e578063a22cb4651461016f57600080fd5b806323b872dd116100a757806323b872dd1461011557806342842e0e146101285780636352211e1461013b57600080fd5b8063081812fc146100c3578063095ea7b314610100575b600080fd5b6100d66100d13660046110dc565b6101c0565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020015b60405180910390f35b61011361010e36600461111e565b6101da565b005b610113610123366004611148565b6101fb565b610113610136366004611148565b61021f565b6100d66101493660046110dc565b61023e565b61016161015c366004611185565b610252565b6040519081526020016100f7565b61011361017d3660046111b1565b610266565b610113610283565b6101136101983660046111e8565b6102a6565b6101b06101ab366004611285565b6102d0565b60405190151581526020016100f7565b60006101d4826101ce610325565b90610353565b92915050565b6101f76101e561040c565b83836101ef610325565b92919061041b565b5050565b61021a61020661040c565b848484610211610325565b93929190610696565b505050565b61021a61022a61040c565b848484610235610325565b93929190610974565b60006101d48261024c610325565b906109ba565b60006101d482610260610325565b90610a23565b6101f761027161040c565b838361027b610325565b929190610a9f565b61029c61028e61040c565b610296610bb7565b90610be5565b6102a4610c50565b565b6102c96102b161040c565b86868686866102be610325565b959493929190610c85565b5050505050565b600061031e83836102df610325565b919073ffffffffffffffffffffffffffffffffffffffff9182166000908152600393909301602090815260408085209290931684525290205460ff1690565b9392505050565b6000806101d460017fddf3ee18ae6d688373c219468f8be446e7ae82215f4779d821c7ea5e8c13c0c16112b8565b60008181526020839052604081205473ffffffffffffffffffffffffffffffffffffffff81166103b7576040517fdd560475000000000000000000000000000000000000000000000000000000008152600481018490526024015b60405180910390fd5b74010000000000000000000000000000000000000000811615610402575050600081815260028301602052604090205473ffffffffffffffffffffffffffffffffffffffff166101d4565b60009150506101d4565b6000610416610cfb565b905090565b60008181526020859052604090205473ffffffffffffffffffffffffffffffffffffffff811661047a576040517fdd560475000000000000000000000000000000000000000000000000000000008152600481018390526024016103ae565b8073ffffffffffffffffffffffffffffffffffffffff808216908516036104e5576040517fb7fdc01000000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff821660048201526024016103ae565b6104f0868287610e48565b61054d576040517fc7563a1800000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff808716600483015282166024820152604481018490526064016103ae565b73ffffffffffffffffffffffffffffffffffffffff84166105b257740100000000000000000000000000000000000000008216156105ad57600083815260208790526040902073ffffffffffffffffffffffffffffffffffffffff821690555b610633565b7401000000000000000000000000000000000000000082178083146105e35760008481526020889052604090208190555b506000838152600287016020526040902080547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff86161790555b828473ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b92560405160405180910390a4505050505050565b73ffffffffffffffffffffffffffffffffffffffff82166106e3576040517f86c8706700000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b60008181526020869052604090205473ffffffffffffffffffffffffffffffffffffffff8116610742576040517fdd560475000000000000000000000000000000000000000000000000000000008152600481018390526024016103ae565b73ffffffffffffffffffffffffffffffffffffffff84168173ffffffffffffffffffffffffffffffffffffffff16146107c6576040517f14dbb53600000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff85166004820152602481018390526044016103ae565b6107d1868587610e48565b6108805774010000000000000000000000000000000000000000811615806108225750600082815260028701602052604090205473ffffffffffffffffffffffffffffffffffffffff868116911614155b15610880576040517fa4a3018b00000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff808716600483015285166024820152604481018390526064016103ae565b600082815260208790526040902073ffffffffffffffffffffffffffffffffffffffff808516918290558516146109115773ffffffffffffffffffffffffffffffffffffffff80851660009081526001808901602052604080832080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0190559286168252919020805490910190555b818373ffffffffffffffffffffffffffffffffffffffff168573ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef60405160405180910390a4505050505050565b6109818585858585610696565b73ffffffffffffffffffffffffffffffffffffffff82163b156102c9576102c98484848460405180602001604052806000815250610ebd565b60008181526020839052604081205473ffffffffffffffffffffffffffffffffffffffff8116610a19576040517fdd560475000000000000000000000000000000000000000000000000000000008152600481018490526024016103ae565b805b949350505050565b600073ffffffffffffffffffffffffffffffffffffffff8216610a72576040517faefbce4e00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b5073ffffffffffffffffffffffffffffffffffffffff166000908152600191909101602052604090205490565b8273ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1603610b1c576040517fe4215c6a00000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff841660048201526024016103ae565b73ffffffffffffffffffffffffffffffffffffffff838116600081815260038701602090815260408083209487168084529482529182902080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff001686151590811790915591519182527f17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31910160405180910390a350505050565b6000806101d460017fb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d61046112b8565b815473ffffffffffffffffffffffffffffffffffffffff8281169116146101f7576040517f673a31a100000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff821660048201526024016103ae565b6102a47f80ac58cd000000000000000000000000000000000000000000000000000000006001610c7e610fd2565b9190611000565b610c928787878787610696565b73ffffffffffffffffffffffffffffffffffffffff84163b15610cf257610cf28686868686868080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250610ebd92505050565b50505050505050565b600033321480610d0b5750601836105b15610d1557503390565b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec36013560601c7f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16331480610e3757506040517f019a202800000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff82811660048301523360248301523060448301527f0000000000000000000000000000000000000000000000000000000000000000169063019a202890606401602060405180830381865afa158015610e13573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610e3791906112f2565b15610e4157919050565b3391505090565b60008173ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff161480610a1b57505073ffffffffffffffffffffffffffffffffffffffff9182166000908152600393909301602090815260408085209290931684525290205460ff1690565b6040517f150b7a02000000000000000000000000000000000000000000000000000000008082529073ffffffffffffffffffffffffffffffffffffffff85169063150b7a0290610f1790899089908890889060040161130f565b6020604051808303816000875af1158015610f36573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610f5a91906113bc565b7fffffffff0000000000000000000000000000000000000000000000000000000016146102c9576040517fc215a7a100000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff84166004820152602481018390526044016103ae565b6000806101d460017fca9d3e17f264b0f3984e2634e94adb37fa3e6a8103f06aeae6fa59e21c769f5e6112b8565b7c01000000000000000000000000000000000000000000000000000000007fffffffff00000000000000000000000000000000000000000000000000000000831601611078576040517f72c683bb00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b7fffffffff00000000000000000000000000000000000000000000000000000000919091166000908152602092909252604090912080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0016911515919091179055565b6000602082840312156110ee57600080fd5b5035919050565b803573ffffffffffffffffffffffffffffffffffffffff8116811461111957600080fd5b919050565b6000806040838503121561113157600080fd5b61113a836110f5565b946020939093013593505050565b60008060006060848603121561115d57600080fd5b611166846110f5565b9250611174602085016110f5565b929592945050506040919091013590565b60006020828403121561119757600080fd5b61031e826110f5565b80151581146111ae57600080fd5b50565b600080604083850312156111c457600080fd5b6111cd836110f5565b915060208301356111dd816111a0565b809150509250929050565b60008060008060006080868803121561120057600080fd5b611209866110f5565b9450611217602087016110f5565b935060408601359250606086013567ffffffffffffffff81111561123a57600080fd5b8601601f8101881361124b57600080fd5b803567ffffffffffffffff81111561126257600080fd5b88602082840101111561127457600080fd5b959894975092955050506020019190565b6000806040838503121561129857600080fd5b6112a1836110f5565b91506112af602084016110f5565b90509250929050565b818103818111156101d4577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006020828403121561130457600080fd5b815161031e816111a0565b73ffffffffffffffffffffffffffffffffffffffff8516815273ffffffffffffffffffffffffffffffffffffffff84166020820152826040820152608060608201526000825180608084015260005b8181101561137b57602081860181015160a086840101520161135e565b50600060a0828501015260a07fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f83011684010191505095945050505050565b6000602082840312156113ce57600080fd5b81517fffffffff000000000000000000000000000000000000000000000000000000008116811461031e57600080fdfea2646970667358221220d68fb5112bcbb0edab0987b87d71ab87964758651aceb6f990b09a4aaebcd22f64736f6c634300081c0033",
+  "devdoc": {
+    "details": "This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).Note: This facet depends on {ProxyAdminFacet}, and {InterfaceDetectionFacet}.",
+    "errors": {
+      "ERC721NonApprovedForApproval(address,address,uint256)": [
+        {
+          "params": {
+            "sender": "The message sender.",
+            "tokenId": "The identifier of the token."
+          }
+        }
+      ],
+      "ERC721NonApprovedForTransfer(address,address,uint256)": [
+        {
+          "params": {
+            "sender": "The message sender.",
+            "tokenId": "The identifier of the token."
+          }
+        }
+      ],
+      "ERC721NonExistingToken(uint256)": [
+        {
+          "params": {
+            "tokenId": "The identifier of the token that was checked."
+          }
+        }
+      ],
+      "ERC721NonOwnedToken(address,uint256)": [
+        {
+          "params": {
+            "account": "The account that was expected to own the token.",
+            "tokenId": "The identifier of the token."
+          }
+        }
+      ],
+      "ERC721SafeTransferRejected(address,uint256)": [
+        {
+          "params": {
+            "recipient": "The recipient contract.",
+            "tokenId": "The identifier of the token."
+          }
+        }
+      ],
+      "ERC721SelfApproval(address)": [
+        {
+          "params": {
+            "account": "The account trying to approve itself."
+          }
+        }
+      ],
+      "ERC721SelfApprovalForAll(address)": [
+        {
+          "params": {
+            "account": "The account trying to approveForAll itself."
+          }
+        }
+      ],
+      "NotProxyAdmin(address)": [
+        {
+          "params": {
+            "account": "The account that was checked."
+          }
+        }
+      ]
+    },
+    "events": {
+      "Approval(address,address,uint256)": {
+        "params": {
+          "approved": "The approved address.",
+          "owner": "The token owner.",
+          "tokenId": "The approved token identifier."
+        }
+      },
+      "ApprovalForAll(address,address,bool)": {
+        "params": {
+          "approved": "True when then approval is set, false when it is unset.",
+          "operator": "The approved address.",
+          "owner": "The tokens owner."
+        }
+      },
+      "Transfer(address,address,uint256)": {
+        "params": {
+          "from": "The previous token owner.",
+          "to": "The new token owner.",
+          "tokenId": "The transferred token identifier."
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "approve(address,uint256)": {
+        "details": "Note: There can only be one approved address per token at a given time.Note: A token approval gets reset when this token is transferred, including a self-transfer.Reverts if `tokenId` does not exist.Reverts if `to` is the token owner.Reverts if the sender is not the token owner and has not been approved by the token owner.Emits an {Approval} event.",
+        "params": {
+          "to": "The address to approve, or the zero address to remove any existing approval.",
+          "tokenId": "The token identifier to give approval for."
+        }
+      },
+      "balanceOf(address)": {
+        "details": "Reverts if `owner` is the zero address.",
+        "params": {
+          "owner": "The address to query the balance of."
+        },
+        "returns": {
+          "balance": "The amount owned by the owner."
+        }
+      },
+      "getApproved(uint256)": {
+        "details": "Reverts if `tokenId` does not exist.",
+        "params": {
+          "tokenId": "The token identifier to query the approval of."
+        },
+        "returns": {
+          "approved": "The approved address for the token identifier, or the zero address if no approval is set."
+        }
+      },
+      "initERC721Storage()": {
+        "details": "Reverts with {NotProxyAdmin} if the sender is not the proxy admin."
+      },
+      "isApprovedForAll(address,address)": {
+        "params": {
+          "operator": "The address which receives the approval for all tokens.",
+          "owner": "The address which gives the approval for all tokens."
+        },
+        "returns": {
+          "approvedForAll": "Whether the operator is approved for all tokens by the owner."
+        }
+      },
+      "ownerOf(uint256)": {
+        "details": "Reverts if `tokenId` does not exist.",
+        "params": {
+          "tokenId": "The token identifier to query the owner of."
+        },
+        "returns": {
+          "tokenOwner": "The owner of the token identifier."
+        }
+      },
+      "safeTransferFrom(address,address,uint256)": {
+        "details": "Resets the token approval for `tokenId`.Reverts if `to` is the zero address.Reverts if `from` is not the owner of `tokenId`.Reverts if the sender is not `from` and has not been approved by `from` for `tokenId`.Reverts if `to` is a contract and the call to {IERC721Receiver-onERC721Received} fails, reverts or is rejected.Emits a {Transfer} event.",
+        "params": {
+          "from": "The current token owner.",
+          "to": "The recipient of the token transfer.",
+          "tokenId": "The identifier of the token to transfer."
+        }
+      },
+      "safeTransferFrom(address,address,uint256,bytes)": {
+        "details": "Resets the token approval for `tokenId`.Reverts if `to` is the zero address.Reverts if `from` is not the owner of `tokenId`.Reverts if the sender is not `from` and has not been approved by `from` for `tokenId`.Reverts if `to` is a contract and the call to {IERC721Receiver-onERC721Received} fails, reverts or is rejected.Emits a {Transfer} event.",
+        "params": {
+          "data": "Optional data to send along to a receiver contract.",
+          "from": "The current token owner.",
+          "to": "The recipient of the token transfer.",
+          "tokenId": "The identifier of the token to transfer."
+        }
+      },
+      "setApprovalForAll(address,bool)": {
+        "details": "Reverts if the sender is the same as `operator`.Emits an {ApprovalForAll} event.",
+        "params": {
+          "approved": "True to set an approval for all tokens, false to unset it.",
+          "operator": "The address to approve for all tokens."
+        }
+      },
+      "transferFrom(address,address,uint256)": {
+        "details": "Note: Usage of this method is discouraged, use `safeTransferFrom` whenever possible.Resets the token approval for `tokenId`.Reverts if `to` is the zero address.Reverts if `from` is not the owner of `tokenId`.Reverts if the sender is not `from` and has not been approved by `from` for `tokenId`.Emits a {Transfer} event.",
+        "params": {
+          "from": "The current token owner.",
+          "to": "The recipient of the token transfer. Self-transfers are possible.",
+          "tokenId": "The identifier of the token to transfer."
+        }
+      }
+    },
+    "title": "ERC721 Non-Fungible Token Standard (facet version).",
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "ERC721BalanceOfAddressZero()": [
+        {
+          "notice": "Thrown when querying the balance of the zero address."
+        }
+      ],
+      "ERC721NonApprovedForApproval(address,address,uint256)": [
+        {
+          "notice": "Thrown when a sender tries to set a token approval but is neither the owner nor approvedForAll by the owner."
+        }
+      ],
+      "ERC721NonApprovedForTransfer(address,address,uint256)": [
+        {
+          "notice": "Thrown when a sender tries to transfer a token but is neither the owner nor approved by the owner."
+        }
+      ],
+      "ERC721NonExistingToken(uint256)": [
+        {
+          "notice": "Thrown when a token does not exist but is required to."
+        }
+      ],
+      "ERC721NonOwnedToken(address,uint256)": [
+        {
+          "notice": "Thrown when a token is not owned by the expected account."
+        }
+      ],
+      "ERC721SafeTransferRejected(address,uint256)": [
+        {
+          "notice": "Thrown when a safe transfer is rejected by the recipient contract."
+        }
+      ],
+      "ERC721SelfApproval(address)": [
+        {
+          "notice": "Thrown when trying to approve oneself."
+        }
+      ],
+      "ERC721SelfApprovalForAll(address)": [
+        {
+          "notice": "Thrown when trying to approveForAll oneself."
+        }
+      ],
+      "ERC721TransferToAddressZero()": [
+        {
+          "notice": "Thrown when transferring a token to the zero address."
+        }
+      ],
+      "IllegalInterfaceId()": [
+        {
+          "notice": "Thrown when setting the illegal interfaceId 0xffffffff."
+        }
+      ],
+      "NotProxyAdmin(address)": [
+        {
+          "notice": "Thrown when an account is not the proxy admin but is required to."
+        }
+      ]
+    },
+    "events": {
+      "Approval(address,address,uint256)": {
+        "notice": "Emitted when a single token approval is set."
+      },
+      "ApprovalForAll(address,address,bool)": {
+        "notice": "Emitted when an approval for all tokens is set or unset."
+      },
+      "Transfer(address,address,uint256)": {
+        "notice": "Emitted when a token is transferred."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "approve(address,uint256)": {
+        "notice": "Sets or unsets an approval to transfer a single token on behalf of its owner."
+      },
+      "balanceOf(address)": {
+        "notice": "Gets the balance of an address."
+      },
+      "getApproved(uint256)": {
+        "notice": "Gets the approved address for a token."
+      },
+      "initERC721Storage()": {
+        "notice": "Marks the following ERC165 interfaces as supported: ERC721."
+      },
+      "isApprovedForAll(address,address)": {
+        "notice": "Gets whether an operator is approved for all tokens by an owner."
+      },
+      "ownerOf(uint256)": {
+        "notice": "Gets the owner of a token."
+      },
+      "safeTransferFrom(address,address,uint256)": {
+        "notice": "Safely transfers the ownership of a token to a recipient."
+      },
+      "safeTransferFrom(address,address,uint256,bytes)": {
+        "notice": "Safely transfers the ownership of a token to a recipient."
+      },
+      "setApprovalForAll(address,bool)": {
+        "notice": "Sets or unsets an approval to transfer all tokens on behalf of their owner."
+      },
+      "transferFrom(address,address,uint256)": {
+        "notice": "Unsafely transfers the ownership of a token to a recipient."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

@@ -5,7 +5,7 @@ module.exports = {
       defaultProvider: 'alchemy',
     },
     sepolia: {
-      defaultProvider: 'infura',
+      defaultProvider: 'alchemy',
     },
 
     // Polygon
