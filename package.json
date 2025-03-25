@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "4.0.0-beta.3",
+  "version": "4.0.0",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
@@ -38,11 +38,10 @@
     "@animoca/ethereum-contracts": "^4.1.2",
     "@animoca/ethereum-contracts-4.1": "npm:@animoca/ethereum-contracts@4.1.2",
     "@animoca/ethereum-contracts-bridging-2.0": "npm:@animoca/ethereum-contracts-bridging@2.0.0",
-    "@layerzerolabs/lz-definitions": "^3.0.79",
     "@nomicfoundation/hardhat-ethers": "^3.0.8",
-    "eslint": "^9.22.0",
+    "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-prettier": "^5.2.4",
     "ethers": "^6.13.5",
     "hardhat": "^2.22.19",
     "hardhat-deploy": "^1.0.1",

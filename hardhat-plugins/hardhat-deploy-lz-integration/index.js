@@ -10,11 +10,19 @@ extendConfig((config, _userConfig) => {
   }
   const external = config.external;
 
+  if (external.contracts === undefined) {
+    external.contract = [];
+  }
+
+  external.contracts.push({
+    artifacts: ['node_modules/@layerzerolabs/lz-evm-sdk-v2', 'node_modules/@layerzerolabs/test-devtools-evm-hardhat'],
+  });
+
   if (external.deployments === undefined) {
     external.deployments = {};
   }
 
-  const resolvedDeploymentsDirectories = [`node_modules/@layerzerolabs/lz-evm-sdk-v2/deployments`];
+  const resolvedDeploymentsDirectories = ['node_modules/@layerzerolabs/lz-evm-sdk-v2/deployments'];
 
   for (const [networkName, networkConfig] of Object.entries(config.networks ?? {})) {
     if (!networkConfig.live) continue;
