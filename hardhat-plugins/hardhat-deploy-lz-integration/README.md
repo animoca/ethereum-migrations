@@ -10,12 +10,16 @@ This plugin only needs `@layerzerolabs/lz-definitions` to be executed, but it ne
 Example:
 
 ```js
-const {EndpointId} = require('@layerzerolabs/lz-definitions');
+const { EndpointId } = require("@layerzerolabs/lz-definitions");
 
-networks: {
+require("@animoca/ethereum-migrations/hardhat-plugins/hardhat-deploy-lz-integration");
+
+module.exports = {
+  networks: {
     mainnet: {
-        url: 'http://mainnet',
-        eid: EndpointId.ETHEREUM_V2_MAINNET,
-    }
-},
+      url: "http://mainnet",
+      eid: EndpointId.ETHEREUM_V2_MAINNET,
+    },
+  },
+};
 ```

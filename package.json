@@ -27,10 +27,9 @@
     "clean:hardhat": "rm -rf \"hardhat.config.last.json\"",
     "clean:etherscan": "rm -rf \"etherscan_requests\"",
     "clean": "run-s clean:cache clean:deployments clean:generated clean:hardhat clean:etherscan",
-    "deploy": "hardhat deploy --show-stack-traces",
-    "deploy:test": "NETWORK_TAGS=test yarn deploy",
+    "deploy": "cross-env NODE_OPTIONS=--max-old-space-size=8192 hardhat deploy --show-stack-traces",
     "verify": "hardhat etherscan-verify --show-stack-traces",
-    "run-all": "run-s lint:fix clean deploy deploy:test",
+    "run-all": "run-s lint:fix clean deploy",
     "prepack": "run-s clean"
   },
   "devDependencies": {

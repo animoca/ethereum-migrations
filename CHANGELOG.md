@@ -7,20 +7,24 @@
 - Updated to dependency version `@animoca/ethereum-contracts@4x` and `@animoca/ethereum-contracts-bridging@2x`.
 - Moved `diamond.js` from `templates/` to `helpers/` folder.
 - Removed decommissioned network `okextest`.
+- Removed POS Portal artifacts, migrations and `namedAccounts` configuration.
 
 ### New features
 
-- Added support for LayerZero OFT bridging: `hardhat-deploy-lz-integrations` plugin and migration templates.
+- Added support for LayerZero OFT bridging: `hardhat-deploy-lz-integration` plugin, migration templates and network configurations.
 - `@animoca/ethereum-contracts@4.1` and `@animoca/ethereum-contracts-bridging@2.0` deployed on all networks.
+- Added proxied ERC721/ERC1155 preset migration templates.
 
 ### Bugfixes
 
 - Prevented deploy options overwriting in some token migration templates.
-- Fixed Chainlink VRF contracts addresses on sepolia.
+- Fixed bug in diamond helper.
+- Fixed Chainlink VRF deployment addresses on sepolia.
 
 ### Improvements
 
 - Added etherscan URLs in network configurations where needed.
+- Used network name instead of chain id for `namedAccounts` configuration.
 - Updated to latest dependencies.
 
 ## 3.0.8
