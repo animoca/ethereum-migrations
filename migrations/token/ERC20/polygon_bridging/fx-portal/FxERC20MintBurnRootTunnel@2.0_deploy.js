@@ -1,6 +1,6 @@
 const Contract_deploy = require('../../../../../src/templates/Contract/deploy');
 const {getNamedAccount, getContractAddress} = require('../../../../../src/helpers/templates');
-const {multiSkip, skipNetworks, skipChainTypesExceptFor} = require('../../../../../src/helpers/common');
+const {skipChainTypesExceptFor} = require('../../../../../src/helpers/common');
 
 module.exports = Contract_deploy('FxERC20MintBurnRootTunnel@2.0', {
   contract: 'FxERC20MintBurnRootTunnel',
@@ -13,9 +13,6 @@ module.exports = Contract_deploy('FxERC20MintBurnRootTunnel@2.0', {
   ],
   deterministicDeployment: true,
 });
-module.exports.skip = multiSkip(
-  skipNetworks(['sepolia']), // until fx-portal is supported on amoy
-  skipChainTypesExceptFor('ethereum'),
-);
+module.exports.skip = skipChainTypesExceptFor('ethereum');
 module.exports.tags = ['ERC20', 'PolygonFxPortal'];
 module.exports.dependencies = ['ForwarderRegistry@4.1_deploy'];

@@ -24,6 +24,6 @@ Remark: make sure the network config for the secondary networks have a companion
 
 ### Secondary chains (for each)
 
-- ERC20MintBurn_deploy, using the same token deployment name as the primary chain one
+- ERC20MintBurn_deploy, using a different token deployment name than the primary chain one
 - OFTAdapterMintBurn_deploy, using the token deployment name from the previous step
 - AccessControl.grantRole(tokenDeploymentName, 'minter', getContractAddress(`${OFTAdapterMintBurn_${tokenDeploymentName}}`))
