@@ -1,0 +1,582 @@
+{
+  "address": "0x316a472D084489CB6d4C66e5eB62aE3AdA17521e",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "AddressEmptyCode",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ECDSAInvalidSignature",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "length",
+          "type": "uint256"
+        }
+      ],
+      "name": "ECDSAInvalidSignatureLength",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ECDSAInvalidSignatureS",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FailedCall",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "forwarder",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "ForwarderNotApproved",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "needed",
+          "type": "uint256"
+        }
+      ],
+      "name": "InsufficientBalance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidEIP1271Signature",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "WrongSigner",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "forwarder",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "nonce",
+          "type": "uint256"
+        }
+      ],
+      "name": "ForwarderApproval",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DOMAIN_SEPARATOR",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "domainSeparator",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "signature",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bool",
+          "name": "isEIP1271Signature",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "approveAndForward",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "forward",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "forwarder",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "getNonce",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "nonce",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "forwarder",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForwarder",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "isTrustedForwarder",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "forwarder",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes",
+          "name": "signature",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bool",
+          "name": "isEIP1271Signature",
+          "type": "bool"
+        }
+      ],
+      "name": "setForwarderApproval",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "forwarder",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setForwarderApproval",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x5ff01666ecc334ac4e2fb07cc8b4f50baac6eefff7956c8b9ed4a9a7e2641e28",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x80b12BD0F1793BF6CEa767Fa83Eb2068eaa17DC8",
+    "contractAddress": null,
+    "transactionIndex": 132,
+    "gasUsed": "1002631",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xe46f44dbebe0001ed91730ea21141bca3f0c28010476a1fab5f7b3a42c413c38",
+    "transactionHash": "0x5ff01666ecc334ac4e2fb07cc8b4f50baac6eefff7956c8b9ed4a9a7e2641e28",
+    "logs": [],
+    "blockNumber": 22120637,
+    "cumulativeGasUsed": "13368192",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "84bab0eb3356c2e3bedca0f2f5a163c5",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"}],\"name\":\"AddressEmptyCode\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ECDSAInvalidSignature\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"length\",\"type\":\"uint256\"}],\"name\":\"ECDSAInvalidSignatureLength\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"}],\"name\":\"ECDSAInvalidSignatureS\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"FailedCall\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"forwarder\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"}],\"name\":\"ForwarderNotApproved\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"needed\",\"type\":\"uint256\"}],\"name\":\"InsufficientBalance\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidEIP1271Signature\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"WrongSigner\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"forwarder\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"}],\"name\":\"ForwarderApproval\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DOMAIN_SEPARATOR\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"domainSeparator\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"isEIP1271Signature\",\"type\":\"bool\"},{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"approveAndForward\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"forward\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"forwarder\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"}],\"name\":\"getNonce\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"forwarder\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"}],\"name\":\"isApprovedForwarder\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"isTrustedForwarder\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"forwarder\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"isEIP1271Signature\",\"type\":\"bool\"}],\"name\":\"setForwarderApproval\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"forwarder\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setForwarderApproval\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This contract should be deployed uniquely per network, in a non-upgradeable way.\",\"errors\":{\"AddressEmptyCode(address)\":[{\"details\":\"There's no code at `target` (it is not a contract).\"}],\"ECDSAInvalidSignature()\":[{\"details\":\"The signature derives the `address(0)`.\"}],\"ECDSAInvalidSignatureLength(uint256)\":[{\"details\":\"The signature has an invalid length.\"}],\"ECDSAInvalidSignatureS(bytes32)\":[{\"details\":\"The signature has an S value that is in the upper half order.\"}],\"FailedCall()\":[{\"details\":\"A call to an address target failed. The target may have reverted.\"}],\"InsufficientBalance(uint256,uint256)\":[{\"details\":\"The ETH balance of the account is not enough to perform the operation.\"}]},\"events\":{\"ForwarderApproval(address,address,address,bool,uint256)\":{\"params\":{\"approved\":\"True for an approval, false for a disapproval.\",\"forwarder\":\"The account approved or disapproved as forwarder.\",\"nonce\":\"The `sender`'s account nonce before the approval change.\",\"sender\":\"The account for which `forwarder` is approved or disapproved.\",\"target\":\"The target contract approved or disapproved as forwarder.\"}}},\"kind\":\"dev\",\"methods\":{\"DOMAIN_SEPARATOR()\":{\"returns\":{\"domainSeparator\":\"The EIP-712 domain separator.\"}},\"approveAndForward(bytes,bool,address,bytes)\":{\"details\":\"Reverts with {InvalidEIP1271Signature} if `isEIP1271Signature` is true and the signature is reported invalid by the `sender` contract.Reverts with {WrongSigner} if `isEIP1271Signature` is false and `sender` is not the actual signer.Emits a {ForwarderApproval} event.\",\"params\":{\"data\":\"The content of the call (the `sender` address will be appended to it according to EIP-2771).\",\"isEIP1271Signature\":\"True if `sender` is a contract that provides authorization via EIP-1271.\",\"signature\":\"Signature by `sender` for approving the forwarder.\",\"target\":\"The destination of the call (that will receive the meta-transaction).\"}},\"forward(address,bytes)\":{\"details\":\"Reverts with {ForwarderNotApproved} if the caller has not been previously approved as a forwarder by the sender.\",\"params\":{\"data\":\"The content of the call (the `sender` address will be appended to it according to EIP-2771).\",\"target\":\"The destination of the call (that will receive the meta-transaction).\"}},\"getNonce(address,address,address)\":{\"params\":{\"forwarder\":\"The forwarder account.\",\"sender\":\"The sender account.\",\"target\":\"The target contract.\"},\"returns\":{\"nonce\":\"The current nonce for the `sender`/`forwarder`/`target` tuple.\"}},\"isApprovedForwarder(address,address,address)\":{\"params\":{\"forwarder\":\"The forwarder account.\",\"sender\":\"The sender account.\",\"target\":\"The target contract.\"},\"returns\":{\"_0\":\"True if `forwarder` is an approved meta-transaction forwarder for `sender` to `target`, false otherwise.\"}},\"isTrustedForwarder(address)\":{\"params\":{\"forwarder\":\"The forwarder to check.\"},\"returns\":{\"_0\":\"True if `forwarder` is trusted, false if not.\"}},\"setForwarderApproval(address,address,address,bool,bytes,bool)\":{\"details\":\"Reverts with {InvalidEIP1271Signature} if `isEIP1271Signature` is true and the signature is reported invalid by the `sender` contract.Reverts with {WrongSigner} if `isEIP1271Signature` is false and `sender` is not the actual signer.Emits a {ForwarderApproval} event.\",\"params\":{\"approved\":\"Whether to approve or disapprove the forwarder.\",\"forwarder\":\"The address of the forwarder to change the approval of.\",\"isEIP1271Signature\":\"True if `sender` is a contract that provides authorization via EIP-1271.\",\"sender\":\"The address which signed the approval of the approval.\",\"signature\":\"Signature by `sender` for approving forwarder.\",\"target\":\"The target contract to change the approval of.\"}},\"setForwarderApproval(address,address,bool)\":{\"details\":\"Emits a {ForwarderApproval} event.\",\"params\":{\"forwarder\":\"The address of the forwarder to change the approval of.\"}}},\"title\":\"Meta-Transactions Forwarder Registry.\",\"version\":1},\"userdoc\":{\"events\":{\"ForwarderApproval(address,address,address,bool,uint256)\":{\"notice\":\"Emitted when a forwarder is approved or disapproved.\"}},\"kind\":\"user\",\"methods\":{\"DOMAIN_SEPARATOR()\":{\"notice\":\"Returns the EIP-712 DOMAIN_SEPARATOR.\"},\"approveAndForward(bytes,bool,address,bytes)\":{\"notice\":\"Approves the forwarder and forwards the meta-transaction using EIP-2771.\"},\"forward(address,bytes)\":{\"notice\":\"Forwards the meta-transaction using EIP-2771.\"},\"getNonce(address,address,address)\":{\"notice\":\"Gets the current nonce for the sender/forwarder pair.\"},\"isApprovedForwarder(address,address,address)\":{\"notice\":\"Checks whether an account is as an approved meta-transaction forwarder for a sender account to a target contract.\"},\"isTrustedForwarder(address)\":{\"notice\":\"Checks whether a forwarder is trusted.\"},\"setForwarderApproval(address,address,address,bool,bytes,bool)\":{\"notice\":\"Approves or disapproves a forwarder using a signature.\"},\"setForwarderApproval(address,address,bool)\":{\"notice\":\"Approves or disapproves a forwarder for the sender.\"}},\"notice\":\"Users can allow specific EIP-2771 forwarders to forward meta-transactions on their behalf, per target contract.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/metatx/ForwarderRegistry.sol\":\"ForwarderRegistry\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":99999},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Address.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.2.0) (utils/Address.sol)\\n\\npragma solidity ^0.8.20;\\n\\nimport {Errors} from \\\"./Errors.sol\\\";\\n\\n/**\\n * @dev Collection of functions related to the address type\\n */\\nlibrary Address {\\n    /**\\n     * @dev There's no code at `target` (it is not a contract).\\n     */\\n    error AddressEmptyCode(address target);\\n\\n    /**\\n     * @dev Replacement for Solidity's `transfer`: sends `amount` wei to\\n     * `recipient`, forwarding all available gas and reverting on errors.\\n     *\\n     * https://eips.ethereum.org/EIPS/eip-1884[EIP1884] increases the gas cost\\n     * of certain opcodes, possibly making contracts go over the 2300 gas limit\\n     * imposed by `transfer`, making them unable to receive funds via\\n     * `transfer`. {sendValue} removes this limitation.\\n     *\\n     * https://consensys.net/diligence/blog/2019/09/stop-using-soliditys-transfer-now/[Learn more].\\n     *\\n     * IMPORTANT: because control is transferred to `recipient`, care must be\\n     * taken to not create reentrancy vulnerabilities. Consider using\\n     * {ReentrancyGuard} or the\\n     * https://solidity.readthedocs.io/en/v0.8.20/security-considerations.html#use-the-checks-effects-interactions-pattern[checks-effects-interactions pattern].\\n     */\\n    function sendValue(address payable recipient, uint256 amount) internal {\\n        if (address(this).balance < amount) {\\n            revert Errors.InsufficientBalance(address(this).balance, amount);\\n        }\\n\\n        (bool success, bytes memory returndata) = recipient.call{value: amount}(\\\"\\\");\\n        if (!success) {\\n            _revert(returndata);\\n        }\\n    }\\n\\n    /**\\n     * @dev Performs a Solidity function call using a low level `call`. A\\n     * plain `call` is an unsafe replacement for a function call: use this\\n     * function instead.\\n     *\\n     * If `target` reverts with a revert reason or custom error, it is bubbled\\n     * up by this function (like regular Solidity function calls). However, if\\n     * the call reverted with no returned reason, this function reverts with a\\n     * {Errors.FailedCall} error.\\n     *\\n     * Returns the raw returned data. To convert to the expected return value,\\n     * use https://solidity.readthedocs.io/en/latest/units-and-global-variables.html?highlight=abi.decode#abi-encoding-and-decoding-functions[`abi.decode`].\\n     *\\n     * Requirements:\\n     *\\n     * - `target` must be a contract.\\n     * - calling `target` with `data` must not revert.\\n     */\\n    function functionCall(address target, bytes memory data) internal returns (bytes memory) {\\n        return functionCallWithValue(target, data, 0);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but also transferring `value` wei to `target`.\\n     *\\n     * Requirements:\\n     *\\n     * - the calling contract must have an ETH balance of at least `value`.\\n     * - the called Solidity function must be `payable`.\\n     */\\n    function functionCallWithValue(address target, bytes memory data, uint256 value) internal returns (bytes memory) {\\n        if (address(this).balance < value) {\\n            revert Errors.InsufficientBalance(address(this).balance, value);\\n        }\\n        (bool success, bytes memory returndata) = target.call{value: value}(data);\\n        return verifyCallResultFromTarget(target, success, returndata);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but performing a static call.\\n     */\\n    function functionStaticCall(address target, bytes memory data) internal view returns (bytes memory) {\\n        (bool success, bytes memory returndata) = target.staticcall(data);\\n        return verifyCallResultFromTarget(target, success, returndata);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but performing a delegate call.\\n     */\\n    function functionDelegateCall(address target, bytes memory data) internal returns (bytes memory) {\\n        (bool success, bytes memory returndata) = target.delegatecall(data);\\n        return verifyCallResultFromTarget(target, success, returndata);\\n    }\\n\\n    /**\\n     * @dev Tool to verify that a low level call to smart-contract was successful, and reverts if the target\\n     * was not a contract or bubbling up the revert reason (falling back to {Errors.FailedCall}) in case\\n     * of an unsuccessful call.\\n     */\\n    function verifyCallResultFromTarget(\\n        address target,\\n        bool success,\\n        bytes memory returndata\\n    ) internal view returns (bytes memory) {\\n        if (!success) {\\n            _revert(returndata);\\n        } else {\\n            // only check if target is a contract if the call was successful and the return data is empty\\n            // otherwise we already know that it was a contract\\n            if (returndata.length == 0 && target.code.length == 0) {\\n                revert AddressEmptyCode(target);\\n            }\\n            return returndata;\\n        }\\n    }\\n\\n    /**\\n     * @dev Tool to verify that a low level call was successful, and reverts if it wasn't, either by bubbling the\\n     * revert reason or with a default {Errors.FailedCall} error.\\n     */\\n    function verifyCallResult(bool success, bytes memory returndata) internal pure returns (bytes memory) {\\n        if (!success) {\\n            _revert(returndata);\\n        } else {\\n            return returndata;\\n        }\\n    }\\n\\n    /**\\n     * @dev Reverts with returndata if present. Otherwise reverts with {Errors.FailedCall}.\\n     */\\n    function _revert(bytes memory returndata) private pure {\\n        // Look for revert reason and bubble it up if present\\n        if (returndata.length > 0) {\\n            // The easiest way to bubble the revert reason is using memory via assembly\\n            assembly (\\\"memory-safe\\\") {\\n                let returndata_size := mload(returndata)\\n                revert(add(32, returndata), returndata_size)\\n            }\\n        } else {\\n            revert Errors.FailedCall();\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xaaa1d17c1129b127a4a401db2fbd72960e2671474be3d08cae71ccdc42f7624c\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Errors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.1.0) (utils/Errors.sol)\\n\\npragma solidity ^0.8.20;\\n\\n/**\\n * @dev Collection of common custom errors used in multiple contracts\\n *\\n * IMPORTANT: Backwards compatibility is not guaranteed in future versions of the library.\\n * It is recommended to avoid relying on the error API for critical functionality.\\n *\\n * _Available since v5.1._\\n */\\nlibrary Errors {\\n    /**\\n     * @dev The ETH balance of the account is not enough to perform the operation.\\n     */\\n    error InsufficientBalance(uint256 balance, uint256 needed);\\n\\n    /**\\n     * @dev A call to an address target failed. The target may have reverted.\\n     */\\n    error FailedCall();\\n\\n    /**\\n     * @dev The deployment failed.\\n     */\\n    error FailedDeployment();\\n\\n    /**\\n     * @dev A necessary precompile is missing.\\n     */\\n    error MissingPrecompile(address);\\n}\\n\",\"keccak256\":\"0x6afa713bfd42cf0f7656efa91201007ac465e42049d7de1d50753a373648c123\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/cryptography/ECDSA.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.1.0) (utils/cryptography/ECDSA.sol)\\n\\npragma solidity ^0.8.20;\\n\\n/**\\n * @dev Elliptic Curve Digital Signature Algorithm (ECDSA) operations.\\n *\\n * These functions can be used to verify that a message was signed by the holder\\n * of the private keys of a given address.\\n */\\nlibrary ECDSA {\\n    enum RecoverError {\\n        NoError,\\n        InvalidSignature,\\n        InvalidSignatureLength,\\n        InvalidSignatureS\\n    }\\n\\n    /**\\n     * @dev The signature derives the `address(0)`.\\n     */\\n    error ECDSAInvalidSignature();\\n\\n    /**\\n     * @dev The signature has an invalid length.\\n     */\\n    error ECDSAInvalidSignatureLength(uint256 length);\\n\\n    /**\\n     * @dev The signature has an S value that is in the upper half order.\\n     */\\n    error ECDSAInvalidSignatureS(bytes32 s);\\n\\n    /**\\n     * @dev Returns the address that signed a hashed message (`hash`) with `signature` or an error. This will not\\n     * return address(0) without also returning an error description. Errors are documented using an enum (error type)\\n     * and a bytes32 providing additional information about the error.\\n     *\\n     * If no error is returned, then the address can be used for verification purposes.\\n     *\\n     * The `ecrecover` EVM precompile allows for malleable (non-unique) signatures:\\n     * this function rejects them by requiring the `s` value to be in the lower\\n     * half order, and the `v` value to be either 27 or 28.\\n     *\\n     * IMPORTANT: `hash` _must_ be the result of a hash operation for the\\n     * verification to be secure: it is possible to craft signatures that\\n     * recover to arbitrary addresses for non-hashed data. A safe way to ensure\\n     * this is by receiving a hash of the original message (which may otherwise\\n     * be too long), and then calling {MessageHashUtils-toEthSignedMessageHash} on it.\\n     *\\n     * Documentation for signature generation:\\n     * - with https://web3js.readthedocs.io/en/v1.3.4/web3-eth-accounts.html#sign[Web3.js]\\n     * - with https://docs.ethers.io/v5/api/signer/#Signer-signMessage[ethers]\\n     */\\n    function tryRecover(\\n        bytes32 hash,\\n        bytes memory signature\\n    ) internal pure returns (address recovered, RecoverError err, bytes32 errArg) {\\n        if (signature.length == 65) {\\n            bytes32 r;\\n            bytes32 s;\\n            uint8 v;\\n            // ecrecover takes the signature parameters, and the only way to get them\\n            // currently is to use assembly.\\n            assembly (\\\"memory-safe\\\") {\\n                r := mload(add(signature, 0x20))\\n                s := mload(add(signature, 0x40))\\n                v := byte(0, mload(add(signature, 0x60)))\\n            }\\n            return tryRecover(hash, v, r, s);\\n        } else {\\n            return (address(0), RecoverError.InvalidSignatureLength, bytes32(signature.length));\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the address that signed a hashed message (`hash`) with\\n     * `signature`. This address can then be used for verification purposes.\\n     *\\n     * The `ecrecover` EVM precompile allows for malleable (non-unique) signatures:\\n     * this function rejects them by requiring the `s` value to be in the lower\\n     * half order, and the `v` value to be either 27 or 28.\\n     *\\n     * IMPORTANT: `hash` _must_ be the result of a hash operation for the\\n     * verification to be secure: it is possible to craft signatures that\\n     * recover to arbitrary addresses for non-hashed data. A safe way to ensure\\n     * this is by receiving a hash of the original message (which may otherwise\\n     * be too long), and then calling {MessageHashUtils-toEthSignedMessageHash} on it.\\n     */\\n    function recover(bytes32 hash, bytes memory signature) internal pure returns (address) {\\n        (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, signature);\\n        _throwError(error, errorArg);\\n        return recovered;\\n    }\\n\\n    /**\\n     * @dev Overload of {ECDSA-tryRecover} that receives the `r` and `vs` short-signature fields separately.\\n     *\\n     * See https://eips.ethereum.org/EIPS/eip-2098[ERC-2098 short signatures]\\n     */\\n    function tryRecover(\\n        bytes32 hash,\\n        bytes32 r,\\n        bytes32 vs\\n    ) internal pure returns (address recovered, RecoverError err, bytes32 errArg) {\\n        unchecked {\\n            bytes32 s = vs & bytes32(0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff);\\n            // We do not check for an overflow here since the shift operation results in 0 or 1.\\n            uint8 v = uint8((uint256(vs) >> 255) + 27);\\n            return tryRecover(hash, v, r, s);\\n        }\\n    }\\n\\n    /**\\n     * @dev Overload of {ECDSA-recover} that receives the `r and `vs` short-signature fields separately.\\n     */\\n    function recover(bytes32 hash, bytes32 r, bytes32 vs) internal pure returns (address) {\\n        (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, r, vs);\\n        _throwError(error, errorArg);\\n        return recovered;\\n    }\\n\\n    /**\\n     * @dev Overload of {ECDSA-tryRecover} that receives the `v`,\\n     * `r` and `s` signature fields separately.\\n     */\\n    function tryRecover(\\n        bytes32 hash,\\n        uint8 v,\\n        bytes32 r,\\n        bytes32 s\\n    ) internal pure returns (address recovered, RecoverError err, bytes32 errArg) {\\n        // EIP-2 still allows signature malleability for ecrecover(). Remove this possibility and make the signature\\n        // unique. Appendix F in the Ethereum Yellow paper (https://ethereum.github.io/yellowpaper/paper.pdf), defines\\n        // the valid range for s in (301): 0 < s < secp256k1n \\u00f7 2 + 1, and for v in (302): v \\u2208 {27, 28}. Most\\n        // signatures from current libraries generate a unique signature with an s-value in the lower half order.\\n        //\\n        // If your library generates malleable signatures, such as s-values in the upper range, calculate a new s-value\\n        // with 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141 - s1 and flip v from 27 to 28 or\\n        // vice versa. If your library also generates signatures with 0/1 for v instead 27/28, add 27 to v to accept\\n        // these malleable signatures as well.\\n        if (uint256(s) > 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0) {\\n            return (address(0), RecoverError.InvalidSignatureS, s);\\n        }\\n\\n        // If the signature is valid (and not malleable), return the signer address\\n        address signer = ecrecover(hash, v, r, s);\\n        if (signer == address(0)) {\\n            return (address(0), RecoverError.InvalidSignature, bytes32(0));\\n        }\\n\\n        return (signer, RecoverError.NoError, bytes32(0));\\n    }\\n\\n    /**\\n     * @dev Overload of {ECDSA-recover} that receives the `v`,\\n     * `r` and `s` signature fields separately.\\n     */\\n    function recover(bytes32 hash, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {\\n        (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, v, r, s);\\n        _throwError(error, errorArg);\\n        return recovered;\\n    }\\n\\n    /**\\n     * @dev Optionally reverts with the corresponding custom error according to the `error` argument provided.\\n     */\\n    function _throwError(RecoverError error, bytes32 errorArg) private pure {\\n        if (error == RecoverError.NoError) {\\n            return; // no error: do nothing\\n        } else if (error == RecoverError.InvalidSignature) {\\n            revert ECDSAInvalidSignature();\\n        } else if (error == RecoverError.InvalidSignatureLength) {\\n            revert ECDSAInvalidSignatureLength(uint256(errorArg));\\n        } else if (error == RecoverError.InvalidSignatureS) {\\n            revert ECDSAInvalidSignatureS(errorArg);\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x69f54c02b7d81d505910ec198c11ed4c6a728418a868b906b4a0cf29946fda84\",\"license\":\"MIT\"},\"contracts/cryptography/interfaces/IERC1271.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title Standard Signature Validation Method for Contracts.\\n/// @dev See https://eips.ethereum.org/EIPS/eip-1271\\ninterface IERC1271 {\\n    /// @notice Returns whether the signature is valid for the data hash.\\n    /// @param hash The hash of the signed data.\\n    /// @param signature The signature for `hash`.\\n    /// @return magicValue `0x1626ba7e` (`bytes4(keccak256(\\\"isValidSignature(bytes32,bytes)\\\")`) if the signature is valid, else any other value.\\n    function isValidSignature(bytes32 hash, bytes memory signature) external view returns (bytes4 magicValue);\\n}\\n\",\"keccak256\":\"0x1621de669dedd441750ee13ecfa1d6ee7cc13d2666c08a52bbc2eb95fc0f293b\",\"license\":\"MIT\"},\"contracts/metatx/ForwarderRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.28;\\n\\nimport {IERC1271} from \\\"./../cryptography/interfaces/IERC1271.sol\\\";\\nimport {IForwarderRegistry} from \\\"./interfaces/IForwarderRegistry.sol\\\";\\nimport {IERC2771} from \\\"./interfaces/IERC2771.sol\\\";\\nimport {ERC2771Calldata} from \\\"./libraries/ERC2771Calldata.sol\\\";\\nimport {Address} from \\\"@openzeppelin/contracts/utils/Address.sol\\\";\\nimport {ECDSA} from \\\"@openzeppelin/contracts/utils/cryptography/ECDSA.sol\\\";\\n\\n/// @title Meta-Transactions Forwarder Registry.\\n/// @notice Users can allow specific EIP-2771 forwarders to forward meta-transactions on their behalf, per target contract.\\n/// @dev This contract should be deployed uniquely per network, in a non-upgradeable way.\\ncontract ForwarderRegistry is IForwarderRegistry, IERC2771 {\\n    using Address for address;\\n    using ECDSA for bytes32;\\n\\n    struct Forwarder {\\n        uint248 nonce;\\n        bool approved;\\n    }\\n\\n    error ForwarderNotApproved(address sender, address forwarder, address target);\\n    error InvalidEIP1271Signature();\\n    error WrongSigner();\\n\\n    bytes4 private constant EIP1271_MAGICVALUE = 0x1626ba7e;\\n    bytes32 private constant EIP712_DOMAIN_NAME = keccak256(\\\"ForwarderRegistry\\\");\\n    bytes32 private constant APPROVAL_TYPEHASH =\\n        keccak256(\\\"ForwarderApproval(address sender,address forwarder,address target,bool approved,uint256 nonce)\\\");\\n\\n    // sender => forwarder => target => Forwarder\\n    mapping(address => mapping(address => mapping(address => Forwarder))) private _forwarders;\\n\\n    uint256 private immutable _DEPLOYMENT_CHAIN_ID;\\n    bytes32 private immutable _DEPLOYMENT_DOMAIN_SEPARATOR;\\n\\n    /// @notice Emitted when a forwarder is approved or disapproved.\\n    /// @param sender The account for which `forwarder` is approved or disapproved.\\n    /// @param forwarder The account approved or disapproved as forwarder.\\n    /// @param target The target contract approved or disapproved as forwarder.\\n    /// @param approved True for an approval, false for a disapproval.\\n    /// @param nonce The `sender`'s account nonce before the approval change.\\n    event ForwarderApproval(address indexed sender, address indexed forwarder, address indexed target, bool approved, uint256 nonce);\\n\\n    constructor() {\\n        uint256 chainId;\\n        assembly {\\n            chainId := chainid()\\n        }\\n        _DEPLOYMENT_CHAIN_ID = chainId;\\n        _DEPLOYMENT_DOMAIN_SEPARATOR = _calculateDomainSeparator(chainId);\\n    }\\n\\n    /// @notice Approves or disapproves a forwarder for the sender.\\n    /// @dev Emits a {ForwarderApproval} event.\\n    /// @param forwarder The address of the forwarder to change the approval of.\\n    function setForwarderApproval(address forwarder, address target, bool approved) external {\\n        Forwarder storage forwarderData = _forwarders[msg.sender][forwarder][target];\\n        _setForwarderApproval(forwarderData, msg.sender, forwarder, target, approved, forwarderData.nonce);\\n    }\\n\\n    /// @notice Approves or disapproves a forwarder using a signature.\\n    /// @dev Reverts with {InvalidEIP1271Signature} if `isEIP1271Signature` is true and the signature is reported invalid by the `sender` contract.\\n    /// @dev Reverts with {WrongSigner} if `isEIP1271Signature` is false and `sender` is not the actual signer.\\n    /// @dev Emits a {ForwarderApproval} event.\\n    /// @param sender The address which signed the approval of the approval.\\n    /// @param forwarder The address of the forwarder to change the approval of.\\n    /// @param target The target contract to change the approval of.\\n    /// @param approved Whether to approve or disapprove the forwarder.\\n    /// @param signature Signature by `sender` for approving forwarder.\\n    /// @param isEIP1271Signature True if `sender` is a contract that provides authorization via EIP-1271.\\n    function setForwarderApproval(\\n        address sender,\\n        address forwarder,\\n        address target,\\n        bool approved,\\n        bytes calldata signature,\\n        bool isEIP1271Signature\\n    ) public {\\n        Forwarder storage forwarderData = _forwarders[sender][forwarder][target];\\n        uint256 nonce = forwarderData.nonce;\\n\\n        _requireValidSignature(sender, forwarder, target, approved, nonce, signature, isEIP1271Signature);\\n        _setForwarderApproval(forwarderData, sender, forwarder, target, approved, nonce);\\n    }\\n\\n    /// @notice Forwards the meta-transaction using EIP-2771.\\n    /// @dev Reverts with {ForwarderNotApproved} if the caller has not been previously approved as a forwarder by the sender.\\n    /// @param target The destination of the call (that will receive the meta-transaction).\\n    /// @param data The content of the call (the `sender` address will be appended to it according to EIP-2771).\\n    function forward(address target, bytes calldata data) external payable {\\n        address sender = ERC2771Calldata.msgSender();\\n        if (!_forwarders[sender][msg.sender][target].approved) revert ForwarderNotApproved(sender, msg.sender, target);\\n        target.functionCallWithValue(abi.encodePacked(data, sender), msg.value);\\n    }\\n\\n    /// @notice Approves the forwarder and forwards the meta-transaction using EIP-2771.\\n    /// @dev Reverts with {InvalidEIP1271Signature} if `isEIP1271Signature` is true and the signature is reported invalid by the `sender` contract.\\n    /// @dev Reverts with {WrongSigner} if `isEIP1271Signature` is false and `sender` is not the actual signer.\\n    /// @dev Emits a {ForwarderApproval} event.\\n    /// @param signature Signature by `sender` for approving the forwarder.\\n    /// @param isEIP1271Signature True if `sender` is a contract that provides authorization via EIP-1271.\\n    /// @param target The destination of the call (that will receive the meta-transaction).\\n    /// @param data The content of the call (the `sender` address will be appended to it according to EIP-2771).\\n    function approveAndForward(bytes calldata signature, bool isEIP1271Signature, address target, bytes calldata data) external payable {\\n        address sender = ERC2771Calldata.msgSender();\\n        setForwarderApproval(sender, msg.sender, target, true, signature, isEIP1271Signature);\\n        target.functionCallWithValue(abi.encodePacked(data, sender), msg.value);\\n    }\\n\\n    /// @notice Returns the EIP-712 DOMAIN_SEPARATOR.\\n    /// @return domainSeparator The EIP-712 domain separator.\\n    // solhint-disable-next-line func-name-mixedcase\\n    function DOMAIN_SEPARATOR() public view returns (bytes32 domainSeparator) {\\n        uint256 chainId;\\n        assembly {\\n            chainId := chainid()\\n        }\\n\\n        // in case a fork happens, to support the chain that had to change its chainId, we compute the domain operator\\n        return chainId == _DEPLOYMENT_CHAIN_ID ? _DEPLOYMENT_DOMAIN_SEPARATOR : _calculateDomainSeparator(chainId);\\n    }\\n\\n    /// @notice Gets the current nonce for the sender/forwarder pair.\\n    /// @param sender The sender account.\\n    /// @param forwarder The forwarder account.\\n    /// @param target The target contract.\\n    /// @return nonce The current nonce for the `sender`/`forwarder`/`target` tuple.\\n    function getNonce(address sender, address forwarder, address target) external view returns (uint256 nonce) {\\n        return _forwarders[sender][forwarder][target].nonce;\\n    }\\n\\n    /// @inheritdoc IForwarderRegistry\\n    function isApprovedForwarder(address sender, address forwarder, address target) external view returns (bool) {\\n        return _forwarders[sender][forwarder][target].approved;\\n    }\\n\\n    /// @inheritdoc IERC2771\\n    function isTrustedForwarder(address) external pure returns (bool) {\\n        return true;\\n    }\\n\\n    function _requireValidSignature(\\n        address sender,\\n        address forwarder,\\n        address target,\\n        bool approved,\\n        uint256 nonce,\\n        bytes calldata signature,\\n        bool isEIP1271Signature\\n    ) private view {\\n        bytes memory data = abi.encodePacked(\\n            \\\"\\\\x19\\\\x01\\\",\\n            DOMAIN_SEPARATOR(),\\n            keccak256(abi.encode(APPROVAL_TYPEHASH, sender, forwarder, target, approved, nonce))\\n        );\\n        if (isEIP1271Signature) {\\n            if (IERC1271(sender).isValidSignature(keccak256(data), signature) != EIP1271_MAGICVALUE) revert InvalidEIP1271Signature();\\n        } else {\\n            if (keccak256(data).recover(signature) != sender) revert WrongSigner();\\n        }\\n    }\\n\\n    function _setForwarderApproval(\\n        Forwarder storage forwarderData,\\n        address sender,\\n        address forwarder,\\n        address target,\\n        bool approved,\\n        uint256 nonce\\n    ) private {\\n        forwarderData.approved = approved;\\n        unchecked {\\n            forwarderData.nonce = uint248(nonce + 1);\\n        }\\n        emit ForwarderApproval(sender, forwarder, target, approved, nonce);\\n    }\\n\\n    function _calculateDomainSeparator(uint256 chainId) private view returns (bytes32) {\\n        return\\n            keccak256(\\n                abi.encode(\\n                    keccak256(\\\"EIP712Domain(string name,uint256 chainId,address verifyingContract)\\\"),\\n                    EIP712_DOMAIN_NAME,\\n                    chainId,\\n                    address(this)\\n                )\\n            );\\n    }\\n}\\n\",\"keccak256\":\"0x34e549f9d0ac406d93b093a4f21167a1a1791a29d42af1c36d7ffaa902b88333\",\"license\":\"MIT\"},\"contracts/metatx/interfaces/IERC2771.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title Secure Protocol for Native Meta Transactions.\\n/// @dev See https://eips.ethereum.org/EIPS/eip-2771\\ninterface IERC2771 {\\n    /// @notice Checks whether a forwarder is trusted.\\n    /// @param forwarder The forwarder to check.\\n    /// @return isTrusted True if `forwarder` is trusted, false if not.\\n    function isTrustedForwarder(address forwarder) external view returns (bool isTrusted);\\n}\\n\",\"keccak256\":\"0xba965c7284aabdb77c9b0bd7b20d72e04d9e38d28f8a00c635ad84ab346e9f12\",\"license\":\"MIT\"},\"contracts/metatx/interfaces/IForwarderRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @title Meta-Transactions Forwarder Registry.\\ninterface IForwarderRegistry {\\n    /// @notice Checks whether an account is as an approved meta-transaction forwarder for a sender account to a target contract.\\n    /// @param sender The sender account.\\n    /// @param forwarder The forwarder account.\\n    /// @param target The target contract.\\n    /// @return isApproved True if `forwarder` is an approved meta-transaction forwarder for `sender` to `target`, false otherwise.\\n    function isApprovedForwarder(address sender, address forwarder, address target) external view returns (bool isApproved);\\n}\\n\",\"keccak256\":\"0xdfb17430660876a9214c0cc4c37eb688c565b3c8211151b3413d88d5b4e4c4cb\",\"license\":\"MIT\"},\"contracts/metatx/libraries/ERC2771Calldata.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.28;\\n\\n/// @dev Derived from https://github.com/OpenZeppelin/openzeppelin-contracts (MIT licence)\\n/// @dev See https://eips.ethereum.org/EIPS/eip-2771\\nlibrary ERC2771Calldata {\\n    /// @notice Returns the sender address appended at the end of the calldata, as specified in EIP-2771.\\n    function msgSender() internal pure returns (address sender) {\\n        assembly {\\n            sender := shr(96, calldataload(sub(calldatasize(), 20)))\\n        }\\n    }\\n\\n    /// @notice Returns the calldata while omitting the appended sender address, as specified in EIP-2771.\\n    function msgData() internal pure returns (bytes calldata data) {\\n        unchecked {\\n            return msg.data[:msg.data.length - 20];\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x8de5057207aa02ba450c95d802f3f77736cafeb1c4e516d6989c27ff5fa1315d\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60c0604052348015600f57600080fd5b50466080818152604080517f8cad95687ba82c2ce50e74f7b754645e5117c3a5bec8151c0726d5857980a8666020808301919091527f06a520fda4ca688235391b02e357c6a65eb2a3bb40a69c0199f3f7f9cccee041828401526060820185905230828501528251808303909401845260a0909101909152815191012060a0525060805160a0516111366100b56000396000610378015260006102d101526111366000f3fe60806040526004361061007b5760003560e01c80636fadcf721161004e5780636fadcf721461011b5780639438f7f31461012e578063953135f514610141578063ae3c8c2d1461016157600080fd5b8063019a2028146100805780630c695d17146100b55780633644e515146100d7578063572b6c05146100fa575b600080fd5b34801561008c57600080fd5b506100a061009b366004610d61565b6101dd565b60405190151581526020015b60405180910390f35b3480156100c157600080fd5b506100d56100d0366004610dfd565b610246565b005b3480156100e357600080fd5b506100ec6102cc565b6040519081526020016100ac565b34801561010657600080fd5b506100a0610115366004610e94565b50600190565b6100d5610129366004610eaf565b61039e565b6100d561013c366004610f02565b6104ed565b34801561014d57600080fd5b506100d561015c366004610f99565b610546565b34801561016d57600080fd5b506100ec61017c366004610d61565b73ffffffffffffffffffffffffffffffffffffffff928316600090815260208181526040808320948616835293815283822092909416815292529020547effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1690565b73ffffffffffffffffffffffffffffffffffffffff83811660009081526020818152604080832086851684528252808320938516835292905220547f0100000000000000000000000000000000000000000000000000000000000000900460ff165b9392505050565b73ffffffffffffffffffffffffffffffffffffffff8088166000908152602081815260408083208a85168452825280832093891683529290522080547effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff166102b389898989858a8a8a6105bd565b6102c1828a8a8a8a86610848565b505050505050505050565b6000467f0000000000000000000000000000000000000000000000000000000000000000811461037657604080517f8cad95687ba82c2ce50e74f7b754645e5117c3a5bec8151c0726d5857980a8666020808301919091527f06a520fda4ca688235391b02e357c6a65eb2a3bb40a69c0199f3f7f9cccee0418284015260608201849052306080808401919091528351808403909101815260a09092019092528051910120610398565b7f00000000000000000000000000000000000000000000000000000000000000005b91505090565b367fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec013560601c600081815260208181526040808320338452825280832073ffffffffffffffffffffffffffffffffffffffff881684529091529020547f0100000000000000000000000000000000000000000000000000000000000000900460ff16610482576040517f865e4ca900000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff8083166004830152336024830152851660448201526064015b60405180910390fd5b6104e683838360405160200161049a93929190610fd3565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe081840301815291905273ffffffffffffffffffffffffffffffffffffffff86169034610924565b5050505050565b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec36013560601c61052481338660018b8b8b610246565b61053c83838360405160200161049a93929190610fd3565b5050505050505050565b3360008181526020818152604080832073ffffffffffffffffffffffffffffffffffffffff888116855290835281842090871684529091529020805490916105b7918391908790879087907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff16610848565b50505050565b60006105c76102cc565b604080517f1d89f51cffda0adbc9dbff2f94eeaa6d10d8c3e27a39a69c4c7a29ebb3e1d284602082015273ffffffffffffffffffffffffffffffffffffffff808d1692820192909252818b166060820152908916608082015287151560a082015260c0810187905260e0016040516020818303038152906040528051906020012060405160200161068a9291907f190100000000000000000000000000000000000000000000000000000000000081526002810192909252602282015260420190565b6040516020818303038152906040529050811561079d57805160208201206040517f1626ba7e000000000000000000000000000000000000000000000000000000008082529173ffffffffffffffffffffffffffffffffffffffff8c1691631626ba7e916106fe918990899060040161100c565b602060405180830381865afa15801561071b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061073f9190611060565b7fffffffff000000000000000000000000000000000000000000000000000000001614610798576040517f5d52cbe300000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6102c1565b8873ffffffffffffffffffffffffffffffffffffffff166107fb85858080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152505085516020870120929150506109ee565b73ffffffffffffffffffffffffffffffffffffffff16146102c1576040517fa7932e6a00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600181017effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff168215157f0100000000000000000000000000000000000000000000000000000000000000027fff000000000000000000000000000000000000000000000000000000000000001617865560405173ffffffffffffffffffffffffffffffffffffffff80851691868216918816907f61036a3baab62925c6646f1eb84438957e2f9b3c52d084e099f955e04788b0489061091490879087909115158252602082015260400190565b60405180910390a4505050505050565b606081471015610969576040517fcf47918100000000000000000000000000000000000000000000000000000000815247600482015260248101839052604401610479565b6000808573ffffffffffffffffffffffffffffffffffffffff16848660405161099291906110a2565b60006040518083038185875af1925050503d80600081146109cf576040519150601f19603f3d011682016040523d82523d6000602084013e6109d4565b606091505b50915091506109e4868383610a18565b9695505050505050565b6000806000806109fe8686610aa7565b925092509250610a0e8282610af4565b5090949350505050565b606082610a2d57610a2882610bfc565b61023f565b8151158015610a51575073ffffffffffffffffffffffffffffffffffffffff84163b155b15610aa0576040517f9996b31500000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff85166004820152602401610479565b508061023f565b60008060008351604103610ae15760208401516040850151606086015160001a610ad388828585610c3e565b955095509550505050610aed565b50508151600091506002905b9250925092565b6000826003811115610b0857610b086110d1565b03610b11575050565b6001826003811115610b2557610b256110d1565b03610b5c576040517ff645eedf00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6002826003811115610b7057610b706110d1565b03610baa576040517ffce698f700000000000000000000000000000000000000000000000000000000815260048101829052602401610479565b6003826003811115610bbe57610bbe6110d1565b03610bf8576040517fd78bce0c00000000000000000000000000000000000000000000000000000000815260048101829052602401610479565b5050565b805115610c0c5780518082602001fd5b6040517fd6bda27500000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600080807f7fffffffffffffffffffffffffffffff5d576e7357a4501ddfe92f46681b20a0841115610c795750600091506003905082610d2e565b604080516000808252602082018084528a905260ff891692820192909252606081018790526080810186905260019060a0016020604051602081039080840390855afa158015610ccd573d6000803e3d6000fd5b50506040517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0015191505073ffffffffffffffffffffffffffffffffffffffff8116610d2457506000925060019150829050610d2e565b9250600091508190505b9450945094915050565b803573ffffffffffffffffffffffffffffffffffffffff81168114610d5c57600080fd5b919050565b600080600060608486031215610d7657600080fd5b610d7f84610d38565b9250610d8d60208501610d38565b9150610d9b60408501610d38565b90509250925092565b80358015158114610d5c57600080fd5b60008083601f840112610dc657600080fd5b50813567ffffffffffffffff811115610dde57600080fd5b602083019150836020828501011115610df657600080fd5b9250929050565b600080600080600080600060c0888a031215610e1857600080fd5b610e2188610d38565b9650610e2f60208901610d38565b9550610e3d60408901610d38565b9450610e4b60608901610da4565b9350608088013567ffffffffffffffff811115610e6757600080fd5b610e738a828b01610db4565b9094509250610e86905060a08901610da4565b905092959891949750929550565b600060208284031215610ea657600080fd5b61023f82610d38565b600080600060408486031215610ec457600080fd5b610ecd84610d38565b9250602084013567ffffffffffffffff811115610ee957600080fd5b610ef586828701610db4565b9497909650939450505050565b60008060008060008060808789031215610f1b57600080fd5b863567ffffffffffffffff811115610f3257600080fd5b610f3e89828a01610db4565b9097509550610f51905060208801610da4565b9350610f5f60408801610d38565b9250606087013567ffffffffffffffff811115610f7b57600080fd5b610f8789828a01610db4565b979a9699509497509295939492505050565b600080600060608486031215610fae57600080fd5b610fb784610d38565b9250610fc560208501610d38565b9150610d9b60408501610da4565b8284823760609190911b7fffffffffffffffffffffffffffffffffffffffff000000000000000000000000169101908152601401919050565b83815260406020820152816040820152818360608301376000818301606090810191909152601f9092017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe016010192915050565b60006020828403121561107257600080fd5b81517fffffffff000000000000000000000000000000000000000000000000000000008116811461023f57600080fd5b6000825160005b818110156110c357602081860181015185830152016110a9565b506000920191825250919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fdfea2646970667358221220179844ac40e4a204b24d8384002a3cbccd70823ee1fcb8e915aec10e1fe5574e64736f6c634300081c0033",
+  "deployedBytecode": "0x60806040526004361061007b5760003560e01c80636fadcf721161004e5780636fadcf721461011b5780639438f7f31461012e578063953135f514610141578063ae3c8c2d1461016157600080fd5b8063019a2028146100805780630c695d17146100b55780633644e515146100d7578063572b6c05146100fa575b600080fd5b34801561008c57600080fd5b506100a061009b366004610d61565b6101dd565b60405190151581526020015b60405180910390f35b3480156100c157600080fd5b506100d56100d0366004610dfd565b610246565b005b3480156100e357600080fd5b506100ec6102cc565b6040519081526020016100ac565b34801561010657600080fd5b506100a0610115366004610e94565b50600190565b6100d5610129366004610eaf565b61039e565b6100d561013c366004610f02565b6104ed565b34801561014d57600080fd5b506100d561015c366004610f99565b610546565b34801561016d57600080fd5b506100ec61017c366004610d61565b73ffffffffffffffffffffffffffffffffffffffff928316600090815260208181526040808320948616835293815283822092909416815292529020547effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1690565b73ffffffffffffffffffffffffffffffffffffffff83811660009081526020818152604080832086851684528252808320938516835292905220547f0100000000000000000000000000000000000000000000000000000000000000900460ff165b9392505050565b73ffffffffffffffffffffffffffffffffffffffff8088166000908152602081815260408083208a85168452825280832093891683529290522080547effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff166102b389898989858a8a8a6105bd565b6102c1828a8a8a8a86610848565b505050505050505050565b6000467f0000000000000000000000000000000000000000000000000000000000000000811461037657604080517f8cad95687ba82c2ce50e74f7b754645e5117c3a5bec8151c0726d5857980a8666020808301919091527f06a520fda4ca688235391b02e357c6a65eb2a3bb40a69c0199f3f7f9cccee0418284015260608201849052306080808401919091528351808403909101815260a09092019092528051910120610398565b7f00000000000000000000000000000000000000000000000000000000000000005b91505090565b367fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec013560601c600081815260208181526040808320338452825280832073ffffffffffffffffffffffffffffffffffffffff881684529091529020547f0100000000000000000000000000000000000000000000000000000000000000900460ff16610482576040517f865e4ca900000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff8083166004830152336024830152851660448201526064015b60405180910390fd5b6104e683838360405160200161049a93929190610fd3565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe081840301815291905273ffffffffffffffffffffffffffffffffffffffff86169034610924565b5050505050565b7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffec36013560601c61052481338660018b8b8b610246565b61053c83838360405160200161049a93929190610fd3565b5050505050505050565b3360008181526020818152604080832073ffffffffffffffffffffffffffffffffffffffff888116855290835281842090871684529091529020805490916105b7918391908790879087907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff16610848565b50505050565b60006105c76102cc565b604080517f1d89f51cffda0adbc9dbff2f94eeaa6d10d8c3e27a39a69c4c7a29ebb3e1d284602082015273ffffffffffffffffffffffffffffffffffffffff808d1692820192909252818b166060820152908916608082015287151560a082015260c0810187905260e0016040516020818303038152906040528051906020012060405160200161068a9291907f190100000000000000000000000000000000000000000000000000000000000081526002810192909252602282015260420190565b6040516020818303038152906040529050811561079d57805160208201206040517f1626ba7e000000000000000000000000000000000000000000000000000000008082529173ffffffffffffffffffffffffffffffffffffffff8c1691631626ba7e916106fe918990899060040161100c565b602060405180830381865afa15801561071b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061073f9190611060565b7fffffffff000000000000000000000000000000000000000000000000000000001614610798576040517f5d52cbe300000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6102c1565b8873ffffffffffffffffffffffffffffffffffffffff166107fb85858080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152505085516020870120929150506109ee565b73ffffffffffffffffffffffffffffffffffffffff16146102c1576040517fa7932e6a00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600181017effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff168215157f0100000000000000000000000000000000000000000000000000000000000000027fff000000000000000000000000000000000000000000000000000000000000001617865560405173ffffffffffffffffffffffffffffffffffffffff80851691868216918816907f61036a3baab62925c6646f1eb84438957e2f9b3c52d084e099f955e04788b0489061091490879087909115158252602082015260400190565b60405180910390a4505050505050565b606081471015610969576040517fcf47918100000000000000000000000000000000000000000000000000000000815247600482015260248101839052604401610479565b6000808573ffffffffffffffffffffffffffffffffffffffff16848660405161099291906110a2565b60006040518083038185875af1925050503d80600081146109cf576040519150601f19603f3d011682016040523d82523d6000602084013e6109d4565b606091505b50915091506109e4868383610a18565b9695505050505050565b6000806000806109fe8686610aa7565b925092509250610a0e8282610af4565b5090949350505050565b606082610a2d57610a2882610bfc565b61023f565b8151158015610a51575073ffffffffffffffffffffffffffffffffffffffff84163b155b15610aa0576040517f9996b31500000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff85166004820152602401610479565b508061023f565b60008060008351604103610ae15760208401516040850151606086015160001a610ad388828585610c3e565b955095509550505050610aed565b50508151600091506002905b9250925092565b6000826003811115610b0857610b086110d1565b03610b11575050565b6001826003811115610b2557610b256110d1565b03610b5c576040517ff645eedf00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6002826003811115610b7057610b706110d1565b03610baa576040517ffce698f700000000000000000000000000000000000000000000000000000000815260048101829052602401610479565b6003826003811115610bbe57610bbe6110d1565b03610bf8576040517fd78bce0c00000000000000000000000000000000000000000000000000000000815260048101829052602401610479565b5050565b805115610c0c5780518082602001fd5b6040517fd6bda27500000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600080807f7fffffffffffffffffffffffffffffff5d576e7357a4501ddfe92f46681b20a0841115610c795750600091506003905082610d2e565b604080516000808252602082018084528a905260ff891692820192909252606081018790526080810186905260019060a0016020604051602081039080840390855afa158015610ccd573d6000803e3d6000fd5b50506040517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0015191505073ffffffffffffffffffffffffffffffffffffffff8116610d2457506000925060019150829050610d2e565b9250600091508190505b9450945094915050565b803573ffffffffffffffffffffffffffffffffffffffff81168114610d5c57600080fd5b919050565b600080600060608486031215610d7657600080fd5b610d7f84610d38565b9250610d8d60208501610d38565b9150610d9b60408501610d38565b90509250925092565b80358015158114610d5c57600080fd5b60008083601f840112610dc657600080fd5b50813567ffffffffffffffff811115610dde57600080fd5b602083019150836020828501011115610df657600080fd5b9250929050565b600080600080600080600060c0888a031215610e1857600080fd5b610e2188610d38565b9650610e2f60208901610d38565b9550610e3d60408901610d38565b9450610e4b60608901610da4565b9350608088013567ffffffffffffffff811115610e6757600080fd5b610e738a828b01610db4565b9094509250610e86905060a08901610da4565b905092959891949750929550565b600060208284031215610ea657600080fd5b61023f82610d38565b600080600060408486031215610ec457600080fd5b610ecd84610d38565b9250602084013567ffffffffffffffff811115610ee957600080fd5b610ef586828701610db4565b9497909650939450505050565b60008060008060008060808789031215610f1b57600080fd5b863567ffffffffffffffff811115610f3257600080fd5b610f3e89828a01610db4565b9097509550610f51905060208801610da4565b9350610f5f60408801610d38565b9250606087013567ffffffffffffffff811115610f7b57600080fd5b610f8789828a01610db4565b979a9699509497509295939492505050565b600080600060608486031215610fae57600080fd5b610fb784610d38565b9250610fc560208501610d38565b9150610d9b60408501610da4565b8284823760609190911b7fffffffffffffffffffffffffffffffffffffffff000000000000000000000000169101908152601401919050565b83815260406020820152816040820152818360608301376000818301606090810191909152601f9092017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe016010192915050565b60006020828403121561107257600080fd5b81517fffffffff000000000000000000000000000000000000000000000000000000008116811461023f57600080fd5b6000825160005b818110156110c357602081860181015185830152016110a9565b506000920191825250919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fdfea2646970667358221220179844ac40e4a204b24d8384002a3cbccd70823ee1fcb8e915aec10e1fe5574e64736f6c634300081c0033",
+  "devdoc": {
+    "details": "This contract should be deployed uniquely per network, in a non-upgradeable way.",
+    "errors": {
+      "AddressEmptyCode(address)": [
+        {
+          "details": "There's no code at `target` (it is not a contract)."
+        }
+      ],
+      "ECDSAInvalidSignature()": [
+        {
+          "details": "The signature derives the `address(0)`."
+        }
+      ],
+      "ECDSAInvalidSignatureLength(uint256)": [
+        {
+          "details": "The signature has an invalid length."
+        }
+      ],
+      "ECDSAInvalidSignatureS(bytes32)": [
+        {
+          "details": "The signature has an S value that is in the upper half order."
+        }
+      ],
+      "FailedCall()": [
+        {
+          "details": "A call to an address target failed. The target may have reverted."
+        }
+      ],
+      "InsufficientBalance(uint256,uint256)": [
+        {
+          "details": "The ETH balance of the account is not enough to perform the operation."
+        }
+      ]
+    },
+    "events": {
+      "ForwarderApproval(address,address,address,bool,uint256)": {
+        "params": {
+          "approved": "True for an approval, false for a disapproval.",
+          "forwarder": "The account approved or disapproved as forwarder.",
+          "nonce": "The `sender`'s account nonce before the approval change.",
+          "sender": "The account for which `forwarder` is approved or disapproved.",
+          "target": "The target contract approved or disapproved as forwarder."
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "DOMAIN_SEPARATOR()": {
+        "returns": {
+          "domainSeparator": "The EIP-712 domain separator."
+        }
+      },
+      "approveAndForward(bytes,bool,address,bytes)": {
+        "details": "Reverts with {InvalidEIP1271Signature} if `isEIP1271Signature` is true and the signature is reported invalid by the `sender` contract.Reverts with {WrongSigner} if `isEIP1271Signature` is false and `sender` is not the actual signer.Emits a {ForwarderApproval} event.",
+        "params": {
+          "data": "The content of the call (the `sender` address will be appended to it according to EIP-2771).",
+          "isEIP1271Signature": "True if `sender` is a contract that provides authorization via EIP-1271.",
+          "signature": "Signature by `sender` for approving the forwarder.",
+          "target": "The destination of the call (that will receive the meta-transaction)."
+        }
+      },
+      "forward(address,bytes)": {
+        "details": "Reverts with {ForwarderNotApproved} if the caller has not been previously approved as a forwarder by the sender.",
+        "params": {
+          "data": "The content of the call (the `sender` address will be appended to it according to EIP-2771).",
+          "target": "The destination of the call (that will receive the meta-transaction)."
+        }
+      },
+      "getNonce(address,address,address)": {
+        "params": {
+          "forwarder": "The forwarder account.",
+          "sender": "The sender account.",
+          "target": "The target contract."
+        },
+        "returns": {
+          "nonce": "The current nonce for the `sender`/`forwarder`/`target` tuple."
+        }
+      },
+      "isApprovedForwarder(address,address,address)": {
+        "params": {
+          "forwarder": "The forwarder account.",
+          "sender": "The sender account.",
+          "target": "The target contract."
+        },
+        "returns": {
+          "_0": "True if `forwarder` is an approved meta-transaction forwarder for `sender` to `target`, false otherwise."
+        }
+      },
+      "isTrustedForwarder(address)": {
+        "params": {
+          "forwarder": "The forwarder to check."
+        },
+        "returns": {
+          "_0": "True if `forwarder` is trusted, false if not."
+        }
+      },
+      "setForwarderApproval(address,address,address,bool,bytes,bool)": {
+        "details": "Reverts with {InvalidEIP1271Signature} if `isEIP1271Signature` is true and the signature is reported invalid by the `sender` contract.Reverts with {WrongSigner} if `isEIP1271Signature` is false and `sender` is not the actual signer.Emits a {ForwarderApproval} event.",
+        "params": {
+          "approved": "Whether to approve or disapprove the forwarder.",
+          "forwarder": "The address of the forwarder to change the approval of.",
+          "isEIP1271Signature": "True if `sender` is a contract that provides authorization via EIP-1271.",
+          "sender": "The address which signed the approval of the approval.",
+          "signature": "Signature by `sender` for approving forwarder.",
+          "target": "The target contract to change the approval of."
+        }
+      },
+      "setForwarderApproval(address,address,bool)": {
+        "details": "Emits a {ForwarderApproval} event.",
+        "params": {
+          "forwarder": "The address of the forwarder to change the approval of."
+        }
+      }
+    },
+    "title": "Meta-Transactions Forwarder Registry.",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "ForwarderApproval(address,address,address,bool,uint256)": {
+        "notice": "Emitted when a forwarder is approved or disapproved."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "DOMAIN_SEPARATOR()": {
+        "notice": "Returns the EIP-712 DOMAIN_SEPARATOR."
+      },
+      "approveAndForward(bytes,bool,address,bytes)": {
+        "notice": "Approves the forwarder and forwards the meta-transaction using EIP-2771."
+      },
+      "forward(address,bytes)": {
+        "notice": "Forwards the meta-transaction using EIP-2771."
+      },
+      "getNonce(address,address,address)": {
+        "notice": "Gets the current nonce for the sender/forwarder pair."
+      },
+      "isApprovedForwarder(address,address,address)": {
+        "notice": "Checks whether an account is as an approved meta-transaction forwarder for a sender account to a target contract."
+      },
+      "isTrustedForwarder(address)": {
+        "notice": "Checks whether a forwarder is trusted."
+      },
+      "setForwarderApproval(address,address,address,bool,bytes,bool)": {
+        "notice": "Approves or disapproves a forwarder using a signature."
+      },
+      "setForwarderApproval(address,address,bool)": {
+        "notice": "Approves or disapproves a forwarder for the sender."
+      }
+    },
+    "notice": "Users can allow specific EIP-2771 forwarders to forward meta-transactions on their behalf, per target contract.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 12321,
+        "contract": "contracts/metatx/ForwarderRegistry.sol:ForwarderRegistry",
+        "label": "_forwarders",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_mapping(t_address,t_mapping(t_address,t_struct(Forwarder)12287_storage)))"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_mapping(t_address,t_mapping(t_address,t_struct(Forwarder)12287_storage)))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(address => mapping(address => struct ForwarderRegistry.Forwarder)))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_mapping(t_address,t_struct(Forwarder)12287_storage))"
+      },
+      "t_mapping(t_address,t_mapping(t_address,t_struct(Forwarder)12287_storage))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(address => struct ForwarderRegistry.Forwarder))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_struct(Forwarder)12287_storage)"
+      },
+      "t_mapping(t_address,t_struct(Forwarder)12287_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct ForwarderRegistry.Forwarder)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Forwarder)12287_storage"
+      },
+      "t_struct(Forwarder)12287_storage": {
+        "encoding": "inplace",
+        "label": "struct ForwarderRegistry.Forwarder",
+        "members": [
+          {
+            "astId": 12284,
+            "contract": "contracts/metatx/ForwarderRegistry.sol:ForwarderRegistry",
+            "label": "nonce",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint248"
+          },
+          {
+            "astId": 12286,
+            "contract": "contracts/metatx/ForwarderRegistry.sol:ForwarderRegistry",
+            "label": "approved",
+            "offset": 31,
+            "slot": "0",
+            "type": "t_bool"
+          }
+        ],
+        "numberOfBytes": "32"
+      },
+      "t_uint248": {
+        "encoding": "inplace",
+        "label": "uint248",
+        "numberOfBytes": "31"
+      }
+    }
+  }
+}
