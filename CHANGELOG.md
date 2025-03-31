@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.1
+
+### Bugfixes
+
+- Added package `resolutions` for `@ethersproject/**@5`, `elliptic`, `axios` and `cookie` to fix security issues in transitive dependencies.
+
 ## 4.0.0
 
 ### Breaking changes
