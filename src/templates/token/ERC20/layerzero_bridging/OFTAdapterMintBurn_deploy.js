@@ -13,7 +13,7 @@ module.exports = function (erc20DeploymentName, delegate, options = {}) {
       {name: 'delegate', value: getNamedAccount(delegate)},
     ],
   });
-  migration.skip = skipNetworksTagged(['dev']);
+  migration.skip = skipNetworksTagged('dev');
   migration.dependencies = [`${erc20DeploymentName}_deploy`];
   migration.tags = [erc20DeploymentName];
   return migration;
