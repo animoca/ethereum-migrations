@@ -2,7 +2,7 @@ const {ethers} = require('hardhat');
 const {templatedMigration} = require('../../../../utils');
 const {multiSkip, skipNetworksTagged, skipChainTypesExceptFor} = require('../../../../../helpers/common');
 
-module.exports = function (rootTunnelName, rootTokenName, options = {}) {
+module.exports = function (rootTunnelName, rootTokenName, childTokenName, options = {}) {
   const migration = templatedMigration(async (hre) => {
     const {getArtifact, execute, get, read, log} = hre.deployments;
 
@@ -17,7 +17,7 @@ module.exports = function (rootTunnelName, rootTokenName, options = {}) {
     await execute(rootTunnelName, executeOptions, 'mapToken', RootToken.address);
     const childToken = await read(rootTunnelName, 'rootToChildToken', RootToken.address);
     const FxERC20Interface = await getArtifact('IFxERC20');
-    hre.companionNetworks['polygon'].deployments.save(`Polygon${rootTokenName}`, {
+    hre.companionNetworks['polygon'].deployments.save(childTokenName, {
       abi: [...RootToken.abi, ...FxERC20Interface.abi],
       address: childToken,
     });

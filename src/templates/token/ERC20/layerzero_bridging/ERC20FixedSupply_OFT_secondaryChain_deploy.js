@@ -1,8 +1,9 @@
+const {ethers} = require('hardhat');
 const ERC20FixedSupply_deploy = require('../ERC20FixedSupply_deploy');
 
 module.exports = function (deploymentName, primaryChainDeploymentName, primaryChainType, tokenName, tokenSymbol, tokenDecimals, options = {}) {
   const holders = async (hre) => {
-    const {ethers, getNamedAccounts} = hre;
+    const {getNamedAccounts} = hre;
     const from = (await getNamedAccounts())[options.from || 'deployer'];
     const signer = await ethers.getSigner(from);
     // compute the address of the OFTAdapter which will be deployed right after this contract
