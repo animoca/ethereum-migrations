@@ -14,7 +14,7 @@ module.exports = function (erc20DeploymentName, delegate, options = {}) {
     ],
     deterministicDeployment: false, // due to pre-computation of the deployment address, we can't use deterministic deployment
   });
-  migration.skip = skipNetworksTagged(['dev']);
+  migration.skip = skipNetworksTagged('dev');
   migration.dependencies = [`${erc20DeploymentName}_deploy`];
   migration.tags = [erc20DeploymentName];
   return migration;

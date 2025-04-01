@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.1.1
+
+### Bugfixes
+
+- Fixed skip flag in LayerZero migration templates.
+
 ## 4.1.0
 
 ### New features
