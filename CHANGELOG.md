@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.1.0
+
+### New features
+
+- Added a parameter to specify the child token deployment name in `FxERC20RootTunnel_mapToken` migration template.
+
 ## 4.0.1
 
 ### Bugfixes
