@@ -5,7 +5,7 @@
 ### Bugfixes
 
 - Fixed wrong addresses of Chainlink VRF Wrapper V2 in the contract specified in TokenMetadataResolverRandomizedReveal@4.1 and @3.0 deployment files.
-- Removed TokenMetadataResolverRandomizedReveal@4.1 and @3.0 deployment files for Base and Base Sepolia becuase Chainlink VRF V2 does not support these networks.
+- Removed TokenMetadataResolverRandomizedReveal@4.1 and @3.0 deployment files for Base and Base Sepolia because Chainlink VRF V2 does not support these networks.
 
 ## 4.1.1
 
