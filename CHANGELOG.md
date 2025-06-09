@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.1.2
+
+### Bugfixes
+
+- Fixed wrong address of Chainlink VRF Wrapper V2 in the contract specified in TokenMetadataResolverRandomizedReveal@4.1 deployment file.
+
 ## 4.1.1
 
 ### Bugfixes
