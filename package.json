@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "Base dependency and core migrations for solidity smart-contracts migrations projects",
   "keywords": [
     "animoca",
