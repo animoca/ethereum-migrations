@@ -13,4 +13,4 @@ module.exports = Contract_deploy('TokenMetadataResolverRandomizedReveal@4.1', {
   deterministicDeployment: true,
 });
 module.exports.tags = ['TokenMetadata'];
-module.exports.skip = skipNetworks('base');
+module.exports.skip = skipNetworksTagged('base');
