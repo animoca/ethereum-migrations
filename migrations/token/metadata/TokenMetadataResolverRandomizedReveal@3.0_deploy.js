@@ -1,5 +1,6 @@
 const {ethers} = require('hardhat');
 const {getContractAddressOrFallback} = require('../../../src/helpers/templates');
+const {skipNetworksTagged} = require('../../../src/helpers/common');
 const Contract_deploy = require('../../../src/templates/Contract/deploy');
 
 module.exports = Contract_deploy('TokenMetadataResolverRandomizedReveal@3.0', {
@@ -11,4 +12,5 @@ module.exports = Contract_deploy('TokenMetadataResolverRandomizedReveal@3.0', {
   ],
   deterministicDeployment: true,
 });
+module.exports.skip = skipNetworksTagged('base');
 module.exports.tags = ['TokenMetadata'];

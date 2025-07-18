@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.9
+
+### Bugfixes
+
+- Skipped TokenMetadataResolverRandomizedReveal deployment on base networks (ChainLink VRF not supported).
+
 ## 3.0.8
 
 ### Bugfixes
