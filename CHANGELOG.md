@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.1.3
+
+### Improvements
+
+- Removed the custom etherscan api urls per network.
+
 ## 4.1.2
 
 ### Bugfixes
