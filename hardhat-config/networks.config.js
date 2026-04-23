@@ -95,12 +95,6 @@ module.exports = {
       companionNetworks: {
         ethereum: 'sepolia',
       },
-      verify: {
-        url: 'https://api-amoy.polygonscan.com',
-        etherscan: {
-          apiUrl: 'https://api-amoy.polygonscan.com',
-        },
-      },
     },
 
     //----------------------------//
@@ -196,12 +190,6 @@ module.exports = {
         ethereum: 'sepolia',
         bsc: 'bsctest',
       },
-      verify: {
-        url: 'https://api-sepolia.arbiscan.io',
-        etherscan: {
-          apiUrl: 'https://api-sepolia.arbiscan.io',
-        },
-      },
     },
 
     //----------------------------//
@@ -218,12 +206,6 @@ module.exports = {
       companionNetworks: {
         ethereum: 'mainnet',
       },
-      verify: {
-        url: 'https://api.basescan.org',
-        etherscan: {
-          apiUrl: 'https://api.basescan.org',
-        },
-      },
     },
 
     basesepolia: {
@@ -235,12 +217,6 @@ module.exports = {
       eid: 40245,
       companionNetworks: {
         ethereum: 'sepolia',
-      },
-      verify: {
-        url: 'https://api-sepolia.basescan.org',
-        etherscan: {
-          apiUrl: 'https://api-sepolia.basescan.org',
-        },
       },
     },
   },
