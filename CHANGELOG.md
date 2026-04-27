@@ -1,5 +1,11 @@
 # Changelog
 
+## 54.0.0
+
+### Breaking changes
+
+- Updated to dependency version `@animoca/ethereum-contracts@5x`.
+
 ## 4.1.3
 
 ### Improvements

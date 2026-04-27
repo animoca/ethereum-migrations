@@ -1,0 +1,76 @@
+{
+  "address": "0xA10be962d69164Bb1Da4630F51ED0cFcC0c58E5f",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x9b866816016b1e582a0828800f31ea4c3621959246d8c99f735026eecb66b8f0",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x80b12BD0F1793BF6CEa767Fa83Eb2068eaa17DC8",
+    "contractAddress": null,
+    "transactionIndex": 108,
+    "gasUsed": "135558",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "transactionHash": "0x9b866816016b1e582a0828800f31ea4c3621959246d8c99f735026eecb66b8f0",
+    "logs": [],
+    "blockNumber": 45241967,
+    "cumulativeGasUsed": "17324453",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "e58ccaacfa173ece9d248247c3661afc",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.30+commit.73712a01\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).\",\"kind\":\"dev\",\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"Note: This function call must use less than 30 000 gas.\",\"params\":{\"interfaceId\":\"the interface identifier to test.\"},\"returns\":{\"_0\":\"True if the interface is supported, false if `interfaceId` is `0xffffffff` or if the interface is not supported.\"}}},\"title\":\"ERC165 Interface Detection Standard (facet version).\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"supportsInterface(bytes4)\":{\"notice\":\"Returns whether this contract implements a given interface.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/introspection/facets/InterfaceDetectionFacet.sol\":\"InterfaceDetectionFacet\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":99999},\"remappings\":[],\"viaIR\":true},\"sources\":{\"contracts/introspection/InterfaceDetection.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.30;\\n\\nimport {IERC165} from \\\"./interfaces/IERC165.sol\\\";\\nimport {InterfaceDetectionStorage} from \\\"./libraries/InterfaceDetectionStorage.sol\\\";\\n\\n/// @title ERC165 Interface Detection Standard (immutable or proxiable version).\\n/// @dev This contract is to be used via inheritance in an immutable (non-proxied) or proxied implementation.\\nabstract contract InterfaceDetection is IERC165 {\\n    using InterfaceDetectionStorage for InterfaceDetectionStorage.Layout;\\n\\n    /// @inheritdoc IERC165\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool) {\\n        return InterfaceDetectionStorage.layout().supportsInterface(interfaceId);\\n    }\\n}\\n\",\"keccak256\":\"0xe354c1a6cda80cd07b511f86a4c4fa1ba5171fb855ce640f5736eee508a45544\",\"license\":\"MIT\"},\"contracts/introspection/errors/InterfaceDetectionErrors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.30;\\n\\n/// @notice Thrown when setting the illegal interfaceId 0xffffffff.\\nerror IllegalInterfaceId();\\n\",\"keccak256\":\"0x9e7379cf94fb7567f0992b51f0622134da6512bb9ee91631c28c20bd83111ba1\",\"license\":\"MIT\"},\"contracts/introspection/facets/InterfaceDetectionFacet.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.30;\\n\\nimport {InterfaceDetection} from \\\"./../InterfaceDetection.sol\\\";\\n\\n/// @title ERC165 Interface Detection Standard (facet version).\\n/// @dev This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).\\ncontract InterfaceDetectionFacet is InterfaceDetection {}\\n\",\"keccak256\":\"0x9aa8304b156eca1d56ee3743064f4d547e547ada2900784560740456c78975ee\",\"license\":\"MIT\"},\"contracts/introspection/interfaces/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.30;\\n\\n/// @title ERC165 Interface Detection Standard.\\n/// @dev See https://eips.ethereum.org/EIPS/eip-165.\\n/// @dev Note: The ERC-165 identifier for this interface is 0x01ffc9a7.\\ninterface IERC165 {\\n    /// @notice Returns whether this contract implements a given interface.\\n    /// @dev Note: This function call must use less than 30 000 gas.\\n    /// @param interfaceId the interface identifier to test.\\n    /// @return supported True if the interface is supported, false if `interfaceId` is `0xffffffff` or if the interface is not supported.\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool supported);\\n}\\n\",\"keccak256\":\"0x605930bfacdebf5cceae8ab9ff2a19fca89127e0b2724386ae09131d91114ab0\",\"license\":\"MIT\"},\"contracts/introspection/libraries/InterfaceDetectionStorage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.30;\\n\\nimport {IllegalInterfaceId} from \\\"./../errors/InterfaceDetectionErrors.sol\\\";\\nimport {IERC165} from \\\"./../interfaces/IERC165.sol\\\";\\n\\nlibrary InterfaceDetectionStorage {\\n    struct Layout {\\n        mapping(bytes4 => bool) supportedInterfaces;\\n    }\\n\\n    bytes32 internal constant LAYOUT_STORAGE_SLOT = bytes32(uint256(keccak256(\\\"animoca.core.introspection.InterfaceDetection.storage\\\")) - 1);\\n\\n    bytes4 internal constant ILLEGAL_INTERFACE_ID = 0xffffffff;\\n\\n    /// @notice Sets or unsets an ERC165 interface.\\n    /// @dev Revertswith {IllegalInterfaceId} if `interfaceId` is `0xffffffff`.\\n    /// @param interfaceId the interface identifier.\\n    /// @param supported True to set the interface, false to unset it.\\n    function setSupportedInterface(Layout storage s, bytes4 interfaceId, bool supported) internal {\\n        if (interfaceId == ILLEGAL_INTERFACE_ID) revert IllegalInterfaceId();\\n        s.supportedInterfaces[interfaceId] = supported;\\n    }\\n\\n    /// @notice Returns whether this contract implements a given interface.\\n    /// @dev Note: This function call must use less than 30 000 gas.\\n    /// @param interfaceId The interface identifier to test.\\n    /// @return supported True if the interface is supported, false if `interfaceId` is `0xffffffff` or if the interface is not supported.\\n    function supportsInterface(Layout storage s, bytes4 interfaceId) internal view returns (bool supported) {\\n        if (interfaceId == ILLEGAL_INTERFACE_ID) {\\n            return false;\\n        }\\n        if (interfaceId == type(IERC165).interfaceId) {\\n            return true;\\n        }\\n        return s.supportedInterfaces[interfaceId];\\n    }\\n\\n    function layout() internal pure returns (Layout storage s) {\\n        bytes32 position = LAYOUT_STORAGE_SLOT;\\n        assembly {\\n            s.slot := position\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xe0edb89cdeb281041ad8f84e11574dcc7540356e5c4b79c2be5aa2cb478add1e\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60808060405234601557610181908161001b8239f35b600080fdfe6080604052600436101561001257600080fd5b60003560e01c6301ffc9a71461002757600080fd5b346100975760207ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc360112610097576004357fffffffff00000000000000000000000000000000000000000000000000000000811681036100975761008d60209161009c565b6040519015158152f35b600080fd5b7fffffffff00000000000000000000000000000000000000000000000000000000167fffffffff000000000000000000000000000000000000000000000000000000008114610145577f01ffc9a700000000000000000000000000000000000000000000000000000000811461013f576000527fca9d3e17f264b0f3984e2634e94adb37fa3e6a8103f06aeae6fa59e21c769f5d60205260ff6040600020541690565b50600190565b5060009056fea2646970667358221220cfa7c8cad2889c742f02565f7d773329cc39dbeb7398663393110c63e6ca8e1c64736f6c634300081e0033",
+  "deployedBytecode": "0x6080604052600436101561001257600080fd5b60003560e01c6301ffc9a71461002757600080fd5b346100975760207ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc360112610097576004357fffffffff00000000000000000000000000000000000000000000000000000000811681036100975761008d60209161009c565b6040519015158152f35b600080fd5b7fffffffff00000000000000000000000000000000000000000000000000000000167fffffffff000000000000000000000000000000000000000000000000000000008114610145577f01ffc9a700000000000000000000000000000000000000000000000000000000811461013f576000527fca9d3e17f264b0f3984e2634e94adb37fa3e6a8103f06aeae6fa59e21c769f5d60205260ff6040600020541690565b50600190565b5060009056fea2646970667358221220cfa7c8cad2889c742f02565f7d773329cc39dbeb7398663393110c63e6ca8e1c64736f6c634300081e0033",
+  "devdoc": {
+    "details": "This contract is to be used as a diamond facet (see ERC2535 Diamond Standard https://eips.ethereum.org/EIPS/eip-2535).",
+    "kind": "dev",
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "details": "Note: This function call must use less than 30 000 gas.",
+        "params": {
+          "interfaceId": "the interface identifier to test."
+        },
+        "returns": {
+          "_0": "True if the interface is supported, false if `interfaceId` is `0xffffffff` or if the interface is not supported."
+        }
+      }
+    },
+    "title": "ERC165 Interface Detection Standard (facet version).",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "notice": "Returns whether this contract implements a given interface."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

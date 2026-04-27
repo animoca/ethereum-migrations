@@ -11,9 +11,9 @@ module.exports = function (deploymentName, tokenName, tokenSymbol, tokenDecimals
       {name: 'decimals', value: tokenDecimals},
       {name: 'holders', value: holders},
       {name: 'allocations', value: allocations},
-      {name: 'ForwarderRegistry', value: getContractAddress('ForwarderRegistry@4.1')},
+      {name: 'ForwarderRegistry', value: getContractAddress('ForwarderRegistry@5.0')},
     ],
   });
-  migration.dependencies = ['ForwarderRegistry@4.1_deploy'];
+  migration.dependencies = ['ForwarderRegistry@5.0_deploy'];
   return migration;
 };
