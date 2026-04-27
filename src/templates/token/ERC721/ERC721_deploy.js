@@ -10,9 +10,9 @@ module.exports = function (contractName, artifact, tokenName, tokenSymbol, metad
       {name: 'symbol', value: tokenSymbol},
       {name: 'MetadataResolver', value: getContractAddress(metadataResolver)},
       {name: 'OperatorFiltererRegistry', value: getContractAddress('OperatorFilterRegistry')},
-      {name: 'ForwarderRegistry', value: getContractAddress('ForwarderRegistry@4.1')},
+      {name: 'ForwarderRegistry', value: getContractAddress('ForwarderRegistry@5.0')},
     ],
   });
-  migration.dependencies = [`${metadataResolver}_deploy`, 'ForwarderRegistry@4.1_deploy'];
+  migration.dependencies = [`${metadataResolver}_deploy`, 'ForwarderRegistry@5.0_deploy'];
   return migration;
 };

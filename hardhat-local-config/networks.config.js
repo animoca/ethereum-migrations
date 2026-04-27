@@ -45,7 +45,7 @@ module.exports = {
       defaultProvider: 'alchemy',
     },
     basesepolia: {
-      defaultProvider: 'infura',
+      defaultProvider: 'alchemy',
     },
   },
 };

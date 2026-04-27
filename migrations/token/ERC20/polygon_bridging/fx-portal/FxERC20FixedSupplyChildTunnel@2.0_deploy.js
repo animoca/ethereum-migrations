@@ -8,10 +8,10 @@ module.exports = Contract_deploy('FxERC20FixedSupplyChildTunnel@2.0', {
   args: [
     {name: 'FxChild', value: getNamedAccount('FxPortal_FxChild')},
     {name: 'ChildTokenLogic', value: getContractAddress('FxERC20FixedSupply@2.0')},
-    {name: 'ForwarderRegistry', value: getContractAddress('ForwarderRegistry@4.1')},
+    {name: 'ForwarderRegistry', value: getContractAddress('ForwarderRegistry@5.0')},
   ],
   deterministicDeployment: true,
 });
 module.exports.skip = skipChainTypesExceptFor('polygon');
 module.exports.tags = ['ERC20', 'PolygonFxPortal'];
-module.exports.dependencies = ['FxERC20FixedSupply@2.0_deploy', 'ForwarderRegistry@4.1_deploy'];
+module.exports.dependencies = ['FxERC20FixedSupply@2.0_deploy', 'ForwarderRegistry@5.0_deploy'];

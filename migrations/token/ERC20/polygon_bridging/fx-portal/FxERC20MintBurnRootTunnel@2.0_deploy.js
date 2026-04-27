@@ -9,10 +9,10 @@ module.exports = Contract_deploy('FxERC20MintBurnRootTunnel@2.0', {
     {name: 'CheckpointManager', value: getNamedAccount('FxPortal_CheckpointManager')},
     {name: 'FxRoot', value: getNamedAccount('FxPortal_FxRoot')},
     {name: 'ChildTokenLogic', value: async (hre) => (await hre.companionNetworks['polygon'].deployments.get('FxERC20MintBurn@2.0')).address},
-    {name: 'ForwarderRegistry', value: getContractAddress('ForwarderRegistry@4.1')},
+    {name: 'ForwarderRegistry', value: getContractAddress('ForwarderRegistry@5.0')},
   ],
   deterministicDeployment: true,
 });
 module.exports.skip = skipChainTypesExceptFor('ethereum');
 module.exports.tags = ['ERC20', 'PolygonFxPortal'];
-module.exports.dependencies = ['ForwarderRegistry@4.1_deploy'];
+module.exports.dependencies = ['ForwarderRegistry@5.0_deploy'];
